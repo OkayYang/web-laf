@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ruoyi.wx.mapper.LafStudentMapper">
+    
+    <resultMap type="LafStudent" id="LafStudentResult">
+        <result property="stuId"    column="stu_id"    />
+        <result property="stuNick"    column="stu_nick"    />
+        <result property="stuName"    column="stu_name"    />
+        <result property="stuSex"    column="stu_sex"    />
+        <result property="stuXh"    column="stu_xh"    />
+        <result property="stuPassword"    column="stu_password"    />
+        <result property="stuDepartment"    column="stu_department"    />
+        <result property="stuMajor"    column="stu_major"    />
+        <result property="stuClassname"    column="stu_className"    />
+        <result property="stuQq"    column="stu_qq"    />
+        <result property="stuEmail"    column="stu_email"    />
+        <result property="stuImage"    column="stu_image"    />
+        <result property="createTime"    column="create_time"    />
+        <result property="stuStatus"    column="stu_status"    />
+        <result property="openid"    column="openid"    />
+    </resultMap>
+
+    <sql id="selectLafStudentVo">
+        select stu_id, stu_nick, stu_name, stu_sex, stu_xh, stu_password, stu_department, stu_major, stu_className, stu_qq, stu_email, stu_image, create_time, stu_status, openid from laf_student
+    </sql>
+
+    <select id="selectLafStudentList" parameterType="LafStudent" resultMap="LafStudentResult">
+        <include refid="selectLafStudentVo"/>
+        <where>  
+            <if test="stuNick != null  and stuNick != ''"> and stu_nick = #{stuNick}</if>
+            <if test="stuName != null  and stuName != ''"> and stu_name like concat('%', #{stuName}, '%')</if>
+            <if test="stuSex != null  and stuSex != ''"> and stu_sex = #{stuSex}</if>
+            <if test="stuXh != null  and stuXh != ''"> and stu_xh = #{stuXh}</if>
+            <if test="stuDepartment != null  and stuDepartment != ''"> and stu_department = #{stuDepartment}</if>
+            <if test="stuMajor != null  and stuMajor != ''"> and stu_major = #{stuMajor}</if>
+            <if test="stuClassname != null  and stuClassname != ''"> and stu_className like concat('%', #{stuClassname}, '%')</if>
+            <if test="createTime != null "> and create_time = #{createTime}</if>
+            <if test="stuStatus != null  and stuStatus != ''"> and stu_status = #{stuStatus}</if>
+            <if test="openid != null  and openid != ''"> and openid = #{openid}</if>
+        </where>
+    </select>
+    
+    <select id="selectLafStudentByStuId" parameterType="Long" resultMap="LafStudentResult">
+        <include refid="selectLafStudentVo"/>
+        where stu_id = #{stuId}
+    </select>
+        
+    <insert id="insertLafStudent" parameterType="LafStudent" useGeneratedKeys="true" keyProperty="stuId">
+        insert into laf_student
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="stuNick != null">stu_nick,</if>
+            <if test="stuName != null">stu_name,</if>
+            <if test="stuSex != null">stu_sex,</if>
+            <if test="stuXh != null">stu_xh,</if>
+            <if test="stuPassword != null">stu_password,</if>
+            <if test="stuDepartment != null">stu_department,</if>
+            <if test="stuMajor != null">stu_major,</if>
+            <if test="stuClassname != null">stu_className,</if>
+            <if test="stuQq != null">stu_qq,</if>
+            <if test="stuEmail != null">stu_email,</if>
+            <if test="stuImage != null">stu_image,</if>
+            <if test="createTime != null">create_time,</if>
+            <if test="stuStatus != null">stu_status,</if>
+            <if test="openid != null">openid,</if>
+         </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="stuNick != null">#{stuNick},</if>
+            <if test="stuName != null">#{stuName},</if>
+            <if test="stuSex != null">#{stuSex},</if>
+            <if test="stuXh != null">#{stuXh},</if>
+            <if test="stuPassword != null">#{stuPassword},</if>
+            <if test="stuDepartment != null">#{stuDepartment},</if>
+            <if test="stuMajor != null">#{stuMajor},</if>
+            <if test="stuClassname != null">#{stuClassname},</if>
+            <if test="stuQq != null">#{stuQq},</if>
+            <if test="stuEmail != null">#{stuEmail},</if>
+            <if test="stuImage != null">#{stuImage},</if>
+            <if test="createTime != null">#{createTime},</if>
+            <if test="stuStatus != null">#{stuStatus},</if>
+            <if test="openid != null">#{openid},</if>
+         </trim>
+    </insert>
+
+    <update id="updateLafStudent" parameterType="LafStudent">
+        update laf_student
+        <trim prefix="SET" suffixOverrides=",">
+            <if test="stuNick != null">stu_nick = #{stuNick},</if>
+            <if test="stuName != null">stu_name = #{stuName},</if>
+            <if test="stuSex != null">stu_sex = #{stuSex},</if>
+            <if test="stuXh != null">stu_xh = #{stuXh},</if>
+            <if test="stuPassword != null">stu_password = #{stuPassword},</if>
+            <if test="stuDepartment != null">stu_department = #{stuDepartment},</if>
+            <if test="stuMajor != null">stu_major = #{stuMajor},</if>
+            <if test="stuClassname != null">stu_className = #{stuClassname},</if>
+            <if test="stuQq != null">stu_qq = #{stuQq},</if>
+            <if test="stuEmail != null">stu_email = #{stuEmail},</if>
+            <if test="stuImage != null">stu_image = #{stuImage},</if>
+            <if test="createTime != null">create_time = #{createTime},</if>
+            <if test="stuStatus != null">stu_status = #{stuStatus},</if>
+            <if test="openid != null">openid = #{openid},</if>
+        </trim>
+        where stu_id = #{stuId}
+    </update>
+
+    <delete id="deleteLafStudentByStuId" parameterType="Long">
+        delete from laf_student where stu_id = #{stuId}
+    </delete>
+
+    <delete id="deleteLafStudentByStuIds" parameterType="String">
+        delete from laf_student where stu_id in 
+        <foreach item="stuId" collection="array" open="(" separator="," close=")">
+            #{stuId}
+        </foreach>
+    </delete>
+
+</mapper>

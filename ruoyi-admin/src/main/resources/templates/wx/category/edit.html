@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh" xmlns:th="http://www.thymeleaf.org" >
+<head>
+    <th:block th:include="include :: header('修改物品种类')" />
+</head>
+<body class="white-bg">
+    <div class="wrapper wrapper-content animated fadeInRight ibox-content">
+        <form class="form-horizontal m" id="form-category-edit" th:object="${lafCategory}">
+            <input name="cateId" th:field="*{cateId}" type="hidden">
+            <div class="form-group">    
+                <label class="col-sm-3 control-label">父ID：</label>
+                <div class="col-sm-8">
+                    <div class="input-group">
+                        <input id="treeId" name="paraentId" type="hidden" th:field="*{paraentId}" />
+                        <input class="form-control" type="text" onclick="selectCategoryTree()" id="treeName" readonly="true" th:field="*{parentName}">
+                        <span class="input-group-addon"><i class="fa fa-search"></i></span>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">    
+                <label class="col-sm-3 control-label">名称：</label>
+                <div class="col-sm-8">
+                    <input name="cateName" th:field="*{cateName}" class="form-control" type="text">
+                </div>
+            </div>
+            <div class="form-group">    
+                <label class="col-sm-3 control-label">状态：</label>
+                <div class="col-sm-8">
+                    <select name="cateStutus" class="form-control m-b" th:with="type=${@dict.getType('laf_user_status')}">
+                        <option th:each="dict : ${type}" th:text="${dict.dictLabel}" th:value="${dict.dictValue}" th:field="*{cateStutus}"></option>
+                    </select>
+                </div>
+            </div>
+        </form>
+    </div>
+    <th:block th:include="include :: footer" />
+    <script th:inline="javascript">
+        var prefix = ctx + "wx/category";
+        $("#form-category-edit").validate({
+            focusCleanup: true
+        });
+
+        function submitHandler() {
+            if ($.validate.form()) {
+                $.operate.save(prefix + "/edit", $('#form-category-edit').serialize());
+            }
+        }
+
+        /*物品种类-编辑-选择父物品种类树*/
+        function selectCategoryTree() {
+            var options = {
+                title: '物品种类选择',
+                width: "380",
+                url: prefix + "/selectCategoryTree/" + $("#treeId").val(),
+                callBack: doSubmit
+            };
+            $.modal.openOptions(options);
+        }
+
+        function doSubmit(index, layero){
+            var body = $.modal.getChildFrame(index);
+            $("#treeId").val(body.find('#treeId').val());
+            $("#treeName").val(body.find('#treeName').val());
+            $.modal.close(index);
+        }
+    </script>
+</body>
+</html>

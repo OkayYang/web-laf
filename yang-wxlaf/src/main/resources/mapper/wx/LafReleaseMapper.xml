@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ruoyi.wx.mapper.LafReleaseMapper">
+    
+    <resultMap type="LafRelease" id="LafReleaseResult">
+        <result property="relId"    column="rel_id"    />
+        <result property="relTitle"    column="rel_title"    />
+        <result property="relDesc"    column="rel_desc"    />
+        <result property="relContact"    column="rel_contact"    />
+        <result property="relCateId"    column="rel_cate_id"    />
+        <result property="relTime"    column="rel_time"    />
+        <result property="relCampus"    column="rel_campus"    />
+        <result property="createPlace"    column="create_place"    />
+        <result property="createTime"    column="create_time"    />
+        <result property="createId"    column="create_id"    />
+        <result property="relImage"    column="rel_image"    />
+        <result property="relSatus"    column="rel_satus"    />
+        <result property="relStar"    column="rel_star"    />
+        <result property="relFlag"    column="rel_flag"    />
+        <result property="commAmount"    column="comm_amount"    />
+    </resultMap>
+
+    <sql id="selectLafReleaseVo">
+        select rel_id, rel_title, rel_desc, rel_contact, rel_cate_id, rel_time, rel_campus, create_place, create_time, create_id, rel_image, rel_satus, rel_star, rel_flag, comm_amount from laf_release
+    </sql>
+
+    <select id="selectLafReleaseList" parameterType="LafRelease" resultMap="LafReleaseResult">
+        <include refid="selectLafReleaseVo"/>
+        <where>  
+            <if test="relTitle != null  and relTitle != ''"> and rel_title = #{relTitle}</if>
+            <if test="relDesc != null  and relDesc != ''"> and rel_desc = #{relDesc}</if>
+            <if test="relContact != null  and relContact != ''"> and rel_contact = #{relContact}</if>
+            <if test="relCateId != null "> and rel_cate_id = #{relCateId}</if>
+            <if test="relTime != null "> and rel_time = #{relTime}</if>
+            <if test="relCampus != null  and relCampus != ''"> and rel_campus = #{relCampus}</if>
+            <if test="createTime != null "> and create_time = #{createTime}</if>
+            <if test="createId != null "> and create_id = #{createId}</if>
+            <if test="relSatus != null  and relSatus != ''"> and rel_satus = #{relSatus}</if>
+            <if test="relFlag != null  and relFlag != ''"> and rel_flag = #{relFlag}</if>
+        </where>
+    </select>
+    
+    <select id="selectLafReleaseByRelId" parameterType="Long" resultMap="LafReleaseResult">
+        <include refid="selectLafReleaseVo"/>
+        where rel_id = #{relId}
+    </select>
+        
+    <insert id="insertLafRelease" parameterType="LafRelease" useGeneratedKeys="true" keyProperty="relId">
+        insert into laf_release
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="relTitle != null">rel_title,</if>
+            <if test="relDesc != null">rel_desc,</if>
+            <if test="relContact != null">rel_contact,</if>
+            <if test="relCateId != null">rel_cate_id,</if>
+            <if test="relTime != null">rel_time,</if>
+            <if test="relCampus != null">rel_campus,</if>
+            <if test="createPlace != null">create_place,</if>
+            <if test="createTime != null">create_time,</if>
+            <if test="createId != null">create_id,</if>
+            <if test="relImage != null">rel_image,</if>
+            <if test="relSatus != null">rel_satus,</if>
+            <if test="relStar != null">rel_star,</if>
+            <if test="relFlag != null">rel_flag,</if>
+            <if test="commAmount != null">comm_amount,</if>
+         </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="relTitle != null">#{relTitle},</if>
+            <if test="relDesc != null">#{relDesc},</if>
+            <if test="relContact != null">#{relContact},</if>
+            <if test="relCateId != null">#{relCateId},</if>
+            <if test="relTime != null">#{relTime},</if>
+            <if test="relCampus != null">#{relCampus},</if>
+            <if test="createPlace != null">#{createPlace},</if>
+            <if test="createTime != null">#{createTime},</if>
+            <if test="createId != null">#{createId},</if>
+            <if test="relImage != null">#{relImage},</if>
+            <if test="relSatus != null">#{relSatus},</if>
+            <if test="relStar != null">#{relStar},</if>
+            <if test="relFlag != null">#{relFlag},</if>
+            <if test="commAmount != null">#{commAmount},</if>
+         </trim>
+    </insert>
+
+    <update id="updateLafRelease" parameterType="LafRelease">
+        update laf_release
+        <trim prefix="SET" suffixOverrides=",">
+            <if test="relTitle != null">rel_title = #{relTitle},</if>
+            <if test="relDesc != null">rel_desc = #{relDesc},</if>
+            <if test="relContact != null">rel_contact = #{relContact},</if>
+            <if test="relCateId != null">rel_cate_id = #{relCateId},</if>
+            <if test="relTime != null">rel_time = #{relTime},</if>
+            <if test="relCampus != null">rel_campus = #{relCampus},</if>
+            <if test="createPlace != null">create_place = #{createPlace},</if>
+            <if test="createTime != null">create_time = #{createTime},</if>
+            <if test="createId != null">create_id = #{createId},</if>
+            <if test="relImage != null">rel_image = #{relImage},</if>
+            <if test="relSatus != null">rel_satus = #{relSatus},</if>
+            <if test="relStar != null">rel_star = #{relStar},</if>
+            <if test="relFlag != null">rel_flag = #{relFlag},</if>
+            <if test="commAmount != null">comm_amount = #{commAmount},</if>
+        </trim>
+        where rel_id = #{relId}
+    </update>
+
+    <delete id="deleteLafReleaseByRelId" parameterType="Long">
+        delete from laf_release where rel_id = #{relId}
+    </delete>
+
+    <delete id="deleteLafReleaseByRelIds" parameterType="String">
+        delete from laf_release where rel_id in 
+        <foreach item="relId" collection="array" open="(" separator="," close=")">
+            #{relId}
+        </foreach>
+    </delete>
+
+</mapper>

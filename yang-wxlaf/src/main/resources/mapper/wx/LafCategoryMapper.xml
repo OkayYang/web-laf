@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ruoyi.wx.mapper.LafCategoryMapper">
+    
+    <resultMap type="LafCategory" id="LafCategoryResult">
+        <result property="cateId"    column="cate_id"    />
+        <result property="paraentId"    column="paraent_id"    />
+        <result property="cateName"    column="cate_name"    />
+        <result property="createTime"    column="create_time"    />
+        <result property="createBy"    column="create_by"    />
+        <result property="cateStutus"    column="cate_stutus"    />
+        <result property="parentName" column="parent_name" />
+    </resultMap>
+
+    <sql id="selectLafCategoryVo">
+        select cate_id, paraent_id, cate_name, create_time, create_by, cate_stutus from laf_category
+    </sql>
+
+    <select id="selectLafCategoryList" parameterType="LafCategory" resultMap="LafCategoryResult">
+        <include refid="selectLafCategoryVo"/>
+        <where>  
+            <if test="paraentId != null "> and paraent_id = #{paraentId}</if>
+            <if test="cateName != null  and cateName != ''"> and cate_name like concat('%', #{cateName}, '%')</if>
+            <if test="cateStutus != null  and cateStutus != ''"> and cate_stutus = #{cateStutus}</if>
+        </where>
+        order by paraent_id
+    </select>
+    
+    <select id="selectLafCategoryByCateId" parameterType="Long" resultMap="LafCategoryResult">
+        select t.cate_id, t.paraent_id, t.cate_name, t.create_time, t.create_by, t.cate_stutus, p.cate_name as parent_name
+        from laf_category t
+        left join laf_category p on p.cate_id = t.paraent_id
+        where t.cate_id = #{cateId}
+    </select>
+        
+    <insert id="insertLafCategory" parameterType="LafCategory" useGeneratedKeys="true" keyProperty="cateId">
+        insert into laf_category
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="paraentId != null">paraent_id,</if>
+            <if test="cateName != null">cate_name,</if>
+            <if test="createTime != null">create_time,</if>
+            <if test="createBy != null">create_by,</if>
+            <if test="cateStutus != null">cate_stutus,</if>
+         </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="paraentId != null">#{paraentId},</if>
+            <if test="cateName != null">#{cateName},</if>
+            <if test="createTime != null">#{createTime},</if>
+            <if test="createBy != null">#{createBy},</if>
+            <if test="cateStutus != null">#{cateStutus},</if>
+         </trim>
+    </insert>
+
+    <update id="updateLafCategory" parameterType="LafCategory">
+        update laf_category
+        <trim prefix="SET" suffixOverrides=",">
+            <if test="paraentId != null">paraent_id = #{paraentId},</if>
+            <if test="cateName != null">cate_name = #{cateName},</if>
+            <if test="createTime != null">create_time = #{createTime},</if>
+            <if test="createBy != null">create_by = #{createBy},</if>
+            <if test="cateStutus != null">cate_stutus = #{cateStutus},</if>
+        </trim>
+        where cate_id = #{cateId}
+    </update>
+
+    <delete id="deleteLafCategoryByCateId" parameterType="Long">
+        delete from laf_category where cate_id = #{cateId}
+    </delete>
+
+    <delete id="deleteLafCategoryByCateIds" parameterType="String">
+        delete from laf_category where cate_id in 
+        <foreach item="cateId" collection="array" open="(" separator="," close=")">
+            #{cateId}
+        </foreach>
+    </delete>
+
+</mapper>
