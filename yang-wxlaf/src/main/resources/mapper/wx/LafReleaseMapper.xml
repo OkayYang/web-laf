@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper
-PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
-"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.ruoyi.wx.mapper.LafReleaseMapper">
-    
+
     <resultMap type="LafRelease" id="LafReleaseResult">
         <result property="relId"    column="rel_id"    />
         <result property="relTitle"    column="rel_title"    />
@@ -28,10 +28,10 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 
     <select id="selectLafReleaseList" parameterType="LafRelease" resultMap="LafReleaseResult">
         <include refid="selectLafReleaseVo"/>
-        <where>  
-            <if test="relTitle != null  and relTitle != ''"> and rel_title = #{relTitle}</if>
-            <if test="relDesc != null  and relDesc != ''"> and rel_desc = #{relDesc}</if>
-            <if test="relContact != null  and relContact != ''"> and rel_contact = #{relContact}</if>
+        <where>
+            <if test="relTitle != null  and relTitle != ''"> and rel_title like concat('%', #{relTitle}, '%')</if>
+            <if test="relDesc != null  and relDesc != ''"> and rel_desc like concat('%', #{relDesc}, '%')</if>
+            <if test="relContact != null  and relContact != ''"> and rel_contact like concat('%', #{relContact}, '%')</if>
             <if test="relCateId != null "> and rel_cate_id = #{relCateId}</if>
             <if test="relTime != null "> and rel_time = #{relTime}</if>
             <if test="relCampus != null  and relCampus != ''"> and rel_campus = #{relCampus}</if>
@@ -41,12 +41,12 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
             <if test="relFlag != null  and relFlag != ''"> and rel_flag = #{relFlag}</if>
         </where>
     </select>
-    
+
     <select id="selectLafReleaseByRelId" parameterType="Long" resultMap="LafReleaseResult">
         <include refid="selectLafReleaseVo"/>
         where rel_id = #{relId}
     </select>
-        
+
     <insert id="insertLafRelease" parameterType="LafRelease" useGeneratedKeys="true" keyProperty="relId">
         insert into laf_release
         <trim prefix="(" suffix=")" suffixOverrides=",">
@@ -64,7 +64,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
             <if test="relStar != null">rel_star,</if>
             <if test="relFlag != null">rel_flag,</if>
             <if test="commAmount != null">comm_amount,</if>
-         </trim>
+        </trim>
         <trim prefix="values (" suffix=")" suffixOverrides=",">
             <if test="relTitle != null">#{relTitle},</if>
             <if test="relDesc != null">#{relDesc},</if>
@@ -80,7 +80,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
             <if test="relStar != null">#{relStar},</if>
             <if test="relFlag != null">#{relFlag},</if>
             <if test="commAmount != null">#{commAmount},</if>
-         </trim>
+        </trim>
     </insert>
 
     <update id="updateLafRelease" parameterType="LafRelease">
@@ -109,7 +109,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
     </delete>
 
     <delete id="deleteLafReleaseByRelIds" parameterType="String">
-        delete from laf_release where rel_id in 
+        delete from laf_release where rel_id in
         <foreach item="relId" collection="array" open="(" separator="," close=")">
             #{relId}
         </foreach>

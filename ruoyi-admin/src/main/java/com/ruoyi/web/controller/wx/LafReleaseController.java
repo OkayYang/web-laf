@@ -54,6 +54,28 @@ public class LafReleaseController extends WxBaseController
         return getDataTable(list);
     }
 
+    /**
+     * wx 查询接口
+     * @param lafRelease
+     * @return
+     */
+
+    @PostMapping("/select")
+    @ResponseBody
+    public TableDataInfo select(@RequestBody LafRelease lafRelease)
+    {
+        startPage();
+        List<LafRelease> list = lafReleaseService.selectLafReleaseList(lafRelease);
+        return getDataTable(list);
+    }
+
+    /**
+     * wx  上传接口
+     * @param file
+     * @return
+     * @throws Exception
+     */
+
     @ResponseBody
     @RequestMapping("/upload")
     public String upload(@RequestParam("file") MultipartFile file ) throws Exception{
@@ -100,6 +122,12 @@ public class LafReleaseController extends WxBaseController
     {
         return toAjax(lafReleaseService.insertLafRelease(lafRelease));
     }
+
+    /**
+     * wx 添加接口
+     * @param lafRelease
+     * @return
+     */
 
     @PostMapping("/add/check")
     @ResponseBody
