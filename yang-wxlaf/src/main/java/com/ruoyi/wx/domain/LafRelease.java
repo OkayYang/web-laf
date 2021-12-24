@@ -9,9 +9,9 @@ import com.ruoyi.common.core.domain.BaseEntity;
 
 /**
  * 帖子对象 laf_release
- * 
+ *
  * @author yang
- * @date 2021-10-08
+ * @date 2021-12-08
  */
 public class LafRelease extends BaseEntity
 {
@@ -69,155 +69,155 @@ public class LafRelease extends BaseEntity
     @Excel(name = "状态")
     private String relFlag;
 
-    /** 评论量 */
-    @Excel(name = "评论量")
-    private Long commAmount;
+    /** 浏览量 */
+    @Excel(name = "浏览量")
+    private Long relFlow;
 
-    public void setRelId(Long relId) 
+    public void setRelId(Long relId)
     {
         this.relId = relId;
     }
 
-    public Long getRelId() 
+    public Long getRelId()
     {
         return relId;
     }
-    public void setRelTitle(String relTitle) 
+    public void setRelTitle(String relTitle)
     {
         this.relTitle = relTitle;
     }
 
-    public String getRelTitle() 
+    public String getRelTitle()
     {
         return relTitle;
     }
-    public void setRelDesc(String relDesc) 
+    public void setRelDesc(String relDesc)
     {
         this.relDesc = relDesc;
     }
 
-    public String getRelDesc() 
+    public String getRelDesc()
     {
         return relDesc;
     }
-    public void setRelContact(String relContact) 
+    public void setRelContact(String relContact)
     {
         this.relContact = relContact;
     }
 
-    public String getRelContact() 
+    public String getRelContact()
     {
         return relContact;
     }
-    public void setRelCateId(Long relCateId) 
+    public void setRelCateId(Long relCateId)
     {
         this.relCateId = relCateId;
     }
 
-    public Long getRelCateId() 
+    public Long getRelCateId()
     {
         return relCateId;
     }
-    public void setRelTime(Date relTime) 
+    public void setRelTime(Date relTime)
     {
         this.relTime = relTime;
     }
 
-    public Date getRelTime() 
+    public Date getRelTime()
     {
         return relTime;
     }
-    public void setRelCampus(String relCampus) 
+    public void setRelCampus(String relCampus)
     {
         this.relCampus = relCampus;
     }
 
-    public String getRelCampus() 
+    public String getRelCampus()
     {
         return relCampus;
     }
-    public void setCreatePlace(String createPlace) 
+    public void setCreatePlace(String createPlace)
     {
         this.createPlace = createPlace;
     }
 
-    public String getCreatePlace() 
+    public String getCreatePlace()
     {
         return createPlace;
     }
-    public void setCreateId(Long createId) 
+    public void setCreateId(Long createId)
     {
         this.createId = createId;
     }
 
-    public Long getCreateId() 
+    public Long getCreateId()
     {
         return createId;
     }
-    public void setRelImage(String relImage) 
+    public void setRelImage(String relImage)
     {
         this.relImage = relImage;
     }
 
-    public String getRelImage() 
+    public String getRelImage()
     {
         return relImage;
     }
-    public void setRelSatus(String relSatus) 
+    public void setRelSatus(String relSatus)
     {
         this.relSatus = relSatus;
     }
 
-    public String getRelSatus() 
+    public String getRelSatus()
     {
         return relSatus;
     }
-    public void setRelStar(Long relStar) 
+    public void setRelStar(Long relStar)
     {
         this.relStar = relStar;
     }
 
-    public Long getRelStar() 
+    public Long getRelStar()
     {
         return relStar;
     }
-    public void setRelFlag(String relFlag) 
+    public void setRelFlag(String relFlag)
     {
         this.relFlag = relFlag;
     }
 
-    public String getRelFlag() 
+    public String getRelFlag()
     {
         return relFlag;
     }
-    public void setCommAmount(Long commAmount) 
+    public void setRelFlow(Long relFlow)
     {
-        this.commAmount = commAmount;
+        this.relFlow = relFlow;
     }
 
-    public Long getCommAmount() 
+    public Long getRelFlow()
     {
-        return commAmount;
+        return relFlow;
     }
 
     @Override
     public String toString() {
         return new ToStringBuilder(this,ToStringStyle.MULTI_LINE_STYLE)
-            .append("relId", getRelId())
-            .append("relTitle", getRelTitle())
-            .append("relDesc", getRelDesc())
-            .append("relContact", getRelContact())
-            .append("relCateId", getRelCateId())
-            .append("relTime", getRelTime())
-            .append("relCampus", getRelCampus())
-            .append("createPlace", getCreatePlace())
-            .append("createTime", getCreateTime())
-            .append("createId", getCreateId())
-            .append("relImage", getRelImage())
-            .append("relSatus", getRelSatus())
-            .append("relStar", getRelStar())
-            .append("relFlag", getRelFlag())
-            .append("commAmount", getCommAmount())
-            .toString();
+                .append("relId", getRelId())
+                .append("relTitle", getRelTitle())
+                .append("relDesc", getRelDesc())
+                .append("relContact", getRelContact())
+                .append("relCateId", getRelCateId())
+                .append("relTime", getRelTime())
+                .append("relCampus", getRelCampus())
+                .append("createPlace", getCreatePlace())
+                .append("createTime", getCreateTime())
+                .append("createId", getCreateId())
+                .append("relImage", getRelImage())
+                .append("relSatus", getRelSatus())
+                .append("relStar", getRelStar())
+                .append("relFlag", getRelFlag())
+                .append("relFlow", getRelFlow())
+                .toString();
     }
 }

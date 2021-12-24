@@ -1,4 +1,4 @@
-package com.ruoyi.web.controller.wx;
+package com.ruoyi.web.controller.wx.web;
 
 import com.alibaba.fastjson.JSONObject;
 import com.ruoyi.common.core.controller.WxBaseController;

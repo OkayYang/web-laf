@@ -19,11 +19,11 @@
         <result property="relSatus"    column="rel_satus"    />
         <result property="relStar"    column="rel_star"    />
         <result property="relFlag"    column="rel_flag"    />
-        <result property="commAmount"    column="comm_amount"    />
+        <result property="relFlow"    column="rel_flow"    />
     </resultMap>
 
     <sql id="selectLafReleaseVo">
-        select rel_id, rel_title, rel_desc, rel_contact, rel_cate_id, rel_time, rel_campus, create_place, create_time, create_id, rel_image, rel_satus, rel_star, rel_flag, comm_amount from laf_release
+        select rel_id, rel_title, rel_desc, rel_contact, rel_cate_id, rel_time, rel_campus, create_place, create_time, create_id, rel_image, rel_satus, rel_star, rel_flag, rel_flow from laf_release
     </sql>
 
     <select id="selectLafReleaseList" parameterType="LafRelease" resultMap="LafReleaseResult">
@@ -35,7 +35,8 @@
             <if test="relCateId != null "> and rel_cate_id = #{relCateId}</if>
             <if test="relTime != null "> and rel_time = #{relTime}</if>
             <if test="relCampus != null  and relCampus != ''"> and rel_campus = #{relCampus}</if>
-            <if test="createTime != null "> and create_time = #{createTime}</if>
+             <!--时间模糊查询-->
+            <if test="createTime != null "> and  date_format(create_time,'%y%m%d') = date_format(#{createTime},'%y%m%d')</if>
             <if test="createId != null "> and create_id = #{createId}</if>
             <if test="relSatus != null  and relSatus != ''"> and rel_satus = #{relSatus}</if>
             <if test="relFlag != null  and relFlag != ''"> and rel_flag = #{relFlag}</if>
@@ -63,7 +64,7 @@
             <if test="relSatus != null">rel_satus,</if>
             <if test="relStar != null">rel_star,</if>
             <if test="relFlag != null">rel_flag,</if>
-            <if test="commAmount != null">comm_amount,</if>
+            <if test="relFlow != null">rel_flow,</if>
         </trim>
         <trim prefix="values (" suffix=")" suffixOverrides=",">
             <if test="relTitle != null">#{relTitle},</if>
@@ -79,7 +80,7 @@
             <if test="relSatus != null">#{relSatus},</if>
             <if test="relStar != null">#{relStar},</if>
             <if test="relFlag != null">#{relFlag},</if>
-            <if test="commAmount != null">#{commAmount},</if>
+            <if test="relFlow != null">#{relFlow},</if>
         </trim>
     </insert>
 
@@ -99,7 +100,7 @@
             <if test="relSatus != null">rel_satus = #{relSatus},</if>
             <if test="relStar != null">rel_star = #{relStar},</if>
             <if test="relFlag != null">rel_flag = #{relFlag},</if>
-            <if test="commAmount != null">comm_amount = #{commAmount},</if>
+            <if test="relFlow != null">rel_flow = #{relFlow},</if>
         </trim>
         where rel_id = #{relId}
     </update>

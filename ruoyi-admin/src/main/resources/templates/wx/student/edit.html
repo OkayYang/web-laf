@@ -4,105 +4,105 @@
     <th:block th:include="include :: header('修改学生')" />
 </head>
 <body class="white-bg">
-    <div class="wrapper wrapper-content animated fadeInRight ibox-content">
-        <form class="form-horizontal m" id="form-student-edit" th:object="${lafStudent}">
-            <input name="stuId" th:field="*{stuId}" type="hidden">
-            <div class="form-group">    
-                <label class="col-sm-3 control-label">昵称：</label>
-                <div class="col-sm-8">
-                    <input name="stuNick" th:field="*{stuNick}" class="form-control" type="text">
-                </div>
+<div class="wrapper wrapper-content animated fadeInRight ibox-content">
+    <form class="form-horizontal m" id="form-student-edit" th:object="${lafStudent}">
+        <input name="stuId" th:field="*{stuId}" type="hidden">
+        <div class="form-group">
+            <label class="col-sm-3 control-label">昵称：</label>
+            <div class="col-sm-8">
+                <input name="stuNick" th:field="*{stuNick}" class="form-control" type="text">
             </div>
-            <div class="form-group">    
-                <label class="col-sm-3 control-label">姓名：</label>
-                <div class="col-sm-8">
-                    <input name="stuName" th:field="*{stuName}" class="form-control" type="text">
-                </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-3 control-label">姓名：</label>
+            <div class="col-sm-8">
+                <input name="stuName" th:field="*{stuName}" class="form-control" type="text">
             </div>
-            <div class="form-group">    
-                <label class="col-sm-3 control-label">性别：</label>
-                <div class="col-sm-8">
-                    <select name="stuSex" class="form-control m-b" th:with="type=${@dict.getType('laf_user_sex')}">
-                        <option th:each="dict : ${type}" th:text="${dict.dictLabel}" th:value="${dict.dictValue}" th:field="*{stuSex}"></option>
-                    </select>
-                </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-3 control-label">性别：</label>
+            <div class="col-sm-8">
+                <select name="stuSex" class="form-control m-b" th:with="type=${@dict.getType('laf_user_sex')}">
+                    <option th:each="dict : ${type}" th:text="${dict.dictLabel}" th:value="${dict.dictValue}" th:field="*{stuSex}"></option>
+                </select>
             </div>
-            <div class="form-group">    
-                <label class="col-sm-3 control-label">学号：</label>
-                <div class="col-sm-8">
-                    <input name="stuXh" th:field="*{stuXh}" class="form-control" type="text">
-                </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-3 control-label">学号：</label>
+            <div class="col-sm-8">
+                <input name="stuXh" th:field="*{stuXh}" class="form-control" type="text">
             </div>
-            <div class="form-group">    
-                <label class="col-sm-3 control-label">密码：</label>
-                <div class="col-sm-8">
-                    <input name="stuPassword" th:field="*{stuPassword}" class="form-control" type="text">
-                </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-3 control-label">密码：</label>
+            <div class="col-sm-8">
+                <input name="stuPassword" th:field="*{stuPassword}" class="form-control" type="text">
             </div>
-            <div class="form-group">    
-                <label class="col-sm-3 control-label">学院：</label>
-                <div class="col-sm-8">
-                    <input name="stuDepartment" th:field="*{stuDepartment}" class="form-control" type="text">
-                </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-3 control-label">学院：</label>
+            <div class="col-sm-8">
+                <input name="stuDepartment" th:field="*{stuDepartment}" class="form-control" type="text">
             </div>
-            <div class="form-group">    
-                <label class="col-sm-3 control-label">专业：</label>
-                <div class="col-sm-8">
-                    <input name="stuMajor" th:field="*{stuMajor}" class="form-control" type="text">
-                </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-3 control-label">专业：</label>
+            <div class="col-sm-8">
+                <input name="stuMajor" th:field="*{stuMajor}" class="form-control" type="text">
             </div>
-            <div class="form-group">    
-                <label class="col-sm-3 control-label">班级：</label>
-                <div class="col-sm-8">
-                    <input name="stuClassname" th:field="*{stuClassname}" class="form-control" type="text">
-                </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-3 control-label">班级：</label>
+            <div class="col-sm-8">
+                <input name="stuClassname" th:field="*{stuClassname}" class="form-control" type="text">
             </div>
-            <div class="form-group">    
-                <label class="col-sm-3 control-label">QQ：</label>
-                <div class="col-sm-8">
-                    <input name="stuQq" th:field="*{stuQq}" class="form-control" type="text">
-                </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-3 control-label">QQ：</label>
+            <div class="col-sm-8">
+                <input name="stuQq" th:field="*{stuQq}" class="form-control" type="text">
             </div>
-            <div class="form-group">    
-                <label class="col-sm-3 control-label">email：</label>
-                <div class="col-sm-8">
-                    <input name="stuEmail" th:field="*{stuEmail}" class="form-control" type="text">
-                </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-3 control-label">email：</label>
+            <div class="col-sm-8">
+                <input name="stuEmail" th:field="*{stuEmail}" class="form-control" type="text">
             </div>
-            <div class="form-group">    
-                <label class="col-sm-3 control-label">头像：</label>
-                <div class="col-sm-8">
-                    <input name="stuImage" th:field="*{stuImage}" class="form-control" type="text">
-                </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-3 control-label">头像：</label>
+            <div class="col-sm-8">
+                <input name="stuImage" th:field="*{stuImage}" class="form-control" type="text">
             </div>
-            <div class="form-group">    
-                <label class="col-sm-3 control-label">状态：</label>
-                <div class="col-sm-8">
-                    <select name="stuStatus" class="form-control m-b" th:with="type=${@dict.getType('laf_user_status')}">
-                        <option th:each="dict : ${type}" th:text="${dict.dictLabel}" th:value="${dict.dictValue}" th:field="*{stuStatus}"></option>
-                    </select>
-                </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-3 control-label">状态：</label>
+            <div class="col-sm-8">
+                <select name="stuStatus" class="form-control m-b" th:with="type=${@dict.getType('laf_user_status')}">
+                    <option th:each="dict : ${type}" th:text="${dict.dictLabel}" th:value="${dict.dictValue}" th:field="*{stuStatus}"></option>
+                </select>
             </div>
-            <div class="form-group">    
-                <label class="col-sm-3 control-label">openId：</label>
-                <div class="col-sm-8">
-                    <input name="openid" th:field="*{openid}" class="form-control" type="text">
-                </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-3 control-label">openId：</label>
+            <div class="col-sm-8">
+                <input name="openid" th:field="*{openid}" class="form-control" type="text">
             </div>
-        </form>
-    </div>
-    <th:block th:include="include :: footer" />
-    <script th:inline="javascript">
-        var prefix = ctx + "wx/student";
-        $("#form-student-edit").validate({
-            focusCleanup: true
-        });
+        </div>
+    </form>
+</div>
+<th:block th:include="include :: footer" />
+<script th:inline="javascript">
+    var prefix = ctx + "wx/student";
+    $("#form-student-edit").validate({
+        focusCleanup: true
+    });
 
-        function submitHandler() {
-            if ($.validate.form()) {
-                $.operate.save(prefix + "/edit", $('#form-student-edit').serialize());
-            }
+    function submitHandler() {
+        if ($.validate.form()) {
+            $.operate.save(prefix + "/edit", $('#form-student-edit').serialize());
         }
-    </script>
+    }
+</script>
 </body>
 </html>

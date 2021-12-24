@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ruoyi.wx.mapper.LafCommentMapper">
+    
+    <resultMap type="LafComment" id="LafCommentResult">
+        <result property="comId"    column="com_id"    />
+        <result property="paraentId"    column="paraent_id"    />
+        <result property="comRelId"    column="com_rel_id"    />
+        <result property="comStuId"    column="com_stu_id"    />
+        <result property="comContent"    column="com_content"    />
+        <result property="createTime"    column="create_time"    />
+        <result property="comStar"    column="com_star"    />
+        <result property="comStatus"    column="com_status"    />
+        <result property="parentName" column="parent_name" />
+    </resultMap>
+
+    <sql id="selectLafCommentVo">
+        select com_id, paraent_id, com_rel_id, com_stu_id, com_content, create_time, com_star, com_status from laf_comment
+    </sql>
+
+    <select id="selectLafCommentList" parameterType="LafComment" resultMap="LafCommentResult">
+        <include refid="selectLafCommentVo"/>
+        <where>  
+            <if test="paraentId != null "> and paraent_id = #{paraentId}</if>
+            <if test="comRelId != null "> and com_rel_id = #{comRelId}</if>
+            <if test="comStuId != null "> and com_stu_id = #{comStuId}</if>
+            <if test="comContent != null  and comContent != ''"> and com_content like concat('%', #{comContent}, '%')</if>
+            <if test="createTime != null "> and create_time = #{createTime}</if>
+            <if test="comStatus != null  and comStatus != ''"> and com_status = #{comStatus}</if>
+        </where>
+        order by paraent_id
+    </select>
+
+    <!-- wx按顺序显示评论-->
+    <select id="selectWxLafCommentList" parameterType="LafComment" resultMap="LafCommentResult">
+        <include refid="selectLafCommentVo"/>
+        <where>
+            <if test="paraentId != null "> and paraent_id = #{paraentId}</if>
+            <if test="comRelId != null "> and com_rel_id = #{comRelId}</if>
+            <if test="comStuId != null "> and com_stu_id = #{comStuId}</if>
+            <if test="comContent != null  and comContent != ''"> and com_content like concat('%', #{comContent}, '%')</if>
+            <if test="createTime != null "> and create_time = #{createTime}</if>
+            <if test="comStatus != null  and comStatus != ''"> and com_status = #{comStatus}</if>
+        </where>
+
+    </select>
+    
+    <select id="selectLafCommentByComId" parameterType="Long" resultMap="LafCommentResult">
+        select t.com_id, t.paraent_id, t.com_rel_id, t.com_stu_id, t.com_content, t.create_time, t.com_star, t.com_status, p.com_content as parent_name
+        from laf_comment t
+        left join laf_comment p on p.com_id = t.paraent_id
+        where t.com_id = #{comId}
+    </select>
+        
+    <insert id="insertLafComment" parameterType="LafComment">
+        insert into laf_comment
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="comId != null">com_id,</if>
+            <if test="paraentId != null">paraent_id,</if>
+            <if test="comRelId != null">com_rel_id,</if>
+            <if test="comStuId != null">com_stu_id,</if>
+            <if test="comContent != null">com_content,</if>
+            <if test="createTime != null">create_time,</if>
+            <if test="comStar != null">com_star,</if>
+            <if test="comStatus != null">com_status,</if>
+         </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="comId != null">#{comId},</if>
+            <if test="paraentId != null">#{paraentId},</if>
+            <if test="comRelId != null">#{comRelId},</if>
+            <if test="comStuId != null">#{comStuId},</if>
+            <if test="comContent != null">#{comContent},</if>
+            <if test="createTime != null">#{createTime},</if>
+            <if test="comStar != null">#{comStar},</if>
+            <if test="comStatus != null">#{comStatus},</if>
+         </trim>
+    </insert>
+
+    <update id="updateLafComment" parameterType="LafComment">
+        update laf_comment
+        <trim prefix="SET" suffixOverrides=",">
+            <if test="paraentId != null">paraent_id = #{paraentId},</if>
+            <if test="comRelId != null">com_rel_id = #{comRelId},</if>
+            <if test="comStuId != null">com_stu_id = #{comStuId},</if>
+            <if test="comContent != null">com_content = #{comContent},</if>
+            <if test="createTime != null">create_time = #{createTime},</if>
+            <if test="comStar != null">com_star = #{comStar},</if>
+            <if test="comStatus != null">com_status = #{comStatus},</if>
+        </trim>
+        where com_id = #{comId}
+    </update>
+
+    <delete id="deleteLafCommentByComId" parameterType="Long">
+        delete from laf_comment where com_id = #{comId}
+    </delete>
+
+    <delete id="deleteLafCommentByComIds" parameterType="String">
+        delete from laf_comment where com_id in 
+        <foreach item="comId" collection="array" open="(" separator="," close=")">
+            #{comId}
+        </foreach>
+    </delete>
+
+</mapper>

@@ -5,8 +5,13 @@ import java.util.List;
 
 import com.ruoyi.common.core.controller.WxBaseController;
 import com.ruoyi.common.core.domain.WxLoginResult;
+import com.ruoyi.wx.service.ILafStudentService;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.ApiParam;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.*;
@@ -25,14 +30,20 @@ import org.springframework.web.multipart.MultipartFile;
  * @author yang
  * @date 2021-10-05
  */
+@Api("失物招领帖子管理")
 @Controller
 @RequestMapping("/wx/release")
 public class LafReleaseController extends WxBaseController
 {
     private String prefix = "wx/release";
 
+    @Value("${wx.upload.path}")
+    private String imagePath;
+
     @Autowired
     private ILafReleaseService lafReleaseService;
+    @Autowired
+    private ILafStudentService lafStudentService;
 
     @RequiresPermissions("wx:release:view")
     @GetMapping()
@@ -43,11 +54,14 @@ public class LafReleaseController extends WxBaseController
 
     /**
      * 查询帖子列表
+     * 开放接口无需权限
      */
+    @ApiOperation("wx用户获取失物招领列表")
+
     /*@RequiresPermissions("wx:release:list")*/
     @PostMapping("/list")
     @ResponseBody
-    public TableDataInfo list(LafRelease lafRelease)
+    public TableDataInfo list(@ApiParam(value = "查询帖子信息", required = true)LafRelease lafRelease)
     {
         startPage();
         List<LafRelease> list = lafReleaseService.selectLafReleaseList(lafRelease);
@@ -65,14 +79,19 @@ public class LafReleaseController extends WxBaseController
     public TableDataInfo select(@RequestBody LafRelease lafRelease)
     {
         startPage();
+        //搜索具体某一天
+        if (lafRelease.getCreateTime()!=null){
+            System.out.println(lafRelease.getCreateTime());
+        }
         List<LafRelease> list = lafReleaseService.selectLafReleaseList(lafRelease);
         return getDataTable(list);
     }
 
+
     /**
      * wx  上传接口
      * @param file
-     * @return
+     * @return   返回帖子图片地址
      * @throws Exception
      */
 
@@ -83,7 +102,7 @@ public class LafReleaseController extends WxBaseController
         String fileName = file.getOriginalFilename();
         //不指定名字，保存时使用 file.getOriginalFilename()得到文件名字
         //保存到文件服务器，OSS服务器
-        file.transferTo(new File("D:\\BaiduNetdiskWorkspace\\tiezi\\"+fileName));
+        file.transferTo(new File(this.imagePath+fileName));
         return "/img/user/tiezi/"+fileName;
     }
 
@@ -124,7 +143,7 @@ public class LafReleaseController extends WxBaseController
     }
 
     /**
-     * wx 添加接口
+     * wx 发布帖子接口
      * @param lafRelease
      * @return
      */

@@ -36,7 +36,8 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
             <if test="stuDepartment != null  and stuDepartment != ''"> and stu_department = #{stuDepartment}</if>
             <if test="stuMajor != null  and stuMajor != ''"> and stu_major = #{stuMajor}</if>
             <if test="stuClassname != null  and stuClassname != ''"> and stu_className like concat('%', #{stuClassname}, '%')</if>
-            <if test="createTime != null "> and create_time = #{createTime}</if>
+            <!--时间模糊查询-->
+            <if test="createTime != null "> and date_format(create_time,'%y%m%d') = date_format(#{createTime},'%y%m%d')</if>
             <if test="stuStatus != null  and stuStatus != ''"> and stu_status = #{stuStatus}</if>
             <if test="openid != null  and openid != ''"> and openid = #{openid}</if>
         </where>

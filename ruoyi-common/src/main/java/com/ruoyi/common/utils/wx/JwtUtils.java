@@ -72,6 +72,7 @@ public class JwtUtils {
         } catch (Exception e) {
             // e.printStackTrace();
             // token 校验失败, 抛出Token验证非法异常
+            return null;
         }
         return jwt.getClaims();
     }
@@ -84,6 +85,9 @@ public class JwtUtils {
      */
     public static Long getAppUID(String token) {
         Map<String, Claim> claims = verifyToken(token);
+        if (claims==null){
+            return null;
+        }
         Claim user_id_claim = claims.get("user_id");
         if (null == user_id_claim || StringUtils.isEmpty(user_id_claim.asString())) {
             // token 校验失败, 抛出Token验证非法异常
