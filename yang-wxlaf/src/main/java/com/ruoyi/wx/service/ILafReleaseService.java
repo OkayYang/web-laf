@@ -2,6 +2,7 @@ package com.ruoyi.wx.service;
 
 import java.util.List;
 import com.ruoyi.wx.domain.LafRelease;
+import com.ruoyi.wx.util.Graph;
 
 /**
  * 帖子Service接口
@@ -58,4 +59,16 @@ public interface ILafReleaseService
      * @return 结果
      */
     public int deleteLafReleaseByRelId(Long relId);
+    /**
+     * 统计信息量
+     */
+    public int informationCount();
+    /**
+     * 统计成功量
+     */
+    public int successCount();
+    /**
+     * 扇形图
+     */
+    public List<Graph> fanChart();
 }

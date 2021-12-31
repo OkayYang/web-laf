@@ -58,4 +58,7 @@ public interface ILafStudentService
      * @return 结果
      */
     public int deleteLafStudentByStuId(Long stuId);
+
+
+    public int countNumbers();
 }

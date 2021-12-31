@@ -4,6 +4,12 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.ruoyi.wx.mapper.LafReleaseMapper">
 
+    <resultMap  type="com.ruoyi.wx.util.Graph" id="GraphResult">
+        <result property="name" column="name"/>
+        <result property="value" column="num"/>
+
+    </resultMap>
+
     <resultMap type="LafRelease" id="LafReleaseResult">
         <result property="relId"    column="rel_id"    />
         <result property="relTitle"    column="rel_title"    />
@@ -115,5 +121,16 @@
             #{relId}
         </foreach>
     </delete>
+
+    <select id="informationCount" resultType="int">
+        select count(*) from laf_release
+    </select>
+
+    <select id="successCount" resultType="int">
+        select count(*) from laf_release where rel_flag=2
+    </select>
+    <select id="fanChart" resultMap="GraphResult">
+        select cate_name as name,count(*) as num from laf_release,laf_category where laf_release.rel_cate_id = laf_category.cate_id GROUP BY cate_name
+    </select>
 
 </mapper>

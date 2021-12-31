@@ -33,6 +33,7 @@ public class JwtUtils {
      * @param user_id
      *            登录成功后用户user_id, 参数user_id不可传空
      */
+
     public static String createToken(Long user_id) throws Exception {
         Date iatDate = new Date();
         // expire time

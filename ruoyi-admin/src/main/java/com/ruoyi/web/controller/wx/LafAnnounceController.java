@@ -1,8 +1,5 @@
 package com.ruoyi.web.controller.wx;
 
-import java.text.DateFormat;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.util.List;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,9 +21,9 @@ import com.ruoyi.common.core.page.TableDataInfo;
 
 /**
  * 小程序公告Controller
- * 
+ *
  * @author yang
- * @date 2021-12-20
+ * @date 2021-12-26
  */
 @Controller
 @RequestMapping("/wx/announce")
@@ -50,34 +47,11 @@ public class LafAnnounceController extends BaseController
     @RequiresPermissions("wx:announce:list")
     @PostMapping("/list")
     @ResponseBody
-    public TableDataInfo list(LafAnnounce lafAnnounce) throws ParseException {
+    public TableDataInfo list(LafAnnounce lafAnnounce)
+    {
         startPage();
-        if (lafAnnounce.getCreatTime()!=null){
-            SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd");
-            String dateString = simpleDateFormat.format(lafAnnounce.getCreatTime());
-
-            DateFormat format = new SimpleDateFormat("yyyy-MM-dd");
-            lafAnnounce.setCreatTime(format.parse(dateString));
-            System.out.println(lafAnnounce.getCreatTime().toString());
-        }
-
-
         List<LafAnnounce> list = lafAnnounceService.selectLafAnnounceList(lafAnnounce);
         return getDataTable(list);
-    }
-    /**
-     * 小程序用户获得公告
-     */
-    @GetMapping("/list")
-    @ResponseBody
-    public LafAnnounce list(){
-        LafAnnounce lafAnnounce = new LafAnnounce();
-        lafAnnounce.setStatus("0");
-        List<LafAnnounce> list= lafAnnounceService.selectLafAnnounceList(lafAnnounce);
-        if (list.size()>0){
-            lafAnnounce = list.get(0);
-        }
-        return lafAnnounce;
     }
 
     /**
@@ -112,9 +86,6 @@ public class LafAnnounceController extends BaseController
     @ResponseBody
     public AjaxResult addSave(LafAnnounce lafAnnounce)
     {
-
-        lafAnnounce.setCreateBy(getLoginName());
-
         return toAjax(lafAnnounceService.insertLafAnnounce(lafAnnounce));
     }
 

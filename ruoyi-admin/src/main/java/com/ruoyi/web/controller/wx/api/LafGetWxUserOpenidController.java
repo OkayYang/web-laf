@@ -1,4 +1,4 @@
-package com.ruoyi.web.controller.wx.web;
+package com.ruoyi.web.controller.wx.api;
 
 import com.alibaba.fastjson.JSONObject;
 import com.ruoyi.common.core.controller.WxBaseController;
@@ -20,7 +20,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @Controller()
-@RequestMapping("wx/login")
+@RequestMapping("wx/api/login")
 public class LafGetWxUserOpenidController extends WxBaseController {
     @Autowired
     private ILafStudentService lafStudentService;

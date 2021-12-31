@@ -1,6 +1,7 @@
 package com.ruoyi.common.utils.wx;
 
 public class WeChatModel {
+
     private String code;
     private String avatarUrl;
     private String nickName;

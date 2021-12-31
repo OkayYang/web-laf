@@ -2,6 +2,7 @@ package com.ruoyi.wx.mapper;
 
 import java.util.List;
 import com.ruoyi.wx.domain.LafRelease;
+import com.ruoyi.wx.util.Graph;
 
 /**
  * 帖子Mapper接口
@@ -58,4 +59,18 @@ public interface LafReleaseMapper
      * @return 结果
      */
     public int deleteLafReleaseByRelIds(String[] relIds);
+
+    /**
+     * 统计信息量
+     */
+    public int informationCount();
+    /**
+     * 统计成功量
+     */
+    public int successCount();
+    /**
+     * 扇形图数据
+     */
+
+    public List<Graph> fanChart();
 }

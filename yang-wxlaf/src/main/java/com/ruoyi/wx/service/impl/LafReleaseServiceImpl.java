@@ -2,6 +2,7 @@ package com.ruoyi.wx.service.impl;
 
 import java.util.List;
 import com.ruoyi.common.utils.DateUtils;
+import com.ruoyi.wx.util.Graph;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.ruoyi.wx.mapper.LafReleaseMapper;
@@ -92,5 +93,26 @@ public class LafReleaseServiceImpl implements ILafReleaseService
     public int deleteLafReleaseByRelId(Long relId)
     {
         return lafReleaseMapper.deleteLafReleaseByRelId(relId);
+    }
+
+    /**
+     * 统计信息量
+     */
+    public int informationCount(){
+        return lafReleaseMapper.informationCount();
+    }
+    /**
+     * 统计成功量
+     */
+    public int successCount(){
+        return lafReleaseMapper.successCount();
+    }
+
+    /**
+     * 扇形图数据
+     */
+
+    public List<Graph> fanChart(){
+        return lafReleaseMapper.fanChart();
     }
 }

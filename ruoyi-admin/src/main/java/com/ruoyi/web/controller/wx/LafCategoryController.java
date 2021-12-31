@@ -22,9 +22,9 @@ import com.ruoyi.common.core.domain.Ztree;
 
 /**
  * 物品种类Controller
- * 
+ *
  * @author yang
- * @date 2021-10-08
+ * @date 2021-12-26
  */
 @Controller
 @RequestMapping("/wx/category")

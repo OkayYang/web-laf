@@ -93,4 +93,8 @@ public class LafStudentServiceImpl implements ILafStudentService
     {
         return lafStudentMapper.deleteLafStudentByStuId(stuId);
     }
+    @Override
+    public int countNumbers(){
+        return lafStudentMapper.countNumbers();
+    }
 }

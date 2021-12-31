@@ -58,4 +58,11 @@ public interface LafStudentMapper
      * @return 结果
      */
     public int deleteLafStudentByStuIds(String[] stuIds);
+
+    /**
+     * 查询用户总数
+     */
+    public int countNumbers();
+
+
 }

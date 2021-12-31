@@ -1,9 +1,9 @@
-package com.ruoyi.web.controller.wx.web;
+package com.ruoyi.web.controller.wx.api;
 
 import com.ruoyi.common.annotation.Log;
 import com.ruoyi.common.core.controller.BaseController;
-import com.ruoyi.common.core.controller.WxBaseController;
 import com.ruoyi.common.core.domain.AjaxResult;
+import com.ruoyi.common.core.domain.WxLoginResult;
 import com.ruoyi.common.enums.BusinessType;
 import com.ruoyi.wx.domain.LafComment;
 import com.ruoyi.wx.domain.LafRelease;
@@ -27,8 +27,8 @@ import java.util.List;
 
 @Api("查看发布详细信息")
 @Controller
-@RequestMapping("/wx/info")
-public class LafReleaseInfoController extends BaseController {
+@RequestMapping("/wx/api/info")
+public class LafWxReleaseInfoController extends BaseController {
     @Autowired
     private ILafReleaseService lafReleaseService;
     @Autowired
@@ -59,7 +59,7 @@ public class LafReleaseInfoController extends BaseController {
             return lafReleaseInfo;
         }else return null;
     }
-    @ApiOperation("查看选中物品详细信息")
+    @ApiOperation("查看选中物品评论")
     @ApiImplicitParam(name = "relId", value = "选中物品ID", required = true, dataType = "int")
     @GetMapping("/comments")
     @ResponseBody
@@ -74,7 +74,7 @@ public class LafReleaseInfoController extends BaseController {
      * 新增当前帖子留言
      */
     @Log(title = "帖子留言", businessType = BusinessType.INSERT)
-    @PostMapping("/comment/add")
+    @PostMapping("/auth/comment/add")
     @ResponseBody
     public AjaxResult addSave(@RequestBody LafComment lafComment)
     {
@@ -87,10 +87,11 @@ public class LafReleaseInfoController extends BaseController {
      */
 
     @Log(title = "帖子留言", businessType = BusinessType.DELETE)
-    @GetMapping("/comment/remove")
+    @GetMapping("/auth/comment/remove")
     @ResponseBody
     public AjaxResult remove(@RequestParam("comId") Long comId)
     {
         return toAjax(lafCommentService.deleteLafCommentByComId(comId));
     }
+
 }
