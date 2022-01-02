@@ -2,9 +2,7 @@ package com.ruoyi.web.controller.wx.api;
 
 
 import com.ruoyi.common.annotation.Log;
-import com.ruoyi.common.core.controller.WxBaseController;
-import com.ruoyi.common.core.domain.AjaxResult;
-import com.ruoyi.common.core.domain.WxLoginResult;
+import com.ruoyi.wx.util.WxRespResult;
 import com.ruoyi.common.core.page.TableDataInfo;
 import com.ruoyi.common.enums.BusinessType;
 import com.ruoyi.wx.domain.LafRelease;
@@ -38,7 +36,7 @@ public class LafWxReleaseController extends WxBaseController {
 
     @PostMapping("/auth/add/check")
     @ResponseBody
-    public WxLoginResult addCheck(@RequestBody LafRelease lafRelease)
+    public WxRespResult addCheck(@RequestBody LafRelease lafRelease)
     {
         lafRelease.setCreateId(getWxUid());
         if (lafRelease.getRelImage() == null) {
@@ -124,7 +122,7 @@ public class LafWxReleaseController extends WxBaseController {
     @Log(title = "帖子", businessType = BusinessType.DELETE)
     @GetMapping( "/auth/remove")
     @ResponseBody
-    public WxLoginResult remove(@RequestParam("tid") String tid)
+    public WxRespResult remove(@RequestParam("tid") String tid)
     {
         return toAjax(lafReleaseService.deleteLafReleaseByRelIds(tid));
     }

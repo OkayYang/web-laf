@@ -1,6 +1,10 @@
-package com.ruoyi.common.utils.wx;
+package com.ruoyi.wx.util;
 
-public class WeChatModel {
+/**
+ * wx用户登陆请求体
+ */
+
+public class WxUserModel {
 
     private String code;
     private String avatarUrl;

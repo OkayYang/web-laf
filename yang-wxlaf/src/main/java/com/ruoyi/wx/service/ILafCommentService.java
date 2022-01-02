@@ -3,7 +3,7 @@ package com.ruoyi.wx.service;
 import java.util.List;
 import com.ruoyi.wx.domain.LafComment;
 import com.ruoyi.common.core.domain.Ztree;
-import com.ruoyi.wx.util.CommentDetail;
+import com.ruoyi.wx.util.commet.CommentDetail;
 
 /**
  * 帖子留言Service接口

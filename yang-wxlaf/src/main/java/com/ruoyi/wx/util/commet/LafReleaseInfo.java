@@ -1,11 +1,9 @@
-package com.ruoyi.wx.util;
+package com.ruoyi.wx.util.commet;
 
 import com.ruoyi.wx.domain.LafRelease;
 
-import java.util.List;
-
 public class LafReleaseInfo {
-    private  User publish_user;
+    private User publish_user;
     private LafRelease lafRelease;
 
 

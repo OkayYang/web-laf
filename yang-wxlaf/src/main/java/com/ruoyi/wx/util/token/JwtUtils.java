@@ -1,4 +1,4 @@
-package com.ruoyi.common.utils.wx;
+package com.ruoyi.wx.util.token;
 
 
 import java.util.Calendar;

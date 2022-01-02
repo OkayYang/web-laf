@@ -2,7 +2,7 @@ package com.ruoyi.wx.service.impl;
 
 import java.util.List;
 import com.ruoyi.common.utils.DateUtils;
-import com.ruoyi.wx.util.Graph;
+import com.ruoyi.wx.util.echart.Graph;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.ruoyi.wx.mapper.LafReleaseMapper;

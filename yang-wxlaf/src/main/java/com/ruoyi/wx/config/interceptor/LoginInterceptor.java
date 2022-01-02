@@ -1,14 +1,15 @@
-package com.ruoyi.framework.interceptor.wx;
+package com.ruoyi.wx.config.interceptor;
 
-import com.ruoyi.common.core.domain.WxLoginResult;
-import com.ruoyi.common.utils.wx.JwtUtils;
-import org.springframework.web.bind.annotation.ResponseBody;
+import com.ruoyi.wx.util.token.JwtUtils;
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+/**
+ * 认证过滤，防止非法请求
+ */
 public class LoginInterceptor implements HandlerInterceptor  {
 
     @Override

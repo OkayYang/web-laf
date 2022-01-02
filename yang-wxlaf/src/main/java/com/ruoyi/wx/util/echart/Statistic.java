@@ -1,4 +1,6 @@
-package com.ruoyi.wx.util;
+package com.ruoyi.wx.util.echart;
+
+import com.ruoyi.wx.util.echart.Graph;
 
 import java.util.List;
 

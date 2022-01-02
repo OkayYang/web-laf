@@ -1,10 +1,13 @@
-package com.ruoyi.framework.config.wx;
+package com.ruoyi.wx.config.wx;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
+/**
+ * 数据库图片地址到本机映射
+ */
 @Configuration
 public class ResourceConfigAdapter implements WebMvcConfigurer {
     @Value("${wx.upload.path}")

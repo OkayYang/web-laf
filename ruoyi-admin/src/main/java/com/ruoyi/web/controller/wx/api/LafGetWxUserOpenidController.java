@@ -1,11 +1,10 @@
 package com.ruoyi.web.controller.wx.api;
 
 import com.alibaba.fastjson.JSONObject;
-import com.ruoyi.common.core.controller.WxBaseController;
-import com.ruoyi.common.core.domain.WxLoginResult;
-import com.ruoyi.common.utils.wx.JwtUtils;
+import com.ruoyi.wx.util.WxRespResult;
+import com.ruoyi.wx.util.token.JwtUtils;
 import com.ruoyi.wx.domain.LafStudent;
-import com.ruoyi.common.utils.wx.WeChatModel;
+import com.ruoyi.wx.util.WxUserModel;
 import com.ruoyi.wx.service.ILafStudentService;
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
@@ -27,14 +26,15 @@ public class LafGetWxUserOpenidController extends WxBaseController {
 
     @PostMapping("/check")
     @ResponseBody
-    public WxLoginResult checkLogin(@RequestBody WeChatModel weChatModel){
-        System.out.println(weChatModel);
+    public WxRespResult checkLogin(@RequestBody WxUserModel wxUserModel){
+        System.out.println(wxUserModel);
 
+        //获取微信用户的open-id
         StringBuilder url = new StringBuilder("https://api.weixin.qq.com/sns/jscode2session?");
         url.append("appid=wx8a13127914667c1c");//appid设置
         url.append("&secret=41ddaea423916a416d377cec14345791");//secret设置
         url.append("&js_code=");//code设置
-        url.append(weChatModel.getCode());
+        url.append(wxUserModel.getCode());
         url.append("&grant_type=authorization_code");
         LafStudent student = new LafStudent();
         String content="";
@@ -46,7 +46,7 @@ public class LafGetWxUserOpenidController extends WxBaseController {
             HttpEntity result = response.getEntity();//拿到返回的HttpResponse的"实体"
             content = EntityUtils.toString(result);
             JSONObject res = JSONObject.parseObject(content);//把信息封装为json
-            String openId = (String) res.get("openid");
+            String openId = (String) res.get("openid");//拿到open-id
             if (openId!=null){
                 student.setOpenid(openId);
                 List<LafStudent> studentList = lafStudentService.selectLafStudentList(student);
@@ -54,9 +54,9 @@ public class LafGetWxUserOpenidController extends WxBaseController {
                 System.out.println(studentList.size());
                 if (count ==0){
                     //未注册
-                    student.setStuImage(weChatModel.getAvatarUrl());
-                    student.setStuNick(weChatModel.getNickName());
-                    student.setStuSex(weChatModel.getGender());
+                    student.setStuImage(wxUserModel.getAvatarUrl());
+                    student.setStuNick(wxUserModel.getNickName());
+                    student.setStuSex(wxUserModel.getGender());
                     System.out.println(student);
                     lafStudentService.insertLafStudent(student);
                 }else {

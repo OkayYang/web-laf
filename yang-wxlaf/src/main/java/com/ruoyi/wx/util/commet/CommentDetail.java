@@ -1,7 +1,6 @@
-package com.ruoyi.wx.util;
+package com.ruoyi.wx.util.commet;
 
 import com.ruoyi.wx.domain.LafComment;
-import com.ruoyi.wx.domain.LafStudent;
 
 public class CommentDetail {
     private LafComment comment;

@@ -1,6 +1,5 @@
 package com.ruoyi.web.controller.wx.api;
 
-import com.ruoyi.common.core.controller.WxBaseController;
 import com.ruoyi.wx.domain.LafAnnounce;
 import com.ruoyi.wx.service.ILafAnnounceService;
 import org.springframework.beans.factory.annotation.Autowired;

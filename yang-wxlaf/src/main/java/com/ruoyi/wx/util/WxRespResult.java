@@ -1,14 +1,14 @@
-package com.ruoyi.common.core.domain;
+package com.ruoyi.wx.util;
 
 import java.util.HashMap;
 import com.ruoyi.common.utils.StringUtils;
 
 /**
- * 操作消息提醒
+ * wx请求响应结果
  *
  * @author ruoyi
  */
-public class WxLoginResult extends HashMap<String, Object>
+public class WxRespResult extends HashMap<String, Object>
 
 {
     private static final long serialVersionUID = 1L;
@@ -52,7 +52,7 @@ public class WxLoginResult extends HashMap<String, Object>
     /**
      * 初始化一个新创建的 AjaxResult 对象，使其表示一个空消息。
      */
-    public WxLoginResult()
+    public WxRespResult()
     {
     }
 
@@ -62,7 +62,7 @@ public class WxLoginResult extends HashMap<String, Object>
      * @param type 状态类型
      * @param msg 返回内容
      */
-    public WxLoginResult(Type type, String msg)
+    public WxRespResult(Type type, String msg)
     {
         super.put(CODE_TAG, type.value);
         super.put(MSG_TAG, msg);
@@ -75,7 +75,7 @@ public class WxLoginResult extends HashMap<String, Object>
      * @param msg 返回内容
      * @param data 数据对象
      */
-    public WxLoginResult(Type type, String msg, Object data)
+    public WxRespResult(Type type, String msg, Object data)
     {
         super.put(CODE_TAG, type.value);
         super.put(MSG_TAG, msg);
@@ -95,7 +95,7 @@ public class WxLoginResult extends HashMap<String, Object>
      * @Author yang
      */
 
-    public WxLoginResult(Type type, String msg, Object data,String token)
+    public WxRespResult(Type type, String msg, Object data, String token)
     {
         super.put(CODE_TAG, type.value);
         super.put(MSG_TAG, msg);
@@ -114,7 +114,7 @@ public class WxLoginResult extends HashMap<String, Object>
      * @return 数据对象
      */
     @Override
-    public WxLoginResult put(String key, Object value)
+    public WxRespResult put(String key, Object value)
     {
         super.put(key, value);
         return this;
@@ -125,9 +125,9 @@ public class WxLoginResult extends HashMap<String, Object>
      *
      * @return 成功消息
      */
-    public static WxLoginResult success()
+    public static WxRespResult success()
     {
-        return WxLoginResult.success("操作成功");
+        return WxRespResult.success("操作成功");
     }
 
     /**
@@ -135,9 +135,9 @@ public class WxLoginResult extends HashMap<String, Object>
      *
      * @return 成功消息
      */
-    public static WxLoginResult success(Object data)
+    public static WxRespResult success(Object data)
     {
-        return WxLoginResult.success("操作成功", data);
+        return WxRespResult.success("操作成功", data);
     }
 
     /**
@@ -145,9 +145,9 @@ public class WxLoginResult extends HashMap<String, Object>
      *
      * @return 成功消息
      */
-    public static WxLoginResult success(Object data,String token)
+    public static WxRespResult success(Object data, String token)
     {
-        return WxLoginResult.success("操作成功", data,token);
+        return WxRespResult.success("操作成功", data,token);
     }
 
     /**
@@ -156,9 +156,9 @@ public class WxLoginResult extends HashMap<String, Object>
      * @param msg 返回内容
      * @return 成功消息
      */
-    public static WxLoginResult success(String msg)
+    public static WxRespResult success(String msg)
     {
-        return WxLoginResult.success(msg, null,null);
+        return WxRespResult.success(msg, null,null);
     }
 
     /**
@@ -168,9 +168,9 @@ public class WxLoginResult extends HashMap<String, Object>
      * @param data 数据对象
      * @return 成功消息
      */
-    public static WxLoginResult success(String msg, Object data)
+    public static WxRespResult success(String msg, Object data)
     {
-        return new WxLoginResult(Type.SUCCESS, msg, data);
+        return new WxRespResult(Type.SUCCESS, msg, data);
     }
 
     /**
@@ -183,9 +183,9 @@ public class WxLoginResult extends HashMap<String, Object>
      * @Author yang
      */
 
-    public static WxLoginResult success(String msg, Object data,String token)
+    public static WxRespResult success(String msg, Object data, String token)
     {
-        return new WxLoginResult(Type.SUCCESS, msg, data,token);
+        return new WxRespResult(Type.SUCCESS, msg, data,token);
     }
 
 
@@ -196,9 +196,9 @@ public class WxLoginResult extends HashMap<String, Object>
      * @param msg 返回内容
      * @return 警告消息
      */
-    public static WxLoginResult warn(String msg)
+    public static WxRespResult warn(String msg)
     {
-        return WxLoginResult.warn(msg, null);
+        return WxRespResult.warn(msg, null);
     }
 
     /**
@@ -208,9 +208,9 @@ public class WxLoginResult extends HashMap<String, Object>
      * @param data 数据对象
      * @return 警告消息
      */
-    public static WxLoginResult warn(String msg, Object data)
+    public static WxRespResult warn(String msg, Object data)
     {
-        return new WxLoginResult(Type.WARN, msg, data);
+        return new WxRespResult(Type.WARN, msg, data);
     }
 
     /**
@@ -218,9 +218,9 @@ public class WxLoginResult extends HashMap<String, Object>
      *
      * @return
      */
-    public static WxLoginResult error()
+    public static WxRespResult error()
     {
-        return WxLoginResult.error("操作失败");
+        return WxRespResult.error("操作失败");
     }
 
     /**
@@ -229,9 +229,9 @@ public class WxLoginResult extends HashMap<String, Object>
      * @param msg 返回内容
      * @return 警告消息
      */
-    public static WxLoginResult error(String msg)
+    public static WxRespResult error(String msg)
     {
-        return WxLoginResult.error(msg, null);
+        return WxRespResult.error(msg, null);
     }
 
     /**
@@ -241,8 +241,8 @@ public class WxLoginResult extends HashMap<String, Object>
      * @param data 数据对象
      * @return 警告消息
      */
-    public static WxLoginResult error(String msg, Object data)
+    public static WxRespResult error(String msg, Object data)
     {
-        return new WxLoginResult(Type.ERROR, msg, data);
+        return new WxRespResult(Type.ERROR, msg, data);
     }
 }

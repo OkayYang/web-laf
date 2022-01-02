@@ -1,13 +1,13 @@
-package com.ruoyi.framework.config.wx;
+package com.ruoyi.wx.config.wx;
 
-import com.ruoyi.framework.interceptor.wx.LoginInterceptor;
+import com.ruoyi.wx.config.interceptor.LoginInterceptor;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
-import java.util.ArrayList;
-import java.util.List;
-
+/**
+ * 配置过滤请求
+ */
 @Configuration
 public class WxLoginConfig implements WebMvcConfigurer {
 
@@ -18,8 +18,6 @@ public class WxLoginConfig implements WebMvcConfigurer {
         registry.addInterceptor(new LoginInterceptor())
                 .addPathPatterns(
                         "/wx/api/*/auth/**"
-
-
                 );
     }
 }

@@ -1,4 +1,4 @@
-package com.ruoyi.wx.util;
+package com.ruoyi.wx.util.echart;
 
 public class Graph {
     private String name;

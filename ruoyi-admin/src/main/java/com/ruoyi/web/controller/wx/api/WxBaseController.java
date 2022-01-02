@@ -1,15 +1,15 @@
-package com.ruoyi.common.core.controller;
+package com.ruoyi.web.controller.wx.api;
 
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
-import com.ruoyi.common.core.domain.WxLoginResult;
+import com.ruoyi.wx.util.WxRespResult;
 import com.ruoyi.common.core.domain.entity.SysUser;
 import com.ruoyi.common.core.page.PageDomain;
 import com.ruoyi.common.core.page.TableDataInfo;
 import com.ruoyi.common.core.page.TableSupport;
 import com.ruoyi.common.utils.*;
 import com.ruoyi.common.utils.sql.SqlUtil;
-import com.ruoyi.common.utils.wx.JwtUtils;
+import com.ruoyi.wx.util.token.JwtUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.WebDataBinder;
@@ -128,7 +128,7 @@ public class WxBaseController {
      * @param rows 影响行数
      * @return 操作结果
      */
-    protected WxLoginResult toAjax(int rows)
+    protected WxRespResult toAjax(int rows)
     {
         return rows > 0 ? success() : error();
     }
@@ -140,7 +140,7 @@ public class WxBaseController {
      * @param result 结果
      * @return 操作结果
      */
-    protected WxLoginResult toAjax(boolean result)
+    protected WxRespResult toAjax(boolean result)
     {
         return result ? success() : error();
     }
@@ -148,33 +148,33 @@ public class WxBaseController {
     /**
      * 返回成功
      */
-    public WxLoginResult success()
+    public WxRespResult success()
     {
-        return WxLoginResult.success();
+        return WxRespResult.success();
     }
 
     /**
      * 返回失败消息
      */
-    public WxLoginResult error()
+    public WxRespResult error()
     {
-        return WxLoginResult.error();
+        return WxRespResult.error();
     }
 
     /**
      * 返回成功消息
      */
-    public WxLoginResult success(String message)
+    public WxRespResult success(String message)
     {
-        return WxLoginResult.success(message);
+        return WxRespResult.success(message);
     }
 
     /**
      * 返回成功数据
      */
-    public static WxLoginResult success(Object data)
+    public static WxRespResult success(Object data)
     {
-        return WxLoginResult.success("操作成功", data);
+        return WxRespResult.success("操作成功", data);
     }
 
     /**
@@ -182,26 +182,26 @@ public class WxBaseController {
      *
      * @Author yang
      */
-    public static WxLoginResult success(Object data,String token)
+    public static WxRespResult success(Object data, String token)
 
     {
-        return WxLoginResult.success("操作成功", data,token);
+        return WxRespResult.success("操作成功", data,token);
     }
 
     /**
      * 返回失败消息
      */
-    public WxLoginResult error(String message)
+    public WxRespResult error(String message)
     {
-        return WxLoginResult.error(message);
+        return WxRespResult.error(message);
     }
 
     /**
      * 返回错误码消息
      */
-    public WxLoginResult error(WxLoginResult.Type type, String message)
+    public WxRespResult error(WxRespResult.Type type, String message)
     {
-        return new WxLoginResult(type, message);
+        return new WxRespResult(type, message);
     }
 
     /**
