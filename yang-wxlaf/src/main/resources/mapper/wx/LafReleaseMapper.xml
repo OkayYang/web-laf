@@ -26,10 +26,11 @@
         <result property="relStar"    column="rel_star"    />
         <result property="relFlag"    column="rel_flag"    />
         <result property="relFlow"    column="rel_flow"    />
+        <result property="relDel"    column="rel_del"    />
     </resultMap>
 
     <sql id="selectLafReleaseVo">
-        select rel_id, rel_title, rel_desc, rel_contact, rel_cate_id, rel_time, rel_campus, create_place, create_time, create_id, rel_image, rel_satus, rel_star, rel_flag, rel_flow from laf_release
+        select rel_id, rel_title, rel_desc, rel_contact, rel_cate_id, rel_time, rel_campus, create_place, create_time, create_id, rel_image, rel_satus, rel_star, rel_flag, rel_flow,rel_del  from laf_release
     </sql>
 
     <select id="selectLafReleaseList" parameterType="LafRelease" resultMap="LafReleaseResult">
@@ -46,12 +47,15 @@
             <if test="createId != null "> and create_id = #{createId}</if>
             <if test="relSatus != null  and relSatus != ''"> and rel_satus = #{relSatus}</if>
             <if test="relFlag != null  and relFlag != ''"> and rel_flag = #{relFlag}</if>
+            <if test="relDel != null  and relDel != ''"> and rel_del = #{relDel}</if>
         </where>
+        order by create_time desc
     </select>
 
     <select id="selectLafReleaseByRelId" parameterType="Long" resultMap="LafReleaseResult">
         <include refid="selectLafReleaseVo"/>
         where rel_id = #{relId}
+        order by create_time desc
     </select>
 
     <insert id="insertLafRelease" parameterType="LafRelease" useGeneratedKeys="true" keyProperty="relId">
@@ -71,6 +75,7 @@
             <if test="relStar != null">rel_star,</if>
             <if test="relFlag != null">rel_flag,</if>
             <if test="relFlow != null">rel_flow,</if>
+            <if test="relDel != null">rel_del,</if>
         </trim>
         <trim prefix="values (" suffix=")" suffixOverrides=",">
             <if test="relTitle != null">#{relTitle},</if>
@@ -87,6 +92,7 @@
             <if test="relStar != null">#{relStar},</if>
             <if test="relFlag != null">#{relFlag},</if>
             <if test="relFlow != null">#{relFlow},</if>
+            <if test="relDel != null">#{relDel},</if>
         </trim>
     </insert>
 
@@ -107,6 +113,7 @@
             <if test="relStar != null">rel_star = #{relStar},</if>
             <if test="relFlag != null">rel_flag = #{relFlag},</if>
             <if test="relFlow != null">rel_flow = #{relFlow},</if>
+            <if test="relDel != null">rel_del = #{relDel},</if>
         </trim>
         where rel_id = #{relId}
     </update>

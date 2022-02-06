@@ -97,6 +97,14 @@
                 <input name="relFlow" th:field="*{relFlow}" class="form-control" type="text">
             </div>
         </div>
+        <div class="form-group">
+            <label class="col-sm-3 control-label">删除：</label>
+            <div class="col-sm-8">
+                <select name="relDel" class="form-control m-b" th:with="type=${@dict.getType('laf_release_del')}">
+                    <option th:each="dict : ${type}" th:text="${dict.dictLabel}" th:value="${dict.dictValue}" th:field="*{relDel}"></option>
+                </select>
+            </div>
+        </div>
     </form>
 </div>
 <th:block th:include="include :: footer" />

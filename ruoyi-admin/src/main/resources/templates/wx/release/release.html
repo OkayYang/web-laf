@@ -63,6 +63,13 @@
                             </select>
                         </li>
                         <li>
+                            <label>删除：</label>
+                            <select name="relDel" th:with="type=${@dict.getType('laf_release_del')}">
+                                <option value="">所有</option>
+                                <option th:each="dict : ${type}" th:text="${dict.dictLabel}" th:value="${dict.dictValue}"></option>
+                            </select>
+                        </li>
+                        <li>
                             <a class="btn btn-primary btn-rounded btn-sm" onclick="$.table.search()"><i class="fa fa-search"></i>&nbsp;搜索</a>
                             <a class="btn btn-warning btn-rounded btn-sm" onclick="$.form.reset()"><i class="fa fa-refresh"></i>&nbsp;重置</a>
                         </li>
@@ -98,6 +105,7 @@
     var relCampusDatas = [[${@dict.getType('laf_campus')}]];
     var relSatusDatas = [[${@dict.getType('laf_release_cate')}]];
     var relFlagDatas = [[${@dict.getType('laf_release_status')}]];
+    var relDelDatas = [[${@dict.getType('laf_release_del')}]];
     var prefix = ctx + "wx/release";
 
     $(function() {
@@ -163,7 +171,7 @@
                     title: '图片',*/
                     field: "relImage", align: "center", title: "图片",
                     formatter: function (value, row, index) {
-                         //var image =  '<div><a href="http://localhost' + row.relImage + '" target="view_window"><img style="width: 50px;height: 50px;margin: auto"  src="http://localhost' + row.relImage + '"></img></a></div>';
+                        //var image =  '<div><a href="http://localhost' + row.relImage + '" target="view_window"><img style="width: 50px;height: 50px;margin: auto"  src="http://localhost' + row.relImage + '"></img></a></div>';
                         var image =  '<div><a href="' + row.relImage + '" target="view_window"><img style="width: 50px;height: 50px;margin: auto"  src="' + row.relImage + '"></img></a></div>';
                         return image;
                     }
@@ -189,6 +197,13 @@
                 {
                     field: 'relFlow',
                     title: '浏览量'
+                },
+                {
+                    field: 'relDel',
+                    title: '删除',
+                    formatter: function(value, row, index) {
+                        return $.table.selectDictLabel(relDelDatas, value);
+                    }
                 },
                 {
                     title: '操作',

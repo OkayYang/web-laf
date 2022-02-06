@@ -64,7 +64,6 @@ public class LafWxReleaseInfoController extends BaseController {
     @Transactional
     public List<CommentDetail> selectComments(@RequestParam Long relId)
     {
-
         List<CommentDetail> commentDetailList = lafCommentService.selectLafCommentByTid(relId);
         return commentDetailList;
     }

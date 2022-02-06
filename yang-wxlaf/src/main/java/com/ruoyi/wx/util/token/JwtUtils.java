@@ -23,7 +23,7 @@ public class JwtUtils {
     public static final String SECRET = "jiangxiligong8722";
     /** token 过期时间: 10天 */
     public static final int calendarField = Calendar.DATE;
-    public static final int calendarInterval = 10;
+    public static final int calendarInterval = 30;
 
     /**
      * JWT生成Token.<br/>

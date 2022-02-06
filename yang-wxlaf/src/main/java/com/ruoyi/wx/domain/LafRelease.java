@@ -73,6 +73,10 @@ public class LafRelease extends BaseEntity
     @Excel(name = "浏览量")
     private Long relFlow;
 
+    /** 删除 */
+    @Excel(name = "删除")
+    private String relDel;
+
     public void setRelId(Long relId)
     {
         this.relId = relId;
@@ -200,6 +204,14 @@ public class LafRelease extends BaseEntity
         return relFlow;
     }
 
+    public String getRelDel() {
+        return relDel;
+    }
+
+    public void setRelDel(String relDel) {
+        this.relDel = relDel;
+    }
+
     @Override
     public String toString() {
         return new ToStringBuilder(this,ToStringStyle.MULTI_LINE_STYLE)
@@ -218,6 +230,7 @@ public class LafRelease extends BaseEntity
                 .append("relStar", getRelStar())
                 .append("relFlag", getRelFlag())
                 .append("relFlow", getRelFlow())
+                .append("relDel", getRelDel())
                 .toString();
     }
 }

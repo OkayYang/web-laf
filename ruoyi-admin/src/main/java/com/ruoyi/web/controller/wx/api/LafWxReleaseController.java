@@ -1,7 +1,10 @@
 package com.ruoyi.web.controller.wx.api;
 
 
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
 import com.ruoyi.common.annotation.Log;
+import com.ruoyi.common.core.domain.AjaxResult;
 import com.ruoyi.wx.util.WxRespResult;
 import com.ruoyi.common.core.page.TableDataInfo;
 import com.ruoyi.common.enums.BusinessType;
@@ -10,9 +13,12 @@ import com.ruoyi.wx.service.ILafReleaseService;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
 import org.apache.ibatis.annotations.Param;
+import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -68,33 +74,20 @@ public class LafWxReleaseController extends WxBaseController {
         return "/img/user/tiezi/"+fileName;
     }
 
-    /**
-     * wx查询帖子列表接口
-     * 开放接口无需权限
-     */
-    @ApiOperation("wx用户获取失物招领列表")
+
+
     @PostMapping("/list")
     @ResponseBody
-    public TableDataInfo list(@ApiParam(value = "查询帖子信息", required = true)LafRelease lafRelease)
-    {
-        startPage();
+    public PageInfo<LafRelease> list(@RequestBody LafRelease lafRelease,@Param("pageNum") Integer pageNum,@Param("pageSize") Integer pageSize){
+        PageHelper.startPage(pageNum,pageSize);
+        //过滤已被删除的
+        lafRelease.setRelDel("1");
         List<LafRelease> list = lafReleaseService.selectLafReleaseList(lafRelease);
-        return getDataTable(list);
+        PageInfo<LafRelease> pageInfo = new PageInfo<LafRelease>(list,pageSize);
+        return pageInfo;
     }
 
-    /**
-     * wx 查询接口
-     * @param lafRelease
-     * @return
-     */
-    @PostMapping("/select")
-    @ResponseBody
-    public TableDataInfo select(@RequestBody LafRelease lafRelease)
-    {
-        startPage();
-        List<LafRelease> list = lafReleaseService.selectLafReleaseList(lafRelease);
-        return getDataTable(list);
-    }
+
     /**
      * wx 查询个人发布
      */
@@ -103,6 +96,7 @@ public class LafWxReleaseController extends WxBaseController {
     public TableDataInfo myRelease(@Param("id")String id){
         startPage();
         LafRelease lafRelease = new LafRelease();
+        lafRelease.setRelDel("1");
         lafRelease.setCreateId(getWxUid());
         if ("1".equals(id)||"2".equals(id)){
             lafRelease.setRelSatus(id);
@@ -125,6 +119,18 @@ public class LafWxReleaseController extends WxBaseController {
     public WxRespResult remove(@RequestParam("tid") String tid)
     {
         return toAjax(lafReleaseService.deleteLafReleaseByRelIds(tid));
+    }
+
+    /**
+     * 微信用户删除
+     */
+    @Log(title = "帖子", businessType = BusinessType.UPDATE)
+    @PostMapping("/auth/edit")
+    @ResponseBody
+    public WxRespResult editSave(@RequestBody LafRelease lafRelease)
+    {
+
+        return toAjax(lafReleaseService.updateLafRelease(lafRelease));
     }
 
 
