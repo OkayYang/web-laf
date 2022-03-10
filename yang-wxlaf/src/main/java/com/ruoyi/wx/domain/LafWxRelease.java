@@ -7,77 +7,73 @@ import com.ruoyi.common.annotation.Excel;
 import com.ruoyi.common.core.domain.BaseEntity;
 
 /**
- * 帖子对象 laf_release
+ * VIEW对象 laf_wx_release
  *
  * @author yang
  * @date 2022-02-27
  */
-public class LafRelease extends BaseEntity
+public class LafWxRelease extends BaseEntity
 {
     private static final long serialVersionUID = 1L;
 
-    /** 帖子ID */
+    /** 帖子id */
     private Long relId;
 
-    /** 标题 */
-    @Excel(name = "标题")
+    /** 帖子标题 */
     private String relTitle;
 
-    /** 描述 */
-    @Excel(name = "描述")
+    /** 帖子描述 */
     private String relDesc;
 
-    /** 联系方式 */
-    @Excel(name = "联系方式")
+    /** 帖子联系方式 */
     private String relContact;
 
-    /** 物品种类 */
-    @Excel(name = "物品种类")
-    private Long relCateId;
+    /** 所属物品种类id */
+    private String relCateId;
 
-    /** 认领时间 */
-    @JsonFormat(pattern = "yyyy-MM-dd")
-    @Excel(name = "认领时间", width = 30, dateFormat = "yyyy-MM-dd")
+    /** 物品丢失发现时间 */
     private Date relTime;
 
-    /** 校区 */
-    @Excel(name = "校区")
+    /** 物品丢失寻找校区 */
     private String relCampus;
 
-    /** 地点 */
-    @Excel(name = "地点")
+    /** 物品丢失发现地点 */
     private String createPlace;
 
-    /** 发布者ID */
-    @Excel(name = "发布者ID")
-    private Long createId;
-
-    /** 图片 */
-    @Excel(name = "图片")
+    /** 帖子图片 */
     private String relImage;
 
-    /** 帖子类别(1代表失物，2代表寻物) */
-    @Excel(name = "帖子类别(1代表失物，2代表寻物)")
-    private String relStatus;
+    /** 获得赞 */
+    private Integer relStar;
 
-    /** 赞 */
-    @Excel(name = "赞")
-    private Long relStar;
-
-    /** 状态 */
-    @Excel(name = "状态")
+    /** 是否成功(1寻找中，2成功) */
     private String relFlag;
 
     /** 浏览量 */
-    @Excel(name = "浏览量")
-    private Long relFlow;
+    private String relFlow;
 
-    /** 删除 */
-    @Excel(name = "删除")
+    /** 是否删除(1未删除,2删除 */
     private String relDel;
 
+    /** 学生唯一表示id */
+    private Long stuId;
+
+    /** 学生别名昵称 */
+    private String stuNick;
+
+    /** 学生姓名 */
+    private String stuName;
+
+    /** 性别（1男，2女，3外星人） */
+    private String stuSex;
+
+    /** 头像 */
+    private String stuAvatar;
+
+    /** 帖子类别(1代表失物，2代表寻物) */
+    private String relStatus;
+
     /** 认领者id */
-    @Excel(name = "认领者id")
     private Long relClaimId;
 
     public void setRelId(Long relId)
@@ -116,12 +112,12 @@ public class LafRelease extends BaseEntity
     {
         return relContact;
     }
-    public void setRelCateId(Long relCateId)
+    public void setRelCateId(String relCateId)
     {
         this.relCateId = relCateId;
     }
 
-    public Long getRelCateId()
+    public String getRelCateId()
     {
         return relCateId;
     }
@@ -152,15 +148,6 @@ public class LafRelease extends BaseEntity
     {
         return createPlace;
     }
-    public void setCreateId(Long createId)
-    {
-        this.createId = createId;
-    }
-
-    public Long getCreateId()
-    {
-        return createId;
-    }
     public void setRelImage(String relImage)
     {
         this.relImage = relImage;
@@ -170,21 +157,12 @@ public class LafRelease extends BaseEntity
     {
         return relImage;
     }
-    public void setRelStatus(String relStatus)
-    {
-        this.relStatus = relStatus;
-    }
-
-    public String getRelStatus()
-    {
-        return relStatus;
-    }
-    public void setRelStar(Long relStar)
+    public void setRelStar(Integer relStar)
     {
         this.relStar = relStar;
     }
 
-    public Long getRelStar()
+    public Integer getRelStar()
     {
         return relStar;
     }
@@ -197,12 +175,12 @@ public class LafRelease extends BaseEntity
     {
         return relFlag;
     }
-    public void setRelFlow(Long relFlow)
+    public void setRelFlow(String relFlow)
     {
         this.relFlow = relFlow;
     }
 
-    public Long getRelFlow()
+    public String getRelFlow()
     {
         return relFlow;
     }
@@ -214,6 +192,60 @@ public class LafRelease extends BaseEntity
     public String getRelDel()
     {
         return relDel;
+    }
+    public void setStuId(Long stuId)
+    {
+        this.stuId = stuId;
+    }
+
+    public Long getStuId()
+    {
+        return stuId;
+    }
+    public void setStuNick(String stuNick)
+    {
+        this.stuNick = stuNick;
+    }
+
+    public String getStuNick()
+    {
+        return stuNick;
+    }
+    public void setStuName(String stuName)
+    {
+        this.stuName = stuName;
+    }
+
+    public String getStuName()
+    {
+        return stuName;
+    }
+    public void setStuSex(String stuSex)
+    {
+        this.stuSex = stuSex;
+    }
+
+    public String getStuSex()
+    {
+        return stuSex;
+    }
+    public void setStuAvatar(String stuAvatar)
+    {
+        this.stuAvatar = stuAvatar;
+    }
+
+    public String getStuAvatar()
+    {
+        return stuAvatar;
+    }
+    public void setRelStatus(String relStatus)
+    {
+        this.relStatus = relStatus;
+    }
+
+    public String getRelStatus()
+    {
+        return relStatus;
     }
     public void setRelClaimId(Long relClaimId)
     {
@@ -237,13 +269,17 @@ public class LafRelease extends BaseEntity
                 .append("relCampus", getRelCampus())
                 .append("createPlace", getCreatePlace())
                 .append("createTime", getCreateTime())
-                .append("createId", getCreateId())
                 .append("relImage", getRelImage())
-                .append("relStatus", getRelStatus())
                 .append("relStar", getRelStar())
                 .append("relFlag", getRelFlag())
                 .append("relFlow", getRelFlow())
                 .append("relDel", getRelDel())
+                .append("stuId", getStuId())
+                .append("stuNick", getStuNick())
+                .append("stuName", getStuName())
+                .append("stuSex", getStuSex())
+                .append("stuAvatar", getStuAvatar())
+                .append("relStatus", getRelStatus())
                 .append("relClaimId", getRelClaimId())
                 .toString();
     }

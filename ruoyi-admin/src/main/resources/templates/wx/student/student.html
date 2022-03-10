@@ -11,6 +11,10 @@
                 <div class="select-list">
                     <ul>
                         <li>
+                            <label>学生ID：</label>
+                            <input type="text" name="stuId"/>
+                        </li>
+                        <li>
                             <label>昵称：</label>
                             <input type="text" name="stuNick"/>
                         </li>
@@ -106,7 +110,7 @@
                 {
                     field: 'stuId',
                     title: '学生ID',
-                    visible: false
+                    visible:true
                 },
                 {
                     field: 'stuNick',
@@ -171,6 +175,7 @@
                         return $.table.selectDictLabel(stuStatusDatas, value);
                     }
                 },
+
                 {
                     field: 'openid',
                     title: 'openId'

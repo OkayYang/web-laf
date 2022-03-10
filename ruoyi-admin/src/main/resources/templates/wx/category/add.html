@@ -7,11 +7,11 @@
     <div class="wrapper wrapper-content animated fadeInRight ibox-content">
         <form class="form-horizontal m" id="form-category-add">
             <div class="form-group">    
-                <label class="col-sm-3 control-label">父ID：</label>
+                <label class="col-sm-3 control-label is-required">所属id：</label>
                 <div class="col-sm-8">
                     <div class="input-group">
-                        <input id="treeId" name="paraentId" type="hidden" th:value="${lafCategory?.cateId}"/>
-                        <input class="form-control" type="text" onclick="selectCategoryTree()" id="treeName" readonly="true" th:value="${lafCategory?.cateName}">
+                        <input id="treeId" name="parentId" type="hidden" th:value="${lafCategory?.cateId}"/>
+                        <input class="form-control" type="text" onclick="selectCategoryTree()" id="treeName" readonly="true" th:value="${lafCategory?.cateName}" required>
                         <span class="input-group-addon"><i class="fa fa-search"></i></span>
                     </div>
                 </div>
@@ -25,9 +25,10 @@
             <div class="form-group">    
                 <label class="col-sm-3 control-label">状态：</label>
                 <div class="col-sm-8">
-                    <select name="cateStutus" class="form-control m-b" th:with="type=${@dict.getType('laf_user_status')}">
-                        <option th:each="dict : ${type}" th:text="${dict.dictLabel}" th:value="${dict.dictValue}"></option>
-                    </select>
+                    <div class="radio-box" th:each="dict : ${@dict.getType('laf_user_status')}">
+                        <input type="radio" th:id="${'cateStatus_' + dict.dictCode}" name="cateStatus" th:value="${dict.dictValue}" th:checked="${dict.default}">
+                        <label th:for="${'cateStatus_' + dict.dictCode}" th:text="${dict.dictLabel}"></label>
+                    </div>
                 </div>
             </div>
         </form>

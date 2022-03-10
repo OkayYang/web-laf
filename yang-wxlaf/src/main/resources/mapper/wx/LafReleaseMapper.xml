@@ -10,6 +10,30 @@
 
     </resultMap>
 
+    <resultMap type="LafWxRelease" id="LafWxReleaseResult">
+        <result property="relId"    column="rel_id"    />
+        <result property="relTitle"    column="rel_title"    />
+        <result property="relDesc"    column="rel_desc"    />
+        <result property="relContact"    column="rel_contact"    />
+        <result property="relCateId"    column="rel_cate_id"    />
+        <result property="relTime"    column="rel_time"    />
+        <result property="relCampus"    column="rel_campus"    />
+        <result property="createPlace"    column="create_place"    />
+        <result property="createTime"    column="create_time"    />
+        <result property="relImage"    column="rel_image"    />
+        <result property="relStatus"    column="rel_status"    />
+        <result property="relStar"    column="rel_star"    />
+        <result property="relFlag"    column="rel_flag"    />
+        <result property="relFlow"    column="rel_flow"    />
+        <result property="relDel"    column="rel_del"    />
+        <result property="stuId"    column="stu_id"    />
+        <result property="stuNick"    column="stu_nick"    />
+        <result property="stuName"    column="stu_name"    />
+        <result property="stuSex"    column="stu_sex"    />
+        <result property="stuAvatar"    column="stu_image"    />
+        <result property="relClaimId"    column="rel_claim_id"    />
+    </resultMap>
+
     <resultMap type="LafRelease" id="LafReleaseResult">
         <result property="relId"    column="rel_id"    />
         <result property="relTitle"    column="rel_title"    />
@@ -22,32 +46,72 @@
         <result property="createTime"    column="create_time"    />
         <result property="createId"    column="create_id"    />
         <result property="relImage"    column="rel_image"    />
-        <result property="relSatus"    column="rel_satus"    />
+        <result property="relStatus"    column="rel_status"    />
         <result property="relStar"    column="rel_star"    />
         <result property="relFlag"    column="rel_flag"    />
         <result property="relFlow"    column="rel_flow"    />
         <result property="relDel"    column="rel_del"    />
+        <result property="relClaimId"    column="rel_claim_id"    />
     </resultMap>
 
     <sql id="selectLafReleaseVo">
-        select rel_id, rel_title, rel_desc, rel_contact, rel_cate_id, rel_time, rel_campus, create_place, create_time, create_id, rel_image, rel_satus, rel_star, rel_flag, rel_flow,rel_del  from laf_release
+        select rel_id, rel_title, rel_desc, rel_contact, rel_cate_id, rel_time, rel_campus, create_place, create_time, create_id, rel_image, rel_status, rel_star, rel_flag, rel_flow,rel_del,rel_claim_id  from laf_release
     </sql>
+    <sql id="selectLafWxReleaseVo">
+        select rel_id, rel_title, rel_desc, rel_contact, rel_cate_id, rel_time, rel_campus, create_place, create_time, rel_image, rel_status, rel_star, rel_flag, rel_flow, rel_del, stu_id, stu_nick, stu_name, stu_sex,stu_image,rel_claim_id from laf_wx_release
+    </sql>
+
+    <select id="selectLafWxReleaseList" parameterType="LafWxRelease" resultMap="LafWxReleaseResult">
+        <include refid="selectLafWxReleaseVo"/>
+        <where>
+            <if test="relId != null "> and rel_id = #{relId}</if>
+            <if test="relContact != null  and relContact != ''"> and rel_contact = #{relContact}</if>
+            <if test="relCateId != null  and relCateId != ''"> and rel_cate_id = #{relCateId}</if>
+            <if test="relTime != null "> and  date_format(rel_time,'%y%m%d') = date_format(#{relTime},'%y%m%d')</if>
+            <if test="relCampus != null  and relCampus != ''"> and rel_campus = #{relCampus}</if>
+            <if test="createPlace != null  and createPlace != ''"> and create_place = #{createPlace}</if>
+            <!--时间模糊查询-->
+            <if test="createTime != null "> and  date_format(create_time,'%y%m%d') = date_format(#{createTime},'%y%m%d')</if>
+            <if test="relImage != null  and relImage != ''"> and rel_image = #{relImage}</if>
+            <if test="relStatus != null  and relStatus != ''"> and rel_status = #{relStatus}</if>
+            <if test="relStar != null "> and rel_star = #{relStar}</if>
+            <if test="relFlag != null  and relFlag != ''"> and rel_flag = #{relFlag}</if>
+            <if test="relFlow != null  and relFlow != ''"> and rel_flow = #{relFlow}</if>
+            <if test="relDel != null  and relDel != ''"> and rel_del = #{relDel}</if>
+            <if test="stuId != null "> and stu_id = #{stuId}</if>
+            <if test="stuNick != null  and stuNick != ''"> and stu_nick = #{stuNick}</if>
+            <if test="stuName != null  and stuName != ''"> and stu_name like concat('%', #{stuName}, '%')</if>
+            <if test="stuSex != null  and stuSex != ''"> and stu_sex = #{stuSex}</if>
+            <if test="relClaimId != null "> and rel_claim_id = #{relClaimId}</if>
+
+            <if test="relTitle != null  and relTitle != ''"> and rel_title = #{relTitle} </if>
+            <if test="relDesc != null  and relDesc != ''"> and rel_desc = #{relDesc}</if>
+        </where>
+        order by create_time desc
+    </select>
+
+    <select id="selectLafWxReleaseByRelId" parameterType="Long" resultMap="LafWxReleaseResult">
+        <include refid="selectLafWxReleaseVo"/>
+        where rel_id = #{relId}
+    </select>
 
     <select id="selectLafReleaseList" parameterType="LafRelease" resultMap="LafReleaseResult">
         <include refid="selectLafReleaseVo"/>
         <where>
+            <if test="relId != null "> and rel_id = #{relId}</if>
             <if test="relTitle != null  and relTitle != ''"> and rel_title like concat('%', #{relTitle}, '%')</if>
             <if test="relDesc != null  and relDesc != ''"> and rel_desc like concat('%', #{relDesc}, '%')</if>
             <if test="relContact != null  and relContact != ''"> and rel_contact like concat('%', #{relContact}, '%')</if>
             <if test="relCateId != null "> and rel_cate_id = #{relCateId}</if>
-            <if test="relTime != null "> and rel_time = #{relTime}</if>
+            <if test="relTime != null "> and  date_format(rel_time,'%y%m%d') = date_format(#{relTime},'%y%m%d')</if>
             <if test="relCampus != null  and relCampus != ''"> and rel_campus = #{relCampus}</if>
              <!--时间模糊查询-->
             <if test="createTime != null "> and  date_format(create_time,'%y%m%d') = date_format(#{createTime},'%y%m%d')</if>
             <if test="createId != null "> and create_id = #{createId}</if>
-            <if test="relSatus != null  and relSatus != ''"> and rel_satus = #{relSatus}</if>
+            <if test="relStatus != null  and relStatus != ''"> and rel_status = #{relStatus}</if>
             <if test="relFlag != null  and relFlag != ''"> and rel_flag = #{relFlag}</if>
             <if test="relDel != null  and relDel != ''"> and rel_del = #{relDel}</if>
+            <if test="relClaimId != null "> and rel_claim_id = #{relClaimId}</if>
         </where>
         order by create_time desc
     </select>
@@ -71,11 +135,12 @@
             <if test="createTime != null">create_time,</if>
             <if test="createId != null">create_id,</if>
             <if test="relImage != null">rel_image,</if>
-            <if test="relSatus != null">rel_satus,</if>
+            <if test="relStatus != null">rel_status,</if>
             <if test="relStar != null">rel_star,</if>
             <if test="relFlag != null">rel_flag,</if>
             <if test="relFlow != null">rel_flow,</if>
             <if test="relDel != null">rel_del,</if>
+            <if test="relClaimId != null">rel_claim_id,</if>
         </trim>
         <trim prefix="values (" suffix=")" suffixOverrides=",">
             <if test="relTitle != null">#{relTitle},</if>
@@ -88,11 +153,12 @@
             <if test="createTime != null">#{createTime},</if>
             <if test="createId != null">#{createId},</if>
             <if test="relImage != null">#{relImage},</if>
-            <if test="relSatus != null">#{relSatus},</if>
+            <if test="relStatus != null">#{relStatus},</if>
             <if test="relStar != null">#{relStar},</if>
             <if test="relFlag != null">#{relFlag},</if>
             <if test="relFlow != null">#{relFlow},</if>
             <if test="relDel != null">#{relDel},</if>
+            <if test="relClaimId != null">#{relClaimId},</if>
         </trim>
     </insert>
 
@@ -103,17 +169,18 @@
             <if test="relDesc != null">rel_desc = #{relDesc},</if>
             <if test="relContact != null">rel_contact = #{relContact},</if>
             <if test="relCateId != null">rel_cate_id = #{relCateId},</if>
-            <if test="relTime != null">rel_time = #{relTime},</if>
+            rel_time = #{relTime},
             <if test="relCampus != null">rel_campus = #{relCampus},</if>
             <if test="createPlace != null">create_place = #{createPlace},</if>
             <if test="createTime != null">create_time = #{createTime},</if>
             <if test="createId != null">create_id = #{createId},</if>
             <if test="relImage != null">rel_image = #{relImage},</if>
-            <if test="relSatus != null">rel_satus = #{relSatus},</if>
+            <if test="relStatus != null">rel_status = #{relStatus},</if>
             <if test="relStar != null">rel_star = #{relStar},</if>
             <if test="relFlag != null">rel_flag = #{relFlag},</if>
             <if test="relFlow != null">rel_flow = #{relFlow},</if>
             <if test="relDel != null">rel_del = #{relDel},</if>
+            rel_claim_id = #{relClaimId}
         </trim>
         where rel_id = #{relId}
     </update>

@@ -4,6 +4,7 @@ import java.util.List;
 import com.ruoyi.wx.domain.LafComment;
 import com.ruoyi.common.core.domain.Ztree;
 import com.ruoyi.wx.util.commet.CommentDetail;
+import com.ruoyi.wx.util.commet.CommentTree;
 
 /**
  * 帖子留言Service接口
@@ -72,4 +73,5 @@ public interface ILafCommentService
      * 获取当前帖子下的评论
      */
     public List<CommentDetail> selectLafCommentByTid(Long relID);
+    public List<CommentTree> testComment(Long relID);
 }

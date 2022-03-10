@@ -7,9 +7,9 @@ import com.ruoyi.common.core.domain.TreeEntity;
 
 /**
  * 物品种类对象 laf_category
- * 
+ *
  * @author yang
- * @date 2021-10-08
+ * @date 2022-02-11
  */
 public class LafCategory extends TreeEntity
 {
@@ -18,64 +18,51 @@ public class LafCategory extends TreeEntity
     /** 物品ID */
     private Long cateId;
 
-    /** 父ID */
-    @Excel(name = "父ID")
-    private Long paraentId;
-
     /** 名称 */
     @Excel(name = "名称")
     private String cateName;
 
-    /** 状态 */
-    @Excel(name = "状态")
-    private String cateStutus;
+    /** 状态(1使用中，2已删除） */
+    @Excel(name = "状态(1使用中，2已删除）")
+    private String cateStatus;
 
-    public void setCateId(Long cateId) 
+    public void setCateId(Long cateId)
     {
         this.cateId = cateId;
     }
 
-    public Long getCateId() 
+    public Long getCateId()
     {
         return cateId;
     }
-    public void setParaentId(Long paraentId) 
-    {
-        this.paraentId = paraentId;
-    }
-
-    public Long getParaentId() 
-    {
-        return paraentId;
-    }
-    public void setCateName(String cateName) 
+    public void setCateName(String cateName)
     {
         this.cateName = cateName;
     }
 
-    public String getCateName() 
+    public String getCateName()
     {
         return cateName;
     }
-    public void setCateStutus(String cateStutus) 
+    public void setCateStatus(String cateStatus)
     {
-        this.cateStutus = cateStutus;
+        this.cateStatus = cateStatus;
     }
 
-    public String getCateStutus() 
+    public String getCateStatus()
     {
-        return cateStutus;
+        return cateStatus;
     }
 
     @Override
     public String toString() {
         return new ToStringBuilder(this,ToStringStyle.MULTI_LINE_STYLE)
-            .append("cateId", getCateId())
-            .append("paraentId", getParaentId())
-            .append("cateName", getCateName())
-            .append("createTime", getCreateTime())
-            .append("createBy", getCreateBy())
-            .append("cateStutus", getCateStutus())
-            .toString();
+                .append("cateId", getCateId())
+                .append("parentId", getParentId())
+                .append("cateName", getCateName())
+                .append("createTime", getCreateTime())
+                .append("createBy", getCreateBy())
+                .append("cateStatus", getCateStatus())
+                .toString();
     }
 }

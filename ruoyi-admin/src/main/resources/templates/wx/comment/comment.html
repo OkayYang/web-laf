@@ -11,10 +11,6 @@
                     <div class="select-list">
                         <ul>
                             <li>
-                                <label>父ID：</label>
-                                <input type="text" name="paraentId"/>
-                            </li>
-                            <li>
                                 <label>文章ID：</label>
                                 <input type="text" name="comRelId"/>
                             </li>
@@ -23,8 +19,8 @@
                                 <input type="text" name="comStuId"/>
                             </li>
                             <li>
-                                <label>评论时间：</label>
-                                <input type="text" class="time-input" placeholder="请选择评论时间" name="createTime"/>
+                                <label>时间：</label>
+                                <input type="text" class="time-input" placeholder="请选择时间" name="createTime"/>
                             </li>
                             <li>
                                 <label>状态：</label>
@@ -69,8 +65,8 @@
         $(function() {
             var options = {
                 code: "comId",
-                parentCode: "paraentId",
-                expandColumn: "4",
+                parentCode: "parentId",
+                expandColumn: "3",
                 uniqueId: "comId",
                 url: prefix + "/list",
                 createUrl: prefix + "/add/{id}",
@@ -81,11 +77,6 @@
                 columns: [{
                     field: 'selectItem',
                     radio: true
-                },
-                {
-                    field: 'paraentId',
-                    title: '父ID',
-                    align: 'left'
                 },
                 {
                     field: 'comRelId',
@@ -104,7 +95,7 @@
                 },
                 {
                     field: 'createTime',
-                    title: '评论时间',
+                    title: '时间',
                     align: 'left'
                 },
                 {
@@ -118,6 +109,15 @@
                     align: 'left',
                     formatter: function(value, row, index) {
                         return $.table.selectDictLabel(comStatusDatas, value);
+                    }
+                },
+                {
+
+                    field: "comImage", align: "center", title: "图片",
+                    formatter: function (value, row, index) {
+                        //var image =  '<div><a href="http://localhost' + row.relImage + '" target="view_window"><img style="width: 50px;height: 50px;margin: auto"  src="http://localhost' + row.relImage + '"></img></a></div>';
+                        var image = '<div><a href="' + row.comImage + '" target="view_window"><img style="width: 50px;height: 50px;margin: auto"  src="' + row.comImage + '"></img></a></div>';
+                        return image;
                     }
                 },
                 {

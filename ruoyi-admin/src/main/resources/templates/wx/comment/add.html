@@ -7,10 +7,10 @@
     <div class="wrapper wrapper-content animated fadeInRight ibox-content">
         <form class="form-horizontal m" id="form-comment-add">
             <div class="form-group">    
-                <label class="col-sm-3 control-label">父ID：</label>
+                <label class="col-sm-3 control-label">父评论ID：</label>
                 <div class="col-sm-8">
                     <div class="input-group">
-                        <input id="treeId" name="paraentId" type="hidden" th:value="${lafComment?.comId}"/>
+                        <input id="treeId" name="parentId" type="hidden" th:value="${lafComment?.comId}"/>
                         <input class="form-control" type="text" onclick="selectCommentTree()" id="treeName" readonly="true" th:value="${lafComment?.comContent}">
                         <span class="input-group-addon"><i class="fa fa-search"></i></span>
                     </div>
@@ -38,6 +38,12 @@
                 <label class="col-sm-3 control-label">赞：</label>
                 <div class="col-sm-8">
                     <input name="comStar" class="form-control" type="text">
+                </div>
+            </div>
+            <div class="form-group">    
+                <label class="col-sm-3 control-label">图片：</label>
+                <div class="col-sm-8">
+                    <input name="comImage" class="form-control" type="text">
                 </div>
             </div>
         </form>

@@ -11,6 +11,10 @@
                 <div class="select-list">
                     <ul>
                         <li>
+                            <label>帖子ID：</label>
+                            <input type="text" name="relId"/>
+                        </li>
+                        <li>
                             <label>标题：</label>
                             <input type="text" name="relTitle"/>
                         </li>
@@ -30,8 +34,8 @@
                             </select>
                         </li>
                         <li>
-                            <label>线索时间：</label>
-                            <input type="text" class="time-input" placeholder="请选择线索时间" name="relTime"/>
+                            <label>认领时间：</label>
+                            <input type="text" class="time-input" placeholder="请选择认领时间" name="relTime"/>
                         </li>
                         <li>
                             <label>校区：</label>
@@ -50,7 +54,7 @@
                         </li>
                         <li>
                             <label>类别：</label>
-                            <select name="relSatus" th:with="type=${@dict.getType('laf_release_cate')}">
+                            <select name="relStatus" th:with="type=${@dict.getType('laf_release_cate')}">
                                 <option value="">所有</option>
                                 <option th:each="dict : ${type}" th:text="${dict.dictLabel}" th:value="${dict.dictValue}"></option>
                             </select>
@@ -68,6 +72,10 @@
                                 <option value="">所有</option>
                                 <option th:each="dict : ${type}" th:text="${dict.dictLabel}" th:value="${dict.dictValue}"></option>
                             </select>
+                        </li>
+                        <li>
+                            <label>认领者ID：</label>
+                            <input type="text" name="relClaimId"/>
                         </li>
                         <li>
                             <a class="btn btn-primary btn-rounded btn-sm" onclick="$.table.search()"><i class="fa fa-search"></i>&nbsp;搜索</a>
@@ -103,7 +111,7 @@
     var removeFlag = [[${@permission.hasPermi('wx:release:remove')}]];
     var relCateIdDatas = [[${@dict.getType('laf_category')}]];
     var relCampusDatas = [[${@dict.getType('laf_campus')}]];
-    var relSatusDatas = [[${@dict.getType('laf_release_cate')}]];
+    var relStatusDatas = [[${@dict.getType('laf_release_cate')}]];
     var relFlagDatas = [[${@dict.getType('laf_release_status')}]];
     var relDelDatas = [[${@dict.getType('laf_release_del')}]];
     var prefix = ctx + "wx/release";
@@ -122,7 +130,7 @@
                 {
                     field: 'relId',
                     title: '帖子ID',
-                    visible: false
+                    visible: true
                 },
                 {
                     field: 'relTitle',
@@ -145,7 +153,7 @@
                 },
                 {
                     field: 'relTime',
-                    title: '线索时间'
+                    title: '认领时间'
                 },
                 {
                     field: 'relCampus',
@@ -172,15 +180,15 @@
                     field: "relImage", align: "center", title: "图片",
                     formatter: function (value, row, index) {
                         //var image =  '<div><a href="http://localhost' + row.relImage + '" target="view_window"><img style="width: 50px;height: 50px;margin: auto"  src="http://localhost' + row.relImage + '"></img></a></div>';
-                        var image =  '<div><a href="' + row.relImage + '" target="view_window"><img style="width: 50px;height: 50px;margin: auto"  src="' + row.relImage + '"></img></a></div>';
+                        var image = '<div><a href="' + row.relImage + '" target="view_window"><img style="width: 50px;height: 50px;margin: auto"  src="' + row.relImage + '"></img></a></div>';
                         return image;
                     }
                 },
                 {
-                    field: 'relSatus',
+                    field: 'relStatus',
                     title: '类别',
                     formatter: function(value, row, index) {
-                        return $.table.selectDictLabel(relSatusDatas, value);
+                        return $.table.selectDictLabel(relStatusDatas, value);
                     }
                 },
                 {
@@ -204,6 +212,10 @@
                     formatter: function(value, row, index) {
                         return $.table.selectDictLabel(relDelDatas, value);
                     }
+                },
+                {
+                    field: 'relClaimId',
+                    title: '认领者ID'
                 },
                 {
                     title: '操作',

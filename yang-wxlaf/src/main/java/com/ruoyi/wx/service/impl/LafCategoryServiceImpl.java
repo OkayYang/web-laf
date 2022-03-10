@@ -110,7 +110,7 @@ public class LafCategoryServiceImpl implements ILafCategoryService
         {
             Ztree ztree = new Ztree();
             ztree.setId(lafCategory.getCateId());
-            ztree.setpId(lafCategory.getParaentId());
+            ztree.setpId(lafCategory.getParentId());
             ztree.setName(lafCategory.getCateName());
             ztree.setTitle(lafCategory.getCateName());
             ztrees.add(ztree);

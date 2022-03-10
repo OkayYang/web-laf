@@ -11,8 +11,12 @@
                     <div class="select-list">
                         <ul>
                             <li>
-                                <label>父ID：</label>
-                                <input type="text" name="paraentId"/>
+                                <label>物品ID：</label>
+                                <input type="text" name="cateId"/>
+                            </li>
+                            <li>
+                                <label>所属id：</label>
+                                <input type="text" name="parentId"/>
                             </li>
                             <li>
                                 <label>名称：</label>
@@ -20,7 +24,7 @@
                             </li>
                             <li>
                                 <label>状态：</label>
-                                <select name="cateStutus" th:with="type=${@dict.getType('laf_user_status')}">
+                                <select name="cateStatus" th:with="type=${@dict.getType('laf_user_status')}">
                                     <option value="">所有</option>
                                     <option th:each="dict : ${type}" th:text="${dict.dictLabel}" th:value="${dict.dictValue}"></option>
                                 </select>
@@ -55,14 +59,14 @@
         var addFlag = [[${@permission.hasPermi('wx:category:add')}]];
         var editFlag = [[${@permission.hasPermi('wx:category:edit')}]];
         var removeFlag = [[${@permission.hasPermi('wx:category:remove')}]];
-        var cateStutusDatas = [[${@dict.getType('laf_user_status')}]];
+        var cateStatusDatas = [[${@dict.getType('laf_user_status')}]];
         var prefix = ctx + "wx/category";
 
         $(function() {
             var options = {
                 code: "cateId",
-                parentCode: "paraentId",
-                expandColumn: "2",
+                parentCode: "parentId",
+                expandColumn: "3",
                 uniqueId: "cateId",
                 url: prefix + "/list",
                 createUrl: prefix + "/add/{id}",
@@ -75,8 +79,13 @@
                     radio: true
                 },
                 {
-                    field: 'paraentId',
-                    title: '父ID',
+                    field: 'cateId',
+                    title: '物品ID',
+                    align: 'left'
+                },
+                {
+                    field: 'parentId',
+                    title: '所属id',
                     align: 'left'
                 },
                 {
@@ -85,11 +94,11 @@
                     align: 'left'
                 },
                 {
-                    field: 'cateStutus',
+                    field: 'cateStatus',
                     title: '状态',
                     align: 'left',
                     formatter: function(value, row, index) {
-                        return $.table.selectDictLabel(cateStutusDatas, value);
+                        return $.table.selectDictLabel(cateStatusDatas, value);
                     }
                 },
                 {

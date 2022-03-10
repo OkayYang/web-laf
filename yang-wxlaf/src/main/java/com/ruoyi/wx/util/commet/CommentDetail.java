@@ -1,6 +1,7 @@
 package com.ruoyi.wx.util.commet;
 
 import com.ruoyi.wx.domain.LafComment;
+import com.ruoyi.wx.util.User;
 
 public class CommentDetail {
     private LafComment comment;
@@ -15,6 +16,7 @@ public class CommentDetail {
         this.comm_user = comm_user;
         this.reply_user = reply_user;
     }
+
 
     public LafComment getComment() {
         return comment;

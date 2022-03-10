@@ -2,6 +2,7 @@ package com.ruoyi.wx.mapper;
 
 import java.util.List;
 import com.ruoyi.wx.domain.LafRelease;
+import com.ruoyi.wx.domain.LafWxRelease;
 import com.ruoyi.wx.util.echart.Graph;
 
 /**
@@ -73,4 +74,20 @@ public interface LafReleaseMapper
      */
 
     public List<Graph> fanChart();
+
+    /**
+     * 查询VIEW列表
+     *
+     * @param lafWxRelease VIEW
+     * @return VIEW集合
+     */
+    public List<LafWxRelease> selectLafWxReleaseList(LafWxRelease lafWxRelease);
+
+    /**
+     * 查询VIEW
+     *
+     * @param relId VIEW主键
+     * @return VIEW
+     */
+    public LafWxRelease selectLafWxReleaseByRelId(Long relId);
 }

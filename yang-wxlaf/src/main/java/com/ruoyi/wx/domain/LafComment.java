@@ -9,7 +9,7 @@ import com.ruoyi.common.core.domain.TreeEntity;
  * 帖子留言对象 laf_comment
  * 
  * @author yang
- * @date 2021-12-22
+ * @date 2022-03-04
  */
 public class LafComment extends TreeEntity
 {
@@ -17,10 +17,6 @@ public class LafComment extends TreeEntity
 
     /** ID */
     private Long comId;
-
-    /** 父ID */
-    @Excel(name = "父ID")
-    private Long paraentId;
 
     /** 文章ID */
     @Excel(name = "文章ID")
@@ -42,6 +38,10 @@ public class LafComment extends TreeEntity
     @Excel(name = "状态")
     private String comStatus;
 
+    /** 图片 */
+    @Excel(name = "图片")
+    private String comImage;
+
     public void setComId(Long comId) 
     {
         this.comId = comId;
@@ -50,15 +50,6 @@ public class LafComment extends TreeEntity
     public Long getComId() 
     {
         return comId;
-    }
-    public void setParaentId(Long paraentId) 
-    {
-        this.paraentId = paraentId;
-    }
-
-    public Long getParaentId() 
-    {
-        return paraentId;
     }
     public void setComRelId(Long comRelId) 
     {
@@ -105,18 +96,28 @@ public class LafComment extends TreeEntity
     {
         return comStatus;
     }
+    public void setComImage(String comImage) 
+    {
+        this.comImage = comImage;
+    }
+
+    public String getComImage() 
+    {
+        return comImage;
+    }
 
     @Override
     public String toString() {
         return new ToStringBuilder(this,ToStringStyle.MULTI_LINE_STYLE)
             .append("comId", getComId())
-            .append("paraentId", getParaentId())
+            .append("parentId", getParentId())
             .append("comRelId", getComRelId())
             .append("comStuId", getComStuId())
             .append("comContent", getComContent())
             .append("createTime", getCreateTime())
             .append("comStar", getComStar())
             .append("comStatus", getComStatus())
+            .append("comImage", getComImage())
             .toString();
     }
 }

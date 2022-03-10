@@ -1,4 +1,4 @@
-package com.ruoyi.wx.util.commet;
+package com.ruoyi.wx.util;
 
 public class User {
     private String avatar;

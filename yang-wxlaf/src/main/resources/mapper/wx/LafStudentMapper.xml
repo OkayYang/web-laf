@@ -28,7 +28,8 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 
     <select id="selectLafStudentList" parameterType="LafStudent" resultMap="LafStudentResult">
         <include refid="selectLafStudentVo"/>
-        <where>  
+        <where>
+            <if test="stuId != null "> and stu_id = #{stuId}</if>
             <if test="stuNick != null  and stuNick != ''"> and stu_nick = #{stuNick}</if>
             <if test="stuName != null  and stuName != ''"> and stu_name like concat('%', #{stuName}, '%')</if>
             <if test="stuSex != null  and stuSex != ''"> and stu_sex = #{stuSex}</if>

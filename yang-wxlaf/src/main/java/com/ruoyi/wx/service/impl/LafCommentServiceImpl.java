@@ -7,7 +7,8 @@ import com.ruoyi.common.utils.DateUtils;
 import com.ruoyi.wx.domain.LafStudent;
 import com.ruoyi.wx.mapper.LafStudentMapper;
 import com.ruoyi.wx.util.commet.CommentDetail;
-import com.ruoyi.wx.util.commet.User;
+import com.ruoyi.wx.util.commet.CommentTree;
+import com.ruoyi.wx.util.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.ruoyi.wx.mapper.LafCommentMapper;
@@ -28,6 +29,8 @@ public class LafCommentServiceImpl implements ILafCommentService
     private LafCommentMapper lafCommentMapper;
     @Autowired
     private LafStudentMapper lafStudentMapper;
+
+    private List<CommentDetail> commentDetails;
 
     /**
      * 查询帖子留言
@@ -116,7 +119,7 @@ public class LafCommentServiceImpl implements ILafCommentService
         {
             Ztree ztree = new Ztree();
             ztree.setId(lafComment.getComId());
-            ztree.setpId(lafComment.getParaentId());
+            ztree.setpId(lafComment.getParentId());
             ztree.setName(lafComment.getComContent());
             ztree.setTitle(lafComment.getComContent());
             ztrees.add(ztree);
@@ -134,14 +137,16 @@ public class LafCommentServiceImpl implements ILafCommentService
     public List<CommentDetail> selectLafCommentByTid(Long relID) {
         LafComment lafComment = new LafComment();
         lafComment.setComRelId(relID);
+
         List<LafComment> commentList = lafCommentMapper.selectWxLafCommentList(lafComment);
+
         List<CommentDetail> commentDetailList = new ArrayList<>();
         for (LafComment item:commentList
              ) {
             LafStudent student1 = lafStudentMapper.selectLafStudentByStuId(item.getComStuId());
             User user1 = new User(student1.getStuImage(),student1.getStuNick(),student1.getStuSex(),student1.getStuId());
 
-            LafComment comment = lafCommentMapper.selectLafCommentByComId(item.getParaentId());
+            LafComment comment = lafCommentMapper.selectLafCommentByComId(item.getParentId());
             Long replyUid = null;
             User user2 = new User();
             if (comment!=null){
@@ -156,4 +161,60 @@ public class LafCommentServiceImpl implements ILafCommentService
         }
         return commentDetailList;
     }
+
+    /**
+     * 通过帖子ID查看评论
+     * @param relID
+     * @return
+     */
+
+    public List<CommentTree> testComment(Long relID) {
+        //获取一级评论
+        LafComment lafComment = new LafComment();
+        lafComment.setComRelId(relID);
+        List<LafComment> commentList = lafCommentMapper.selectWxLafCommentList(lafComment);
+        List<CommentTree> commentTree = new ArrayList<>();
+        for (LafComment item:commentList
+        ) {
+            this.commentDetails = new ArrayList<>();
+            LafStudent student1 = lafStudentMapper.selectLafStudentByStuId(item.getComStuId());
+            User user1 = new User(student1.getStuImage(),student1.getStuNick(),student1.getStuSex(),student1.getStuId());
+
+            LafComment comment = lafCommentMapper.selectLafCommentByComId(item.getParentId());
+            User user2 = new User();
+            //获取二级评论列表
+            List<CommentDetail> commentDetailList = treeComments(item.getComId());
+            CommentDetail commentDetail = new CommentDetail(item,user1,user2);
+            commentTree.add(new CommentTree(commentDetail,commentDetailList));
+        }
+        return commentTree;
+    }
+    public List<CommentDetail> treeComments(Long pid){
+
+        LafComment lafComment = new LafComment();
+        lafComment.setParentId(pid);
+        List<LafComment> commentList = lafCommentMapper.selectWxLafCommentList(lafComment);
+        if (commentList.size()==0){
+            return null;
+        }
+        //获取二级评论信息
+        for (LafComment item: commentList
+             ) {
+
+            //获取评论者个人信息
+            LafStudent student1 = lafStudentMapper.selectLafStudentByStuId(item.getComStuId());
+            User user1 = new User(student1.getStuImage(),student1.getStuNick(),student1.getStuSex(),student1.getStuId());
+            //获取回复者个人信息
+            LafComment comment = lafCommentMapper.selectLafCommentByComId(pid);
+            LafStudent student2 = lafStudentMapper.selectLafStudentByStuId(comment.getComStuId());
+            User user2 = new User(student2.getStuImage(),student2.getStuNick(),student2.getStuSex(),student2.getStuId());
+            CommentDetail commentDetail = new CommentDetail(item,user1,user2);
+            //添加到回复列表
+            this.commentDetails.add(commentDetail);
+            //递归
+            treeComments(commentDetail.getComment().getComId());
+        }
+        return this.commentDetails;
+    }
+
 }
