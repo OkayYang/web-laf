@@ -1,20 +1,26 @@
 package com.ruoyi.wx.service.impl;
 
+import java.text.SimpleDateFormat;
+import java.util.HashMap;
 import java.util.List;
 import java.util.ArrayList;
+import java.util.Map;
+
 import com.ruoyi.common.core.domain.Ztree;
 import com.ruoyi.common.utils.DateUtils;
-import com.ruoyi.wx.domain.LafStudent;
-import com.ruoyi.wx.mapper.LafStudentMapper;
+import com.ruoyi.wx.domain.*;
+import com.ruoyi.wx.mapper.*;
 import com.ruoyi.wx.util.commet.CommentDetail;
 import com.ruoyi.wx.util.commet.CommentTree;
 import com.ruoyi.wx.util.User;
+import com.ruoyi.wx.util.tencent.domain.TemplateData;
+import com.ruoyi.wx.util.tencent.domain.WxMessVo;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
-import com.ruoyi.wx.mapper.LafCommentMapper;
-import com.ruoyi.wx.domain.LafComment;
 import com.ruoyi.wx.service.ILafCommentService;
 import com.ruoyi.common.core.text.Convert;
+import org.springframework.web.client.RestTemplate;
 
 /**
  * 帖子留言Service业务层处理
@@ -29,8 +35,17 @@ public class LafCommentServiceImpl implements ILafCommentService
     private LafCommentMapper lafCommentMapper;
     @Autowired
     private LafStudentMapper lafStudentMapper;
+    @Autowired
+    private LafReleaseMapper lafReleaseMapper;
+
+    @Autowired
+    private LafApiTokenMapper lafApiTokenMapper;
 
     private List<CommentDetail> commentDetails;
+
+
+    //设置JSON时间格式
+    private SimpleDateFormat myDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 
     /**
      * 查询帖子留言
@@ -66,7 +81,18 @@ public class LafCommentServiceImpl implements ILafCommentService
     public int insertLafComment(LafComment lafComment)
     {
         lafComment.setCreateTime(DateUtils.getNowDate());
-        return lafCommentMapper.insertLafComment(lafComment);
+        int result = lafCommentMapper.insertLafComment(lafComment);
+        if (result==1){
+            new Thread(){
+                @Override
+                public void run(){
+                    pushComment(lafComment);
+                }
+            }.start();
+
+
+        }
+        return result;
     }
 
     /**
@@ -215,6 +241,56 @@ public class LafCommentServiceImpl implements ILafCommentService
             treeComments(commentDetail.getComment().getComId());
         }
         return this.commentDetails;
+    }
+
+    public String pushComment(LafComment lafComment){
+
+
+        LafApiToken lafApiToken = lafApiTokenMapper.selectLafApiTokenById(1L);
+        String accessToken = lafApiToken.getToken();
+        LafRelease lafRelease = lafReleaseMapper.selectLafReleaseByRelId(lafComment.getComRelId());
+        LafStudent lafStudent = null;
+        LafComment replyComment = null;
+        LafStudent commentStudent = lafStudentMapper.selectLafStudentByStuId(lafComment.getComStuId());
+        if (lafComment.getParentId()==null) {
+            lafStudent = lafStudentMapper.selectLafStudentByStuId(lafRelease.getCreateId());
+
+        }else {
+            replyComment = lafCommentMapper.selectLafCommentByComId(lafComment.getParentId());
+            lafStudent = lafStudentMapper.selectLafStudentByStuId(replyComment.getComStuId());
+        }
+        String openId = lafStudent.getOpenid();
+        String title = lafRelease.getRelTitle();
+        String time = myDateFormat.format(lafComment.getCreateTime());
+        String content = lafComment.getComContent();
+        String replyName = commentStudent.getStuNick();
+
+        //这里简单起见我们每次都获取最新的access_token（时间开发中，应该在access_token快过期时再重新获取）
+        String url = "https://api.weixin.qq.com/cgi-bin/message/subscribe/send?access_token="+accessToken;
+
+        //拼接推送的模版
+        WxMessVo wxMssVo = new WxMessVo();
+        wxMssVo.setTouser(openId);//用户的openid（要发送给那个用户，通常这里应该动态传进来的）
+        wxMssVo.setTemplate_id("fTUA7CP8Wh1hbv-3x4QrrK_BRl5y8dnHMBnbTqdN9dI");//订阅消息模板id
+        wxMssVo.setPage("pages/detail/detail?tid="+lafComment.getComRelId());
+
+        Map<String, TemplateData> m = new HashMap<>(3);
+        m.put("thing7",new TemplateData("您有一条回复请注意查看。" ));
+        m.put("thing1", new TemplateData(title));
+        m.put("name2", new TemplateData(replyName));
+        m.put("time9",new TemplateData(time));
+        m.put("thing3",new TemplateData(content));
+        wxMssVo.setData(m);
+
+        RestTemplate restTemplate = new RestTemplate();
+
+        ResponseEntity<String> responseEntity =
+                restTemplate.postForEntity(url, wxMssVo, String.class);
+        System.out.println(responseEntity.getBody());
+
+        return responseEntity.getBody();
+
+
     }
 
 }

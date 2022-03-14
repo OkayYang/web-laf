@@ -1,6 +1,6 @@
-package com.ruoyi.wx.util.baidu.ocr;
+package com.ruoyi.wx.util.baidu;
 
-import com.ruoyi.wx.util.baidu.Unit;
+import com.ruoyi.wx.util.baidu.domain.Unit;
 
 import javax.imageio.ImageIO;
 import java.awt.*;

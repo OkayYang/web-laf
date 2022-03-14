@@ -1,6 +1,7 @@
-package com.ruoyi.wx.util.baidu;
+package com.ruoyi.wx.util.baidu.domain;
 
 import com.google.gson.annotations.SerializedName;
+import com.ruoyi.wx.util.baidu.domain.Location;
 
 public class Unit {
     @SerializedName("location")

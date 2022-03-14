@@ -1,15 +1,24 @@
 package com.ruoyi.wx.service.impl;
 
+import java.text.SimpleDateFormat;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
+
 import com.ruoyi.common.utils.DateUtils;
-import com.ruoyi.wx.domain.LafWxRelease;
+import com.ruoyi.wx.domain.*;
+import com.ruoyi.wx.mapper.LafApiTokenMapper;
+import com.ruoyi.wx.mapper.LafStudentMapper;
 import com.ruoyi.wx.util.echart.Graph;
+import com.ruoyi.wx.util.tencent.domain.TemplateData;
+import com.ruoyi.wx.util.tencent.domain.WxMessVo;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import com.ruoyi.wx.mapper.LafReleaseMapper;
-import com.ruoyi.wx.domain.LafRelease;
 import com.ruoyi.wx.service.ILafReleaseService;
 import com.ruoyi.common.core.text.Convert;
+import org.springframework.web.client.RestTemplate;
 
 /**
  * 帖子Service业务层处理
@@ -22,6 +31,12 @@ public class LafReleaseServiceImpl implements ILafReleaseService
 {
     @Autowired
     private LafReleaseMapper lafReleaseMapper;
+    @Autowired
+    private LafApiTokenMapper lafApiTokenMapper;
+    @Autowired
+    private LafStudentMapper lafStudentMapper;
+    //设置JSON时间格式
+    private SimpleDateFormat myDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 
     /**
      * 查询帖子
@@ -69,7 +84,15 @@ public class LafReleaseServiceImpl implements ILafReleaseService
     @Override
     public int updateLafRelease(LafRelease lafRelease)
     {
-        return lafReleaseMapper.updateLafRelease(lafRelease);
+        int result = lafReleaseMapper.updateLafRelease(lafRelease);
+
+        if (lafRelease.getRelClaimId()!=null&&result==1){
+            pushClaim(lafRelease.getRelId(),lafRelease.getRelClaimId());
+        }
+
+        return result;
+
+
     }
 
     /**
@@ -138,6 +161,51 @@ public class LafReleaseServiceImpl implements ILafReleaseService
     public LafWxRelease selectLafWxReleaseByRelId(Long relId)
     {
         return lafReleaseMapper.selectLafWxReleaseByRelId(relId);
+    }
+
+    public String pushClaim(Long relId,Long claimId){
+        LafRelease lafRelease = lafReleaseMapper.selectLafReleaseByRelId(relId);
+        LafStudent claimStudent = lafStudentMapper.selectLafStudentByStuId(claimId);
+        LafStudent relStudent = lafStudentMapper.selectLafStudentByStuId(lafRelease.getCreateId());
+
+
+        LafApiToken lafApiToken = lafApiTokenMapper.selectLafApiTokenById(1L);
+        String accessToken = lafApiToken.getToken();
+
+        String openId = relStudent.getOpenid();
+        String title = lafRelease.getRelTitle();
+        String name = claimStudent.getStuNick();
+        String phone = claimStudent.getStuQq();
+        String time = myDateFormat.format(lafRelease.getRelTime());
+        String content = "您发布的失物找到主人啦~~";
+
+
+        //这里简单起见我们每次都获取最新的access_token（时间开发中，应该在access_token快过期时再重新获取）
+        String url = "https://api.weixin.qq.com/cgi-bin/message/subscribe/send?access_token="+accessToken;
+
+        //拼接推送的模版
+        WxMessVo wxMssVo = new WxMessVo();
+        wxMssVo.setTouser(openId);//用户的openid（要发送给那个用户，通常这里应该动态传进来的）
+        wxMssVo.setTemplate_id("lhQ8vRjYydEDLDni5sWTUndbzrbtfvycNyP-SHMWMmM");//订阅消息模板id
+        wxMssVo.setPage("pages/index/index");
+
+        Map<String, TemplateData> m = new HashMap<>(3);
+        m.put("thing1",new TemplateData(content));
+        m.put("thing4", new TemplateData(title));
+        m.put("name2", new TemplateData(name));
+        m.put("phone_number3",new TemplateData(phone));
+        m.put("time5",new TemplateData(time));
+        wxMssVo.setData(m);
+
+        RestTemplate restTemplate = new RestTemplate();
+
+        ResponseEntity<String> responseEntity =
+                restTemplate.postForEntity(url, wxMssVo, String.class);
+        System.out.println(responseEntity.getBody());
+
+        return responseEntity.getBody();
+
+
     }
 
 }

@@ -11,7 +11,7 @@ import com.ruoyi.common.core.page.TableDataInfo;
 import com.ruoyi.common.enums.BusinessType;
 import com.ruoyi.wx.domain.LafRelease;
 import com.ruoyi.wx.service.ILafReleaseService;
-import com.ruoyi.wx.util.baidu.ocr.IDCardOcr;
+import com.ruoyi.wx.util.baidu.IDCardOcrService;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -34,6 +34,9 @@ public class LafWxReleaseController extends WxBaseController {
 
     @Autowired
     private ILafReleaseService lafReleaseService;
+
+    @Autowired
+    private IDCardOcrService idCardOcrService;
     /**
      * wx 发布帖子接口
      * @param lafRelease
@@ -88,10 +91,10 @@ public class LafWxReleaseController extends WxBaseController {
 
         wxOrcIDCardResult.setPhotoUrl(imageUri);
         //ocr卡证类别识别
-        String imageType = IDCardOcr.idCardType(imageUrl);
+        String imageType = idCardOcrService.idCardType(imageUrl);
         if ("sfz".equals(imageType)) {
             //ocr身份证识别打码
-            IDCardOcr.baiDuIDCardOcr(wxOrcIDCardResult,imageUrl,imagePath);
+            idCardOcrService.baiDuIDCardOcr(wxOrcIDCardResult,imageUrl,imagePath);
         }
         //ocr识别
         return wxOrcIDCardResult;

@@ -1,4 +1,4 @@
-package com.ruoyi.wx.util.baidu.ocr;
+package com.ruoyi.wx.util.baidu;
 
 
 import com.baidubce.http.ApiExplorerClient;
@@ -6,47 +6,32 @@ import com.baidubce.http.HttpMethodName;
 import com.baidubce.model.ApiExplorerRequest;
 import com.baidubce.model.ApiExplorerResponse;
 import com.google.gson.Gson;
+import com.ruoyi.wx.domain.LafApiToken;
+import com.ruoyi.wx.mapper.LafApiTokenMapper;
 import com.ruoyi.wx.util.WxOrcIDCardResult;
-import com.ruoyi.wx.util.baidu.BaiduOcrSfzResult;
-import com.ruoyi.wx.util.baidu.Unit;
+import com.ruoyi.wx.util.baidu.domain.BaiduOcrSfzResult;
+import com.ruoyi.wx.util.baidu.domain.Unit;
 import org.json.JSONObject;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-
-public class IDCardOcr {
-    private static String accessToken  = "24.d95dfacbfad875c9559c065822a7e4d9.2592000.1648808603.282335-25693405";
-
-    public static String getOcrAccessToken(){
-        String accessToken = null;
-        String path = "https://aip.baidubce.com/oauth/2.0/token";
-        ApiExplorerRequest request = new ApiExplorerRequest(HttpMethodName.POST, path);
+@Service
+public class IDCardOcrService {
+    @Autowired
+    private LafApiTokenMapper lafApiTokenMapper;
 
 
-        // 设置header参数
-        request.addHeaderParameter("Content-Type", "application/json;charset=UTF-8");
 
-        // 设置query参数
-        request.addQueryParameter("client_id", "BFWxODNsE1CPwIFKGkP38oUl");
-        request.addQueryParameter("client_secret", "4vFC4fxonGMi9CXMmt1pKmmwOOBwSK0y");
-        request.addQueryParameter("grant_type", "client_credentials");
+    //private static String accessToken  = "24.d95dfacbfad875c9559c065822a7e4d9.2592000.1648808603.282335-25693405";
 
-        ApiExplorerClient client = new ApiExplorerClient();
 
-        try {
-            ApiExplorerResponse response = client.sendRequest(request);
-            // 返回结果格式为Json字符串
-            JSONObject object= new JSONObject(response.getResult());
-            accessToken = object.getString("access_token");
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        return accessToken;
-
-    }
-    public static boolean baiDuIDCardOcr(WxOrcIDCardResult wxOrcIDCardResult,String imageUrl,String imagePath){
+    public  boolean baiDuIDCardOcr(WxOrcIDCardResult wxOrcIDCardResult,String imageUrl,String imagePath){
+        LafApiToken apiToken = lafApiTokenMapper.selectLafApiTokenById(2L);
+        String accessToken = apiToken.getToken();
         boolean flag =false;
         String path = "https://aip.baidubce.com/rest/2.0/ocr/v1/idcard";
         String isDetectPhoto = "true";
@@ -96,7 +81,9 @@ public class IDCardOcr {
         return flag;
 
     }
-    public static String idCardType(String imageUrl){
+    public  String idCardType(String imageUrl){
+        LafApiToken apiToken = lafApiTokenMapper.selectLafApiTokenById(2L);
+        String accessToken = apiToken.getToken();
         String type = null;
         String path = "https://aip.baidubce.com/rest/2.0/ocr/v1/multi_card_classify";
         ApiExplorerRequest request = new ApiExplorerRequest(HttpMethodName.POST, path);
@@ -133,7 +120,7 @@ public class IDCardOcr {
         }
         return type;
     }
-    static boolean sfzAddWaterMark(String imagePath,BaiduOcrSfzResult baiduOcrSfzResult) throws IOException {
+    public boolean sfzAddWaterMark(String imagePath,BaiduOcrSfzResult baiduOcrSfzResult) throws IOException {
 
         // 返回结果格式为Json字符串
         List<Unit> unitList = new ArrayList<>();
