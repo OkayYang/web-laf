@@ -1,5 +1,6 @@
 package com.ruoyi.wx.util.baidu;
 
+import com.ruoyi.wx.util.baidu.domain.Location;
 import com.ruoyi.wx.util.baidu.domain.Unit;
 
 import javax.imageio.ImageIO;
@@ -26,9 +27,10 @@ public class WaterMark {
      *  @param imagePath  图片位置
      *  @param units   打码单元列表
      */
-    public static boolean sfzMosaic(String imagePath,List<Unit> units) throws IOException {
+    public static boolean sfzMosaic(String imagePath,List<Location> units) throws IOException {
 
-        int mosaicSize = 20;
+        //马赛克尺寸大小
+        int mosaicSize = 5;
         String path = imagePath;
         //读取该图片
         BufferedImage bi = ImageIO.read(new FileInputStream(path));
@@ -45,12 +47,12 @@ public class WaterMark {
             System.err.println("马赛克尺寸设置不正确");
             return false;
         }
-        for (Unit item: units
+        for (Location item: units
              ) {
-            int x = item.getLocation().getLeft();
-            int y = item.getLocation().getTop();
-            int width = item.getLocation().getWidth();
-            int height = item.getLocation().getHeight();
+            int x = item.getLeft();
+            int y = item.getTop();
+            int width = item.getWidth();
+            int height = item.getHeight();
             //2. 设置各方向绘制的马赛克块个数
             int xcount = width / mosaicSize; // x方向绘制个数
             int ycount = height / mosaicSize; // y方向绘制个数
@@ -90,7 +92,8 @@ public class WaterMark {
                     } else {
                         centerY += (mheight - 1) / 2;
                     }
-                    Color color = new Color(bi.getRGB(centerX, centerY));//获取矩形颜色取中心像素点RGB值
+                    //Color color = new Color(bi.getRGB(centerX, centerY));//获取矩形颜色取中心像素点RGB值
+                    Color color = new Color(255,255,255);
                     gs.setColor(color);//设置绘制颜色
                     gs.fillRect(xTmp, yTmp, mwidth, mheight);//画着色块
                     yTmp += mosaicSize;// 计算下一个矩形的y坐标

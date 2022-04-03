@@ -1,6 +1,7 @@
 package com.ruoyi.web.controller.wx.api;
 
 import com.alibaba.fastjson.JSONObject;
+import com.ruoyi.common.annotation.RepeatSubmit;
 import com.ruoyi.wx.util.WxRespResult;
 import com.ruoyi.wx.util.tencent.TencentWxApi;
 import com.ruoyi.wx.util.token.JwtUtils;
@@ -27,6 +28,7 @@ public class LafGetWxUserOpenidController extends WxBaseController {
 
     @PostMapping("/check")
     @ResponseBody
+    @RepeatSubmit(interval = 500, message = "请求过于频繁")
     public WxRespResult checkLogin(@RequestBody WxUserModel wxUserModel) throws Exception {
         System.out.println(wxUserModel);
         LafStudent student = new LafStudent();

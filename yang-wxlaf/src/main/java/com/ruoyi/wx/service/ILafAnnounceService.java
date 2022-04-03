@@ -7,7 +7,7 @@ import com.ruoyi.wx.domain.LafAnnounce;
  * 小程序公告Service接口
  * 
  * @author yang
- * @date 2021-12-20
+ * @date 2022-03-25
  */
 public interface ILafAnnounceService 
 {
@@ -58,4 +58,9 @@ public interface ILafAnnounceService
      * @return 结果
      */
     public int deleteLafAnnounceByAnnId(Long annId);
+    /**
+     * 更新浏览量
+     * @return
+     */
+    public int updateBrowse(Long annId);
 }

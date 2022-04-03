@@ -1,6 +1,7 @@
 package com.ruoyi.wx.service.impl;
 
 import java.util.List;
+import com.ruoyi.common.utils.DateUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.ruoyi.wx.mapper.LafAnnounceMapper;
@@ -12,7 +13,7 @@ import com.ruoyi.common.core.text.Convert;
  * 小程序公告Service业务层处理
  * 
  * @author yang
- * @date 2021-12-20
+ * @date 2022-03-25
  */
 @Service
 public class LafAnnounceServiceImpl implements ILafAnnounceService 
@@ -53,6 +54,7 @@ public class LafAnnounceServiceImpl implements ILafAnnounceService
     @Override
     public int insertLafAnnounce(LafAnnounce lafAnnounce)
     {
+        lafAnnounce.setCreateTime(DateUtils.getNowDate());
         return lafAnnounceMapper.insertLafAnnounce(lafAnnounce);
     }
 
@@ -90,5 +92,14 @@ public class LafAnnounceServiceImpl implements ILafAnnounceService
     public int deleteLafAnnounceByAnnId(Long annId)
     {
         return lafAnnounceMapper.deleteLafAnnounceByAnnId(annId);
+    }
+
+    /**
+     * 更新浏览量
+     * @return
+     */
+    @Override
+    public int updateBrowse(Long annId){
+        return lafAnnounceMapper.updateBrowse(annId);
     }
 }

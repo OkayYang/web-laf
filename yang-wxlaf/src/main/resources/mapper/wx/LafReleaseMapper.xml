@@ -84,8 +84,9 @@
             <if test="stuSex != null  and stuSex != ''"> and stu_sex = #{stuSex}</if>
             <if test="relClaimId != null "> and rel_claim_id = #{relClaimId}</if>
 
-            <if test="relTitle != null  and relTitle != ''"> and rel_title = #{relTitle} </if>
-            <if test="relDesc != null  and relDesc != ''"> and rel_desc = #{relDesc}</if>
+            <if test="relTitle != null  and relTitle != ''"> and rel_title like concat('%', #{relTitle}, '%')</if>
+            <if test="relDesc != null  and relDesc != ''"> and rel_desc like concat('%', #{relDesc}, '%')</if>
+
         </where>
         order by create_time desc
     </select>
@@ -206,5 +207,9 @@
     <select id="fanChart" resultMap="GraphResult">
         select cate_name as name,count(*) as num from laf_release,laf_category where laf_release.rel_cate_id = laf_category.cate_id GROUP BY cate_name
     </select>
+
+    <update id="updateBrowse" parameterType="Long">
+        update laf_release set rel_flow = rel_flow+1 where rel_id = #{relId}
+    </update>
 
 </mapper>

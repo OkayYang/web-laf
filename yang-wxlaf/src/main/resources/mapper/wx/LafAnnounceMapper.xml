@@ -1,41 +1,42 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper
-PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
-"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.ruoyi.wx.mapper.LafAnnounceMapper">
-    
+
     <resultMap type="LafAnnounce" id="LafAnnounceResult">
         <result property="annId"    column="ann_id"    />
         <result property="annTitle"    column="ann_title"    />
         <result property="annContent"    column="ann_content"    />
         <result property="createBy"    column="create_by"    />
-        <result property="creatTime"    column="creat_time"    />
+        <result property="createTime"    column="create_time"    />
         <result property="image"    column="image"    />
         <result property="status"    column="status"    />
+        <result property="flow"    column="flow"    />
     </resultMap>
 
     <sql id="selectLafAnnounceVo">
-        select ann_id, ann_title, ann_content, create_by, creat_time, image, status from laf_announce
+        select ann_id, ann_title, ann_content, create_by, create_time, image, status, flow from laf_announce
     </sql>
 
     <select id="selectLafAnnounceList" parameterType="LafAnnounce" resultMap="LafAnnounceResult">
         <include refid="selectLafAnnounceVo"/>
-        <where>  
+        <where>
+            <if test="annId != null "> and ann_id = #{annId}</if>
             <if test="annTitle != null  and annTitle != ''"> and ann_title = #{annTitle}</if>
             <if test="annContent != null  and annContent != ''"> and ann_content = #{annContent}</if>
             <if test="createBy != null  and createBy != ''"> and create_by = #{createBy}</if>
-             <!-- datatime 模糊查询-->
-            <if test="creatTime != null "> and  date_format(creat_time,'%y%m%d') = date_format(#{creatTime},'%y%m%d')</if>
-
-            <if test="status != null  and status != ''"> and status = #{status}</if>
+            <!--时间模糊查询-->
+            <if test="createTime != null "> and  date_format(create_time,'%y%m%d') = date_format(#{createTime},'%y%m%d')</if>
         </where>
+        order by create_time desc
     </select>
-    
+
     <select id="selectLafAnnounceByAnnId" parameterType="Long" resultMap="LafAnnounceResult">
         <include refid="selectLafAnnounceVo"/>
         where ann_id = #{annId}
     </select>
-        
+
     <insert id="insertLafAnnounce" parameterType="LafAnnounce">
         insert into laf_announce
         <trim prefix="(" suffix=")" suffixOverrides=",">
@@ -43,19 +44,21 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
             <if test="annTitle != null">ann_title,</if>
             <if test="annContent != null">ann_content,</if>
             <if test="createBy != null">create_by,</if>
-            <if test="creatTime != null">creat_time,</if>
+            <if test="createTime != null">create_time,</if>
             <if test="image != null">image,</if>
             <if test="status != null">status,</if>
-         </trim>
+            <if test="flow != null">flow,</if>
+        </trim>
         <trim prefix="values (" suffix=")" suffixOverrides=",">
             <if test="annId != null">#{annId},</if>
             <if test="annTitle != null">#{annTitle},</if>
             <if test="annContent != null">#{annContent},</if>
             <if test="createBy != null">#{createBy},</if>
-            <if test="creatTime != null">#{creatTime},</if>
+            <if test="createTime != null">#{createTime},</if>
             <if test="image != null">#{image},</if>
             <if test="status != null">#{status},</if>
-         </trim>
+            <if test="flow != null">#{flow},</if>
+        </trim>
     </insert>
 
     <update id="updateLafAnnounce" parameterType="LafAnnounce">
@@ -64,9 +67,10 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
             <if test="annTitle != null">ann_title = #{annTitle},</if>
             <if test="annContent != null">ann_content = #{annContent},</if>
             <if test="createBy != null">create_by = #{createBy},</if>
-            <if test="creatTime != null">creat_time = #{creatTime},</if>
+            <if test="createTime != null">create_time = #{createTime},</if>
             <if test="image != null">image = #{image},</if>
             <if test="status != null">status = #{status},</if>
+            <if test="flow != null">flow = #{flow},</if>
         </trim>
         where ann_id = #{annId}
     </update>
@@ -76,10 +80,13 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
     </delete>
 
     <delete id="deleteLafAnnounceByAnnIds" parameterType="String">
-        delete from laf_announce where ann_id in 
+        delete from laf_announce where ann_id in
         <foreach item="annId" collection="array" open="(" separator="," close=")">
             #{annId}
         </foreach>
     </delete>
+    <update id="updateBrowse" parameterType="Long">
+        update laf_announce set flow = flow+1 where ann_id = #{annId}
+    </update>
 
 </mapper>

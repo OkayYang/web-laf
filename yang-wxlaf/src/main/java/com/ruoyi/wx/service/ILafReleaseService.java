@@ -89,5 +89,11 @@ public interface ILafReleaseService
      */
     public LafWxRelease selectLafWxReleaseByRelId(Long relId);
 
+    /**
+     * 更新浏览量
+     * @return
+     */
+    public int updateBrowse(Long relId);
+
 
 }

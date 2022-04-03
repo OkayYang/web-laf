@@ -4,6 +4,7 @@ package com.ruoyi.web.controller.wx.api;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import com.ruoyi.common.annotation.Log;
+import com.ruoyi.common.annotation.RepeatSubmit;
 import com.ruoyi.wx.domain.LafWxRelease;
 import com.ruoyi.wx.util.WxOrcIDCardResult;
 import com.ruoyi.wx.util.WxRespResult;
@@ -11,7 +12,7 @@ import com.ruoyi.common.core.page.TableDataInfo;
 import com.ruoyi.common.enums.BusinessType;
 import com.ruoyi.wx.domain.LafRelease;
 import com.ruoyi.wx.service.ILafReleaseService;
-import com.ruoyi.wx.util.baidu.IDCardOcrService;
+import com.ruoyi.wx.util.baidu.BaiduOcrService;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -36,7 +37,7 @@ public class LafWxReleaseController extends WxBaseController {
     private ILafReleaseService lafReleaseService;
 
     @Autowired
-    private IDCardOcrService idCardOcrService;
+    private BaiduOcrService baiduOcrService;
     /**
      * wx 发布帖子接口
      * @param lafRelease
@@ -45,6 +46,7 @@ public class LafWxReleaseController extends WxBaseController {
 
     @PostMapping("/auth/add/check")
     @ResponseBody
+    @RepeatSubmit(interval = 500, message = "请求过于频繁")
     public WxRespResult addCheck(@RequestBody LafRelease lafRelease)
     {
         lafRelease.setCreateId(getWxUid());
@@ -71,6 +73,7 @@ public class LafWxReleaseController extends WxBaseController {
 
     @ResponseBody
     @PostMapping("/upload")
+    @RepeatSubmit(interval = 500, message = "请求过于频繁")
     public WxOrcIDCardResult upload(@RequestParam("file") MultipartFile file ) throws Exception{
         WxOrcIDCardResult wxOrcIDCardResult = new WxOrcIDCardResult();
         if (file==null){
@@ -78,7 +81,9 @@ public class LafWxReleaseController extends WxBaseController {
         }
         //fileName是你前台传参时的文件名字，也可以不指定
         //不指定名字，保存时使用 file.getOriginalFilename()得到文件名字
+
         String fileName = file.getOriginalFilename();
+        //String name = file.getOriginalFilename().substring(0,file.getOriginalFilename().lastIndexOf(".")) + ".png";
         //图片地址
         String imageUri = "/img/user/tiezi/"+fileName;
         //网络请求图片资源地址
@@ -90,13 +95,9 @@ public class LafWxReleaseController extends WxBaseController {
         file.transferTo(new File(imagePath));
 
         wxOrcIDCardResult.setPhotoUrl(imageUri);
-        //ocr卡证类别识别
-        String imageType = idCardOcrService.idCardType(imageUrl);
-        if ("sfz".equals(imageType)) {
-            //ocr身份证识别打码
-            idCardOcrService.baiDuIDCardOcr(wxOrcIDCardResult,imageUrl,imagePath);
-        }
-        //ocr识别
+
+        baiduOcrService.classRecognize(wxOrcIDCardResult,imageUrl,imagePath);
+        //ocr识别结果
         return wxOrcIDCardResult;
     }
 
@@ -143,6 +144,7 @@ public class LafWxReleaseController extends WxBaseController {
     @Log(title = "帖子", businessType = BusinessType.DELETE)
     @GetMapping( "/auth/delete")
     @ResponseBody
+    @RepeatSubmit(interval = 500, message = "请求过于频繁")
     public WxRespResult remove(@RequestParam("id") Long tid)
     {
         LafRelease release = new LafRelease();
@@ -176,6 +178,12 @@ public class LafWxReleaseController extends WxBaseController {
             return error("修改失败");
         }
 
+    }
+
+    @GetMapping("/skim")
+    @ResponseBody
+    public WxRespResult updateSkim(@RequestParam("tid") Long tid){
+        return toAjax(lafReleaseService.updateBrowse(tid));
     }
 
 

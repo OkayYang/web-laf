@@ -11,11 +11,12 @@
                 <div class="select-list">
                     <ul>
                         <li>
+                            <label>公告id：</label>
+                            <input type="text" name="annId"/>
+                        </li>
+                        <li>
                             <label>标题类型：</label>
-                            <select name="annTitle" th:with="type=${@dict.getType('sys_notice_type')}">
-                                <option value="">所有</option>
-                                <option th:each="dict : ${type}" th:text="${dict.dictLabel}" th:value="${dict.dictValue}"></option>
-                            </select>
+                            <input type="text" name="annTitle"/>
                         </li>
                         <li>
                             <label>创建者：</label>
@@ -23,11 +24,11 @@
                         </li>
                         <li>
                             <label>发布时间：</label>
-                            <input type="text" class="time-input" placeholder="请选择发布时间" name="creatTime"/>
+                            <input type="text" class="time-input" placeholder="请选择发布时间" name="createTime"/>
                         </li>
                         <li>
                             <label>状态：</label>
-                            <select name="status" th:with="type=${@dict.getType('sys_notice_status')}">
+                            <select name="status" th:with="type=${@dict.getType('laf_user_status')}">
                                 <option value="">所有</option>
                                 <option th:each="dict : ${type}" th:text="${dict.dictLabel}" th:value="${dict.dictValue}"></option>
                             </select>
@@ -64,8 +65,7 @@
 <script th:inline="javascript">
     var editFlag = [[${@permission.hasPermi('wx:announce:edit')}]];
     var removeFlag = [[${@permission.hasPermi('wx:announce:remove')}]];
-    var annTitleDatas = [[${@dict.getType('sys_notice_type')}]];
-    var statusDatas = [[${@dict.getType('sys_notice_status')}]];
+    var statusDatas = [[${@dict.getType('laf_user_status')}]];
     var prefix = ctx + "wx/announce";
 
     $(function() {
@@ -86,10 +86,7 @@
                 },
                 {
                     field: 'annTitle',
-                    title: '标题类型',
-                    formatter: function(value, row, index) {
-                        return $.table.selectDictLabel(annTitleDatas, value);
-                    }
+                    title: '标题类型'
                 },
                 {
                     field: 'annContent',
@@ -100,12 +97,17 @@
                     title: '创建者'
                 },
                 {
-                    field: 'creatTime',
+                    field: 'createTime',
                     title: '发布时间'
                 },
                 {
-                    field: 'image',
-                    title: '图片'
+
+                    field: "image", align: "center", title: "图片",
+                    formatter: function (value, row, index) {
+//var image =  '<div><a href="http://localhost' + row.relImage + '" target="view_window"><img style="width: 50px;height: 50px;margin: auto"  src="http://localhost' + row.relImage + '"></img></a></div>';
+                        var image = '<div><a href="' + row.image + '" target="view_window"><img style="width: 50px;height: 50px;margin: auto"  src="' + row.image + '"></img></a></div>';
+                        return image;
+                    }
                 },
                 {
                     field: 'status',
@@ -113,6 +115,10 @@
                     formatter: function(value, row, index) {
                         return $.table.selectDictLabel(statusDatas, value);
                     }
+                },
+                {
+                    field: 'flow',
+                    title: '浏览量'
                 },
                 {
                     title: '操作',

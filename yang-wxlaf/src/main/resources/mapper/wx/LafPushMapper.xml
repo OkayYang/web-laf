@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ruoyi.wx.mapper.LafPushMapper">
+
+    <resultMap type="LafPush" id="LafPushResult">
+        <result property="pushId"    column="push_id"    />
+        <result property="pushTitle"    column="push_title"    />
+        <result property="pushClue"    column="push_clue"    />
+        <result property="relId"    column="rel_id"    />
+        <result property="cateId"    column="cate_id"    />
+        <result property="stuId"    column="stu_id"    />
+        <result property="createTime"    column="create_time"    />
+        <result property="pushCount"    column="push_count"    />
+        <result property="pushSimilar"    column="push_similar"    />
+        <result property="pushStatus"    column="push_status"    />
+        <result property="pushDel"    column="push_del"    />
+    </resultMap>
+
+    <sql id="selectLafPushVo">
+        select push_id, push_title, push_clue, rel_id, cate_id, stu_id, create_time, push_count, push_similar, push_status, push_del from laf_push
+    </sql>
+
+    <select id="selectLafPushList" parameterType="LafPush" resultMap="LafPushResult">
+        <include refid="selectLafPushVo"/>
+        <where>
+            <if test="pushTitle != null  and pushTitle != ''"> and push_title like concat('%', #{pushTitle}, '%')</if>
+            <if test="pushClue != null  and pushClue != ''"> and push_clue like concat('%', #{pushClue}, '%')</if>
+            <if test="relId != null  and relId != ''"> and rel_id like concat('%', #{relId}, '%')</if>
+            <if test="cateId != null "> and cate_id = #{cateId}</if>
+            <if test="stuId != null "> and stu_id = #{stuId}</if>
+            <if test="createTime != null "> and create_time = #{createTime}</if>
+            <if test="pushSimilar != null "> and push_similar = #{pushSimilar}</if>
+            <if test="pushStatus != null  and pushStatus != ''"> and push_status = #{pushStatus}</if>
+            <if test="pushDel != null  and pushDel != ''"> and push_del = #{pushDel}</if>
+        </where>
+        order by create_time desc
+    </select>
+
+    <select id="selectLafPushByPushId" parameterType="Long" resultMap="LafPushResult">
+        <include refid="selectLafPushVo"/>
+        where push_id = #{pushId}
+    </select>
+
+    <insert id="insertLafPush" parameterType="LafPush">
+        insert into laf_push
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="pushId != null">push_id,</if>
+            <if test="pushTitle != null">push_title,</if>
+            <if test="pushClue != null">push_clue,</if>
+            <if test="relId != null">rel_id,</if>
+            <if test="cateId != null">cate_id,</if>
+            <if test="stuId != null">stu_id,</if>
+            <if test="createTime != null">create_time,</if>
+            <if test="pushCount != null">push_count,</if>
+            <if test="pushSimilar != null">push_similar,</if>
+            <if test="pushStatus != null">push_status,</if>
+            <if test="pushDel != null">push_del,</if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="pushId != null">#{pushId},</if>
+            <if test="pushTitle != null">#{pushTitle},</if>
+            <if test="pushClue != null">#{pushClue},</if>
+            <if test="relId != null">#{relId},</if>
+            <if test="cateId != null">#{cateId},</if>
+            <if test="stuId != null">#{stuId},</if>
+            <if test="createTime != null">#{createTime},</if>
+            <if test="pushCount != null">#{pushCount},</if>
+            <if test="pushSimilar != null">#{pushSimilar},</if>
+            <if test="pushStatus != null">#{pushStatus},</if>
+            <if test="pushDel != null">#{pushDel},</if>
+        </trim>
+    </insert>
+
+    <update id="updateLafPush" parameterType="LafPush">
+        update laf_push
+        <trim prefix="SET" suffixOverrides=",">
+            <if test="pushTitle != null">push_title = #{pushTitle},</if>
+            <if test="pushClue != null">push_clue = #{pushClue},</if>
+            <if test="relId != null">rel_id = #{relId},</if>
+            <if test="cateId != null">cate_id = #{cateId},</if>
+            <if test="stuId != null">stu_id = #{stuId},</if>
+            <if test="createTime != null">create_time = #{createTime},</if>
+            <if test="pushCount != null">push_count = #{pushCount},</if>
+            <if test="pushSimilar != null">push_similar = #{pushSimilar},</if>
+            <if test="pushStatus != null">push_status = #{pushStatus},</if>
+            <if test="pushDel != null">push_del = #{pushDel},</if>
+        </trim>
+        where push_id = #{pushId}
+    </update>
+
+    <delete id="deleteLafPushByPushId" parameterType="Long">
+        delete from laf_push where push_id = #{pushId}
+    </delete>
+
+    <delete id="deleteLafPushByPushIds" parameterType="String">
+        delete from laf_push where push_id in
+        <foreach item="pushId" collection="array" open="(" separator="," close=")">
+            #{pushId}
+        </foreach>
+    </delete>
+
+    <update id="updateCount" >
+        update laf_push set rel_id = #{relId},push_count = push_count+1 where push_id = #{pushId}
+    </update>
+
+</mapper>

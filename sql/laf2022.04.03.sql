@@ -1,17 +1,17 @@
 /*
  Navicat Premium Data Transfer
 
- Source Server         : localhost
+ Source Server         : 101.42.222.167
  Source Server Type    : MySQL
- Source Server Version : 80023
- Source Host           : localhost:3306
+ Source Server Version : 80024
+ Source Host           : 101.42.222.167:3306
  Source Schema         : laf
 
  Target Server Type    : MySQL
- Target Server Version : 80023
+ Target Server Version : 80024
  File Encoding         : 65001
 
- Date: 08/03/2022 22:34:48
+ Date: 03/04/2022 15:32:34
 */
 
 SET NAMES utf8mb4;
@@ -43,17 +43,20 @@ CREATE TABLE `gen_table`  (
   `update_time` datetime NULL DEFAULT NULL COMMENT '更新时间',
   `remark` varchar(500) CHARACTER SET utf8 COLLATE utf8_bin NULL DEFAULT NULL COMMENT '备注',
   PRIMARY KEY (`table_id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 24 CHARACTER SET = utf8 COLLATE = utf8_bin COMMENT = '代码生成业务表' ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 29 CHARACTER SET = utf8 COLLATE = utf8_bin COMMENT = '代码生成业务表' ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of gen_table
 -- ----------------------------
-INSERT INTO `gen_table` VALUES (19, 'laf_category', '物品种类', '', NULL, 'LafCategory', 'tree', 'com.ruoyi.wx', 'wx', 'category', '物品种类', 'yang', '0', '/', '{\"parentMenuId\":\"2002\",\"treeName\":\"cate_name\",\"treeParentCode\":\"parent_id\",\"parentMenuName\":\"物品分类\",\"treeCode\":\"cate_id\"}', 'admin', '2021-10-08 16:14:51', '', '2022-02-11 22:16:49', '');
-INSERT INTO `gen_table` VALUES (20, 'laf_student', '学生表', '', NULL, 'LafStudent', 'crud', 'com.ruoyi.wx', 'wx', 'student', '学生', 'yang', '0', '/', '{\"parentMenuId\":\"2000\",\"treeName\":\"\",\"treeParentCode\":\"\",\"parentMenuName\":\"用户管理\",\"treeCode\":\"\"}', 'admin', '2021-10-08 17:29:45', '', '2021-12-06 16:38:26', '');
-INSERT INTO `gen_table` VALUES (21, 'laf_release', '帖子表', '', NULL, 'LafRelease', 'crud', 'com.ruoyi.wx', 'wx', 'release', '帖子', 'yang', '0', '/', '{\"parentMenuId\":\"2001\",\"treeName\":\"\",\"treeParentCode\":\"\",\"parentMenuName\":\"帖子管理\",\"treeCode\":\"\"}', 'admin', '2021-10-08 17:53:33', '', '2022-02-27 22:12:44', '');
-INSERT INTO `gen_table` VALUES (22, 'laf_announce', 'WX公告', '', NULL, 'LafAnnounce', 'crud', 'com.ruoyi.wx', 'wx', 'announce', '小程序公告', 'yang', '0', '/', '{\"parentMenuId\":\"4\",\"treeName\":\"\",\"treeParentCode\":\"\",\"parentMenuName\":\"失物招领\",\"treeCode\":\"\"}', 'admin', '2021-12-20 11:21:04', '', '2021-12-20 15:32:34', '');
+INSERT INTO `gen_table` VALUES (19, 'laf_category', '物品种类', '', NULL, 'LafCategory', 'tree', 'com.ruoyi.wx', 'wx', 'category', '物品种类', 'yang', '0', '/', '{\"parentMenuId\":\"2002\",\"treeName\":\"cate_name\",\"treeParentCode\":\"parent_id\",\"parentMenuName\":\"物品分类\",\"treeCode\":\"cate_id\"}', 'admin', '2021-10-08 16:14:51', '', '2022-03-09 21:34:28', '');
+INSERT INTO `gen_table` VALUES (20, 'laf_student', '学生表', '', NULL, 'LafStudent', 'crud', 'com.ruoyi.wx', 'wx', 'student', '学生', 'yang', '0', '/', '{\"parentMenuId\":\"2000\",\"treeName\":\"\",\"treeParentCode\":\"\",\"parentMenuName\":\"用户管理\",\"treeCode\":\"\"}', 'admin', '2021-10-08 17:29:45', '', '2022-03-09 21:09:23', '');
+INSERT INTO `gen_table` VALUES (21, 'laf_release', '帖子表', '', NULL, 'LafRelease', 'crud', 'com.ruoyi.wx', 'wx', 'release', '帖子', 'yang', '0', '/', '{\"parentMenuId\":\"2001\",\"treeName\":\"\",\"treeParentCode\":\"\",\"parentMenuName\":\"帖子管理\",\"treeCode\":\"\"}', 'admin', '2021-10-08 17:53:33', '', '2022-03-09 21:24:43', '');
+INSERT INTO `gen_table` VALUES (22, 'laf_announce', 'WX公告', '', NULL, 'LafAnnounce', 'crud', 'com.ruoyi.wx', 'wx', 'announce', '小程序公告', 'yang', '0', '/', '{\"parentMenuId\":\"4\",\"treeName\":\"\",\"treeParentCode\":\"\",\"parentMenuName\":\"失物招领\",\"treeCode\":\"\"}', 'admin', '2021-12-20 11:21:04', '', '2022-03-25 18:03:15', '');
 INSERT INTO `gen_table` VALUES (23, 'laf_comment', '用户评论表', '', NULL, 'LafComment', 'tree', 'com.ruoyi.wx', 'wx', 'comment', '帖子留言', 'yang', '0', '/', '{\"parentMenuId\":\"4\",\"treeName\":\"com_content\",\"treeParentCode\":\"parent_id\",\"parentMenuName\":\"失物招领\",\"treeCode\":\"com_id\"}', 'admin', '2021-12-22 15:54:03', '', '2022-03-04 18:00:02', '');
 INSERT INTO `gen_table` VALUES (24, 'laf_wx_release', 'VIEW', '', NULL, 'LafWxRelease', 'crud', 'com.ruoyi.wx', 'wx', 'release', 'VIEW', 'yang', '0', '/', '{\"parentMenuId\":\"\",\"treeName\":\"\",\"treeParentCode\":\"\",\"parentMenuName\":\"\",\"treeCode\":\"\"}', 'admin', '2022-02-24 14:26:55', '', '2022-02-27 22:21:34', '');
+INSERT INTO `gen_table` VALUES (25, 'laf_api_token', 'apiToken', '', NULL, 'LafApiToken', 'crud', 'com.ruoyi.wx', 'wx', 'token', 'ApiToken', 'yang', '0', '/', '{\"parentMenuId\":\"4\",\"treeName\":\"\",\"treeParentCode\":\"\",\"parentMenuName\":\"失物招领\",\"treeCode\":\"\"}', 'admin', '2022-03-10 15:08:06', '', '2022-03-10 18:59:23', '');
+INSERT INTO `gen_table` VALUES (27, 'laf_wx_push_view', 'VIEW', '', NULL, 'LafWxPushView', 'crud', 'com.ruoyi.wx', 'wx', 'view', 'VIEW', 'yang', '0', '/', '{\"parentMenuId\":\"\",\"treeName\":\"\",\"treeParentCode\":\"\",\"parentMenuName\":\"\",\"treeCode\":\"\"}', 'admin', '2022-03-11 16:02:41', '', '2022-03-11 16:34:25', '');
+INSERT INTO `gen_table` VALUES (28, 'laf_push', '推送表', '', NULL, 'LafPush', 'crud', 'com.ruoyi.wx', 'wx', 'push', '推送订阅', 'yang', '0', '/', '{\"parentMenuId\":\"4\",\"treeName\":\"\",\"treeParentCode\":\"\",\"parentMenuName\":\"失物招领\",\"treeCode\":\"\"}', 'admin', '2022-04-03 15:05:18', '', '2022-04-03 15:16:08', '');
 
 -- ----------------------------
 -- Table structure for gen_table_column
@@ -83,51 +86,50 @@ CREATE TABLE `gen_table_column`  (
   `update_by` varchar(64) CHARACTER SET utf8 COLLATE utf8_bin NULL DEFAULT '' COMMENT '更新者',
   `update_time` datetime NULL DEFAULT NULL COMMENT '更新时间',
   PRIMARY KEY (`column_id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 311 CHARACTER SET = utf8 COLLATE = utf8_bin COMMENT = '代码生成业务表字段' ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 354 CHARACTER SET = utf8 COLLATE = utf8_bin COMMENT = '代码生成业务表字段' ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of gen_table_column
 -- ----------------------------
-INSERT INTO `gen_table_column` VALUES (230, '19', 'cate_id', '物品ID', 'int', 'Long', 'cateId', '1', '1', NULL, '1', NULL, NULL, NULL, 'EQ', 'input', '', 1, 'admin', '2021-10-08 16:14:51', NULL, '2022-02-11 22:16:49');
-INSERT INTO `gen_table_column` VALUES (232, '19', 'cate_name', '名称', 'varchar(255)', 'String', 'cateName', '0', '0', NULL, '1', '1', '1', '1', 'LIKE', 'input', '', 3, 'admin', '2021-10-08 16:14:51', NULL, '2022-02-11 22:16:49');
-INSERT INTO `gen_table_column` VALUES (233, '19', 'create_time', '创建时间', 'timestamp', 'Date', 'createTime', '0', '0', NULL, '1', NULL, NULL, NULL, 'EQ', 'datetime', '', 4, 'admin', '2021-10-08 16:14:51', NULL, '2022-02-11 22:16:49');
-INSERT INTO `gen_table_column` VALUES (234, '19', 'create_by', '创建者', 'varchar(255)', 'String', 'createBy', '0', '0', NULL, '1', NULL, NULL, NULL, 'EQ', 'input', '', 5, 'admin', '2021-10-08 16:14:51', NULL, '2022-02-11 22:16:49');
-INSERT INTO `gen_table_column` VALUES (236, '20', 'stu_id', '学生ID', 'int', 'Long', 'stuId', '1', '1', NULL, '1', NULL, NULL, NULL, 'EQ', 'input', '', 1, 'admin', '2021-10-08 17:29:45', NULL, '2021-12-06 16:38:26');
-INSERT INTO `gen_table_column` VALUES (237, '20', 'stu_nick', '昵称', 'varchar(255)', 'String', 'stuNick', '0', '0', NULL, '1', '1', '1', '1', 'EQ', 'input', '', 2, 'admin', '2021-10-08 17:29:45', NULL, '2021-12-06 16:38:26');
-INSERT INTO `gen_table_column` VALUES (238, '20', 'stu_name', '姓名', 'varchar(255)', 'String', 'stuName', '0', '0', NULL, '1', '1', '1', '1', 'LIKE', 'input', '', 3, 'admin', '2021-10-08 17:29:45', NULL, '2021-12-06 16:38:26');
-INSERT INTO `gen_table_column` VALUES (239, '20', 'stu_sex', '性别', 'char(1)', 'String', 'stuSex', '0', '0', NULL, '1', '1', '1', '1', 'EQ', 'select', 'laf_user_sex', 4, 'admin', '2021-10-08 17:29:45', NULL, '2021-12-06 16:38:26');
-INSERT INTO `gen_table_column` VALUES (240, '20', 'stu_xh', '学号', 'varchar(255)', 'String', 'stuXh', '0', '0', NULL, '1', '1', '1', '1', 'EQ', 'input', '', 5, 'admin', '2021-10-08 17:29:45', NULL, '2021-12-06 16:38:26');
-INSERT INTO `gen_table_column` VALUES (241, '20', 'stu_password', '密码', 'varchar(255)', 'String', 'stuPassword', '0', '0', NULL, '1', '1', '1', NULL, 'EQ', 'input', '', 6, 'admin', '2021-10-08 17:29:45', NULL, '2021-12-06 16:38:26');
-INSERT INTO `gen_table_column` VALUES (242, '20', 'stu_department', '学院', 'varchar(255)', 'String', 'stuDepartment', '0', '0', NULL, '1', '1', '1', '1', 'EQ', 'input', '', 7, 'admin', '2021-10-08 17:29:45', NULL, '2021-12-06 16:38:26');
-INSERT INTO `gen_table_column` VALUES (243, '20', 'stu_major', '专业', 'varchar(255)', 'String', 'stuMajor', '0', '0', NULL, '1', '1', '1', '1', 'EQ', 'input', '', 8, 'admin', '2021-10-08 17:29:45', NULL, '2021-12-06 16:38:26');
-INSERT INTO `gen_table_column` VALUES (244, '20', 'stu_className', '班级', 'varchar(255)', 'String', 'stuClassname', '0', '0', NULL, '1', '1', '1', '1', 'LIKE', 'input', '', 9, 'admin', '2021-10-08 17:29:45', NULL, '2021-12-06 16:38:26');
-INSERT INTO `gen_table_column` VALUES (245, '20', 'stu_qq', 'QQ', 'varchar(255)', 'String', 'stuQq', '0', '0', NULL, '1', '1', '1', NULL, 'EQ', 'input', '', 10, 'admin', '2021-10-08 17:29:45', NULL, '2021-12-06 16:38:26');
-INSERT INTO `gen_table_column` VALUES (246, '20', 'stu_email', 'email', 'varchar(255)', 'String', 'stuEmail', '0', '0', NULL, '1', '1', '1', NULL, 'EQ', 'input', '', 11, 'admin', '2021-10-08 17:29:45', NULL, '2021-12-06 16:38:26');
-INSERT INTO `gen_table_column` VALUES (247, '20', 'stu_image', '头像', 'varchar(255)', 'String', 'stuImage', '0', '0', NULL, '1', '1', '1', NULL, 'EQ', 'input', '', 12, 'admin', '2021-10-08 17:29:45', NULL, '2021-12-06 16:38:26');
-INSERT INTO `gen_table_column` VALUES (248, '20', 'create_time', '创建时间', 'datetime', 'Date', 'createTime', '0', '0', NULL, '1', NULL, '1', '1', 'EQ', 'datetime', '', 13, 'admin', '2021-10-08 17:29:45', NULL, '2021-12-06 16:38:26');
-INSERT INTO `gen_table_column` VALUES (249, '20', 'stu_status', '状态', 'char(1)', 'String', 'stuStatus', '0', '0', NULL, '1', '1', '1', '1', 'EQ', 'select', 'laf_user_status', 14, 'admin', '2021-10-08 17:29:45', NULL, '2021-12-06 16:38:26');
-INSERT INTO `gen_table_column` VALUES (250, '20', 'openid', 'openId', 'varchar(255)', 'String', 'openid', '0', '0', NULL, '1', '1', '1', '1', 'EQ', 'input', '', 15, 'admin', '2021-10-08 17:29:45', NULL, '2021-12-06 16:38:26');
-INSERT INTO `gen_table_column` VALUES (251, '21', 'rel_id', '帖子ID', 'int', 'Long', 'relId', '1', '1', NULL, '1', NULL, NULL, NULL, 'EQ', 'input', '', 1, 'admin', '2021-10-08 17:53:33', NULL, '2022-02-27 22:12:44');
-INSERT INTO `gen_table_column` VALUES (252, '21', 'rel_title', '标题', 'varchar(255)', 'String', 'relTitle', '0', '0', NULL, '1', '1', '1', '1', 'LIKE', 'input', '', 2, 'admin', '2021-10-08 17:53:33', NULL, '2022-02-27 22:12:44');
-INSERT INTO `gen_table_column` VALUES (253, '21', 'rel_desc', '描述', 'varchar(255)', 'String', 'relDesc', '0', '0', NULL, '1', '1', '1', '1', 'LIKE', 'input', '', 3, 'admin', '2021-10-08 17:53:33', NULL, '2022-02-27 22:12:44');
-INSERT INTO `gen_table_column` VALUES (254, '21', 'rel_contact', '联系方式', 'varchar(255)', 'String', 'relContact', '0', '0', NULL, '1', '1', '1', '1', 'LIKE', 'input', '', 4, 'admin', '2021-10-08 17:53:33', NULL, '2022-02-27 22:12:44');
-INSERT INTO `gen_table_column` VALUES (255, '21', 'rel_cate_id', '物品种类', 'int', 'Long', 'relCateId', '0', '0', NULL, '1', '1', '1', '1', 'EQ', 'select', 'laf_category', 5, 'admin', '2021-10-08 17:53:33', NULL, '2022-02-27 22:12:44');
-INSERT INTO `gen_table_column` VALUES (256, '21', 'rel_time', '认领时间', 'datetime', 'Date', 'relTime', '0', '0', NULL, '1', '1', '1', '1', 'EQ', 'datetime', '', 6, 'admin', '2021-10-08 17:53:33', NULL, '2022-02-27 22:12:44');
-INSERT INTO `gen_table_column` VALUES (257, '21', 'rel_campus', '校区', 'varchar(255)', 'String', 'relCampus', '0', '0', NULL, '1', '1', '1', '1', 'EQ', 'select', 'laf_campus', 7, 'admin', '2021-10-08 17:53:33', NULL, '2022-02-27 22:12:44');
-INSERT INTO `gen_table_column` VALUES (258, '21', 'create_place', '地点', 'varchar(255)', 'String', 'createPlace', '0', '0', NULL, '1', '1', '1', NULL, 'LIKE', 'input', '', 8, 'admin', '2021-10-08 17:53:33', NULL, '2022-02-27 22:12:44');
-INSERT INTO `gen_table_column` VALUES (259, '21', 'create_time', '创建时间', 'datetime', 'Date', 'createTime', '0', '0', NULL, '1', NULL, '1', '1', 'EQ', 'datetime', '', 9, 'admin', '2021-10-08 17:53:33', NULL, '2022-02-27 22:12:44');
-INSERT INTO `gen_table_column` VALUES (260, '21', 'create_id', '发布者ID', 'int', 'Long', 'createId', '0', '0', NULL, '1', '1', '1', '1', 'EQ', 'input', '', 10, 'admin', '2021-10-08 17:53:33', NULL, '2022-02-27 22:12:44');
-INSERT INTO `gen_table_column` VALUES (261, '21', 'rel_image', '图片', 'varchar(255)', 'String', 'relImage', '0', '0', NULL, '1', '1', '1', NULL, 'EQ', 'input', '', 11, 'admin', '2021-10-08 17:53:33', NULL, '2022-02-27 22:12:44');
-INSERT INTO `gen_table_column` VALUES (263, '21', 'rel_star', '赞', 'int', 'Long', 'relStar', '0', '0', NULL, NULL, '1', '1', NULL, 'EQ', 'input', '', 13, 'admin', '2021-10-08 17:53:33', NULL, '2022-02-27 22:12:44');
-INSERT INTO `gen_table_column` VALUES (264, '21', 'rel_flag', '状态', 'char(1)', 'String', 'relFlag', '0', '0', NULL, '1', '1', '1', '1', 'EQ', 'select', 'laf_release_status', 14, 'admin', '2021-10-08 17:53:33', NULL, '2022-02-27 22:12:44');
-INSERT INTO `gen_table_column` VALUES (266, '21', 'rel_flow', '浏览量', 'int', 'Long', 'relFlow', '0', '0', NULL, NULL, '1', '1', NULL, 'EQ', 'input', '', 15, '', '2021-12-08 10:38:22', NULL, '2022-02-27 22:12:44');
-INSERT INTO `gen_table_column` VALUES (268, '22', 'ann_title', '标题类型', 'char(1)', 'String', 'annTitle', '0', '0', NULL, '1', '1', '1', '1', 'EQ', 'select', 'sys_notice_type', 2, 'admin', '2021-12-20 11:21:04', NULL, '2021-12-20 15:32:34');
-INSERT INTO `gen_table_column` VALUES (269, '22', 'ann_content', '内容', 'varchar(255)', 'String', 'annContent', '0', '0', NULL, '1', '1', '1', '1', 'EQ', 'textarea', '', 3, 'admin', '2021-12-20 11:21:04', NULL, '2021-12-20 15:32:34');
-INSERT INTO `gen_table_column` VALUES (270, '22', 'create_by', '创建者', 'varchar(255)', 'String', 'createBy', '0', '0', NULL, '1', NULL, '1', '1', 'EQ', 'input', '', 4, 'admin', '2021-12-20 11:21:04', NULL, '2021-12-20 15:32:34');
-INSERT INTO `gen_table_column` VALUES (271, '22', 'creat_time', '发布时间', 'datetime', 'Date', 'creatTime', '0', '0', NULL, '1', '1', '1', '1', 'LIKE', 'datetime', '', 5, 'admin', '2021-12-20 11:21:04', NULL, '2021-12-20 15:32:34');
-INSERT INTO `gen_table_column` VALUES (272, '22', 'image', '图片', 'varchar(255)', 'String', 'image', '0', '0', NULL, '1', '1', '1', NULL, 'EQ', 'input', '', 6, 'admin', '2021-12-20 11:21:04', NULL, '2021-12-20 15:32:34');
-INSERT INTO `gen_table_column` VALUES (273, '22', 'status', '状态', 'char(1)', 'String', 'status', '0', '0', NULL, '1', '1', '1', '1', 'EQ', 'select', 'sys_notice_status', 7, 'admin', '2021-12-20 11:21:04', NULL, '2021-12-20 15:32:34');
-INSERT INTO `gen_table_column` VALUES (274, '22', 'ann_id', '公告id', 'int', 'Long', 'annId', '1', '0', NULL, '1', NULL, NULL, NULL, 'EQ', 'input', '', 1, '', '2021-12-20 11:41:24', NULL, '2021-12-20 15:32:34');
+INSERT INTO `gen_table_column` VALUES (230, '19', 'cate_id', '物品ID', 'int', 'Long', 'cateId', '1', '1', NULL, '1', NULL, '1', '1', 'EQ', 'input', '', 1, 'admin', '2021-10-08 16:14:51', NULL, '2022-03-09 21:34:28');
+INSERT INTO `gen_table_column` VALUES (232, '19', 'cate_name', '名称', 'varchar(255)', 'String', 'cateName', '0', '0', NULL, '1', '1', '1', '1', 'LIKE', 'input', '', 3, 'admin', '2021-10-08 16:14:51', NULL, '2022-03-09 21:34:28');
+INSERT INTO `gen_table_column` VALUES (233, '19', 'create_time', '创建时间', 'timestamp', 'Date', 'createTime', '0', '0', NULL, '1', NULL, NULL, NULL, 'EQ', 'datetime', '', 4, 'admin', '2021-10-08 16:14:51', NULL, '2022-03-09 21:34:28');
+INSERT INTO `gen_table_column` VALUES (234, '19', 'create_by', '创建者', 'varchar(255)', 'String', 'createBy', '0', '0', NULL, '1', NULL, NULL, NULL, 'EQ', 'input', '', 5, 'admin', '2021-10-08 16:14:51', NULL, '2022-03-09 21:34:28');
+INSERT INTO `gen_table_column` VALUES (236, '20', 'stu_id', '学生ID', 'int', 'Long', 'stuId', '1', '1', NULL, '1', NULL, '1', '1', 'EQ', 'input', '', 1, 'admin', '2021-10-08 17:29:45', NULL, '2022-03-09 21:09:23');
+INSERT INTO `gen_table_column` VALUES (237, '20', 'stu_nick', '昵称', 'varchar(255)', 'String', 'stuNick', '0', '0', NULL, '1', '1', '1', '1', 'EQ', 'input', '', 2, 'admin', '2021-10-08 17:29:45', NULL, '2022-03-09 21:09:23');
+INSERT INTO `gen_table_column` VALUES (238, '20', 'stu_name', '姓名', 'varchar(255)', 'String', 'stuName', '0', '0', NULL, '1', '1', '1', '1', 'LIKE', 'input', '', 3, 'admin', '2021-10-08 17:29:45', NULL, '2022-03-09 21:09:23');
+INSERT INTO `gen_table_column` VALUES (239, '20', 'stu_sex', '性别', 'char(1)', 'String', 'stuSex', '0', '0', NULL, '1', '1', '1', '1', 'EQ', 'select', 'laf_user_sex', 4, 'admin', '2021-10-08 17:29:45', NULL, '2022-03-09 21:09:23');
+INSERT INTO `gen_table_column` VALUES (240, '20', 'stu_xh', '学号', 'varchar(255)', 'String', 'stuXh', '0', '0', NULL, '1', '1', '1', '1', 'EQ', 'input', '', 5, 'admin', '2021-10-08 17:29:45', NULL, '2022-03-09 21:09:23');
+INSERT INTO `gen_table_column` VALUES (241, '20', 'stu_password', '密码', 'varchar(255)', 'String', 'stuPassword', '0', '0', NULL, '1', '1', '1', NULL, 'EQ', 'input', '', 6, 'admin', '2021-10-08 17:29:45', NULL, '2022-03-09 21:09:23');
+INSERT INTO `gen_table_column` VALUES (242, '20', 'stu_department', '学院', 'varchar(255)', 'String', 'stuDepartment', '0', '0', NULL, '1', '1', '1', '1', 'EQ', 'input', '', 7, 'admin', '2021-10-08 17:29:45', NULL, '2022-03-09 21:09:23');
+INSERT INTO `gen_table_column` VALUES (243, '20', 'stu_major', '专业', 'varchar(255)', 'String', 'stuMajor', '0', '0', NULL, '1', '1', '1', '1', 'EQ', 'input', '', 8, 'admin', '2021-10-08 17:29:45', NULL, '2022-03-09 21:09:23');
+INSERT INTO `gen_table_column` VALUES (244, '20', 'stu_className', '班级', 'varchar(255)', 'String', 'stuClassname', '0', '0', NULL, '1', '1', '1', '1', 'LIKE', 'input', '', 9, 'admin', '2021-10-08 17:29:45', NULL, '2022-03-09 21:09:23');
+INSERT INTO `gen_table_column` VALUES (245, '20', 'stu_qq', 'QQ', 'varchar(255)', 'String', 'stuQq', '0', '0', NULL, '1', '1', '1', NULL, 'EQ', 'input', '', 10, 'admin', '2021-10-08 17:29:45', NULL, '2022-03-09 21:09:23');
+INSERT INTO `gen_table_column` VALUES (246, '20', 'stu_email', 'email', 'varchar(255)', 'String', 'stuEmail', '0', '0', NULL, '1', '1', '1', NULL, 'EQ', 'input', '', 11, 'admin', '2021-10-08 17:29:45', NULL, '2022-03-09 21:09:23');
+INSERT INTO `gen_table_column` VALUES (247, '20', 'stu_image', '头像', 'varchar(255)', 'String', 'stuImage', '0', '0', NULL, '1', '1', '1', NULL, 'EQ', 'input', '', 12, 'admin', '2021-10-08 17:29:45', NULL, '2022-03-09 21:09:23');
+INSERT INTO `gen_table_column` VALUES (248, '20', 'create_time', '创建时间', 'datetime', 'Date', 'createTime', '0', '0', NULL, '1', NULL, '1', '1', 'EQ', 'datetime', '', 13, 'admin', '2021-10-08 17:29:45', NULL, '2022-03-09 21:09:23');
+INSERT INTO `gen_table_column` VALUES (249, '20', 'stu_status', '状态', 'char(1)', 'String', 'stuStatus', '0', '0', NULL, '1', '1', '1', '1', 'EQ', 'select', 'laf_user_status', 14, 'admin', '2021-10-08 17:29:45', NULL, '2022-03-09 21:09:23');
+INSERT INTO `gen_table_column` VALUES (250, '20', 'openid', 'openId', 'varchar(255)', 'String', 'openid', '0', '0', NULL, '1', '1', '1', '1', 'EQ', 'input', '', 15, 'admin', '2021-10-08 17:29:45', NULL, '2022-03-09 21:09:23');
+INSERT INTO `gen_table_column` VALUES (251, '21', 'rel_id', '帖子ID', 'int', 'Long', 'relId', '1', '1', NULL, '1', NULL, '1', '1', 'EQ', 'input', '', 1, 'admin', '2021-10-08 17:53:33', NULL, '2022-03-09 21:24:43');
+INSERT INTO `gen_table_column` VALUES (252, '21', 'rel_title', '标题', 'varchar(255)', 'String', 'relTitle', '0', '0', NULL, '1', '1', '1', '1', 'LIKE', 'input', '', 2, 'admin', '2021-10-08 17:53:33', NULL, '2022-03-09 21:24:43');
+INSERT INTO `gen_table_column` VALUES (253, '21', 'rel_desc', '描述', 'varchar(255)', 'String', 'relDesc', '0', '0', NULL, '1', '1', '1', '1', 'LIKE', 'input', '', 3, 'admin', '2021-10-08 17:53:33', NULL, '2022-03-09 21:24:43');
+INSERT INTO `gen_table_column` VALUES (254, '21', 'rel_contact', '联系方式', 'varchar(255)', 'String', 'relContact', '0', '0', NULL, '1', '1', '1', '1', 'LIKE', 'input', '', 4, 'admin', '2021-10-08 17:53:33', NULL, '2022-03-09 21:24:43');
+INSERT INTO `gen_table_column` VALUES (255, '21', 'rel_cate_id', '物品种类', 'int', 'Long', 'relCateId', '0', '0', NULL, '1', '1', '1', '1', 'EQ', 'select', 'laf_category', 5, 'admin', '2021-10-08 17:53:33', NULL, '2022-03-09 21:24:43');
+INSERT INTO `gen_table_column` VALUES (256, '21', 'rel_time', '认领时间', 'datetime', 'Date', 'relTime', '0', '0', NULL, '1', '1', '1', '1', 'EQ', 'datetime', '', 6, 'admin', '2021-10-08 17:53:33', NULL, '2022-03-09 21:24:43');
+INSERT INTO `gen_table_column` VALUES (257, '21', 'rel_campus', '校区', 'varchar(255)', 'String', 'relCampus', '0', '0', NULL, '1', '1', '1', '1', 'EQ', 'select', 'laf_campus', 7, 'admin', '2021-10-08 17:53:33', NULL, '2022-03-09 21:24:43');
+INSERT INTO `gen_table_column` VALUES (258, '21', 'create_place', '地点', 'varchar(255)', 'String', 'createPlace', '0', '0', NULL, '1', '1', '1', NULL, 'LIKE', 'input', '', 8, 'admin', '2021-10-08 17:53:33', NULL, '2022-03-09 21:24:43');
+INSERT INTO `gen_table_column` VALUES (259, '21', 'create_time', '创建时间', 'datetime', 'Date', 'createTime', '0', '0', NULL, '1', NULL, '1', '1', 'EQ', 'datetime', '', 9, 'admin', '2021-10-08 17:53:33', NULL, '2022-03-09 21:24:43');
+INSERT INTO `gen_table_column` VALUES (260, '21', 'create_id', '发布者ID', 'int', 'Long', 'createId', '0', '0', NULL, '1', '1', '1', '1', 'EQ', 'input', '', 10, 'admin', '2021-10-08 17:53:33', NULL, '2022-03-09 21:24:43');
+INSERT INTO `gen_table_column` VALUES (261, '21', 'rel_image', '图片', 'varchar(255)', 'String', 'relImage', '0', '0', NULL, '1', '1', '1', NULL, 'EQ', 'input', '', 11, 'admin', '2021-10-08 17:53:33', NULL, '2022-03-09 21:24:43');
+INSERT INTO `gen_table_column` VALUES (263, '21', 'rel_star', '赞', 'int', 'Long', 'relStar', '0', '0', NULL, NULL, '1', '1', NULL, 'EQ', 'input', '', 13, 'admin', '2021-10-08 17:53:33', NULL, '2022-03-09 21:24:43');
+INSERT INTO `gen_table_column` VALUES (264, '21', 'rel_flag', '状态', 'char(1)', 'String', 'relFlag', '0', '0', NULL, '1', '1', '1', '1', 'EQ', 'select', 'laf_release_status', 14, 'admin', '2021-10-08 17:53:33', NULL, '2022-03-09 21:24:43');
+INSERT INTO `gen_table_column` VALUES (266, '21', 'rel_flow', '浏览量', 'int', 'Long', 'relFlow', '0', '0', NULL, NULL, '1', '1', NULL, 'EQ', 'input', '', 15, '', '2021-12-08 10:38:22', NULL, '2022-03-09 21:24:43');
+INSERT INTO `gen_table_column` VALUES (268, '22', 'ann_title', '标题类型', 'char(1)', 'String', 'annTitle', '0', '0', NULL, '1', '1', '1', '1', 'EQ', 'input', '', 2, 'admin', '2021-12-20 11:21:04', NULL, '2022-03-25 18:03:15');
+INSERT INTO `gen_table_column` VALUES (269, '22', 'ann_content', '内容', 'varchar(255)', 'String', 'annContent', '0', '0', NULL, '1', '1', '1', '1', 'EQ', 'textarea', '', 3, 'admin', '2021-12-20 11:21:04', NULL, '2022-03-25 18:03:15');
+INSERT INTO `gen_table_column` VALUES (270, '22', 'create_by', '创建者', 'varchar(255)', 'String', 'createBy', '0', '0', NULL, '1', '1', '1', '1', 'EQ', 'input', '', 4, 'admin', '2021-12-20 11:21:04', NULL, '2022-03-25 18:03:15');
+INSERT INTO `gen_table_column` VALUES (272, '22', 'image', '图片', 'varchar(255)', 'String', 'image', '0', '0', NULL, '1', '1', '1', NULL, 'EQ', 'input', '', 6, 'admin', '2021-12-20 11:21:04', NULL, '2022-03-25 18:03:15');
+INSERT INTO `gen_table_column` VALUES (273, '22', 'status', '状态', 'char(1)', 'String', 'status', '0', '0', NULL, '1', '1', '1', '1', 'EQ', 'select', 'laf_user_status', 7, 'admin', '2021-12-20 11:21:04', NULL, '2022-03-25 18:03:15');
+INSERT INTO `gen_table_column` VALUES (274, '22', 'ann_id', '公告id', 'int', 'Long', 'annId', '1', '0', '1', '1', NULL, NULL, '1', 'EQ', 'input', '', 1, '', '2021-12-20 11:41:24', NULL, '2022-03-25 18:03:15');
 INSERT INTO `gen_table_column` VALUES (275, '23', 'com_id', 'ID', 'int', 'Long', 'comId', '1', '0', NULL, '1', NULL, NULL, NULL, 'EQ', 'input', '', 1, 'admin', '2021-12-22 15:54:03', NULL, '2022-03-04 18:00:02');
 INSERT INTO `gen_table_column` VALUES (277, '23', 'com_rel_id', '文章ID', 'int', 'Long', 'comRelId', '0', '0', NULL, '1', '1', '1', '1', 'EQ', 'input', '', 3, 'admin', '2021-12-22 15:54:03', NULL, '2022-03-04 18:00:02');
 INSERT INTO `gen_table_column` VALUES (278, '23', 'com_stu_id', '用户ID', 'int', 'Long', 'comStuId', '0', '0', NULL, '1', '1', '1', '1', 'EQ', 'input', '', 4, 'admin', '2021-12-22 15:54:03', NULL, '2022-03-04 18:00:02');
@@ -135,9 +137,9 @@ INSERT INTO `gen_table_column` VALUES (279, '23', 'com_content', '内容', 'varc
 INSERT INTO `gen_table_column` VALUES (280, '23', 'create_time', '时间', 'datetime', 'Date', 'createTime', '0', '0', NULL, '1', '1', '1', '1', 'EQ', 'datetime', '', 6, 'admin', '2021-12-22 15:54:03', NULL, '2022-03-04 18:00:02');
 INSERT INTO `gen_table_column` VALUES (281, '23', 'com_star', '赞', 'int', 'Long', 'comStar', '0', '0', NULL, '1', '1', '1', NULL, 'EQ', 'input', '', 7, 'admin', '2021-12-22 15:54:03', NULL, '2022-03-04 18:00:02');
 INSERT INTO `gen_table_column` VALUES (282, '23', 'com_status', '状态', 'char(1)', 'String', 'comStatus', '0', '0', NULL, NULL, '1', '1', '1', 'EQ', 'select', 'laf_user_status', 8, 'admin', '2021-12-22 15:54:03', NULL, '2022-03-04 18:00:02');
-INSERT INTO `gen_table_column` VALUES (283, '21', 'rel_del', '删除', 'char(1)', 'String', 'relDel', '0', '0', NULL, NULL, '1', '1', '1', 'EQ', 'select', 'laf_release_del', 16, '', '2022-02-02 21:09:01', NULL, '2022-02-27 22:12:44');
-INSERT INTO `gen_table_column` VALUES (284, '19', 'cate_status', '状态', 'char(1)', 'String', 'cateStatus', '0', '0', NULL, '1', '1', '1', '1', 'EQ', 'radio', 'laf_user_status', 6, '', '2022-02-11 21:52:54', NULL, '2022-02-11 22:16:49');
-INSERT INTO `gen_table_column` VALUES (285, '19', 'parent_id', '所属id', 'int', 'Long', 'parentId', '0', '0', '1', '1', '1', '1', '1', 'EQ', 'input', '', 2, '', '2022-02-11 21:55:02', NULL, '2022-02-11 22:16:49');
+INSERT INTO `gen_table_column` VALUES (283, '21', 'rel_del', '删除', 'char(1)', 'String', 'relDel', '0', '0', NULL, NULL, '1', '1', '1', 'EQ', 'select', 'laf_release_del', 16, '', '2022-02-02 21:09:01', NULL, '2022-03-09 21:24:43');
+INSERT INTO `gen_table_column` VALUES (284, '19', 'cate_status', '状态', 'char(1)', 'String', 'cateStatus', '0', '0', NULL, '1', '1', '1', '1', 'EQ', 'radio', 'laf_user_status', 6, '', '2022-02-11 21:52:54', NULL, '2022-03-09 21:34:28');
+INSERT INTO `gen_table_column` VALUES (285, '19', 'parent_id', '所属id', 'int', 'Long', 'parentId', '0', '0', '1', '1', '1', '1', '1', 'EQ', 'input', '', 2, '', '2022-02-11 21:55:02', NULL, '2022-03-09 21:34:28');
 INSERT INTO `gen_table_column` VALUES (286, '23', 'parent_id', '父评论ID', 'int', 'Long', 'parentId', '0', '0', NULL, '1', NULL, NULL, NULL, 'EQ', 'input', '', 2, '', '2022-02-11 22:39:17', NULL, '2022-03-04 18:00:02');
 INSERT INTO `gen_table_column` VALUES (287, '24', 'rel_id', '帖子id', 'int', 'Long', 'relId', '0', '0', '1', NULL, NULL, NULL, '1', 'EQ', 'input', '', 1, 'admin', '2022-02-24 14:26:55', NULL, '2022-02-27 22:21:34');
 INSERT INTO `gen_table_column` VALUES (288, '24', 'rel_title', '帖子标题', 'varchar(255)', 'String', 'relTitle', '0', '0', NULL, NULL, NULL, NULL, '1', 'EQ', 'input', '', 2, 'admin', '2022-02-24 14:26:55', NULL, '2022-02-27 22:21:34');
@@ -157,12 +159,42 @@ INSERT INTO `gen_table_column` VALUES (302, '24', 'stu_id', '学生唯一表示i
 INSERT INTO `gen_table_column` VALUES (303, '24', 'stu_nick', '学生别名昵称', 'varchar(255)', 'String', 'stuNick', '0', '0', NULL, NULL, NULL, NULL, '1', 'EQ', 'input', '', 17, 'admin', '2022-02-24 14:26:55', NULL, '2022-02-27 22:21:34');
 INSERT INTO `gen_table_column` VALUES (304, '24', 'stu_name', '学生姓名', 'varchar(255)', 'String', 'stuName', '0', '0', NULL, NULL, NULL, NULL, '1', 'LIKE', 'input', '', 18, 'admin', '2022-02-24 14:26:55', NULL, '2022-02-27 22:21:34');
 INSERT INTO `gen_table_column` VALUES (305, '24', 'stu_sex', '性别（1男，2女，3外星人）', 'char(1)', 'String', 'stuSex', '0', '0', NULL, NULL, NULL, NULL, '1', 'EQ', 'select', '', 19, 'admin', '2022-02-24 14:26:55', NULL, '2022-02-27 22:21:34');
-INSERT INTO `gen_table_column` VALUES (306, '21', 'rel_claim_id', '认领者ID', 'int', 'Long', 'relClaimId', '0', '0', NULL, '1', '1', '1', '1', 'EQ', 'input', '', 17, '', '2022-02-27 21:40:15', NULL, '2022-02-27 22:12:44');
-INSERT INTO `gen_table_column` VALUES (307, '21', 'rel_status', '类别', 'char(1)', 'String', 'relStatus', '0', '0', NULL, '1', '1', '1', '1', 'EQ', 'select', 'laf_release_cate', 12, '', '2022-02-27 21:43:56', NULL, '2022-02-27 22:12:44');
+INSERT INTO `gen_table_column` VALUES (306, '21', 'rel_claim_id', '认领者ID', 'int', 'Long', 'relClaimId', '0', '0', NULL, '1', '1', '1', '1', 'EQ', 'input', '', 17, '', '2022-02-27 21:40:15', NULL, '2022-03-09 21:24:43');
+INSERT INTO `gen_table_column` VALUES (307, '21', 'rel_status', '类别', 'char(1)', 'String', 'relStatus', '0', '0', NULL, '1', '1', '1', '1', 'EQ', 'select', 'laf_release_cate', 12, '', '2022-02-27 21:43:56', NULL, '2022-03-09 21:24:43');
 INSERT INTO `gen_table_column` VALUES (308, '24', 'stu_image', '头像', 'varchar(255)', 'String', 'stuAvatar', '0', '0', NULL, NULL, NULL, NULL, '1', 'EQ', 'input', '', 19, '', '2022-02-27 21:49:52', NULL, '2022-02-27 22:21:34');
 INSERT INTO `gen_table_column` VALUES (309, '24', 'rel_status', '帖子类别(1代表失物，2代表寻物)', 'char(1)', 'String', 'relStatus', '0', '0', NULL, NULL, NULL, NULL, '1', 'EQ', 'radio', '', 20, '', '2022-02-27 21:49:52', NULL, '2022-02-27 22:21:34');
 INSERT INTO `gen_table_column` VALUES (310, '24', 'rel_claim_id', '认领者id', 'int', 'Long', 'relClaimId', '0', '0', NULL, NULL, NULL, NULL, '1', 'EQ', 'input', '', 21, '', '2022-02-27 21:49:52', NULL, '2022-02-27 22:21:34');
 INSERT INTO `gen_table_column` VALUES (311, '23', 'com_image', '图片', 'varchar(255)', 'String', 'comImage', '0', '0', NULL, '1', '1', '1', NULL, 'EQ', 'input', '', 9, '', '2022-03-04 17:59:01', NULL, '2022-03-04 18:00:02');
+INSERT INTO `gen_table_column` VALUES (312, '25', 'id', 'ID', 'int', 'Long', 'id', '1', '1', NULL, '1', NULL, '1', '1', 'EQ', 'input', '', 1, 'admin', '2022-03-10 15:08:06', NULL, '2022-03-10 18:59:23');
+INSERT INTO `gen_table_column` VALUES (313, '25', 'token', 'Token', 'varchar(255)', 'String', 'token', '0', '0', NULL, '1', '1', '1', '1', 'EQ', 'input', '', 2, 'admin', '2022-03-10 15:08:06', NULL, '2022-03-10 18:59:23');
+INSERT INTO `gen_table_column` VALUES (314, '25', 'create_time', '创建时间', 'datetime', 'Date', 'createTime', '0', '0', NULL, '1', '1', '1', '1', 'EQ', 'datetime', '', 3, 'admin', '2022-03-10 15:08:06', NULL, '2022-03-10 18:59:23');
+INSERT INTO `gen_table_column` VALUES (315, '25', 'name', '名称', 'varchar(255)', 'String', 'name', '0', '0', NULL, '1', '1', '1', '1', 'LIKE', 'input', '', 2, '', '2022-03-10 18:59:10', NULL, '2022-03-10 18:59:23');
+INSERT INTO `gen_table_column` VALUES (328, '27', 'com_id', '评论id', 'int', 'Long', 'comId', '0', '0', '1', '1', '1', '1', '1', 'EQ', 'input', '', 1, 'admin', '2022-03-11 16:02:41', NULL, '2022-03-11 16:34:25');
+INSERT INTO `gen_table_column` VALUES (329, '27', 'com_content', '评论内容', 'varchar(255)', 'String', 'comContent', '0', '0', NULL, '1', '1', '1', '1', 'EQ', 'summernote', '', 2, 'admin', '2022-03-11 16:02:41', NULL, '2022-03-11 16:34:25');
+INSERT INTO `gen_table_column` VALUES (330, '27', 'com_time', '创建时间', 'datetime', 'Date', 'comTime', '0', '0', NULL, '1', '1', '1', '1', 'EQ', 'datetime', '', 3, 'admin', '2022-03-11 16:02:41', NULL, '2022-03-11 16:34:25');
+INSERT INTO `gen_table_column` VALUES (331, '27', 'com_nick', '评论者网名', 'varchar(255)', 'String', 'comNick', '0', '0', NULL, '1', '1', '1', '1', 'EQ', 'input', '', 4, 'admin', '2022-03-11 16:02:41', NULL, '2022-03-11 16:34:25');
+INSERT INTO `gen_table_column` VALUES (332, '27', 'com_name', '评论者姓名', 'varchar(255)', 'String', 'comName', '0', '0', NULL, '1', '1', '1', '1', 'LIKE', 'input', '', 5, 'admin', '2022-03-11 16:02:41', NULL, '2022-03-11 16:34:25');
+INSERT INTO `gen_table_column` VALUES (333, '27', 'rel_id', '帖子id', 'int', 'Long', 'relId', '0', '0', '1', '1', '1', '1', '1', 'EQ', 'input', '', 6, 'admin', '2022-03-11 16:02:41', NULL, '2022-03-11 16:34:25');
+INSERT INTO `gen_table_column` VALUES (334, '27', 'rel_title', '帖子标题', 'varchar(255)', 'String', 'relTitle', '0', '0', NULL, '1', '1', '1', '1', 'EQ', 'input', '', 7, 'admin', '2022-03-11 16:02:41', NULL, '2022-03-11 16:34:25');
+INSERT INTO `gen_table_column` VALUES (335, '27', 'rel_openid', '吧主用户id', 'varchar(255)', 'String', 'relOpenid', '0', '0', NULL, '1', '1', '1', '1', 'EQ', 'input', '', 8, 'admin', '2022-03-11 16:02:41', NULL, '2022-03-11 16:34:25');
+INSERT INTO `gen_table_column` VALUES (336, '27', 'parent_openid', '父评论用户id', 'varchar(255)', 'String', 'parentOpenid', '0', '0', NULL, '1', '1', '1', '1', 'EQ', 'input', '', 9, 'admin', '2022-03-11 16:02:41', NULL, '2022-03-11 16:34:25');
+INSERT INTO `gen_table_column` VALUES (337, '27', 'claim_nick', '学生者网名', 'varchar(255)', 'String', 'claimNick', '0', '0', NULL, '1', '1', '1', '1', 'EQ', 'input', '', 10, 'admin', '2022-03-11 16:02:41', NULL, '2022-03-11 16:34:25');
+INSERT INTO `gen_table_column` VALUES (338, '27', 'claim_name', '认领者姓名', 'varchar(255)', 'String', 'claimName', '0', '0', NULL, '1', '1', '1', '1', 'LIKE', 'input', '', 11, 'admin', '2022-03-11 16:02:41', NULL, '2022-03-11 16:34:25');
+INSERT INTO `gen_table_column` VALUES (339, '27', 'claim_time', '认领时间', 'datetime', 'Date', 'claimTime', '0', '0', NULL, '1', '1', '1', '1', 'EQ', 'datetime', '', 12, 'admin', '2022-03-11 16:02:41', NULL, '2022-03-11 16:34:25');
+INSERT INTO `gen_table_column` VALUES (340, '27', 'com_openid', '本用户id', 'varchar(255)', 'String', 'comOpenid', '0', '0', NULL, '1', '1', '1', '1', 'EQ', 'input', '', 8, '', '2022-03-11 16:32:46', NULL, '2022-03-11 16:34:25');
+INSERT INTO `gen_table_column` VALUES (341, '22', 'create_time', '发布时间', 'datetime', 'Date', 'createTime', '0', '0', NULL, '1', '1', '1', '1', 'EQ', 'datetime', '', 5, '', '2022-03-25 17:50:08', NULL, '2022-03-25 18:03:15');
+INSERT INTO `gen_table_column` VALUES (342, '22', 'flow', '浏览量', 'int', 'Long', 'flow', '0', '0', NULL, '1', '1', '1', NULL, 'EQ', 'input', '', 8, '', '2022-03-25 17:50:08', NULL, '2022-03-25 18:03:15');
+INSERT INTO `gen_table_column` VALUES (343, '28', 'push_id', 'ID', 'int', 'Long', 'pushId', '1', '0', NULL, NULL, NULL, NULL, NULL, 'EQ', 'input', '', 1, 'admin', '2022-04-03 15:05:18', NULL, '2022-04-03 15:16:08');
+INSERT INTO `gen_table_column` VALUES (344, '28', 'push_title', '标题', 'varchar(255)', 'String', 'pushTitle', '0', '0', NULL, '1', '1', '1', '1', 'EQ', 'input', '', 2, 'admin', '2022-04-03 15:05:18', NULL, '2022-04-03 15:16:08');
+INSERT INTO `gen_table_column` VALUES (345, '28', 'push_clue', '线索', 'varchar(255)', 'String', 'pushClue', '0', '0', NULL, '1', '1', '1', '1', 'EQ', 'input', '', 3, 'admin', '2022-04-03 15:05:18', NULL, '2022-04-03 15:16:08');
+INSERT INTO `gen_table_column` VALUES (346, '28', 'rel_id', '推送帖子ID', 'varchar(255)', 'String', 'relId', '0', '0', NULL, '1', '1', '1', '1', 'EQ', 'input', '', 4, 'admin', '2022-04-03 15:05:19', NULL, '2022-04-03 15:16:08');
+INSERT INTO `gen_table_column` VALUES (347, '28', 'cate_id', '所属种类', 'int', 'Long', 'cateId', '0', '0', NULL, '1', '1', '1', '1', 'EQ', 'input', '', 5, 'admin', '2022-04-03 15:05:19', NULL, '2022-04-03 15:16:08');
+INSERT INTO `gen_table_column` VALUES (348, '28', 'stu_id', 'UID', 'int', 'Long', 'stuId', '0', '0', NULL, '1', '1', '1', '1', 'EQ', 'input', '', 6, 'admin', '2022-04-03 15:05:19', NULL, '2022-04-03 15:16:08');
+INSERT INTO `gen_table_column` VALUES (349, '28', 'create_time', '时间', 'datetime', 'Date', 'createTime', '0', '0', NULL, '1', NULL, '1', '1', 'EQ', 'datetime', '', 7, 'admin', '2022-04-03 15:05:19', NULL, '2022-04-03 15:16:08');
+INSERT INTO `gen_table_column` VALUES (350, '28', 'push_count', '推送次数', 'int unsigned', 'String', 'pushCount', '0', '0', NULL, '1', NULL, '1', NULL, 'EQ', 'input', '', 8, 'admin', '2022-04-03 15:05:19', NULL, '2022-04-03 15:16:08');
+INSERT INTO `gen_table_column` VALUES (351, '28', 'push_similar', '相似度', 'double', 'Long', 'pushSimilar', '0', '0', NULL, '1', NULL, '1', NULL, 'EQ', 'input', '', 9, 'admin', '2022-04-03 15:05:19', NULL, '2022-04-03 15:16:08');
+INSERT INTO `gen_table_column` VALUES (352, '28', 'push_status', '推送状态', 'char(1)', 'String', 'pushStatus', '0', '0', NULL, '1', '1', '1', '1', 'EQ', 'select', 'laf_release_status', 10, 'admin', '2022-04-03 15:05:19', NULL, '2022-04-03 15:16:08');
+INSERT INTO `gen_table_column` VALUES (353, '28', 'push_del', '删除状态', 'char(1)', 'String', 'pushDel', '0', '0', NULL, '1', '1', '1', '1', 'EQ', 'select', 'laf_user_status', 11, 'admin', '2022-04-03 15:05:19', NULL, '2022-04-03 15:16:08');
 
 -- ----------------------------
 -- Table structure for laf_announce
@@ -170,21 +202,41 @@ INSERT INTO `gen_table_column` VALUES (311, '23', 'com_image', '图片', 'varcha
 DROP TABLE IF EXISTS `laf_announce`;
 CREATE TABLE `laf_announce`  (
   `ann_id` int NOT NULL AUTO_INCREMENT COMMENT '公告id',
-  `ann_title` char(1) CHARACTER SET utf8 COLLATE utf8_bin NULL DEFAULT NULL COMMENT '(1通知，2公告）',
+  `ann_title` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin NULL DEFAULT NULL COMMENT '标题',
   `ann_content` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin NULL DEFAULT NULL COMMENT '公告内容',
   `create_by` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin NULL DEFAULT NULL COMMENT '创建者',
-  `creat_time` datetime NULL DEFAULT NULL COMMENT '发布时间',
+  `create_time` datetime NULL DEFAULT NULL COMMENT '发布时间',
   `image` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin NULL DEFAULT NULL COMMENT '内容图片',
-  `status` char(1) CHARACTER SET utf8 COLLATE utf8_bin NULL DEFAULT '2' COMMENT '状态（0使用，2停用）',
+  `status` char(1) CHARACTER SET utf8 COLLATE utf8_bin NULL DEFAULT '1' COMMENT '状态（1使用，2停用）',
+  `flow` int NOT NULL DEFAULT 1 COMMENT '浏览量',
   PRIMARY KEY (`ann_id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 5 CHARACTER SET = utf8 COLLATE = utf8_bin ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 6 CHARACTER SET = utf8 COLLATE = utf8_bin ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of laf_announce
 -- ----------------------------
-INSERT INTO `laf_announce` VALUES (1, '1', '我们失物招领系统即将上线！！！', 'admin', '2021-10-08 00:00:00', '', '1');
-INSERT INTO `laf_announce` VALUES (3, '2', 'hello world !', 'admin', '2021-11-28 00:00:00', '', '1');
-INSERT INTO `laf_announce` VALUES (4, '1', '2022年祝大家新年快乐！！！！', 'admin', '2021-12-21 00:00:00', '', '0');
+INSERT INTO `laf_announce` VALUES (1, '系统公告', '我们失物招领系统即将上线！！！', 'admin', '2021-10-08 00:00:00', '', '2', 14);
+INSERT INTO `laf_announce` VALUES (3, '系统公告', 'hello world !', 'admin', '2021-11-28 00:00:00', '', '1', 15);
+INSERT INTO `laf_announce` VALUES (4, '系统公告', '2022年祝大家新年快乐！！！！', 'admin', '2021-12-21 00:00:00', '', '1', 31);
+INSERT INTO `laf_announce` VALUES (5, '欢迎大家第一次内测！！', '你好，欢迎使用江理失物招领小程序，本小程序始终秉承用户至上，绝不涉及任何侵犯隐私行为，大家可以放心使用，如果感觉好用大家也可以帮忙推广下，谢谢各位。', NULL, '2022-03-25 00:00:00', 'http://101.42.222.167/img/user/tiezi/tmp_ffab63d36e1b2cb4298b8c4b1b375eece2ecdc0262147ccb.jpg', '1', 149);
+
+-- ----------------------------
+-- Table structure for laf_api_token
+-- ----------------------------
+DROP TABLE IF EXISTS `laf_api_token`;
+CREATE TABLE `laf_api_token`  (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin NULL DEFAULT NULL,
+  `token` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin NULL DEFAULT NULL,
+  `create_time` datetime NULL DEFAULT NULL,
+  PRIMARY KEY (`id`) USING BTREE
+) ENGINE = InnoDB AUTO_INCREMENT = 3 CHARACTER SET = utf8 COLLATE = utf8_bin ROW_FORMAT = DYNAMIC;
+
+-- ----------------------------
+-- Records of laf_api_token
+-- ----------------------------
+INSERT INTO `laf_api_token` VALUES (1, 'wxAccessToken', '55_E9lJ5pgKH7Mw4ZXj3FfVtCfcZL32Le3iWUaHIg_EIwayqyB1d2FJOnpp4lhSaEbppWfZhydmDEUC-915DTKsy_82x9LPHwvBAzCzl0Hrqle3jWZho6K3nblm8ioZyccqrcZfyY7RVtRAOAk4TKDaAHAKBU', '2022-04-03 15:00:01');
+INSERT INTO `laf_api_token` VALUES (2, 'ocrAccessToken', '24.ee929ee490156e10d56f7dcda21750e8.2592000.1651337940.282335-25693405', '2022-04-01 00:59:00');
 
 -- ----------------------------
 -- Table structure for laf_category
@@ -198,7 +250,7 @@ CREATE TABLE `laf_category`  (
   `create_by` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin NULL DEFAULT NULL COMMENT '创建者',
   `cate_status` char(1) CHARACTER SET utf8 COLLATE utf8_bin NULL DEFAULT '1' COMMENT '状态(1使用中，2已删除）',
   PRIMARY KEY (`cate_id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 13 CHARACTER SET = utf8 COLLATE = utf8_bin ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 5 CHARACTER SET = utf8 COLLATE = utf8_bin ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of laf_category
@@ -224,33 +276,19 @@ CREATE TABLE `laf_comment`  (
   `com_image` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin NULL DEFAULT NULL COMMENT '评论图片',
   PRIMARY KEY (`com_id`) USING BTREE,
   INDEX `del_comment`(`parent_id`) USING BTREE,
+  INDEX `com_rel_pk`(`com_rel_id`) USING BTREE,
+  INDEX `com_stu_pk`(`com_stu_id`) USING BTREE,
+  CONSTRAINT `com_rel_pk` FOREIGN KEY (`com_rel_id`) REFERENCES `laf_release` (`rel_id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `com_stu_pk` FOREIGN KEY (`com_stu_id`) REFERENCES `laf_student` (`stu_id`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `del_comment` FOREIGN KEY (`parent_id`) REFERENCES `laf_comment` (`com_id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE = InnoDB AUTO_INCREMENT = 189 CHARACTER SET = utf8 COLLATE = utf8_bin ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 392 CHARACTER SET = utf8 COLLATE = utf8_bin ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of laf_comment
 -- ----------------------------
 INSERT INTO `laf_comment` VALUES (5, NULL, 122, 6, '哈哈', '2021-12-01 19:20:35', 1, '1', NULL);
-INSERT INTO `laf_comment` VALUES (11, NULL, 121, 4, '12321321', '2021-12-22 22:09:12', NULL, '1', NULL);
 INSERT INTO `laf_comment` VALUES (12, NULL, 120, 4, 'nihao', '2021-12-22 22:09:40', NULL, '1', NULL);
 INSERT INTO `laf_comment` VALUES (13, NULL, 120, 4, 'haha', '2021-12-22 22:13:03', NULL, '1', NULL);
-INSERT INTO `laf_comment` VALUES (20, NULL, 118, 4, 'asdad', '2021-12-22 22:31:39', NULL, '1', NULL);
-INSERT INTO `laf_comment` VALUES (21, NULL, 118, 4, 'asdadada', '2021-12-22 22:31:46', NULL, '1', NULL);
-INSERT INTO `laf_comment` VALUES (22, NULL, 118, 4, 'asdadad', '2021-12-22 22:31:49', NULL, '1', NULL);
-INSERT INTO `laf_comment` VALUES (23, NULL, 116, 4, 'asdasd', '2021-12-22 22:31:54', NULL, '1', NULL);
-INSERT INTO `laf_comment` VALUES (24, NULL, 116, 4, 'asdasda', '2021-12-22 22:31:56', NULL, '1', NULL);
-INSERT INTO `laf_comment` VALUES (25, NULL, 116, 4, 'asdasd', '2021-12-22 22:31:58', NULL, '1', NULL);
-INSERT INTO `laf_comment` VALUES (26, NULL, 116, 4, 'asdasdad', '2021-12-22 22:32:01', NULL, '1', NULL);
-INSERT INTO `laf_comment` VALUES (27, NULL, 116, 4, 'asdada', '2021-12-22 22:32:04', NULL, '1', NULL);
-INSERT INTO `laf_comment` VALUES (30, NULL, 118, 4, 'sadads', '2021-12-22 22:33:12', NULL, '1', NULL);
-INSERT INTO `laf_comment` VALUES (31, NULL, 119, 4, '1111', '2021-12-23 09:19:28', NULL, '1', NULL);
-INSERT INTO `laf_comment` VALUES (32, NULL, 119, 4, '111', '2021-12-23 09:19:31', NULL, '1', NULL);
-INSERT INTO `laf_comment` VALUES (35, NULL, 121, 4, 'haha', '2021-12-23 09:20:27', NULL, '1', NULL);
-INSERT INTO `laf_comment` VALUES (39, NULL, 121, 4, '213123', '2021-12-23 09:56:46', NULL, '1', NULL);
-INSERT INTO `laf_comment` VALUES (41, NULL, 117, 4, '1231', '2021-12-23 09:58:50', NULL, '1', NULL);
-INSERT INTO `laf_comment` VALUES (42, NULL, 118, 4, '111', '2021-12-23 10:00:36', NULL, '1', NULL);
-INSERT INTO `laf_comment` VALUES (43, NULL, 118, 4, '1231231', '2021-12-23 10:00:43', NULL, '1', NULL);
-INSERT INTO `laf_comment` VALUES (44, NULL, 121, 4, '111', '2021-12-23 10:00:54', NULL, '1', NULL);
 INSERT INTO `laf_comment` VALUES (58, 5, 122, 4, '哈哈啥啊', '2021-12-23 12:55:48', NULL, '1', NULL);
 INSERT INTO `laf_comment` VALUES (60, NULL, 122, 4, '11', '2021-12-23 12:57:02', NULL, '1', NULL);
 INSERT INTO `laf_comment` VALUES (61, 5, 122, 4, '叫啥呢', '2021-12-23 13:01:17', NULL, '1', NULL);
@@ -260,73 +298,71 @@ INSERT INTO `laf_comment` VALUES (67, 66, 120, 6, '大傻逼', '2021-12-23 19:47
 INSERT INTO `laf_comment` VALUES (68, 66, 120, 6, '1', '2021-12-23 19:47:15', NULL, '1', NULL);
 INSERT INTO `laf_comment` VALUES (69, NULL, 120, 6, '1', '2021-12-23 19:47:21', NULL, '1', NULL);
 INSERT INTO `laf_comment` VALUES (70, NULL, 120, 4, '你好', '2021-12-23 19:47:37', NULL, '1', NULL);
-INSERT INTO `laf_comment` VALUES (71, NULL, 125, 4, '我', '2021-12-23 19:56:20', NULL, '1', NULL);
-INSERT INTO `laf_comment` VALUES (72, NULL, 125, 4, '2', '2021-12-23 19:56:25', NULL, '1', NULL);
-INSERT INTO `laf_comment` VALUES (73, NULL, 125, 4, '3', '2021-12-23 19:58:02', NULL, '1', NULL);
-INSERT INTO `laf_comment` VALUES (74, NULL, 125, 4, '5', '2021-12-23 20:00:06', NULL, '1', NULL);
-INSERT INTO `laf_comment` VALUES (75, NULL, 125, 4, '8', '2021-12-23 20:00:39', NULL, '1', NULL);
-INSERT INTO `laf_comment` VALUES (76, NULL, 124, 4, 'q', '2021-12-23 20:02:18', NULL, '1', NULL);
-INSERT INTO `laf_comment` VALUES (77, NULL, 124, 4, '你好', '2021-12-23 20:04:03', NULL, '1', NULL);
-INSERT INTO `laf_comment` VALUES (78, NULL, 124, 4, '33', '2021-12-23 20:04:27', NULL, '1', NULL);
-INSERT INTO `laf_comment` VALUES (79, NULL, 124, 4, '44', '2021-12-23 20:05:04', NULL, '1', NULL);
-INSERT INTO `laf_comment` VALUES (81, NULL, 129, 4, '2', '2021-12-23 20:17:59', NULL, '1', NULL);
-INSERT INTO `laf_comment` VALUES (85, NULL, 129, 4, '11', '2021-12-23 20:22:05', NULL, '1', NULL);
-INSERT INTO `laf_comment` VALUES (87, NULL, 129, 4, '26565', '2021-12-23 20:26:16', NULL, '1', NULL);
-INSERT INTO `laf_comment` VALUES (88, NULL, 129, 4, '789', '2021-12-23 20:59:01', NULL, '1', NULL);
-INSERT INTO `laf_comment` VALUES (90, NULL, 131, 4, '2', '2021-12-23 21:04:45', NULL, '1', NULL);
-INSERT INTO `laf_comment` VALUES (91, NULL, 133, 4, '2@', '2021-12-23 21:30:30', NULL, '1', NULL);
-INSERT INTO `laf_comment` VALUES (92, NULL, 133, 4, '22', '2021-12-23 21:32:24', NULL, '1', NULL);
-INSERT INTO `laf_comment` VALUES (93, NULL, 134, 6, '1', '2021-12-23 21:57:12', NULL, '1', NULL);
-INSERT INTO `laf_comment` VALUES (94, 93, 134, 4, '干啥', '2021-12-23 21:57:20', NULL, '1', NULL);
-INSERT INTO `laf_comment` VALUES (95, 94, 134, 6, '哈哈', '2021-12-23 21:57:28', NULL, '1', NULL);
 INSERT INTO `laf_comment` VALUES (97, NULL, 132, 4, '11', '2021-12-25 21:26:33', NULL, '1', NULL);
 INSERT INTO `laf_comment` VALUES (99, NULL, 132, 4, 'hello', '2021-12-25 21:31:45', NULL, '1', NULL);
 INSERT INTO `laf_comment` VALUES (100, NULL, 132, 9, '哥一脚踢爆你的蛋蛋', '2021-12-25 21:31:45', NULL, '1', NULL);
 INSERT INTO `laf_comment` VALUES (101, 100, 132, 4, 'gun', '2021-12-25 21:31:56', 100, '1', NULL);
-INSERT INTO `laf_comment` VALUES (102, NULL, 147, 4, '11', '2021-12-25 22:03:45', NULL, '1', NULL);
-INSERT INTO `laf_comment` VALUES (103, NULL, 149, 10, '11', '2021-12-31 12:45:49', NULL, '1', NULL);
-INSERT INTO `laf_comment` VALUES (104, NULL, 149, 4, '11', '2022-01-24 21:03:44', NULL, '1', NULL);
-INSERT INTO `laf_comment` VALUES (112, NULL, NULL, 4, NULL, '2022-03-02 20:10:30', NULL, '1', NULL);
-INSERT INTO `laf_comment` VALUES (113, NULL, NULL, 4, NULL, '2022-03-02 20:11:36', NULL, '1', NULL);
-INSERT INTO `laf_comment` VALUES (114, NULL, 149, 4, '你好', '2022-03-02 20:17:06', NULL, '1', NULL);
-INSERT INTO `laf_comment` VALUES (115, 5, 149, 4, '你好', '2022-03-02 20:17:09', NULL, '1', NULL);
-INSERT INTO `laf_comment` VALUES (116, NULL, 149, 4, '你好', '2022-03-02 20:18:19', NULL, '1', NULL);
-INSERT INTO `laf_comment` VALUES (132, NULL, 161, 4, 'asdfsdaf', '2022-03-02 22:07:56', NULL, '1', NULL);
-INSERT INTO `laf_comment` VALUES (134, NULL, 161, 4, '21341234', '2022-03-02 22:08:52', NULL, '1', NULL);
-INSERT INTO `laf_comment` VALUES (135, NULL, 161, 4, '1234123', '2022-03-02 22:13:36', NULL, '1', NULL);
-INSERT INTO `laf_comment` VALUES (136, NULL, 149, 4, '你好', '2022-03-02 22:14:38', NULL, '1', NULL);
-INSERT INTO `laf_comment` VALUES (137, NULL, 161, 4, '????', '2022-03-02 22:16:46', NULL, '1', NULL);
-INSERT INTO `laf_comment` VALUES (138, NULL, 161, 4, 'lll', '2022-03-02 22:17:33', NULL, '1', NULL);
-INSERT INTO `laf_comment` VALUES (139, NULL, 161, 4, '1234', '2022-03-02 22:17:45', NULL, '1', NULL);
-INSERT INTO `laf_comment` VALUES (140, NULL, 161, 4, 'lllk', '2022-03-02 22:18:25', NULL, '1', NULL);
-INSERT INTO `laf_comment` VALUES (141, NULL, 161, 4, 'hsdafkh', '2022-03-02 22:19:07', NULL, '1', NULL);
-INSERT INTO `laf_comment` VALUES (142, NULL, 161, 4, 'jbm', '2022-03-02 22:21:27', NULL, '1', NULL);
-INSERT INTO `laf_comment` VALUES (143, NULL, 161, 4, '1111', '2022-03-02 22:23:14', NULL, '1', NULL);
-INSERT INTO `laf_comment` VALUES (144, 5, 149, 4, '你好', '2022-03-02 22:24:57', NULL, '1', NULL);
-INSERT INTO `laf_comment` VALUES (145, NULL, 161, 4, '11', '2022-03-02 22:28:01', NULL, '1', NULL);
-INSERT INTO `laf_comment` VALUES (146, NULL, 161, 4, '11111', '2022-03-02 22:28:46', NULL, '1', NULL);
-INSERT INTO `laf_comment` VALUES (147, NULL, 161, 4, '1111', '2022-03-02 22:29:13', NULL, '1', NULL);
-INSERT INTO `laf_comment` VALUES (148, NULL, 174, 4, '111', '2022-03-03 21:57:17', NULL, '1', NULL);
-INSERT INTO `laf_comment` VALUES (149, NULL, 119, 4, '111', '2022-03-03 21:57:51', NULL, '1', NULL);
-INSERT INTO `laf_comment` VALUES (150, 32, 119, 4, '111', '2022-03-03 21:58:00', NULL, '1', NULL);
-INSERT INTO `laf_comment` VALUES (152, 148, 174, 4, '3245', '2022-03-03 22:08:12', NULL, '1', NULL);
-INSERT INTO `laf_comment` VALUES (154, NULL, 173, 4, '2134', '2022-03-03 22:08:20', NULL, '1', NULL);
-INSERT INTO `laf_comment` VALUES (155, 154, 173, 4, '1234', '2022-03-03 22:08:22', NULL, '1', NULL);
-INSERT INTO `laf_comment` VALUES (157, NULL, 149, 4, '你好3.4', '2022-03-04 18:27:27', NULL, '1', '/img/user/tiezi/e2GnA5wxH4WY9bf0f904c66c0979cc15ad1c723f3608.JPG');
-INSERT INTO `laf_comment` VALUES (158, NULL, 149, 4, 'nihao3.4', '2022-03-04 18:28:53', NULL, '1', NULL);
-INSERT INTO `laf_comment` VALUES (160, NULL, 149, 4, '你好啊', '2022-03-05 14:52:11', NULL, '1', NULL);
-INSERT INTO `laf_comment` VALUES (167, NULL, 174, 4, '1231', '2022-03-05 15:32:14', NULL, '1', '/img/user/tiezi/UjkcnLHTGQj23b444e65e8407e0d40c6642962b9ad11.png');
-INSERT INTO `laf_comment` VALUES (168, NULL, 174, 4, '1231', '2022-03-05 15:32:26', NULL, '1', NULL);
-INSERT INTO `laf_comment` VALUES (169, NULL, 174, 4, '234', '2022-03-05 15:32:47', NULL, '1', NULL);
-INSERT INTO `laf_comment` VALUES (170, NULL, 174, 4, '', '2022-03-05 15:32:55', NULL, '1', '/img/user/tiezi/Alrx0tsuP9Rs3b444e65e8407e0d40c6642962b9ad11.png');
-INSERT INTO `laf_comment` VALUES (175, NULL, 174, 4, '1231313', '2022-03-05 15:33:35', NULL, '1', NULL);
-INSERT INTO `laf_comment` VALUES (182, 154, 173, 5, '德辉薄酥饼', '2022-03-06 10:25:00', NULL, '1', NULL);
-INSERT INTO `laf_comment` VALUES (183, 154, 173, 5, '', '2022-03-06 10:25:12', NULL, '1', '/img/user/tiezi/tmp_30800b3166e35f2623266f08ae42e101327c15f0becdc85e.jpg');
-INSERT INTO `laf_comment` VALUES (184, 155, 173, 5, '想啸', '2022-03-06 10:25:21', NULL, '1', NULL);
-INSERT INTO `laf_comment` VALUES (185, 155, 173, 5, '你在干嘛啊', '2022-03-06 10:25:42', NULL, '1', '/img/user/tiezi/tmp_f900986beebc494b6cc5b87630ef13abc90e78567db671c0.jpg');
-INSERT INTO `laf_comment` VALUES (186, NULL, 175, 4, '11', '2022-03-08 22:34:11', NULL, '1', NULL);
-INSERT INTO `laf_comment` VALUES (187, 186, 175, 4, '11', '2022-03-08 22:34:14', NULL, '1', NULL);
-INSERT INTO `laf_comment` VALUES (188, 187, 175, 4, '111', '2022-03-08 22:34:17', NULL, '1', NULL);
+INSERT INTO `laf_comment` VALUES (190, 5, 122, 4, '1111', '2022-03-10 13:24:37', NULL, '1', NULL);
+INSERT INTO `laf_comment` VALUES (191, 60, 122, 4, '111', '2022-03-10 13:30:42', NULL, '1', NULL);
+INSERT INTO `laf_comment` VALUES (192, 64, 122, 4, '111', '2022-03-10 13:34:16', NULL, '1', NULL);
+INSERT INTO `laf_comment` VALUES (193, 64, 122, 4, '你好', '2022-03-10 13:36:02', NULL, '1', NULL);
+INSERT INTO `laf_comment` VALUES (194, 60, 122, 4, '1111', '2022-03-10 13:40:02', NULL, '1', NULL);
+INSERT INTO `laf_comment` VALUES (195, 60, 122, 4, '1111', '2022-03-10 13:53:53', NULL, '1', NULL);
+INSERT INTO `laf_comment` VALUES (196, 60, 122, 4, '1111', '2022-03-10 13:54:15', NULL, '1', NULL);
+INSERT INTO `laf_comment` VALUES (197, 64, 122, 4, '你好', '2022-03-10 13:54:40', NULL, '1', NULL);
+INSERT INTO `laf_comment` VALUES (198, 60, 122, 4, '你好', '2022-03-10 13:55:41', NULL, '1', NULL);
+INSERT INTO `laf_comment` VALUES (199, 60, 122, 4, '你是谁？', '2022-03-10 13:56:45', NULL, '1', NULL);
+INSERT INTO `laf_comment` VALUES (200, 100, 132, 4, '11111', '2022-03-10 13:58:03', NULL, '1', NULL);
+INSERT INTO `laf_comment` VALUES (203, 5, 122, 4, '在吗', '2022-03-10 13:59:29', NULL, '1', NULL);
+INSERT INTO `laf_comment` VALUES (205, 66, 120, 4, '111', '2022-03-10 14:18:38', NULL, '1', NULL);
+INSERT INTO `laf_comment` VALUES (206, 66, 120, 4, '3.10', '2022-03-10 14:30:08', NULL, '1', NULL);
+INSERT INTO `laf_comment` VALUES (237, NULL, 235, 4, '123', '2022-03-13 21:12:17', NULL, '1', NULL);
+INSERT INTO `laf_comment` VALUES (238, 237, 235, 4, '123', '2022-03-13 21:12:20', NULL, '1', NULL);
+INSERT INTO `laf_comment` VALUES (253, NULL, 278, 4, '1', '2022-03-15 15:01:59', NULL, '1', NULL);
+INSERT INTO `laf_comment` VALUES (254, 253, 278, 4, '1', '2022-03-15 15:02:17', NULL, '1', NULL);
+INSERT INTO `laf_comment` VALUES (255, 253, 278, 13, '牛逼', '2022-03-15 16:23:15', NULL, '1', NULL);
+INSERT INTO `laf_comment` VALUES (256, 253, 278, 13, '等会哈', '2022-03-15 16:23:38', NULL, '1', NULL);
+INSERT INTO `laf_comment` VALUES (262, NULL, 308, 12, '好多bug', '2022-03-16 10:27:42', NULL, '1', NULL);
+INSERT INTO `laf_comment` VALUES (263, 262, 308, 4, '那些bug', '2022-03-16 16:08:17', NULL, '1', NULL);
+INSERT INTO `laf_comment` VALUES (280, NULL, 353, 22, '已找回。', '2022-03-18 16:26:48', NULL, '1', NULL);
+INSERT INTO `laf_comment` VALUES (281, 280, 353, 4, '。。', '2022-03-18 16:43:54', NULL, '1', NULL);
+INSERT INTO `laf_comment` VALUES (282, 281, 353, 22, '…', '2022-03-18 16:44:07', NULL, '1', NULL);
+INSERT INTO `laf_comment` VALUES (283, 282, 353, 4, '可以收到我的订阅通知吗', '2022-03-18 16:44:28', NULL, '1', NULL);
+INSERT INTO `laf_comment` VALUES (284, 283, 353, 22, '可以', '2022-03-18 16:44:37', NULL, '1', NULL);
+INSERT INTO `laf_comment` VALUES (288, NULL, 346, 12, '我为什么要找徐乐的身份证', '2022-03-18 17:27:36', NULL, '1', NULL);
+INSERT INTO `laf_comment` VALUES (289, NULL, 358, 12, '没做联系方式的校验uu，回头补≥﹏≤', '2022-03-18 17:45:56', NULL, '1', NULL);
+INSERT INTO `laf_comment` VALUES (290, NULL, 361, 4, '牛牛', '2022-03-18 19:43:14', NULL, '1', NULL);
+INSERT INTO `laf_comment` VALUES (292, NULL, 360, 13, '苏寒', '2022-03-18 19:43:19', NULL, '1', NULL);
+INSERT INTO `laf_comment` VALUES (293, NULL, 361, 13, '牛牛', '2022-03-18 19:43:39', NULL, '1', '/img/user/tiezi/tmp_d286927255ede4cd89c3904fda868aee4dde1e500e002104.jpg');
+INSERT INTO `laf_comment` VALUES (294, NULL, 362, 4, '这是图书馆吗', '2022-03-18 20:14:32', NULL, '1', NULL);
+INSERT INTO `laf_comment` VALUES (295, NULL, 363, 4, '同款', '2022-03-18 20:19:07', NULL, '1', '/img/user/tiezi/tmp_e8768d0c3d859919bb7ff18c58d8b3cd.jpg');
+INSERT INTO `laf_comment` VALUES (297, NULL, 362, 13, '绷不住了', '2022-03-18 20:20:43', NULL, '1', NULL);
+INSERT INTO `laf_comment` VALUES (303, 294, 362, 13, '不是吧，是吧，是吧，不是吧', '2022-03-18 20:23:19', NULL, '1', NULL);
+INSERT INTO `laf_comment` VALUES (308, NULL, 373, 13, '？？？？', '2022-03-18 21:19:56', NULL, '1', NULL);
+INSERT INTO `laf_comment` VALUES (309, NULL, 373, 6, 'Xsp邀请您三食堂共用犀米家', '2022-03-18 21:21:22', NULL, '1', NULL);
+INSERT INTO `laf_comment` VALUES (310, 309, 373, 13, '小学生', '2022-03-18 21:22:12', NULL, '1', NULL);
+INSERT INTO `laf_comment` VALUES (311, 310, 373, 6, '就是这位', '2022-03-18 21:26:04', NULL, '1', NULL);
+INSERT INTO `laf_comment` VALUES (315, NULL, 373, 12, '社死T_T', '2022-03-18 21:38:41', NULL, '1', NULL);
+INSERT INTO `laf_comment` VALUES (317, NULL, 373, 37, '哇美女', '2022-03-18 22:43:57', NULL, '1', NULL);
+INSERT INTO `laf_comment` VALUES (318, 317, 373, 37, '我是二级评论', '2022-03-18 22:44:12', NULL, '1', NULL);
+INSERT INTO `laf_comment` VALUES (319, 318, 373, 37, '有三级吗', '2022-03-18 22:44:28', NULL, '1', NULL);
+INSERT INTO `laf_comment` VALUES (320, 319, 373, 37, '无限级的嘛', '2022-03-18 22:44:55', NULL, '1', NULL);
+INSERT INTO `laf_comment` VALUES (321, 320, 373, 12, '你想皮尺', '2022-03-18 22:59:31', NULL, '1', NULL);
+INSERT INTO `laf_comment` VALUES (322, 317, 373, 12, '尴尬', '2022-03-18 23:00:04', NULL, '1', NULL);
+INSERT INTO `laf_comment` VALUES (323, NULL, 375, 4, '真帅', '2022-03-18 23:03:54', NULL, '1', NULL);
+INSERT INTO `laf_comment` VALUES (325, NULL, 377, 13, '<b>niubi</b>', '2022-03-19 10:09:26', NULL, '1', NULL);
+INSERT INTO `laf_comment` VALUES (326, NULL, 377, 4, 'http://127.0.0.1/sqllib/Less-1/?id=-1%27union%20select%201,group_concat(schema_name),3% 20from%20information_schema.schemata–+', '2022-03-19 11:24:09', NULL, '1', NULL);
+INSERT INTO `laf_comment` VALUES (328, 294, 362, 32, '（）', '2022-03-19 12:03:12', NULL, '1', NULL);
+INSERT INTO `laf_comment` VALUES (330, NULL, 378, 12, '要多少啊，老板', '2022-03-19 12:14:13', NULL, '1', NULL);
+INSERT INTO `laf_comment` VALUES (331, NULL, 378, 12, '11111', '2022-03-19 12:14:35', NULL, '1', NULL);
+INSERT INTO `laf_comment` VALUES (373, NULL, 364, 13, '1234', '2022-03-23 20:00:55', NULL, '1', NULL);
+INSERT INTO `laf_comment` VALUES (374, NULL, 364, 13, '1234', '2022-03-23 20:01:30', NULL, '1', NULL);
+INSERT INTO `laf_comment` VALUES (385, NULL, 402, 4, '1', '2022-03-26 13:30:05', NULL, '1', NULL);
+INSERT INTO `laf_comment` VALUES (386, NULL, 403, 12, '你好', '2022-03-26 13:44:33', NULL, '1', NULL);
+INSERT INTO `laf_comment` VALUES (387, NULL, 402, 4, '1', '2022-03-26 13:45:16', NULL, '1', NULL);
+INSERT INTO `laf_comment` VALUES (388, NULL, 403, 12, '你好吗', '2022-03-26 13:45:18', NULL, '1', NULL);
+INSERT INTO `laf_comment` VALUES (389, NULL, 404, 4, '1', '2022-03-27 10:13:22', NULL, '1', NULL);
+INSERT INTO `laf_comment` VALUES (390, 389, 404, 4, '11', '2022-03-27 10:15:16', NULL, '1', NULL);
 
 -- ----------------------------
 -- Table structure for laf_push
@@ -336,19 +372,24 @@ CREATE TABLE `laf_push`  (
   `push_id` int NOT NULL COMMENT '推送id',
   `push_title` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin NULL DEFAULT NULL COMMENT '推送标题',
   `push_clue` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin NULL DEFAULT NULL COMMENT '推送线索',
-  `push_image` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin NULL DEFAULT NULL COMMENT '推送图片',
+  `rel_id` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin NULL DEFAULT NULL COMMENT '推送帖子id',
   `cate_id` int NULL DEFAULT NULL COMMENT '所属种类',
+  `stu_id` int NULL DEFAULT NULL COMMENT '用户id',
   `create_time` datetime NULL DEFAULT NULL COMMENT '创建时间',
-  `push_count` int NULL DEFAULT NULL COMMENT '推送次数',
+  `push_count` int UNSIGNED NULL DEFAULT 0 COMMENT '推送次数',
   `push_similar` double NULL DEFAULT NULL COMMENT '相似度',
-  `push_status` char(1) CHARACTER SET utf8 COLLATE utf8_bin NULL DEFAULT '1' COMMENT '推送状态（1寻找中，2成功，3已取消）',
-  PRIMARY KEY (`push_id`) USING BTREE
-) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_bin ROW_FORMAT = Dynamic;
+  `push_status` char(1) CHARACTER SET utf8 COLLATE utf8_bin NULL DEFAULT '1' COMMENT '推送状态（1寻找中，2成功）',
+  `push_del` char(1) CHARACTER SET utf8 COLLATE utf8_bin NULL DEFAULT '1' COMMENT '是否删除（1使用，2停用）',
+  PRIMARY KEY (`push_id`) USING BTREE,
+  INDEX `rel_pk`(`rel_id`) USING BTREE,
+  INDEX `stu_pk`(`stu_id`) USING BTREE,
+  CONSTRAINT `stu_pk` FOREIGN KEY (`stu_id`) REFERENCES `laf_student` (`stu_id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_bin ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of laf_push
 -- ----------------------------
-INSERT INTO `laf_push` VALUES (1, '丢失校园卡', '姓名许世平', NULL, 1, '2021-09-27 18:26:05', 0, NULL, '1');
+INSERT INTO `laf_push` VALUES (1, '丢失校园卡', '许世平;许肖阳;学生证', '414;416', 1, 4, '2021-09-27 18:26:05', 6, NULL, '1', '1');
 
 -- ----------------------------
 -- Table structure for laf_release
@@ -359,7 +400,7 @@ CREATE TABLE `laf_release`  (
   `rel_title` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin NULL DEFAULT NULL COMMENT '帖子标题',
   `rel_desc` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin NULL DEFAULT NULL COMMENT '帖子描述',
   `rel_contact` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin NULL DEFAULT NULL COMMENT '帖子联系方式',
-  `rel_cate_id` int UNSIGNED NULL DEFAULT 1 COMMENT '所属物品种类id',
+  `rel_cate_id` int NULL DEFAULT 1 COMMENT '所属物品种类id',
   `rel_time` datetime NULL DEFAULT NULL COMMENT '认领时间',
   `rel_campus` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin NULL DEFAULT NULL COMMENT '物品丢失寻找校区',
   `create_place` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin NULL DEFAULT NULL COMMENT '物品丢失发现地点',
@@ -372,53 +413,63 @@ CREATE TABLE `laf_release`  (
   `rel_flow` int UNSIGNED NULL DEFAULT 1 COMMENT '浏览量',
   `rel_del` char(1) CHARACTER SET utf8 COLLATE utf8_bin NULL DEFAULT '1' COMMENT '是否删除(1未删除,2删除',
   `rel_claim_id` int NULL DEFAULT NULL COMMENT '认领者id',
-  PRIMARY KEY (`rel_id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 176 CHARACTER SET = utf8 COLLATE = utf8_bin ROW_FORMAT = Dynamic;
+  PRIMARY KEY (`rel_id`) USING BTREE,
+  INDEX `cate_fk`(`rel_cate_id`) USING BTREE,
+  INDEX `stu_fk`(`create_id`) USING BTREE,
+  INDEX `claim_fk`(`rel_claim_id`) USING BTREE,
+  CONSTRAINT `cate_fk` FOREIGN KEY (`rel_cate_id`) REFERENCES `laf_category` (`cate_id`) ON DELETE SET NULL ON UPDATE CASCADE,
+  CONSTRAINT `claim_fk` FOREIGN KEY (`rel_claim_id`) REFERENCES `laf_student` (`stu_id`) ON DELETE SET NULL ON UPDATE CASCADE,
+  CONSTRAINT `stu_fk` FOREIGN KEY (`create_id`) REFERENCES `laf_student` (`stu_id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE = InnoDB AUTO_INCREMENT = 427 CHARACTER SET = utf8 COLLATE = utf8_bin ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of laf_release
 -- ----------------------------
-INSERT INTO `laf_release` VALUES (105, '1231', '阿科斯达克贷记卡圣诞节卡刷道具卡撒低级ask京东卡送监督卡监督卡觉得阿萨的健身卡的骄傲看似简单阿达氨基酸肯德基ask啊', '12312312', 3, NULL, '不选择', NULL, '2021-10-06 12:58:38', 4, '/img/user/tiezi/3IfuxJ0JOKDEb6353bf4e0f7dc61f52048a2585e51cf.png', '1', 0000000001, '2', 1, '1', 4);
-INSERT INTO `laf_release` VALUES (107, '我的', '我们', '123456', 2, NULL, '红旗校区', NULL, '2021-10-06 13:01:24', 4, '/img/user/tiezi/tmp_cde98bf3232b71e4f420e9549516ca4b.jpg', '2', 0000000001, '2', 1, '1', 4);
-INSERT INTO `laf_release` VALUES (108, '1', '哈哈', 'apipost', 1, NULL, '南昌校区', NULL, '2021-10-06 13:06:14', 6, '/img/user/tiezi/wDEbmeeRgTWMc6f76911d74279584875503a867e7d4f.png', '1', 0000000001, '1', 1, '1', NULL);
-INSERT INTO `laf_release` VALUES (109, '就觉得肯德基', '不能', 'qjjwje', 3, NULL, '不选择', NULL, '2021-10-06 13:06:51', 4, '/img/user/tiezi/tmp_261eec0acb9c659453b9e54f5f067c18.jpg', '1', 0000000001, '1', 1, '1', NULL);
+INSERT INTO `laf_release` VALUES (107, '我的', '我们', '123456', 2, NULL, '红旗校区', '', '2021-10-06 13:01:24', 4, '/img/user/tiezi/tmp_cde98bf3232b71e4f420e9549516ca4b.jpg', '2', 0000000001, '2', 1, '2', NULL);
+INSERT INTO `laf_release` VALUES (109, '就觉得肯德基', '不能', 'qjjwje', 3, NULL, '不选择', NULL, '2021-10-06 13:06:51', 4, '/img/user/tiezi/tmp_261eec0acb9c659453b9e54f5f067c18.jpg', '1', 0000000001, '1', 2, '1', NULL);
 INSERT INTO `laf_release` VALUES (110, '111', '？', '111', 2, NULL, '南昌校区', NULL, '2021-10-06 13:06:57', 6, '/img/user/shiwu.png', '1', 0000000001, '1', 1, '1', NULL);
-INSERT INTO `laf_release` VALUES (111, '111', '111', '111', 1, NULL, '南昌校区', NULL, '2021-10-06 13:07:37', 6, '/img/user/tiezi/tmp_08835869e79cdb4b235a3fa55a3eee55.jpg', '2', 0000000001, '2', 1, '1', 4);
-INSERT INTO `laf_release` VALUES (112, '刘江8722神', '8722阿萨达开了多久俺姥可视对讲阿卡丽记录卡绝对是离开加了科技科利达进口量达记录卡就点卡啊的啊大飒飒党的', 'qq123456', 3, NULL, '南昌校区', NULL, '2021-10-06 13:14:05', 4, '/img/user/tiezi/tmp_d0deab2d0fe83a75fe92ff7f1afdc5a3.jpg', '1', 0000000001, '1', 1, '1', NULL);
-INSERT INTO `laf_release` VALUES (113, '寻找一卡通', '1203教室丢失', 'qq6876203', 2, NULL, '南昌校区', NULL, '2021-10-06 22:49:21', 4, '/img/user/tiezi/tmp_72dc3decade9181c831e1348e8bd75e2.jpg', '2', 0000000001, '1', 1, '1', NULL);
-INSERT INTO `laf_release` VALUES (114, '寻找一卡通', '华晨宇名字', 'qq123456', 2, NULL, '南昌校区', NULL, '2021-10-06 22:50:13', 4, '/img/user/tiezi/tmp_486f11cbdd01b7b000b82941458ee48e.jpg', '1', 0000000001, '1', 1, '1', NULL);
-INSERT INTO `laf_release` VALUES (116, 'test', '你好', '123', 2, NULL, '不选择', NULL, '2021-10-08 18:24:36', 4, '/img/user/tiezi/igQUCkXOOQa743e701fecbd3e65227fa04699861d1e7.webp', '2', 0000000001, '1', 1, '1', NULL);
-INSERT INTO `laf_release` VALUES (119, '你好李欢迎', '1', 'q', 2, NULL, '南昌校区', NULL, '2021-10-09 22:45:26', 4, '/img/user/tiezi/tmp_cfa381896434a5a13e223a04d700fe02.jpg', '1', 0000000001, '1', 1, '1', NULL);
-INSERT INTO `laf_release` VALUES (120, '许世平大帅比', '8722', '111', 2, NULL, '南昌校区', NULL, '2021-10-09 22:46:58', 6, '/img/user/tiezi/tmp_d9067d2321df42d0a333dbe4aa0a78be.jpg', '1', 0000000001, '1', 1, '1', NULL);
-INSERT INTO `laf_release` VALUES (121, '今天', '今天', '在', 3, NULL, '南昌校区', NULL, '2021-10-10 20:20:20', 4, '/img/user/tiezi/tmp_bfc3a7b0fe025734245fb6674f90e614.jpg', '2', 0000000001, '1', 1, '1', NULL);
-INSERT INTO `laf_release` VALUES (122, 'test', '11', '11', 2, NULL, '南昌校区', '', '2021-12-06 16:15:52', 4, '/img/user/tiezi/oRwVTAZDqGrI2c3dd20939b4a139079b806989c939db.png', '1', 0000000040, '1', 50, '1', NULL);
-INSERT INTO `laf_release` VALUES (124, 'Find my son', 'His name is xsp', '11111', 1, '2022-03-01 12:48:04', '南昌校区', NULL, '2021-12-23 19:49:19', 6, '/img/user/xunwu.png', '2', 0000000000, '2', 0, '1', 4);
-INSERT INTO `laf_release` VALUES (125, 'Wq', 'Ry', 'Rydg', 1, '2022-03-01 12:51:37', '南昌校区', NULL, '2021-12-23 19:50:05', 6, '/img/user/shiwu.png', '1', 0000000000, '2', 0, '1', 4);
+INSERT INTO `laf_release` VALUES (111, '111', '111', '111', 1, NULL, '南昌校区', NULL, '2021-10-06 13:07:37', 6, '/img/user/tiezi/tmp_08835869e79cdb4b235a3fa55a3eee55.jpg', '2', 0000000001, '1', 2, '1', NULL);
+INSERT INTO `laf_release` VALUES (112, '刘江8722神', '8722阿萨达开了多久俺姥可视对讲阿卡丽记录卡绝对是离开加了科技科利达进口量达记录卡就点卡啊的啊大飒飒党的', 'qq123456', 3, NULL, '南昌校区', NULL, '2021-10-06 13:14:05', 4, '/img/user/tiezi/tmp_d0deab2d0fe83a75fe92ff7f1afdc5a3.jpg', '1', 0000000001, '1', 2, '1', NULL);
+INSERT INTO `laf_release` VALUES (113, '寻找一卡通', '1203教室丢失', 'qq6876203', 2, NULL, '南昌校区', '', '2021-10-06 22:49:21', 4, '/img/user/tiezi/tmp_72dc3decade9181c831e1348e8bd75e2.jpg', '2', 0000000001, '1', 1, '1', NULL);
+INSERT INTO `laf_release` VALUES (114, '寻找一卡通', '华晨宇名字', 'qq123456', 2, NULL, '南昌校区', '', '2021-10-06 22:50:13', 4, '/img/user/tiezi/tmp_486f11cbdd01b7b000b82941458ee48e.jpg', '1', 0000000001, '1', 1, '1', NULL);
+INSERT INTO `laf_release` VALUES (120, '许世平大帅比', '8722', '111', 2, NULL, '南昌校区', NULL, '2021-10-09 22:46:58', 6, '/img/user/tiezi/tmp_d9067d2321df42d0a333dbe4aa0a78be.jpg', '1', 0000000001, '1', 3, '1', NULL);
+INSERT INTO `laf_release` VALUES (122, 'test', '11', '11', 2, NULL, '南昌校区', '', '2021-12-06 16:15:52', 4, '/img/user/tiezi/oRwVTAZDqGrI2c3dd20939b4a139079b806989c939db.png', '1', 0000000040, '1', 52, '1', NULL);
 INSERT INTO `laf_release` VALUES (126, '我', '你', 'qqq', 1, NULL, '不选择', NULL, '2021-12-23 20:05:32', 4, '/img/user/tiezi/tmp_63ac06d41c46891d21372c6c37b3d0e9.jpg', '1', 0000000000, '1', 0, '1', NULL);
-INSERT INTO `laf_release` VALUES (127, '你', '好', '啊', 1, NULL, '不选择', NULL, '2021-12-23 20:06:33', 4, '/img/user/tiezi/tmp_fdd2e74c686ac35bec269a3f4f1acb72.jpg', '2', 0000000000, '1', 0, '1', NULL);
-INSERT INTO `laf_release` VALUES (128, 'test', 'test', '123', 1, NULL, '不选择', NULL, '2021-12-23 20:09:44', 4, '/img/user/tiezi/tmp_d19b5f0b5b8073ff3954642bcdaeb668.jpg', '1', 0000000001, '1', 1, '1', NULL);
-INSERT INTO `laf_release` VALUES (129, '你好', '你好', '11', 2, NULL, '不选择', NULL, '2021-12-23 20:11:53', 4, '/img/user/tiezi/tmp_636211f66cc55bc5bb9b67ad6af8fe4b.jpg', '1', 0000000000, '1', 0, '1', NULL);
-INSERT INTO `laf_release` VALUES (131, 'test1.0.0', 'hello，world', '123456', 3, NULL, '不选择', '', '2021-12-23 21:03:16', 4, '/img/user/tiezi/tmp_588a1801ced54e04b0f1e441106bc741.jpg', '1', 0000000000, '1', 1, '1', NULL);
-INSERT INTO `laf_release` VALUES (132, 'test1.0.0', '寻找一个demo', '123456', 1, '2022-03-07 19:44:01', '南昌校区', NULL, '2021-12-23 21:06:05', 4, '/img/user/tiezi/tmp_264c59b67ad78526eddb2f6ce9770a1a.jpg', '2', 0000000000, '2', 1, '1', 4);
-INSERT INTO `laf_release` VALUES (148, '33', '', '33', 1, NULL, '不选择', NULL, '2021-12-25 22:03:55', 4, '/img/user/tiezi/JsjJzjnbBZiA437d1bf4fb7e361d0374403270053f42.png', '1', 0000000000, '1', 1, '1', NULL);
-INSERT INTO `laf_release` VALUES (149, '今天', '你', '123456', 2, NULL, '南昌校区', NULL, '2021-12-25 22:53:19', 4, '/img/user/tiezi/tmp_14a6829838f884f812d13191f0093d1c.jpg', '1', 0000000000, '1', 1, '1', NULL);
-INSERT INTO `laf_release` VALUES (157, '1', '1', '1', 2, NULL, '南昌校区', '', '2022-01-24 21:29:21', 4, '/img/user/tiezi/wDEbmeeRgTWMc6f76911d74279584875503a867e7d4f.png', '1', 0000000000, '1', 1, '2', NULL);
-INSERT INTO `laf_release` VALUES (160, '1', '1', '1', 1, NULL, '不选择', NULL, '2022-02-02 21:27:42', 4, '/img/user/shiwu.png', '1', 0000000000, '1', 1, '2', NULL);
-INSERT INTO `laf_release` VALUES (161, '2', '2', '2', 1, '2022-03-07 19:44:16', '不选择', NULL, '2022-02-02 21:30:04', 4, '/img/user/xunwu.png', '2', 0000000000, '2', 1, '1', 4);
-INSERT INTO `laf_release` VALUES (162, 'eead', 'asda', 'asdad', 1, NULL, '不选择', NULL, '2022-02-02 21:33:15', 4, '/img/user/shiwu.png', '1', 0000000000, '1', 1, '2', NULL);
-INSERT INTO `laf_release` VALUES (163, '11', '', '11', 1, NULL, '不选择', '', '2022-02-02 21:34:44', 4, '/img/user/shiwu.png', '1', 0000000000, '1', 1, '2', NULL);
-INSERT INTO `laf_release` VALUES (164, '1', '1', '1', 1, NULL, '不选择', NULL, '2022-02-02 21:57:55', 4, '/img/user/shiwu.png', '1', 0000000000, '1', 1, '2', NULL);
-INSERT INTO `laf_release` VALUES (165, '1', '', '1', 1, NULL, '不选择', NULL, '2022-02-02 22:42:45', 4, '/img/user/shiwu.png', '1', 0000000000, '1', 1, '2', NULL);
-INSERT INTO `laf_release` VALUES (166, '1', '', '1', 1, NULL, '不选择', NULL, '2022-02-02 23:04:21', 4, '/img/user/shiwu.png', '1', 0000000000, '1', 1, '2', NULL);
-INSERT INTO `laf_release` VALUES (167, '2', '', '2', 1, NULL, '不选择', NULL, '2022-02-02 23:06:39', 4, '/img/user/shiwu.png', '1', 0000000000, '1', 1, '2', NULL);
-INSERT INTO `laf_release` VALUES (168, '1', '哈哈', 'apipost', 1, NULL, '南昌校区', NULL, '2022-02-02 23:07:15', 4, '/img/user/tiezi/wDEbmeeRgTWMc6f76911d74279584875503a867e7d4f.png', '1', 0000000000, '1', 1, '2', NULL);
-INSERT INTO `laf_release` VALUES (169, '1231212414', '', '123131', 1, NULL, '不选择', NULL, '2022-02-02 23:08:27', 4, '/img/user/shiwu.png', '1', 0000000000, '1', 1, '2', NULL);
-INSERT INTO `laf_release` VALUES (170, '1213', '', '12313', 1, '2022-02-09 00:00:00', '不选择', '', '2022-02-02 23:09:15', 4, '/img/user/shiwu.png', '1', 0000000000, '1', 1, '2', NULL);
-INSERT INTO `laf_release` VALUES (171, '1', '', '1', 1, '2022-03-05 15:42:31', '不选择', NULL, '2022-03-03 20:12:56', 4, '/img/user/tiezi/Rn2bc9g6WM0W9bf0f904c66c0979cc15ad1c723f3608.JPG', '1', 0000000000, '2', 1, '1', 4);
-INSERT INTO `laf_release` VALUES (172, '1', '', '1', 1, '2022-03-07 19:44:31', '不选择', NULL, '2022-03-03 21:25:29', 4, '{\"name\":null,\"number\":null,\"photoUrl\":\"http://101.42.222.167/img/user/tiezi/653e8LRUPQFP9bf0f904c66c0979cc15ad1c723f3608.JPG\",\"type\":null}', '1', 0000000000, '2', 1, '1', 4);
-INSERT INTO `laf_release` VALUES (173, '1', '', '1', 1, NULL, '不选择', NULL, '2022-03-03 21:38:41', 4, 'http://101.42.222.167/img/user/tiezi/nUP1V0sMY5zH456486c43eb0d3fa2056f3bbf4bd44a0.png', '1', 0000000000, '1', 1, '1', NULL);
-INSERT INTO `laf_release` VALUES (174, '1', '', '1', 1, '2022-03-06 10:28:46', '不选择', NULL, '2022-03-03 21:43:47', 4, '/img/user/tiezi/e2GnA5wxH4WY9bf0f904c66c0979cc15ad1c723f3608.JPG', '1', 0000000000, '2', 1, '1', 5);
-INSERT INTO `laf_release` VALUES (175, '1', 'sdsadasd', '1', 2, NULL, '南昌校区', NULL, '2022-03-08 22:33:47', 4, '/img/user/tiezi/wDEbmeeRgTWMc6f76911d74279584875503a867e7d4f.png', '1', 0000000000, '1', 1, '1', NULL);
+INSERT INTO `laf_release` VALUES (132, 'test1.0.0', '寻找一个demo', '123456', 1, NULL, '南昌校区', '', '2021-12-23 21:06:05', 4, '/img/user/tiezi/tmp_264c59b67ad78526eddb2f6ce9770a1a.jpg', '2', 0000000000, '2', 1, '2', NULL);
+INSERT INTO `laf_release` VALUES (232, '找啊找啊找男朋友', '丰富，帅气，温暖，有力量', '10086', 1, NULL, '南昌校区', NULL, '2022-03-13 15:54:53', 12, '/img/user/tiezi/QaTILifXzPpB77b9b35cf428ccee5c1953d8a13e0f33.png', '2', 0000000000, '1', 2, '1', NULL);
+INSERT INTO `laf_release` VALUES (235, '想要锦零的《有何不可》', '求贴', '111', 1, NULL, '南昌校区', '中国', '2022-03-13 16:13:03', 12, '/img/user/tiezi/DfryxOgFDCMK03d660a6392ed6895a02bf7db933cd23.png', '2', 0000000000, '1', 3, '1', NULL);
+INSERT INTO `laf_release` VALUES (236, '丢失超能力', '我感受不到我的气场uuu', '10086', 1, NULL, '南昌校区', '1231教室', '2022-03-14 09:48:01', 12, '/img/user/tiezi/tmp_399575f4201c44951b720dd49824a52cdcbc90db4c585f10.jpg', '1', 0000000000, '1', 1, '1', NULL);
+INSERT INTO `laf_release` VALUES (278, '捡到包冲的身份证', '身份证号为3422******2414', NULL, 2, NULL, NULL, NULL, '2022-03-15 14:03:34', 4, '/img/user/tiezi/tmp_5b6ccea3084b350838336426788a24fd.jpg', '1', 0000000000, '1', 1, '1', NULL);
+INSERT INTO `laf_release` VALUES (293, '捡到徐乐的身份证', '身份证号为6529******6716', NULL, 2, NULL, '南昌校区', NULL, '2022-03-16 09:33:12', 12, '/img/user/tiezi/A5wxAtjBG5oIc3f0fc11ecda44c1a8dff46b2a7925e2.jpg', '1', 0000000000, '1', 1, '1', NULL);
+INSERT INTO `laf_release` VALUES (308, '', '', '', 1, NULL, '', '', '2022-03-16 10:26:51', 12, '/img/user/tiezi/tmp_a093b33620738d503cb7baeb9981d2c23005d27992e498a2fb11bc3b6319ac08.jpeg', '', 0000000000, '1', 1, '1', NULL);
+INSERT INTO `laf_release` VALUES (346, '捡到徐乐的身份证', '身份证号为6529******6716', '1', 2, NULL, '南昌校区', NULL, '2022-03-17 21:28:50', 12, '/img/user/tiezi/PgKYrxe4Wnifc3f0fc11ecda44c1a8dff46b2a7925e2.jpg', '2', 0000000000, '1', 1, '1', NULL);
+INSERT INTO `laf_release` VALUES (353, '蓝牙耳机', '昨晚10点于操场丢失', '11111111111', 1, NULL, '南昌校区', '操场', '2022-03-18 16:21:21', 22, '/img/user/tiezi/tmp_9316b9bcc29ce1fb31d47d1e179e7292a48f4944104df831.jpg', '2', 0000000000, '2', 1, '2', NULL);
+INSERT INTO `laf_release` VALUES (357, '…', '778', '8888', 1, NULL, '黄金校区', '。。', '2022-03-18 17:12:39', 22, '/img/user/tiezi/tmp_ffab63d36e1b2cb4298b8c4b1b375eece2ecdc0262147ccb.jpg', '1', 0000000000, '1', 15, '1', NULL);
+INSERT INTO `laf_release` VALUES (358, '哆啦A梦', '啦啦啦', '近近景近景', 2, NULL, '南昌校区', '盗梦空间', '2022-03-18 17:29:22', 12, '/img/user/tiezi/tmp_7a4a0f4efb1a4e4dcf9c33476230ee236899ebf5d87752c1.jpg', '2', 0000000000, '1', 1, '1', NULL);
+INSERT INTO `laf_release` VALUES (360, '丢失了泡瓦', '泡瓦', '114514', 1, NULL, '南昌校区', '大概在天上', '2022-03-18 19:28:52', 24, '/img/user/shiwu.png', '1', 0000000000, '1', 2, '1', NULL);
+INSERT INTO `laf_release` VALUES (361, '毛爷爷', '3月18日学生代表 12 本人在篮球场遗失大红毛爷爷一张,特征是英文字母加数字,上面写着中国人民银行,有谁捡到的麻烦还给我!!!', '15920016225', 1, NULL, '南昌校区', '蓝球场', '2022-03-18 19:39:26', 25, '/img/user/tiezi/tmp_ca8e86c4920059c12367b5c00b8c18c5fd26a037dad136b3e5f8ffad85360cf3.WEBP', '2', 0000000000, '1', 1, '1', NULL);
+INSERT INTO `laf_release` VALUES (362, '仓鼠翻墙跑了', '希望好心人看到能够及时联系我', '3098030040', 1, NULL, '南昌校区', '8栋学生公寓', '2022-03-18 20:12:48', 32, '/img/user/tiezi/tmp_d076ac02d064fa60042dbec48e195314548ac94ef955500b.jpg', '2', 0000000000, '1', 2, '1', NULL);
+INSERT INTO `laf_release` VALUES (363, '阿巴巴巴', NULL, '10086', 1, NULL, '南昌校区', NULL, '2022-03-18 20:16:31', 32, '/img/user/tiezi/tmp_1d33ec4da59988dff72d3eae81e2f802240f32d3beb02812.jpg', '1', 0000000000, '1', 3, '1', NULL);
+INSERT INTO `laf_release` VALUES (364, '捡到熊炎松的学生证', '学生证号为57******92', 'QQ:137456958', 3, NULL, '南昌校区', '篮球场自取', '2022-03-18 20:17:20', 4, '/img/user/tiezi/tmp_adba269845beaaf89f70b899e61d1caa.jpg', '1', 0000000000, '1', 5, '1', NULL);
+INSERT INTO `laf_release` VALUES (365, '动漫人物', '寻人启事本人于5分钟前聊天时丢失小仙女一名至今未回消息长相漂亮可爱大方重金2毛钱酬谢', '123', 1, NULL, '南昌校区', '二次元', '2022-03-18 20:18:43', 25, '/img/user/tiezi/tmp_58d27ca2cb1601c842d550f6b740ef59895865830dd98236.WEBP', '2', 0000000000, '1', 3, '1', NULL);
+INSERT INTO `laf_release` VALUES (366, '111', NULL, '110', 1, NULL, '南昌校区', NULL, '2022-03-18 20:19:03', 32, '/img/user/tiezi/tmp_d02d25e61c4f3b1b5bfac7093436812dfda1d8f36182ca97.jpg', '2', 0000000000, '1', 2, '1', NULL);
+INSERT INTO `laf_release` VALUES (373, '诶呀', '球球快来带走', '1508001272', 1, NULL, '南昌校区', '校园', '2022-03-18 21:11:39', 34, '/img/user/tiezi/tmp_e57b41a8a7f446f58ae76ab8c23eab2b7c2687e6d206d36d.jpg', '1', 0000000000, '1', 1, '2', NULL);
+INSERT INTO `laf_release` VALUES (374, '一卡通', '。。。。。', '123112', 1, '2022-03-18 22:50:26', '南昌校区', NULL, '2022-03-18 22:49:58', 37, '/img/user/tiezi/tmp_005cc9371496dd296424e6461c6d375a5e254c470d67df27.jpg', '1', 0000000000, '2', 1, '1', 37);
+INSERT INTO `laf_release` VALUES (375, '找人', '寻找多年未见的弟弟', '17415641254', 1, NULL, '南昌校区', '八栋', '2022-03-18 23:02:47', 11, '/img/user/tiezi/tmp_6866e035c94d8a9fbd1bd901d0ba41c8c8d07c16457255c4.jpg', '2', 0000000000, '1', 4, '1', NULL);
+INSERT INTO `laf_release` VALUES (376, '失物招领', '失误丢失', '773197799', 1, NULL, '南昌校区', NULL, '2022-03-19 09:16:14', 41, '/img/user/tiezi/tmp_30574de295fc247e4908b363cbbc1edd02ca32825cfe1b82d44b1563b0680fb5.webp', '1', 0000000000, '1', 1, '1', NULL);
+INSERT INTO `laf_release` VALUES (377, '€♀\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t', '\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t\\t测试', '110', 1, '2022-03-19 09:22:33', '南昌校区', '世上人间', '2022-03-19 09:21:26', 42, '/img/user/xunwu.png', '2', 0000000000, '2', 5, '1', 42);
+INSERT INTO `laf_release` VALUES (378, '有人吗？？？？？？？？', '快来人。。。。。', 'QQ:1347456958', 1, NULL, '南昌校区', NULL, '2022-03-19 11:22:21', 4, '/img/user/tiezi/tmp_3fc97522cf86f871def887d023322b3e.jpg', '2', 0000000000, '1', 1, '1', NULL);
+INSERT INTO `laf_release` VALUES (379, '寻找另一张', '找情头', '11', 1, NULL, '南昌校区', '1', '2022-03-19 16:45:02', 12, '/img/user/tiezi/tmp_b9aa0db0c382b7dce76454295c008090b67d0d6112be9f31.jpg', '2', 0000000000, '1', 3, '1', NULL);
+INSERT INTO `laf_release` VALUES (380, '丢失一听罐装可乐', '我的可乐不知道哪里去了，有哪个好心人帮我找找吗？嗝~', '123456789', 1, NULL, '南昌校区', '三教', '2022-03-19 16:47:08', 12, '/img/user/xunwu.png', '2', 0000000000, '1', 15, '1', NULL);
+INSERT INTO `laf_release` VALUES (387, '寻找我的大黄蜂', '大黄蜂', '741236985', 1, '2022-03-26 14:37:25', '南昌校区', NULL, '2022-03-21 10:40:51', 6, '/img/user/tiezi/tmp_5f3bea33a57cf8a60412143fdafe1dd8.jpg', '2', 0000000000, '2', 78, '1', 4);
+INSERT INTO `laf_release` VALUES (402, '捡到熊炎松的学生证', '学生证号为57******92', 'QQ:1347456958', 3, NULL, '南昌校区', NULL, '2022-03-25 21:54:36', 4, '/img/user/tiezi/tmp_ea7036a5ae39a579e356b4f08a1d5ae0.jpg', '2', 0000000000, '1', 17, '1', NULL);
+INSERT INTO `laf_release` VALUES (403, '哈哈', '格局大了好多(//∇//)', '1', 1, NULL, '南昌校区', '1', '2022-03-26 12:30:32', 12, '/img/user/tiezi/tmp_a541024e1717c2cfc929ab4eccbb4dd4e64346a4d4fb2b50.jpg', '2', 0000000000, '1', 26, '1', NULL);
+INSERT INTO `laf_release` VALUES (404, '…', '123', '66666', 1, '2022-03-27 10:59:53', '南昌校区', '天上', '2022-03-26 21:56:03', 22, '/img/user/tiezi/tmp_9c7caf9f376f518e7196d2e68327bc0441e96a17dd5b92c8.jpg', '2', 0000000000, '2', 62, '1', 4);
+INSERT INTO `laf_release` VALUES (405, '时间', '寻找有72小时的一天', '1768', 1, NULL, '南昌校区', '地球', '2022-03-27 00:36:48', 12, '/img/user/tiezi/tmp_801b6af01683aaa84f289605b55ec51dc6c79e31fa2a4c3c.jpg', '2', 0000000000, '1', 16, '1', NULL);
+INSERT INTO `laf_release` VALUES (417, '3323某位同学丢失一个鼠标', '第三排靠左', 'QQ:1347456958', 1, NULL, '南昌校区', '自取', '2022-03-29 08:49:16', 4, '/img/user/tiezi/tmp_5e47f54c76f71e27e1dc041b51c6ca85.jpg', '1', 0000000000, '1', 23, '1', NULL);
+INSERT INTO `laf_release` VALUES (418, '丢失冰柜', '需要冰点', 'QQ:567', 1, NULL, '南昌校区', '地球', '2022-03-29 10:30:10', 12, '/img/user/tiezi/tmp_c9271fb7705945e92846e671f3b4fc0c4173398aaf25b887.jpg', '2', 0000000000, '1', 4, '1', NULL);
+INSERT INTO `laf_release` VALUES (419, '捡到许肖阳的身份证', '身份证号为4116******3212', 'QQ:1347456958', 2, NULL, '南昌校区', NULL, '2022-03-29 16:22:17', 4, '/img/user/tiezi/tmp_c54a1fa4456d307bc1777e65863a06ff.jpg', '1', 0000000000, '1', 5, '1', NULL);
+INSERT INTO `laf_release` VALUES (425, '校花惹', '寻找晴天', 'QQ:567', 1, NULL, '南昌校区', '江理', '2022-03-31 20:09:51', 12, '/img/user/tiezi/tmp_ad04f4ec8f9b7ffe84ff8cef1fc177e87e377eecef2a56f1.jpg', '2', 0000000000, '1', 11, '1', NULL);
 
 -- ----------------------------
 -- Table structure for laf_student
@@ -441,16 +492,51 @@ CREATE TABLE `laf_student`  (
   `stu_status` char(1) CHARACTER SET utf8 COLLATE utf8_bin NULL DEFAULT '1' COMMENT '用户当前状态(1使用，2停用）',
   `openid` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin NULL DEFAULT NULL COMMENT 'wx小程序标识用户id',
   PRIMARY KEY (`stu_id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 11 CHARACTER SET = utf8 COLLATE = utf8_bin ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 52 CHARACTER SET = utf8 COLLATE = utf8_bin ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of laf_student
 -- ----------------------------
-INSERT INTO `laf_student` VALUES (4, '空城', '许肖阳', '3', '5720191930', '123456', '软件工程学院', '软件开发', '193班', '888888', '88888@qq.com', 'https://thirdwx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTJ0ev3v9wh9pIrmqcmNxXzhib0X9eUBnhu3M4MmvE0n7icVgVohQwvIVibaDrthuXMNUVdEtVuI9y3ibQ/132', '2021-10-08 17:27:50', '1', 'o-AmG4kLqQvGARX1O4zVONdtNCi0');
-INSERT INTO `laf_student` VALUES (5, '我是傻逼', '', '2', '', '', '', '', '', '', '', 'https://thirdwx.qlogo.cn/mmopen/vi_32/wpYvpZPYxDyUibZiaKyOh1ZhQu3AiajZS7C1x98flz59yjadIibUwicf6hZFv7hYJKasxmjlf61UH7xV34yFNt524zQ/132', '2021-10-07 17:27:57', '1', 'o-AmG4rlYUzqmZASAJldbI1lENL8');
+INSERT INTO `laf_student` VALUES (4, '空城', '许肖阳', '3', '5720191930', '********', '软件工程学院', '软件开发', '193班', '1347456958', '1347456958@qq.com', 'https://thirdwx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTJ0ev3v9wh9pIrmqcmNxXzhib0X9eUBnhu3M4MmvE0n7icVgVohQwvIVibaDrthuXMNUVdEtVuI9y3ibQ/132', '2021-10-08 17:27:50', '1', 'o-AmG4kLqQvGARX1O4zVONdtNCi0');
 INSERT INTO `laf_student` VALUES (6, '顾。', NULL, '1', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'https://thirdwx.qlogo.cn/mmopen/vi_32/QoPAicbDv67QicVyYJPibeWxNCiaQuqJvdbysiasSL9p0JkpKdAfXKiauXWKyzIRJXVbNdOdCWE4XjpcUSZ0pgHzKIUw/132', '2021-10-09 17:28:00', '1', 'o-AmG4rsy4iAGVedruEaRPV6g_r0');
 INSERT INTO `laf_student` VALUES (9, 'Bear', NULL, '0', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'https://thirdwx.qlogo.cn/mmopen/vi_32/eibiblO5cIkIHMngzxIeWKn2a8Ne0dtRyQQNIKo4C10Od9n1q5wPe7oWM2QHloiaHjvJHTjsW6ERmVlvGgdO7uv0w/132', '2021-12-25 21:31:25', '1', 'o-AmG4hJexe13KMzdtl9WqsUbkR4');
-INSERT INTO `laf_student` VALUES (10, 'yang', '', '1', '', '', '', '', '', '', '', 'https://thirdwx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTJ0ev3v9wh9pIrmqcmNxXzhib0X9eUBnhu3M4MmvE0n7icVgVohQwvIVibaDrthuXMNUVdEtVuI9y3ibQ/132', '2021-10-21 17:27:53', '1', 'o-AmG4kLqQvGARX1O4zVONdtNCi0');
+INSERT INTO `laf_student` VALUES (11, '-好困想睡觉-', NULL, '0', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'https://thirdwx.qlogo.cn/mmopen/vi_32/JcibzEQ3xcOnnhPIBz3QXlDtWG4rDcupkUBWGGOEf9Gzy5ibWQO65g1uibB0V7BjEnS8qBt7OcKMRKby2yMORn4Jw/132', '2022-03-10 19:25:14', '1', 'o-AmG4kVH0GP5a5nHApbBc0zjbd0');
+INSERT INTO `laf_student` VALUES (12, '微凉', NULL, '0', NULL, NULL, NULL, NULL, NULL, '567', NULL, 'https://thirdwx.qlogo.cn/mmopen/vi_32/PlTs9qtNYXciavjwrkQOW9oI8M7LQib9JLrGnSmDPCxSQP1RcnAGjSkhOpibIY6dTUhOiagxa75liaEJKiaWbTwpu3mw/132', '2022-03-11 20:07:36', '1', 'o-AmG4gWGQea-9Qj7ZhFW6j2Baag');
+INSERT INTO `laf_student` VALUES (13, '北望', NULL, '0', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'https://thirdwx.qlogo.cn/mmopen/vi_32/wpYvpZPYxDyUibZiaKyOh1ZhQu3AiajZS7C1x98flz59yjadIibUwicf6hZFv7hYJKasxmjlf61UH7xV34yFNt524zQ/132', '2022-03-12 13:57:49', '1', 'o-AmG4rlYUzqmZASAJldbI1lENL8');
+INSERT INTO `laf_student` VALUES (17, 'Spring', NULL, '0', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'https://thirdwx.qlogo.cn/mmopen/vi_32/nicubVnkJefTwUbkZMU5IDLQFvNpZLN6jQErDdNJ7yxjvlOPFl62liaA3wmVVPXwGPSckkAibGRIdEU5RbA8uYcsQ/132', '2022-03-18 14:17:14', '1', 'o-AmG4vP-qENzwB7uEf_pb4S0q40');
+INSERT INTO `laf_student` VALUES (18, '超级大可爱', NULL, '0', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'https://thirdwx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTKYef9QXoKicceoiaYibgOibibopmOm8pib8HbwD4FGMWWyIA0PnJI3WzTXCkcnrPUFCMhc3n9nJDCRITUQ/132', '2022-03-18 14:24:09', '1', 'o-AmG4mo9v8Rr260Z0b1sXpXpdVo');
+INSERT INTO `laf_student` VALUES (19, '低调', '', '1', '', '', '', '', '', '', '', 'https://thirdwx.qlogo.cn/mmopen/vi_32/qVyWEqek2Yib7yBD93286UJg1oNw7tKMb79XA6icq6xapRzbohjJWk9avibmG1tWFXqUL6IvunANRzcsFVY7icxh8A/132', '2022-03-18 14:33:05', '2', 'o-AmG4n0lZ2shTMM_NeyVy2-s5-4');
+INSERT INTO `laf_student` VALUES (21, '郑东豪', NULL, '0', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'https://thirdwx.qlogo.cn/mmopen/vi_32/eXrTAYdCDH5rPquiaEsSA6I02OSSXJFZDeE6dITUpB1rK4QehI0W9KKTicJMmUmt1RxSvd08Igib1MchuuBTT0EyQ/132', '2022-03-18 15:17:00', '1', 'o-AmG4lU2m1gDHLeLLMo3Y8GCbR0');
+INSERT INTO `laf_student` VALUES (22, 'YWENROU-', NULL, '0', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'https://thirdwx.qlogo.cn/mmopen/vi_32/oIzu6fwdDS5dtz0ssWXRrY6O2HpbzFicwk6icwu6UHXTpd9a7sRNp7R85fXiaic03GaDyLXIyJh5uANoc6nF8ddBbA/132', '2022-03-18 16:15:13', '1', 'o-AmG4qro-HlbfgZpNt2bq9w5MK0');
+INSERT INTO `laf_student` VALUES (23, '辛福', NULL, '0', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'https://thirdwx.qlogo.cn/mmopen/vi_32/PiajxSqBRaEKMcwOAobXgGS8vhT7Cbr3DzfNsJR4CVgxO7jaMpVrQ1cKX7byt9PzQ4qqbZL3ViacAD4W8SHh69wQ/132', '2022-03-18 18:12:50', '1', 'o-AmG4kzsxpzKUzDKNAlvArH9mHI');
+INSERT INTO `laf_student` VALUES (24, 'ない', NULL, '0', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'https://thirdwx.qlogo.cn/mmopen/vi_32/QNvydvWUadKORACcsnUrS8grWKgYKDefHJDDOkhtthMulrQo0Te4XYozlcSyjOtrqWiauIzZcAzTWbP80QvEiciaQ/132', '2022-03-18 19:20:37', '1', 'o-AmG4oXZ7vB0pJNahhS97D9-Fvs');
+INSERT INTO `laf_student` VALUES (25, '梦之泪伤', NULL, '0', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'https://thirdwx.qlogo.cn/mmopen/vi_32/KWfYIfR7qvzBMqsNwib86b4eVMm7aAIdGm8z7FBoGsUBBh7qNeuYBkzIFVgJtIEAZE9rj5kUKgLOrDHva1JNbKA/132', '2022-03-18 19:31:48', '1', 'o-AmG4hQIb4tP7L8aphAasG8iqGs');
+INSERT INTO `laf_student` VALUES (26, '益达', NULL, '0', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'https://thirdwx.qlogo.cn/mmopen/vi_32/0HxeNwa51bD0FTxKt6u4aveTdE867axwPbt3icRCPZwnVZTkCfWk0C2icGCNsvnAxX9xD3kibLltYTibYYgtVkK9ug/132', '2022-03-18 19:38:59', '1', 'o-AmG4lRAtKPo3NWPXSo3594dzVY');
+INSERT INTO `laf_student` VALUES (27, '别不快乐.', NULL, '0', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'https://thirdwx.qlogo.cn/mmopen/vi_32/DYAIOgq83eqXQsOfRwvib7voP1ichanndml77Der4Mu8v0IkMA5qX0qk5CBtpfJ30icEXoTl9S8lZoDXFiaV7iciaN4w/132', '2022-03-18 19:40:17', '1', 'o-AmG4q3dTPUyDM4mPVmtuXfY85Y');
+INSERT INTO `laf_student` VALUES (28, '季风吹向大海', NULL, '0', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'https://thirdwx.qlogo.cn/mmopen/vi_32/nxhZW3n46CXKPnMTlf7r9cxfdkkiakpUw7owqQ9tlqaJbl9ExqYaykIITgbSZOuhiciaaXsFULS7KS6sqc5QOBLbw/132', '2022-03-18 19:40:56', '1', 'o-AmG4n_GpZXM2dtrUxoQkbaAtNc');
+INSERT INTO `laf_student` VALUES (29, 'G9st', NULL, '0', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'https://thirdwx.qlogo.cn/mmopen/vi_32/DYAIOgq83erUTiaHXDACpqHWLEDv09F84IokCIX0uFoz2p9iaibz7IibBHsOVibvMu2KlvSH4ibDq3iarwBa00sgZ57Yw/132', '2022-03-18 19:44:42', '1', 'o-AmG4o-xgU_GqxJYKCZNAb_XscM');
+INSERT INTO `laf_student` VALUES (30, 'Britney', NULL, '0', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'https://thirdwx.qlogo.cn/mmopen/vi_32/wsySAk5OQ51gNHJogRMfS8cPPJuH5fqKd6Hmr9OyVRG5CS591hfDhiatHqO4tCN6BnCAGK3wjsCP2ENyXVfEHaA/132', '2022-03-18 19:49:51', '1', 'o-AmG4vJ72gM8iLmoyI3zQAIp1Xs');
+INSERT INTO `laf_student` VALUES (31, 'isXu', NULL, '0', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'https://thirdwx.qlogo.cn/mmopen/vi_32/tkxeZqNp3C9adbsGOjK2ECzz6jj2lyDn54cJKqqjemVPQg1vJBIPgdsMTSbnxN289pAH0mso4UyuaxrliaqTGEA/132', '2022-03-18 19:51:36', '1', 'o-AmG4lotSGpN1PWbba0xXiGPWVs');
+INSERT INTO `laf_student` VALUES (32, 'dede', NULL, '0', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'https://thirdwx.qlogo.cn/mmopen/vi_32/cxlXiaGvBzQtmZU9oz6OSPicr9WD0F5YebPUMV356X4qY4lYzSBNftkW4PO9HLPdpibKhhuStWKTnbgNA1QTbFSPg/132', '2022-03-18 20:09:28', '1', 'o-AmG4i9mYXo8x7vmrdSs2KKXy80');
+INSERT INTO `laf_student` VALUES (33, ' ', NULL, '0', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'https://thirdwx.qlogo.cn/mmopen/vi_32/WgicbibiaHMsyFTQ0ibTpuF8U11cRTHjRCskwJ8WuYMNwIhPsew6TLq743QhkIibYNBoJbiaSm6cWWfzs8hS8TxqAia8Q/132', '2022-03-18 20:53:55', '1', 'o-AmG4oHEPHgotg6T_9Zo2mJPGJg');
+INSERT INTO `laf_student` VALUES (34, 'estrella', NULL, '0', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'https://thirdwx.qlogo.cn/mmopen/vi_32/3rBbJ6AC2VrlF0RicOP6IOWqAxe8mDw986mCFGBTcrcv3DcucgGKU9umTXVqygxBia9QQhb4HCvgxUIMOTAP6COg/132', '2022-03-18 20:59:54', '1', 'o-AmG4ifSjV1RpbXG7MD_squNSJ4');
+INSERT INTO `laf_student` VALUES (35, '朽木自雕', NULL, '0', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'https://thirdwx.qlogo.cn/mmopen/vi_32/67oBniaUvTg5wJOrsnncHNW1OlresyDadvgmGULp5DXdRjznGibVKuB90IYZ13296gez3ibdwJibDn6IwTOicoutFWg/132', '2022-03-18 21:03:26', '1', 'o-AmG4lQ7LwTPnr6GhL9tJzQ9mz0');
+INSERT INTO `laf_student` VALUES (36, 'A陆续回复中', NULL, '0', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'https://thirdwx.qlogo.cn/mmopen/vi_32/coQGhbgGcM0W5ia8AJH4O6SrCGVJibKm2S4JP9L3PH6m6ecicibXcvhucJFIGFU5mia2I1BcogpYjmQK2DToal4kE3Q/132', '2022-03-18 22:27:00', '1', 'o-AmG4tI-8Y187lDor_7dzwT5lx0');
+INSERT INTO `laf_student` VALUES (37, '米柚', NULL, '0', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'https://thirdwx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTLdBEueYrL4XibS0bmxepTA5dEsryWa8BKK5txOOgfcero7zYtGfic0WYdm3u6nIKvAKxtEHrHLlLBA/132', '2022-03-18 22:43:40', '1', 'o-AmG4uZuiwOrqsRkgsvWN8F8lOQ');
+INSERT INTO `laf_student` VALUES (38, '风吹月落', NULL, '0', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'https://thirdwx.qlogo.cn/mmopen/vi_32/U6ricPLkpVhEMFMUsBchk0H3icM4vUJtHn6NQtbeLiaq0VacVMxwBSllWFdq1hCKu3Um9GKOIyGibOkvk1Euicv7E8A/132', '2022-03-19 00:09:25', '1', 'o-AmG4rW7EZaK5FLL7FOFnT-jUOs');
+INSERT INTO `laf_student` VALUES (39, 'Время', NULL, '0', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'https://thirdwx.qlogo.cn/mmopen/vi_32/FicCwcjlt1rmz8ticQvcR5mGYia50ARrSibcSpyOibsEXZeaSBQM7Qb6dqv3QFH5p12souB654Cll5iaib2AAD7iaHFD6A/132', '2022-03-19 00:30:09', '1', 'o-AmG4hpTweXEINoKJrB-lFAMmH8');
+INSERT INTO `laf_student` VALUES (40, '啊坤', NULL, '0', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'https://thirdwx.qlogo.cn/mmopen/vi_32/XYy5P1KibeQ41dicvPjBQOicy1R93HuoibWX50aKpLNl8y33BN36htibLZqricfK3yoZULwmbV2uSehE2lGpkAyCb4DA/132', '2022-03-19 01:37:59', '1', 'o-AmG4p0qZSuUWMaqoW_dA0u7Zsg');
+INSERT INTO `laf_student` VALUES (41, '苍岚', NULL, '0', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'https://thirdwx.qlogo.cn/mmopen/vi_32/UkTibVVnriaagL3HibLKlxfCogJbFBGdcVicHxyGjvzt9dZnOknrtZicicqGwqOFqC1yW75Q5HD2dnpic5DkOXoLiayJTw/132', '2022-03-19 09:13:46', '1', 'o-AmG4uDi4iizBj6g89kanam6c8k');
+INSERT INTO `laf_student` VALUES (42, 'TXT', NULL, '0', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'https://thirdwx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTIyp2o1UQt7Lq6XT1jPYGvR4pRNYxJiaHGyPl34zRib9fw7cj8S9l4B3LSRscrEF557nNkUQGzCuyww/132', '2022-03-19 09:17:08', '1', 'o-AmG4mYZtGBj2C1FIiQCVwVJzDk');
+INSERT INTO `laf_student` VALUES (43, '魏剑帆', NULL, '0', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'https://thirdwx.qlogo.cn/mmopen/vi_32/ibib6xictyJOE9Wes6Tq6aia5j7icomm3C7NsNdpicO0hzQxy7pYDRYc0Tiax3U6BGXsmnyN0wwI5VwiaBalCVzcsJMXHg/132', '2022-03-19 11:25:45', '1', 'o-AmG4uPL4J9TxJ_3pKY02ebQamY');
+INSERT INTO `laf_student` VALUES (44, '。', NULL, '0', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'https://thirdwx.qlogo.cn/mmopen/vi_32/ZZgEsvakdyoVgmsVBoOeLlmzZWrSRLduQtepRslG7MgI8bia8cUOj2OUahypiaSuYstXLibT60Nro0eshkCdXdSLA/132', '2022-03-19 16:36:11', '1', 'o-AmG4kEGKJovcytPEo6vnp8e2vA');
+INSERT INTO `laf_student` VALUES (45, '૮・ᴥ・ა', NULL, '0', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'https://thirdwx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTKicOYfPgU6oiawiaDrN4ibdqfYj6iaFiaQec3JcrqdlgPl8Zv4cwRxDkapnicLAOpV5IuYUiaC0R0MOTfiakg/132', '2022-03-19 19:14:02', '1', 'o-AmG4n7RcSr7sdbUesb87-v_XTE');
+INSERT INTO `laf_student` VALUES (46, '做一条会飞的鱼', NULL, '0', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'https://thirdwx.qlogo.cn/mmopen/vi_32/T11bCSZUhGc5hPsg3hYNvKDBicGwL8dSY6iblb8LoYoP28op58gMmSxlzb4w2qUM1juRVywnj0KpfC0nfcD3g8TQ/132', '2022-03-20 09:23:48', '1', 'o-AmG4rx8YrOdLFssnNtN76SSzt8');
+INSERT INTO `laf_student` VALUES (47, 'ㅤㅤㅤㅤ', NULL, '0', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'https://thirdwx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTJWPxyXT1nbKfU5JZKJCIMjJ2FBlBZGghoTnAx4x8BRFHuuMBXLxDsI3ugvgWX1IpvHic8ET4nxia4A/132', '2022-03-21 13:09:42', '1', 'o-AmG4vwx88OTgkhheLDExwnMFDY');
+INSERT INTO `laf_student` VALUES (48, '10.11', NULL, '0', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'https://thirdwx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTKG03cIx2HyPcVNl9UH9lxbM4PZC42sicsGeZLJa3iazp1I1jo5MrQuVHtk9cibQNBV01nVG2pEkV9zQ/132', '2022-03-25 22:35:44', '1', 'o-AmG4q1gi04YMgSEnIRYZbm_XEE');
+INSERT INTO `laf_student` VALUES (49, '蓝色妖姬', NULL, '0', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'https://thirdwx.qlogo.cn/mmopen/vi_32/PiajxSqBRaELoZ7kvYvXKoZib9LnliaqRNKibyibPKa2MaKeJx223xXTTNBuyr9VXPzncyRJXwakXg1aRWGWoEiaRKyg/132', '2022-03-27 17:24:27', '1', 'o-AmG4iK_6H3O_NnHP5tm68EEXdg');
+INSERT INTO `laf_student` VALUES (50, '母笑阳', NULL, '0', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'https://thirdwx.qlogo.cn/mmopen/vi_32/PiajxSqBRaELoZ7kvYvXKoZib9LnliaqRNKCIthUTstdm9chtrm56WiaThRjrr2RGiaW6EcRjrg9ODEpOCtnFibOycZg/132', '2022-03-28 22:22:02', '1', 'o-AmG4uRZiPfb3X9fHEYhTvkPBJo');
+INSERT INTO `laf_student` VALUES (51, '小倩', NULL, '0', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'https://thirdwx.qlogo.cn/mmopen/vi_32/qVyWEqek2Yib7yBD93286UPrAT3XzJkTlcUk9mW4ePaEXFvplBsdQL5Flo6KQ319x9te84Zj61GVJZl51KtRLng/132', '2022-03-30 18:32:04', '1', 'o-AmG4lvRMoAa2dwm-ocThKuiKIY');
 
 -- ----------------------------
 -- Table structure for laf_student_online
@@ -468,7 +554,7 @@ CREATE TABLE `laf_student_online`  (
   `last_access_time` datetime NULL DEFAULT NULL COMMENT 'session最后访问时间',
   `expire_time` datetime NULL DEFAULT NULL COMMENT '超时时间，单位为分钟',
   PRIMARY KEY (`stu_sessionId`) USING BTREE
-) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_bin ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_bin ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of laf_student_online
@@ -484,7 +570,7 @@ CREATE TABLE `laf_success`  (
   `suss_uid` int NULL DEFAULT NULL,
   `create_time` datetime NULL DEFAULT NULL,
   PRIMARY KEY (`suss_id`) USING BTREE
-) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_bin ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8 COLLATE = utf8_bin ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of laf_success
@@ -501,7 +587,7 @@ CREATE TABLE `qrtz_blob_triggers`  (
   `blob_data` blob NULL COMMENT '存放持久化Trigger对象',
   PRIMARY KEY (`sched_name`, `trigger_name`, `trigger_group`) USING BTREE,
   CONSTRAINT `qrtz_blob_triggers_ibfk_1` FOREIGN KEY (`sched_name`, `trigger_name`, `trigger_group`) REFERENCES `qrtz_triggers` (`sched_name`, `trigger_name`, `trigger_group`) ON DELETE RESTRICT ON UPDATE RESTRICT
-) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_bin COMMENT = 'Blob类型的触发器表' ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_bin COMMENT = 'Blob类型的触发器表' ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of qrtz_blob_triggers
@@ -516,7 +602,7 @@ CREATE TABLE `qrtz_calendars`  (
   `calendar_name` varchar(200) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL COMMENT '日历名称',
   `calendar` blob NOT NULL COMMENT '存放持久化calendar对象',
   PRIMARY KEY (`sched_name`, `calendar_name`) USING BTREE
-) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_bin COMMENT = '日历信息表' ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_bin COMMENT = '日历信息表' ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of qrtz_calendars
@@ -534,12 +620,14 @@ CREATE TABLE `qrtz_cron_triggers`  (
   `time_zone_id` varchar(80) CHARACTER SET utf8 COLLATE utf8_bin NULL DEFAULT NULL COMMENT '时区',
   PRIMARY KEY (`sched_name`, `trigger_name`, `trigger_group`) USING BTREE,
   CONSTRAINT `qrtz_cron_triggers_ibfk_1` FOREIGN KEY (`sched_name`, `trigger_name`, `trigger_group`) REFERENCES `qrtz_triggers` (`sched_name`, `trigger_name`, `trigger_group`) ON DELETE RESTRICT ON UPDATE RESTRICT
-) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_bin COMMENT = 'Cron类型的触发器表' ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_bin COMMENT = 'Cron类型的触发器表' ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of qrtz_cron_triggers
 -- ----------------------------
 INSERT INTO `qrtz_cron_triggers` VALUES ('RuoyiScheduler', 'TASK_CLASS_NAME1', 'DEFAULT', '0/10 * * * * ?', 'Asia/Shanghai');
+INSERT INTO `qrtz_cron_triggers` VALUES ('RuoyiScheduler', 'TASK_CLASS_NAME100', 'DEFAULT', '0 0/59 * * * ?', 'Asia/Shanghai');
+INSERT INTO `qrtz_cron_triggers` VALUES ('RuoyiScheduler', 'TASK_CLASS_NAME101', 'DEFAULT', '0 0/59 0 1/28 1/1 ?', 'Asia/Shanghai');
 INSERT INTO `qrtz_cron_triggers` VALUES ('RuoyiScheduler', 'TASK_CLASS_NAME2', 'DEFAULT', '0/15 * * * * ?', 'Asia/Shanghai');
 INSERT INTO `qrtz_cron_triggers` VALUES ('RuoyiScheduler', 'TASK_CLASS_NAME3', 'DEFAULT', '0/20 * * * * ?', 'Asia/Shanghai');
 
@@ -562,7 +650,7 @@ CREATE TABLE `qrtz_fired_triggers`  (
   `is_nonconcurrent` varchar(1) CHARACTER SET utf8 COLLATE utf8_bin NULL DEFAULT NULL COMMENT '是否并发',
   `requests_recovery` varchar(1) CHARACTER SET utf8 COLLATE utf8_bin NULL DEFAULT NULL COMMENT '是否接受恢复执行',
   PRIMARY KEY (`sched_name`, `entry_id`) USING BTREE
-) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_bin COMMENT = '已触发的触发器表' ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_bin COMMENT = '已触发的触发器表' ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of qrtz_fired_triggers
@@ -584,12 +672,14 @@ CREATE TABLE `qrtz_job_details`  (
   `requests_recovery` varchar(1) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL COMMENT '是否接受恢复执行',
   `job_data` blob NULL COMMENT '存放持久化job对象',
   PRIMARY KEY (`sched_name`, `job_name`, `job_group`) USING BTREE
-) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_bin COMMENT = '任务详细信息表' ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_bin COMMENT = '任务详细信息表' ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of qrtz_job_details
 -- ----------------------------
 INSERT INTO `qrtz_job_details` VALUES ('RuoyiScheduler', 'TASK_CLASS_NAME1', 'DEFAULT', NULL, 'com.ruoyi.quartz.util.QuartzDisallowConcurrentExecution', '0', '1', '0', '0', 0xACED0005737200156F72672E71756172747A2E4A6F62446174614D61709FB083E8BFA9B0CB020000787200266F72672E71756172747A2E7574696C732E537472696E674B65794469727479466C61674D61708208E8C3FBC55D280200015A0013616C6C6F77735472616E7369656E74446174617872001D6F72672E71756172747A2E7574696C732E4469727479466C61674D617013E62EAD28760ACE0200025A000564697274794C00036D617074000F4C6A6176612F7574696C2F4D61703B787001737200116A6176612E7574696C2E486173684D61700507DAC1C31660D103000246000A6C6F6164466163746F724900097468726573686F6C6478703F4000000000000C7708000000100000000174000F5441534B5F50524F504552544945537372001E636F6D2E72756F79692E71756172747A2E646F6D61696E2E5379734A6F6200000000000000010200084C000A636F6E63757272656E747400124C6A6176612F6C616E672F537472696E673B4C000E63726F6E45787072657373696F6E71007E00094C000C696E766F6B6554617267657471007E00094C00086A6F6247726F757071007E00094C00056A6F6249647400104C6A6176612F6C616E672F4C6F6E673B4C00076A6F624E616D6571007E00094C000D6D697366697265506F6C69637971007E00094C000673746174757371007E000978720027636F6D2E72756F79692E636F6D6D6F6E2E636F72652E646F6D61696E2E42617365456E7469747900000000000000010200074C0008637265617465427971007E00094C000A63726561746554696D657400104C6A6176612F7574696C2F446174653B4C0006706172616D7371007E00034C000672656D61726B71007E00094C000B73656172636856616C756571007E00094C0008757064617465427971007E00094C000A75706461746554696D6571007E000C787074000561646D696E7372000E6A6176612E7574696C2E44617465686A81014B597419030000787077080000017C0C6F059878707400007070707400013174000E302F3130202A202A202A202A203F74001172795461736B2E72794E6F506172616D7374000744454641554C547372000E6A6176612E6C616E672E4C6F6E673B8BE490CC8F23DF0200014A000576616C7565787200106A6176612E6C616E672E4E756D62657286AC951D0B94E08B02000078700000000000000001740018E7B3BBE7BB9FE9BB98E8AEA4EFBC88E697A0E58F82EFBC8974000133740001317800);
+INSERT INTO `qrtz_job_details` VALUES ('RuoyiScheduler', 'TASK_CLASS_NAME100', 'DEFAULT', NULL, 'com.ruoyi.quartz.util.QuartzDisallowConcurrentExecution', '0', '1', '0', '0', 0xACED0005737200156F72672E71756172747A2E4A6F62446174614D61709FB083E8BFA9B0CB020000787200266F72672E71756172747A2E7574696C732E537472696E674B65794469727479466C61674D61708208E8C3FBC55D280200015A0013616C6C6F77735472616E7369656E74446174617872001D6F72672E71756172747A2E7574696C732E4469727479466C61674D617013E62EAD28760ACE0200025A000564697274794C00036D617074000F4C6A6176612F7574696C2F4D61703B787001737200116A6176612E7574696C2E486173684D61700507DAC1C31660D103000246000A6C6F6164466163746F724900097468726573686F6C6478703F4000000000000C7708000000100000000174000F5441534B5F50524F504552544945537372001E636F6D2E72756F79692E71756172747A2E646F6D61696E2E5379734A6F6200000000000000010200084C000A636F6E63757272656E747400124C6A6176612F6C616E672F537472696E673B4C000E63726F6E45787072657373696F6E71007E00094C000C696E766F6B6554617267657471007E00094C00086A6F6247726F757071007E00094C00056A6F6249647400104C6A6176612F6C616E672F4C6F6E673B4C00076A6F624E616D6571007E00094C000D6D697366697265506F6C69637971007E00094C000673746174757371007E000978720027636F6D2E72756F79692E636F6D6D6F6E2E636F72652E646F6D61696E2E42617365456E7469747900000000000000010200074C0008637265617465427971007E00094C000A63726561746554696D657400104C6A6176612F7574696C2F446174653B4C0006706172616D7371007E00034C000672656D61726B71007E00094C000B73656172636856616C756571007E00094C0008757064617465427971007E00094C000A75706461746554696D6571007E000C787074000561646D696E7372000E6A6176612E7574696C2E44617465686A81014B597419030000787077080000017F738D472878707400007070707400013174000E3020302F3539202A202A202A203F74001A746F6B656E5461736B2E676574416363657373546F6B656E282974000744454641554C547372000E6A6176612E6C616E672E4C6F6E673B8BE490CC8F23DF0200014A000576616C7565787200106A6176612E6C616E672E4E756D62657286AC951D0B94E08B02000078700000000000000064740017E88EB7E58F96E5BEAEE4BFA1416363657373546F6B656E74000131740001307800);
+INSERT INTO `qrtz_job_details` VALUES ('RuoyiScheduler', 'TASK_CLASS_NAME101', 'DEFAULT', NULL, 'com.ruoyi.quartz.util.QuartzDisallowConcurrentExecution', '0', '1', '0', '0', 0xACED0005737200156F72672E71756172747A2E4A6F62446174614D61709FB083E8BFA9B0CB020000787200266F72672E71756172747A2E7574696C732E537472696E674B65794469727479466C61674D61708208E8C3FBC55D280200015A0013616C6C6F77735472616E7369656E74446174617872001D6F72672E71756172747A2E7574696C732E4469727479466C61674D617013E62EAD28760ACE0200025A000564697274794C00036D617074000F4C6A6176612F7574696C2F4D61703B787001737200116A6176612E7574696C2E486173684D61700507DAC1C31660D103000246000A6C6F6164466163746F724900097468726573686F6C6478703F4000000000000C7708000000100000000174000F5441534B5F50524F504552544945537372001E636F6D2E72756F79692E71756172747A2E646F6D61696E2E5379734A6F6200000000000000010200084C000A636F6E63757272656E747400124C6A6176612F6C616E672F537472696E673B4C000E63726F6E45787072657373696F6E71007E00094C000C696E766F6B6554617267657471007E00094C00086A6F6247726F757071007E00094C00056A6F6249647400104C6A6176612F6C616E672F4C6F6E673B4C00076A6F624E616D6571007E00094C000D6D697366697265506F6C69637971007E00094C000673746174757371007E000978720027636F6D2E72756F79692E636F6D6D6F6E2E636F72652E646F6D61696E2E42617365456E7469747900000000000000010200074C0008637265617465427971007E00094C000A63726561746554696D657400104C6A6176612F7574696C2F446174653B4C0006706172616D7371007E00034C000672656D61726B71007E00094C000B73656172636856616C756571007E00094C0008757064617465427971007E00094C000A75706461746554696D6571007E000C787074000561646D696E7372000E6A6176612E7574696C2E44617465686A81014B597419030000787077080000017F73A2E2687870740000707070740001317400133020302F3539203020312F323820312F31203F74001D746F6B656E5461736B2E6765744F6372416363657373546F6B656E282974000744454641554C547372000E6A6176612E6C616E672E4C6F6E673B8BE490CC8F23DF0200014A000576616C7565787200106A6176612E6C616E672E4E756D62657286AC951D0B94E08B020000787000000000000000657400106261696475416363657373546F6B656E74000131740001307800);
 INSERT INTO `qrtz_job_details` VALUES ('RuoyiScheduler', 'TASK_CLASS_NAME2', 'DEFAULT', NULL, 'com.ruoyi.quartz.util.QuartzDisallowConcurrentExecution', '0', '1', '0', '0', 0xACED0005737200156F72672E71756172747A2E4A6F62446174614D61709FB083E8BFA9B0CB020000787200266F72672E71756172747A2E7574696C732E537472696E674B65794469727479466C61674D61708208E8C3FBC55D280200015A0013616C6C6F77735472616E7369656E74446174617872001D6F72672E71756172747A2E7574696C732E4469727479466C61674D617013E62EAD28760ACE0200025A000564697274794C00036D617074000F4C6A6176612F7574696C2F4D61703B787001737200116A6176612E7574696C2E486173684D61700507DAC1C31660D103000246000A6C6F6164466163746F724900097468726573686F6C6478703F4000000000000C7708000000100000000174000F5441534B5F50524F504552544945537372001E636F6D2E72756F79692E71756172747A2E646F6D61696E2E5379734A6F6200000000000000010200084C000A636F6E63757272656E747400124C6A6176612F6C616E672F537472696E673B4C000E63726F6E45787072657373696F6E71007E00094C000C696E766F6B6554617267657471007E00094C00086A6F6247726F757071007E00094C00056A6F6249647400104C6A6176612F6C616E672F4C6F6E673B4C00076A6F624E616D6571007E00094C000D6D697366697265506F6C69637971007E00094C000673746174757371007E000978720027636F6D2E72756F79692E636F6D6D6F6E2E636F72652E646F6D61696E2E42617365456E7469747900000000000000010200074C0008637265617465427971007E00094C000A63726561746554696D657400104C6A6176612F7574696C2F446174653B4C0006706172616D7371007E00034C000672656D61726B71007E00094C000B73656172636856616C756571007E00094C0008757064617465427971007E00094C000A75706461746554696D6571007E000C787074000561646D696E7372000E6A6176612E7574696C2E44617465686A81014B597419030000787077080000017C0C6F059878707400007070707400013174000E302F3135202A202A202A202A203F74001572795461736B2E7279506172616D7328277279272974000744454641554C547372000E6A6176612E6C616E672E4C6F6E673B8BE490CC8F23DF0200014A000576616C7565787200106A6176612E6C616E672E4E756D62657286AC951D0B94E08B02000078700000000000000002740018E7B3BBE7BB9FE9BB98E8AEA4EFBC88E69C89E58F82EFBC8974000133740001317800);
 INSERT INTO `qrtz_job_details` VALUES ('RuoyiScheduler', 'TASK_CLASS_NAME3', 'DEFAULT', NULL, 'com.ruoyi.quartz.util.QuartzDisallowConcurrentExecution', '0', '1', '0', '0', 0xACED0005737200156F72672E71756172747A2E4A6F62446174614D61709FB083E8BFA9B0CB020000787200266F72672E71756172747A2E7574696C732E537472696E674B65794469727479466C61674D61708208E8C3FBC55D280200015A0013616C6C6F77735472616E7369656E74446174617872001D6F72672E71756172747A2E7574696C732E4469727479466C61674D617013E62EAD28760ACE0200025A000564697274794C00036D617074000F4C6A6176612F7574696C2F4D61703B787001737200116A6176612E7574696C2E486173684D61700507DAC1C31660D103000246000A6C6F6164466163746F724900097468726573686F6C6478703F4000000000000C7708000000100000000174000F5441534B5F50524F504552544945537372001E636F6D2E72756F79692E71756172747A2E646F6D61696E2E5379734A6F6200000000000000010200084C000A636F6E63757272656E747400124C6A6176612F6C616E672F537472696E673B4C000E63726F6E45787072657373696F6E71007E00094C000C696E766F6B6554617267657471007E00094C00086A6F6247726F757071007E00094C00056A6F6249647400104C6A6176612F6C616E672F4C6F6E673B4C00076A6F624E616D6571007E00094C000D6D697366697265506F6C69637971007E00094C000673746174757371007E000978720027636F6D2E72756F79692E636F6D6D6F6E2E636F72652E646F6D61696E2E42617365456E7469747900000000000000010200074C0008637265617465427971007E00094C000A63726561746554696D657400104C6A6176612F7574696C2F446174653B4C0006706172616D7371007E00034C000672656D61726B71007E00094C000B73656172636856616C756571007E00094C0008757064617465427971007E00094C000A75706461746554696D6571007E000C787074000561646D696E7372000E6A6176612E7574696C2E44617465686A81014B597419030000787077080000017C0C6F059878707400007070707400013174000E302F3230202A202A202A202A203F74003872795461736B2E72794D756C7469706C65506172616D7328277279272C20747275652C20323030304C2C203331362E3530442C203130302974000744454641554C547372000E6A6176612E6C616E672E4C6F6E673B8BE490CC8F23DF0200014A000576616C7565787200106A6176612E6C616E672E4E756D62657286AC951D0B94E08B02000078700000000000000003740018E7B3BBE7BB9FE9BB98E8AEA4EFBC88E5A49AE58F82EFBC8974000133740001317800);
 
@@ -601,7 +691,7 @@ CREATE TABLE `qrtz_locks`  (
   `sched_name` varchar(120) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL COMMENT '调度名称',
   `lock_name` varchar(40) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL COMMENT '悲观锁名称',
   PRIMARY KEY (`sched_name`, `lock_name`) USING BTREE
-) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_bin COMMENT = '存储的悲观锁信息表' ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_bin COMMENT = '存储的悲观锁信息表' ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of qrtz_locks
@@ -617,7 +707,7 @@ CREATE TABLE `qrtz_paused_trigger_grps`  (
   `sched_name` varchar(120) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL COMMENT '调度名称',
   `trigger_group` varchar(200) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL COMMENT 'qrtz_triggers表trigger_group的外键',
   PRIMARY KEY (`sched_name`, `trigger_group`) USING BTREE
-) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_bin COMMENT = '暂停的触发器表' ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_bin COMMENT = '暂停的触发器表' ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of qrtz_paused_trigger_grps
@@ -633,12 +723,12 @@ CREATE TABLE `qrtz_scheduler_state`  (
   `last_checkin_time` bigint NOT NULL COMMENT '上次检查时间',
   `checkin_interval` bigint NOT NULL COMMENT '检查间隔时间',
   PRIMARY KEY (`sched_name`, `instance_name`) USING BTREE
-) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_bin COMMENT = '调度器状态表' ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_bin COMMENT = '调度器状态表' ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of qrtz_scheduler_state
 -- ----------------------------
-INSERT INTO `qrtz_scheduler_state` VALUES ('RuoyiScheduler', 'DESKTOP-AI4GVVJ1646749696572', 1646750075364, 15000);
+INSERT INTO `qrtz_scheduler_state` VALUES ('RuoyiScheduler', 'VM-24-2-centos1648283861316', 1648971154561, 15000);
 
 -- ----------------------------
 -- Table structure for qrtz_simple_triggers
@@ -653,7 +743,7 @@ CREATE TABLE `qrtz_simple_triggers`  (
   `times_triggered` bigint NOT NULL COMMENT '已经触发的次数',
   PRIMARY KEY (`sched_name`, `trigger_name`, `trigger_group`) USING BTREE,
   CONSTRAINT `qrtz_simple_triggers_ibfk_1` FOREIGN KEY (`sched_name`, `trigger_name`, `trigger_group`) REFERENCES `qrtz_triggers` (`sched_name`, `trigger_name`, `trigger_group`) ON DELETE RESTRICT ON UPDATE RESTRICT
-) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_bin COMMENT = '简单触发器的信息表' ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_bin COMMENT = '简单触发器的信息表' ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of qrtz_simple_triggers
@@ -680,7 +770,7 @@ CREATE TABLE `qrtz_simprop_triggers`  (
   `bool_prop_2` varchar(1) CHARACTER SET utf8 COLLATE utf8_bin NULL DEFAULT NULL COMMENT 'Boolean类型的trigger的第二个参数',
   PRIMARY KEY (`sched_name`, `trigger_name`, `trigger_group`) USING BTREE,
   CONSTRAINT `qrtz_simprop_triggers_ibfk_1` FOREIGN KEY (`sched_name`, `trigger_name`, `trigger_group`) REFERENCES `qrtz_triggers` (`sched_name`, `trigger_name`, `trigger_group`) ON DELETE RESTRICT ON UPDATE RESTRICT
-) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_bin COMMENT = '同步机制的行锁表' ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_bin COMMENT = '同步机制的行锁表' ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of qrtz_simprop_triggers
@@ -710,14 +800,16 @@ CREATE TABLE `qrtz_triggers`  (
   PRIMARY KEY (`sched_name`, `trigger_name`, `trigger_group`) USING BTREE,
   INDEX `sched_name`(`sched_name`, `job_name`, `job_group`) USING BTREE,
   CONSTRAINT `qrtz_triggers_ibfk_1` FOREIGN KEY (`sched_name`, `job_name`, `job_group`) REFERENCES `qrtz_job_details` (`sched_name`, `job_name`, `job_group`) ON DELETE RESTRICT ON UPDATE RESTRICT
-) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_bin COMMENT = '触发器详细信息表' ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_bin COMMENT = '触发器详细信息表' ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of qrtz_triggers
 -- ----------------------------
-INSERT INTO `qrtz_triggers` VALUES ('RuoyiScheduler', 'TASK_CLASS_NAME1', 'DEFAULT', 'TASK_CLASS_NAME1', 'DEFAULT', NULL, 1646749700000, -1, 5, 'PAUSED', 'CRON', 1646749696000, 0, NULL, 2, '');
-INSERT INTO `qrtz_triggers` VALUES ('RuoyiScheduler', 'TASK_CLASS_NAME2', 'DEFAULT', 'TASK_CLASS_NAME2', 'DEFAULT', NULL, 1646749710000, -1, 5, 'PAUSED', 'CRON', 1646749696000, 0, NULL, 2, '');
-INSERT INTO `qrtz_triggers` VALUES ('RuoyiScheduler', 'TASK_CLASS_NAME3', 'DEFAULT', 'TASK_CLASS_NAME3', 'DEFAULT', NULL, 1646749700000, -1, 5, 'PAUSED', 'CRON', 1646749696000, 0, NULL, 2, '');
+INSERT INTO `qrtz_triggers` VALUES ('RuoyiScheduler', 'TASK_CLASS_NAME1', 'DEFAULT', 'TASK_CLASS_NAME1', 'DEFAULT', NULL, 1648970830000, -1, 5, 'PAUSED', 'CRON', 1648970828000, 0, NULL, 2, '');
+INSERT INTO `qrtz_triggers` VALUES ('RuoyiScheduler', 'TASK_CLASS_NAME100', 'DEFAULT', 'TASK_CLASS_NAME100', 'DEFAULT', NULL, 1648972740000, -1, 5, 'WAITING', 'CRON', 1648970830000, 0, NULL, -1, '');
+INSERT INTO `qrtz_triggers` VALUES ('RuoyiScheduler', 'TASK_CLASS_NAME101', 'DEFAULT', 'TASK_CLASS_NAME101', 'DEFAULT', NULL, 1651161600000, -1, 5, 'WAITING', 'CRON', 1648970830000, 0, NULL, -1, '');
+INSERT INTO `qrtz_triggers` VALUES ('RuoyiScheduler', 'TASK_CLASS_NAME2', 'DEFAULT', 'TASK_CLASS_NAME2', 'DEFAULT', NULL, 1648970835000, -1, 5, 'PAUSED', 'CRON', 1648970828000, 0, NULL, 2, '');
+INSERT INTO `qrtz_triggers` VALUES ('RuoyiScheduler', 'TASK_CLASS_NAME3', 'DEFAULT', 'TASK_CLASS_NAME3', 'DEFAULT', NULL, 1648970840000, -1, 5, 'PAUSED', 'CRON', 1648970829000, 0, NULL, 2, '');
 
 -- ----------------------------
 -- Table structure for sys_config
@@ -735,7 +827,7 @@ CREATE TABLE `sys_config`  (
   `update_time` datetime NULL DEFAULT NULL COMMENT '更新时间',
   `remark` varchar(500) CHARACTER SET utf8 COLLATE utf8_bin NULL DEFAULT NULL COMMENT '备注',
   PRIMARY KEY (`config_id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 100 CHARACTER SET = utf8 COLLATE = utf8_bin COMMENT = '参数配置表' ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 10 CHARACTER SET = utf8 COLLATE = utf8_bin COMMENT = '参数配置表' ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of sys_config
@@ -770,7 +862,7 @@ CREATE TABLE `sys_dept`  (
   `update_by` varchar(64) CHARACTER SET utf8 COLLATE utf8_bin NULL DEFAULT '' COMMENT '更新者',
   `update_time` datetime NULL DEFAULT NULL COMMENT '更新时间',
   PRIMARY KEY (`dept_id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 109 CHARACTER SET = utf8 COLLATE = utf8_bin COMMENT = '部门表' ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 110 CHARACTER SET = utf8 COLLATE = utf8_bin COMMENT = '部门表' ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of sys_dept
@@ -804,7 +896,7 @@ CREATE TABLE `sys_dict_data`  (
   `update_time` datetime NULL DEFAULT NULL COMMENT '更新时间',
   `remark` varchar(500) CHARACTER SET utf8 COLLATE utf8_bin NULL DEFAULT NULL COMMENT '备注',
   PRIMARY KEY (`dict_code`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 124 CHARACTER SET = utf8 COLLATE = utf8_bin COMMENT = '字典数据表' ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 124 CHARACTER SET = utf8 COLLATE = utf8_bin COMMENT = '字典数据表' ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of sys_dict_data
@@ -878,7 +970,7 @@ CREATE TABLE `sys_dict_type`  (
   `remark` varchar(500) CHARACTER SET utf8 COLLATE utf8_bin NULL DEFAULT NULL COMMENT '备注',
   PRIMARY KEY (`dict_id`) USING BTREE,
   UNIQUE INDEX `dict_type`(`dict_type`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 108 CHARACTER SET = utf8 COLLATE = utf8_bin COMMENT = '字典类型表' ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 108 CHARACTER SET = utf8 COLLATE = utf8_bin COMMENT = '字典类型表' ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of sys_dict_type
@@ -921,7 +1013,7 @@ CREATE TABLE `sys_job`  (
   `update_time` datetime NULL DEFAULT NULL COMMENT '更新时间',
   `remark` varchar(500) CHARACTER SET utf8 COLLATE utf8_bin NULL DEFAULT '' COMMENT '备注信息',
   PRIMARY KEY (`job_id`, `job_name`, `job_group`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 100 CHARACTER SET = utf8 COLLATE = utf8_bin COMMENT = '定时任务调度表' ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 102 CHARACTER SET = utf8 COLLATE = utf8_bin COMMENT = '定时任务调度表' ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of sys_job
@@ -929,6 +1021,8 @@ CREATE TABLE `sys_job`  (
 INSERT INTO `sys_job` VALUES (1, '系统默认（无参）', 'DEFAULT', 'ryTask.ryNoParams', '0/10 * * * * ?', '3', '1', '1', 'admin', '2021-09-22 15:36:15', '', NULL, '');
 INSERT INTO `sys_job` VALUES (2, '系统默认（有参）', 'DEFAULT', 'ryTask.ryParams(\'ry\')', '0/15 * * * * ?', '3', '1', '1', 'admin', '2021-09-22 15:36:15', '', NULL, '');
 INSERT INTO `sys_job` VALUES (3, '系统默认（多参）', 'DEFAULT', 'ryTask.ryMultipleParams(\'ry\', true, 2000L, 316.50D, 100)', '0/20 * * * * ?', '3', '1', '1', 'admin', '2021-09-22 15:36:15', '', NULL, '');
+INSERT INTO `sys_job` VALUES (100, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '0 0/59 * * * ?', '1', '1', '0', 'admin', '2022-03-10 19:18:33', '', '2022-03-10 19:18:37', '');
+INSERT INTO `sys_job` VALUES (101, 'baiduAccessToken', 'DEFAULT', 'tokenTask.getOcrAccessToken()', '0 0/59 0 1/28 1/1 ?', '1', '1', '0', 'admin', '2022-03-10 19:42:09', '', '2022-03-10 19:45:16', '');
 
 -- ----------------------------
 -- Table structure for sys_job_log
@@ -944,11 +1038,1124 @@ CREATE TABLE `sys_job_log`  (
   `exception_info` varchar(2000) CHARACTER SET utf8 COLLATE utf8_bin NULL DEFAULT '' COMMENT '异常信息',
   `create_time` datetime NULL DEFAULT NULL COMMENT '创建时间',
   PRIMARY KEY (`job_log_id`) USING BTREE
-) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_bin COMMENT = '定时任务调度日志表' ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 1114 CHARACTER SET = utf8 COLLATE = utf8_bin COMMENT = '定时任务调度日志表' ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of sys_job_log
 -- ----------------------------
+INSERT INTO `sys_job_log` VALUES (1, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：440毫秒', '0', '', '2022-03-10 19:20:04');
+INSERT INTO `sys_job_log` VALUES (2, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：216毫秒', '0', '', '2022-03-10 19:21:04');
+INSERT INTO `sys_job_log` VALUES (3, 'baiduAccessToken', 'DEFAULT', 'tokenTask.getOcrAccessToken()', 'baiduAccessToken 总共耗时：530毫秒', '0', '', '2022-03-10 19:45:53');
+INSERT INTO `sys_job_log` VALUES (4, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：261毫秒', '0', '', '2022-03-10 20:59:00');
+INSERT INTO `sys_job_log` VALUES (5, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：240毫秒', '0', '', '2022-03-10 21:00:00');
+INSERT INTO `sys_job_log` VALUES (6, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：243毫秒', '0', '', '2022-03-10 21:59:00');
+INSERT INTO `sys_job_log` VALUES (7, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：253毫秒', '0', '', '2022-03-10 22:00:00');
+INSERT INTO `sys_job_log` VALUES (8, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：367毫秒', '0', '', '2022-03-11 16:46:53');
+INSERT INTO `sys_job_log` VALUES (9, 'baiduAccessToken', 'DEFAULT', 'tokenTask.getOcrAccessToken()', 'baiduAccessToken 总共耗时：416毫秒', '0', '', '2022-03-11 16:46:53');
+INSERT INTO `sys_job_log` VALUES (10, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：246毫秒', '0', '', '2022-03-11 16:59:00');
+INSERT INTO `sys_job_log` VALUES (11, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：225毫秒', '0', '', '2022-03-11 17:00:00');
+INSERT INTO `sys_job_log` VALUES (12, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：246毫秒', '0', '', '2022-03-11 17:59:00');
+INSERT INTO `sys_job_log` VALUES (13, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：392毫秒', '0', '', '2022-03-11 18:00:00');
+INSERT INTO `sys_job_log` VALUES (14, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：241毫秒', '0', '', '2022-03-11 18:59:00');
+INSERT INTO `sys_job_log` VALUES (15, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：376毫秒', '0', '', '2022-03-11 19:00:00');
+INSERT INTO `sys_job_log` VALUES (16, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：268毫秒', '0', '', '2022-03-11 19:59:00');
+INSERT INTO `sys_job_log` VALUES (17, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：659毫秒', '0', '', '2022-03-11 20:00:00');
+INSERT INTO `sys_job_log` VALUES (18, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：231毫秒', '0', '', '2022-03-11 20:59:00');
+INSERT INTO `sys_job_log` VALUES (19, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：247毫秒', '0', '', '2022-03-11 21:00:00');
+INSERT INTO `sys_job_log` VALUES (20, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：274毫秒', '0', '', '2022-03-11 21:59:00');
+INSERT INTO `sys_job_log` VALUES (21, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：386毫秒', '0', '', '2022-03-11 22:00:00');
+INSERT INTO `sys_job_log` VALUES (22, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：246毫秒', '0', '', '2022-03-11 22:59:00');
+INSERT INTO `sys_job_log` VALUES (23, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：259毫秒', '0', '', '2022-03-11 23:00:00');
+INSERT INTO `sys_job_log` VALUES (24, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：256毫秒', '0', '', '2022-03-11 23:59:00');
+INSERT INTO `sys_job_log` VALUES (25, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：307毫秒', '0', '', '2022-03-12 00:00:00');
+INSERT INTO `sys_job_log` VALUES (26, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：266毫秒', '0', '', '2022-03-12 00:59:00');
+INSERT INTO `sys_job_log` VALUES (27, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：237毫秒', '0', '', '2022-03-12 01:00:00');
+INSERT INTO `sys_job_log` VALUES (28, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：279毫秒', '0', '', '2022-03-12 01:59:00');
+INSERT INTO `sys_job_log` VALUES (29, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：311毫秒', '0', '', '2022-03-12 02:00:00');
+INSERT INTO `sys_job_log` VALUES (30, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：245毫秒', '0', '', '2022-03-12 02:59:00');
+INSERT INTO `sys_job_log` VALUES (31, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：265毫秒', '0', '', '2022-03-12 03:00:00');
+INSERT INTO `sys_job_log` VALUES (32, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：276毫秒', '0', '', '2022-03-12 03:59:00');
+INSERT INTO `sys_job_log` VALUES (33, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：279毫秒', '0', '', '2022-03-12 04:00:00');
+INSERT INTO `sys_job_log` VALUES (34, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：244毫秒', '0', '', '2022-03-12 04:59:00');
+INSERT INTO `sys_job_log` VALUES (35, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：280毫秒', '0', '', '2022-03-12 05:00:00');
+INSERT INTO `sys_job_log` VALUES (36, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：252毫秒', '0', '', '2022-03-12 05:59:00');
+INSERT INTO `sys_job_log` VALUES (37, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：267毫秒', '0', '', '2022-03-12 06:00:00');
+INSERT INTO `sys_job_log` VALUES (38, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：260毫秒', '0', '', '2022-03-12 06:59:00');
+INSERT INTO `sys_job_log` VALUES (39, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：316毫秒', '0', '', '2022-03-12 07:00:00');
+INSERT INTO `sys_job_log` VALUES (40, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：251毫秒', '0', '', '2022-03-12 07:59:00');
+INSERT INTO `sys_job_log` VALUES (41, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：577毫秒', '0', '', '2022-03-12 08:00:00');
+INSERT INTO `sys_job_log` VALUES (42, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：237毫秒', '0', '', '2022-03-12 08:59:00');
+INSERT INTO `sys_job_log` VALUES (43, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：336毫秒', '0', '', '2022-03-12 09:00:00');
+INSERT INTO `sys_job_log` VALUES (44, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：288毫秒', '0', '', '2022-03-12 09:59:00');
+INSERT INTO `sys_job_log` VALUES (45, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：285毫秒', '0', '', '2022-03-12 10:00:00');
+INSERT INTO `sys_job_log` VALUES (46, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：334毫秒', '0', '', '2022-03-12 10:59:00');
+INSERT INTO `sys_job_log` VALUES (47, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：270毫秒', '0', '', '2022-03-12 11:00:00');
+INSERT INTO `sys_job_log` VALUES (48, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：260毫秒', '0', '', '2022-03-12 11:59:00');
+INSERT INTO `sys_job_log` VALUES (49, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：342毫秒', '0', '', '2022-03-12 12:00:00');
+INSERT INTO `sys_job_log` VALUES (50, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：241毫秒', '0', '', '2022-03-12 12:59:00');
+INSERT INTO `sys_job_log` VALUES (51, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：374毫秒', '0', '', '2022-03-12 13:00:00');
+INSERT INTO `sys_job_log` VALUES (52, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：245毫秒', '0', '', '2022-03-12 13:59:00');
+INSERT INTO `sys_job_log` VALUES (53, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：303毫秒', '0', '', '2022-03-12 14:00:00');
+INSERT INTO `sys_job_log` VALUES (54, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：260毫秒', '0', '', '2022-03-12 14:59:00');
+INSERT INTO `sys_job_log` VALUES (55, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：290毫秒', '0', '', '2022-03-12 15:00:00');
+INSERT INTO `sys_job_log` VALUES (56, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：247毫秒', '0', '', '2022-03-12 15:59:00');
+INSERT INTO `sys_job_log` VALUES (57, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：298毫秒', '0', '', '2022-03-12 16:00:00');
+INSERT INTO `sys_job_log` VALUES (58, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：260毫秒', '0', '', '2022-03-12 16:59:00');
+INSERT INTO `sys_job_log` VALUES (59, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：246毫秒', '0', '', '2022-03-12 17:00:00');
+INSERT INTO `sys_job_log` VALUES (60, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：252毫秒', '0', '', '2022-03-12 17:59:00');
+INSERT INTO `sys_job_log` VALUES (61, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：215毫秒', '0', '', '2022-03-12 18:00:00');
+INSERT INTO `sys_job_log` VALUES (62, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：314毫秒', '0', '', '2022-03-12 18:59:00');
+INSERT INTO `sys_job_log` VALUES (63, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：290毫秒', '0', '', '2022-03-12 19:00:00');
+INSERT INTO `sys_job_log` VALUES (64, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：260毫秒', '0', '', '2022-03-12 19:59:00');
+INSERT INTO `sys_job_log` VALUES (65, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：297毫秒', '0', '', '2022-03-12 20:00:00');
+INSERT INTO `sys_job_log` VALUES (66, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：295毫秒', '0', '', '2022-03-12 20:59:00');
+INSERT INTO `sys_job_log` VALUES (67, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：273毫秒', '0', '', '2022-03-12 21:00:00');
+INSERT INTO `sys_job_log` VALUES (68, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：243毫秒', '0', '', '2022-03-12 21:59:00');
+INSERT INTO `sys_job_log` VALUES (69, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：288毫秒', '0', '', '2022-03-12 22:00:00');
+INSERT INTO `sys_job_log` VALUES (70, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：244毫秒', '0', '', '2022-03-12 22:59:00');
+INSERT INTO `sys_job_log` VALUES (71, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：277毫秒', '0', '', '2022-03-12 23:00:00');
+INSERT INTO `sys_job_log` VALUES (72, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：244毫秒', '0', '', '2022-03-12 23:59:00');
+INSERT INTO `sys_job_log` VALUES (73, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：370毫秒', '0', '', '2022-03-13 00:00:00');
+INSERT INTO `sys_job_log` VALUES (74, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：240毫秒', '0', '', '2022-03-13 00:59:00');
+INSERT INTO `sys_job_log` VALUES (75, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：366毫秒', '0', '', '2022-03-13 01:00:00');
+INSERT INTO `sys_job_log` VALUES (76, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：267毫秒', '0', '', '2022-03-13 01:59:00');
+INSERT INTO `sys_job_log` VALUES (77, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：227毫秒', '0', '', '2022-03-13 02:00:00');
+INSERT INTO `sys_job_log` VALUES (78, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：284毫秒', '0', '', '2022-03-13 02:59:00');
+INSERT INTO `sys_job_log` VALUES (79, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：355毫秒', '0', '', '2022-03-13 03:00:00');
+INSERT INTO `sys_job_log` VALUES (80, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：274毫秒', '0', '', '2022-03-13 03:59:00');
+INSERT INTO `sys_job_log` VALUES (81, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：267毫秒', '0', '', '2022-03-13 04:00:00');
+INSERT INTO `sys_job_log` VALUES (82, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：281毫秒', '0', '', '2022-03-13 04:59:00');
+INSERT INTO `sys_job_log` VALUES (83, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：279毫秒', '0', '', '2022-03-13 05:00:00');
+INSERT INTO `sys_job_log` VALUES (84, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：263毫秒', '0', '', '2022-03-13 05:59:00');
+INSERT INTO `sys_job_log` VALUES (85, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：245毫秒', '0', '', '2022-03-13 06:00:00');
+INSERT INTO `sys_job_log` VALUES (86, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：262毫秒', '0', '', '2022-03-13 06:59:00');
+INSERT INTO `sys_job_log` VALUES (87, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：242毫秒', '0', '', '2022-03-13 07:00:00');
+INSERT INTO `sys_job_log` VALUES (88, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：262毫秒', '0', '', '2022-03-13 07:59:00');
+INSERT INTO `sys_job_log` VALUES (89, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：269毫秒', '0', '', '2022-03-13 08:00:00');
+INSERT INTO `sys_job_log` VALUES (90, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：245毫秒', '0', '', '2022-03-13 08:59:00');
+INSERT INTO `sys_job_log` VALUES (91, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：286毫秒', '0', '', '2022-03-13 09:00:00');
+INSERT INTO `sys_job_log` VALUES (92, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：229毫秒', '0', '', '2022-03-13 09:59:00');
+INSERT INTO `sys_job_log` VALUES (93, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：362毫秒', '0', '', '2022-03-13 10:00:00');
+INSERT INTO `sys_job_log` VALUES (94, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：254毫秒', '0', '', '2022-03-13 10:59:00');
+INSERT INTO `sys_job_log` VALUES (95, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：287毫秒', '0', '', '2022-03-13 11:00:00');
+INSERT INTO `sys_job_log` VALUES (96, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：274毫秒', '0', '', '2022-03-13 11:59:00');
+INSERT INTO `sys_job_log` VALUES (97, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：376毫秒', '0', '', '2022-03-13 12:00:00');
+INSERT INTO `sys_job_log` VALUES (98, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：251毫秒', '0', '', '2022-03-13 12:59:00');
+INSERT INTO `sys_job_log` VALUES (99, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：223毫秒', '0', '', '2022-03-13 13:00:00');
+INSERT INTO `sys_job_log` VALUES (100, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：271毫秒', '0', '', '2022-03-13 13:59:00');
+INSERT INTO `sys_job_log` VALUES (101, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：253毫秒', '0', '', '2022-03-13 14:00:00');
+INSERT INTO `sys_job_log` VALUES (102, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：255毫秒', '0', '', '2022-03-13 14:59:00');
+INSERT INTO `sys_job_log` VALUES (103, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：226毫秒', '0', '', '2022-03-13 15:00:00');
+INSERT INTO `sys_job_log` VALUES (104, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：259毫秒', '0', '', '2022-03-13 15:59:00');
+INSERT INTO `sys_job_log` VALUES (105, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：286毫秒', '0', '', '2022-03-13 16:00:00');
+INSERT INTO `sys_job_log` VALUES (106, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：273毫秒', '0', '', '2022-03-13 16:59:00');
+INSERT INTO `sys_job_log` VALUES (107, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：238毫秒', '0', '', '2022-03-13 17:00:00');
+INSERT INTO `sys_job_log` VALUES (108, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：289毫秒', '0', '', '2022-03-13 17:59:00');
+INSERT INTO `sys_job_log` VALUES (109, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：287毫秒', '0', '', '2022-03-13 18:00:00');
+INSERT INTO `sys_job_log` VALUES (110, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：236毫秒', '0', '', '2022-03-13 18:59:00');
+INSERT INTO `sys_job_log` VALUES (111, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：261毫秒', '0', '', '2022-03-13 19:00:00');
+INSERT INTO `sys_job_log` VALUES (112, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：251毫秒', '0', '', '2022-03-13 19:59:00');
+INSERT INTO `sys_job_log` VALUES (113, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：320毫秒', '0', '', '2022-03-13 20:00:00');
+INSERT INTO `sys_job_log` VALUES (114, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：290毫秒', '0', '', '2022-03-13 20:59:00');
+INSERT INTO `sys_job_log` VALUES (115, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：273毫秒', '0', '', '2022-03-13 21:00:00');
+INSERT INTO `sys_job_log` VALUES (116, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：260毫秒', '0', '', '2022-03-13 21:59:00');
+INSERT INTO `sys_job_log` VALUES (117, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：270毫秒', '0', '', '2022-03-13 22:00:00');
+INSERT INTO `sys_job_log` VALUES (118, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：285毫秒', '0', '', '2022-03-13 22:59:00');
+INSERT INTO `sys_job_log` VALUES (119, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：267毫秒', '0', '', '2022-03-13 23:00:00');
+INSERT INTO `sys_job_log` VALUES (120, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：259毫秒', '0', '', '2022-03-13 23:59:00');
+INSERT INTO `sys_job_log` VALUES (121, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：286毫秒', '0', '', '2022-03-14 00:00:00');
+INSERT INTO `sys_job_log` VALUES (122, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：235毫秒', '0', '', '2022-03-14 00:59:00');
+INSERT INTO `sys_job_log` VALUES (123, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：268毫秒', '0', '', '2022-03-14 01:00:00');
+INSERT INTO `sys_job_log` VALUES (124, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：244毫秒', '0', '', '2022-03-14 01:59:00');
+INSERT INTO `sys_job_log` VALUES (125, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：276毫秒', '0', '', '2022-03-14 02:00:00');
+INSERT INTO `sys_job_log` VALUES (126, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：260毫秒', '0', '', '2022-03-14 02:59:00');
+INSERT INTO `sys_job_log` VALUES (127, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：262毫秒', '0', '', '2022-03-14 03:00:00');
+INSERT INTO `sys_job_log` VALUES (128, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：253毫秒', '0', '', '2022-03-14 03:59:00');
+INSERT INTO `sys_job_log` VALUES (129, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：297毫秒', '0', '', '2022-03-14 04:00:00');
+INSERT INTO `sys_job_log` VALUES (130, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：238毫秒', '0', '', '2022-03-14 04:59:00');
+INSERT INTO `sys_job_log` VALUES (131, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：262毫秒', '0', '', '2022-03-14 05:00:00');
+INSERT INTO `sys_job_log` VALUES (132, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：232毫秒', '0', '', '2022-03-14 05:59:00');
+INSERT INTO `sys_job_log` VALUES (133, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：284毫秒', '0', '', '2022-03-14 06:00:00');
+INSERT INTO `sys_job_log` VALUES (134, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：237毫秒', '0', '', '2022-03-14 06:59:00');
+INSERT INTO `sys_job_log` VALUES (135, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：273毫秒', '0', '', '2022-03-14 07:00:00');
+INSERT INTO `sys_job_log` VALUES (136, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：272毫秒', '0', '', '2022-03-14 07:59:00');
+INSERT INTO `sys_job_log` VALUES (137, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：340毫秒', '0', '', '2022-03-14 08:00:00');
+INSERT INTO `sys_job_log` VALUES (138, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：300毫秒', '0', '', '2022-03-14 08:59:00');
+INSERT INTO `sys_job_log` VALUES (139, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：276毫秒', '0', '', '2022-03-14 09:00:00');
+INSERT INTO `sys_job_log` VALUES (140, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：256毫秒', '0', '', '2022-03-14 09:59:00');
+INSERT INTO `sys_job_log` VALUES (141, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：262毫秒', '0', '', '2022-03-14 10:00:00');
+INSERT INTO `sys_job_log` VALUES (142, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：321毫秒', '0', '', '2022-03-14 10:59:00');
+INSERT INTO `sys_job_log` VALUES (143, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：258毫秒', '0', '', '2022-03-14 11:00:00');
+INSERT INTO `sys_job_log` VALUES (144, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：250毫秒', '0', '', '2022-03-14 11:59:00');
+INSERT INTO `sys_job_log` VALUES (145, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：357毫秒', '0', '', '2022-03-14 12:00:00');
+INSERT INTO `sys_job_log` VALUES (146, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：287毫秒', '0', '', '2022-03-14 12:59:00');
+INSERT INTO `sys_job_log` VALUES (147, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：275毫秒', '0', '', '2022-03-14 13:00:00');
+INSERT INTO `sys_job_log` VALUES (148, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：277毫秒', '0', '', '2022-03-14 13:59:00');
+INSERT INTO `sys_job_log` VALUES (149, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：363毫秒', '0', '', '2022-03-14 14:00:00');
+INSERT INTO `sys_job_log` VALUES (150, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：280毫秒', '0', '', '2022-03-14 14:59:00');
+INSERT INTO `sys_job_log` VALUES (151, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：278毫秒', '0', '', '2022-03-14 15:00:00');
+INSERT INTO `sys_job_log` VALUES (152, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：243毫秒', '0', '', '2022-03-14 15:59:00');
+INSERT INTO `sys_job_log` VALUES (153, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：249毫秒', '0', '', '2022-03-14 16:00:00');
+INSERT INTO `sys_job_log` VALUES (154, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：241毫秒', '0', '', '2022-03-14 16:59:00');
+INSERT INTO `sys_job_log` VALUES (155, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：298毫秒', '0', '', '2022-03-14 17:00:00');
+INSERT INTO `sys_job_log` VALUES (156, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：259毫秒', '0', '', '2022-03-14 17:59:00');
+INSERT INTO `sys_job_log` VALUES (157, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：418毫秒', '0', '', '2022-03-14 18:00:00');
+INSERT INTO `sys_job_log` VALUES (158, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：269毫秒', '0', '', '2022-03-14 18:59:00');
+INSERT INTO `sys_job_log` VALUES (159, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：235毫秒', '0', '', '2022-03-14 19:00:00');
+INSERT INTO `sys_job_log` VALUES (160, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：257毫秒', '0', '', '2022-03-14 19:59:00');
+INSERT INTO `sys_job_log` VALUES (161, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：332毫秒', '0', '', '2022-03-14 20:00:00');
+INSERT INTO `sys_job_log` VALUES (162, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：229毫秒', '0', '', '2022-03-14 20:59:00');
+INSERT INTO `sys_job_log` VALUES (163, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：287毫秒', '0', '', '2022-03-14 21:00:00');
+INSERT INTO `sys_job_log` VALUES (164, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：496毫秒', '0', '', '2022-03-14 21:59:00');
+INSERT INTO `sys_job_log` VALUES (165, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：698毫秒', '0', '', '2022-03-14 22:00:00');
+INSERT INTO `sys_job_log` VALUES (166, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：321毫秒', '0', '', '2022-03-14 22:59:00');
+INSERT INTO `sys_job_log` VALUES (167, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：305毫秒', '0', '', '2022-03-14 23:00:00');
+INSERT INTO `sys_job_log` VALUES (168, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：273毫秒', '0', '', '2022-03-14 23:59:00');
+INSERT INTO `sys_job_log` VALUES (169, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：264毫秒', '0', '', '2022-03-15 00:00:00');
+INSERT INTO `sys_job_log` VALUES (170, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：272毫秒', '0', '', '2022-03-15 00:59:00');
+INSERT INTO `sys_job_log` VALUES (171, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：329毫秒', '0', '', '2022-03-15 01:00:00');
+INSERT INTO `sys_job_log` VALUES (172, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：221毫秒', '0', '', '2022-03-15 01:59:00');
+INSERT INTO `sys_job_log` VALUES (173, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：320毫秒', '0', '', '2022-03-15 02:00:00');
+INSERT INTO `sys_job_log` VALUES (174, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：278毫秒', '0', '', '2022-03-15 02:59:00');
+INSERT INTO `sys_job_log` VALUES (175, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：257毫秒', '0', '', '2022-03-15 03:00:00');
+INSERT INTO `sys_job_log` VALUES (176, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：267毫秒', '0', '', '2022-03-15 03:59:00');
+INSERT INTO `sys_job_log` VALUES (177, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：232毫秒', '0', '', '2022-03-15 04:00:00');
+INSERT INTO `sys_job_log` VALUES (178, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：287毫秒', '0', '', '2022-03-15 04:59:00');
+INSERT INTO `sys_job_log` VALUES (179, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：254毫秒', '0', '', '2022-03-15 05:00:00');
+INSERT INTO `sys_job_log` VALUES (180, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：260毫秒', '0', '', '2022-03-15 05:59:00');
+INSERT INTO `sys_job_log` VALUES (181, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：272毫秒', '0', '', '2022-03-15 06:00:00');
+INSERT INTO `sys_job_log` VALUES (182, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：284毫秒', '0', '', '2022-03-15 06:59:00');
+INSERT INTO `sys_job_log` VALUES (183, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：250毫秒', '0', '', '2022-03-15 07:00:00');
+INSERT INTO `sys_job_log` VALUES (184, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：262毫秒', '0', '', '2022-03-15 07:59:00');
+INSERT INTO `sys_job_log` VALUES (185, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：413毫秒', '0', '', '2022-03-15 08:00:00');
+INSERT INTO `sys_job_log` VALUES (186, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：296毫秒', '0', '', '2022-03-15 08:59:00');
+INSERT INTO `sys_job_log` VALUES (187, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：576毫秒', '0', '', '2022-03-15 09:00:00');
+INSERT INTO `sys_job_log` VALUES (188, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：266毫秒', '0', '', '2022-03-15 09:59:00');
+INSERT INTO `sys_job_log` VALUES (189, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：299毫秒', '0', '', '2022-03-15 10:00:00');
+INSERT INTO `sys_job_log` VALUES (190, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：253毫秒', '0', '', '2022-03-15 10:59:00');
+INSERT INTO `sys_job_log` VALUES (191, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：320毫秒', '0', '', '2022-03-15 11:00:00');
+INSERT INTO `sys_job_log` VALUES (192, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：240毫秒', '0', '', '2022-03-15 11:59:00');
+INSERT INTO `sys_job_log` VALUES (193, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：387毫秒', '0', '', '2022-03-15 12:00:00');
+INSERT INTO `sys_job_log` VALUES (194, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：313毫秒', '0', '', '2022-03-15 12:59:00');
+INSERT INTO `sys_job_log` VALUES (195, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：401毫秒', '0', '', '2022-03-15 13:00:00');
+INSERT INTO `sys_job_log` VALUES (196, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：280毫秒', '0', '', '2022-03-15 13:59:00');
+INSERT INTO `sys_job_log` VALUES (197, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：295毫秒', '0', '', '2022-03-15 14:00:00');
+INSERT INTO `sys_job_log` VALUES (198, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：254毫秒', '0', '', '2022-03-15 14:59:00');
+INSERT INTO `sys_job_log` VALUES (199, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：306毫秒', '0', '', '2022-03-15 15:00:00');
+INSERT INTO `sys_job_log` VALUES (200, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：256毫秒', '0', '', '2022-03-15 15:59:00');
+INSERT INTO `sys_job_log` VALUES (201, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：343毫秒', '0', '', '2022-03-15 16:00:00');
+INSERT INTO `sys_job_log` VALUES (202, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：262毫秒', '0', '', '2022-03-15 16:59:00');
+INSERT INTO `sys_job_log` VALUES (203, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：297毫秒', '0', '', '2022-03-15 17:00:00');
+INSERT INTO `sys_job_log` VALUES (204, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：249毫秒', '0', '', '2022-03-15 17:59:00');
+INSERT INTO `sys_job_log` VALUES (205, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：507毫秒', '0', '', '2022-03-15 18:00:00');
+INSERT INTO `sys_job_log` VALUES (206, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：265毫秒', '0', '', '2022-03-15 18:59:00');
+INSERT INTO `sys_job_log` VALUES (207, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：241毫秒', '0', '', '2022-03-15 19:00:00');
+INSERT INTO `sys_job_log` VALUES (208, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：236毫秒', '0', '', '2022-03-15 19:59:00');
+INSERT INTO `sys_job_log` VALUES (209, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：306毫秒', '0', '', '2022-03-15 20:00:00');
+INSERT INTO `sys_job_log` VALUES (210, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：246毫秒', '0', '', '2022-03-15 20:59:00');
+INSERT INTO `sys_job_log` VALUES (211, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：237毫秒', '0', '', '2022-03-15 21:00:00');
+INSERT INTO `sys_job_log` VALUES (212, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：444毫秒', '0', '', '2022-03-15 21:59:00');
+INSERT INTO `sys_job_log` VALUES (213, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：431毫秒', '0', '', '2022-03-15 22:00:00');
+INSERT INTO `sys_job_log` VALUES (214, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：275毫秒', '0', '', '2022-03-15 23:59:00');
+INSERT INTO `sys_job_log` VALUES (215, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：312毫秒', '0', '', '2022-03-16 00:00:00');
+INSERT INTO `sys_job_log` VALUES (216, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：242毫秒', '0', '', '2022-03-16 00:59:00');
+INSERT INTO `sys_job_log` VALUES (217, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：242毫秒', '0', '', '2022-03-16 01:00:00');
+INSERT INTO `sys_job_log` VALUES (218, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：304毫秒', '0', '', '2022-03-16 01:59:00');
+INSERT INTO `sys_job_log` VALUES (219, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：230毫秒', '0', '', '2022-03-16 02:00:00');
+INSERT INTO `sys_job_log` VALUES (220, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：294毫秒', '0', '', '2022-03-16 02:59:00');
+INSERT INTO `sys_job_log` VALUES (221, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：251毫秒', '0', '', '2022-03-16 03:00:00');
+INSERT INTO `sys_job_log` VALUES (222, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：252毫秒', '0', '', '2022-03-16 03:59:00');
+INSERT INTO `sys_job_log` VALUES (223, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：237毫秒', '0', '', '2022-03-16 04:00:00');
+INSERT INTO `sys_job_log` VALUES (224, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：266毫秒', '0', '', '2022-03-16 04:59:00');
+INSERT INTO `sys_job_log` VALUES (225, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：233毫秒', '0', '', '2022-03-16 05:00:00');
+INSERT INTO `sys_job_log` VALUES (226, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：280毫秒', '0', '', '2022-03-16 05:59:00');
+INSERT INTO `sys_job_log` VALUES (227, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：252毫秒', '0', '', '2022-03-16 06:00:00');
+INSERT INTO `sys_job_log` VALUES (228, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：252毫秒', '0', '', '2022-03-16 06:59:00');
+INSERT INTO `sys_job_log` VALUES (229, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：281毫秒', '0', '', '2022-03-16 07:00:00');
+INSERT INTO `sys_job_log` VALUES (230, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：292毫秒', '0', '', '2022-03-16 07:59:00');
+INSERT INTO `sys_job_log` VALUES (231, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：346毫秒', '0', '', '2022-03-16 08:00:00');
+INSERT INTO `sys_job_log` VALUES (232, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：334毫秒', '0', '', '2022-03-16 08:59:00');
+INSERT INTO `sys_job_log` VALUES (233, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：346毫秒', '0', '', '2022-03-16 09:00:00');
+INSERT INTO `sys_job_log` VALUES (234, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：272毫秒', '0', '', '2022-03-16 09:59:00');
+INSERT INTO `sys_job_log` VALUES (235, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：288毫秒', '0', '', '2022-03-16 10:00:00');
+INSERT INTO `sys_job_log` VALUES (236, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：355毫秒', '0', '', '2022-03-16 10:59:00');
+INSERT INTO `sys_job_log` VALUES (237, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：268毫秒', '0', '', '2022-03-16 11:00:00');
+INSERT INTO `sys_job_log` VALUES (238, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：299毫秒', '0', '', '2022-03-16 11:59:00');
+INSERT INTO `sys_job_log` VALUES (239, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：224毫秒', '0', '', '2022-03-16 12:00:00');
+INSERT INTO `sys_job_log` VALUES (240, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：232毫秒', '0', '', '2022-03-16 12:59:00');
+INSERT INTO `sys_job_log` VALUES (241, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：253毫秒', '0', '', '2022-03-16 13:00:00');
+INSERT INTO `sys_job_log` VALUES (242, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：257毫秒', '0', '', '2022-03-16 13:59:00');
+INSERT INTO `sys_job_log` VALUES (243, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：250毫秒', '0', '', '2022-03-16 14:00:00');
+INSERT INTO `sys_job_log` VALUES (244, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：263毫秒', '0', '', '2022-03-16 14:59:00');
+INSERT INTO `sys_job_log` VALUES (245, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：286毫秒', '0', '', '2022-03-16 15:00:00');
+INSERT INTO `sys_job_log` VALUES (246, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：253毫秒', '0', '', '2022-03-16 15:59:00');
+INSERT INTO `sys_job_log` VALUES (247, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：345毫秒', '0', '', '2022-03-16 16:00:00');
+INSERT INTO `sys_job_log` VALUES (248, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：332毫秒', '0', '', '2022-03-16 16:59:00');
+INSERT INTO `sys_job_log` VALUES (249, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：339毫秒', '0', '', '2022-03-16 17:00:00');
+INSERT INTO `sys_job_log` VALUES (250, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：275毫秒', '0', '', '2022-03-16 17:59:00');
+INSERT INTO `sys_job_log` VALUES (251, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：350毫秒', '0', '', '2022-03-16 18:00:00');
+INSERT INTO `sys_job_log` VALUES (252, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：250毫秒', '0', '', '2022-03-16 18:59:00');
+INSERT INTO `sys_job_log` VALUES (253, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：283毫秒', '0', '', '2022-03-16 19:00:00');
+INSERT INTO `sys_job_log` VALUES (254, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：266毫秒', '0', '', '2022-03-16 19:59:00');
+INSERT INTO `sys_job_log` VALUES (255, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：367毫秒', '0', '', '2022-03-16 20:00:00');
+INSERT INTO `sys_job_log` VALUES (256, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：266毫秒', '0', '', '2022-03-16 20:59:00');
+INSERT INTO `sys_job_log` VALUES (257, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：237毫秒', '0', '', '2022-03-16 21:00:00');
+INSERT INTO `sys_job_log` VALUES (258, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：250毫秒', '0', '', '2022-03-16 21:59:00');
+INSERT INTO `sys_job_log` VALUES (259, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：332毫秒', '0', '', '2022-03-16 22:00:00');
+INSERT INTO `sys_job_log` VALUES (260, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：234毫秒', '0', '', '2022-03-16 22:59:00');
+INSERT INTO `sys_job_log` VALUES (261, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：313毫秒', '0', '', '2022-03-16 23:00:00');
+INSERT INTO `sys_job_log` VALUES (262, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：292毫秒', '0', '', '2022-03-16 23:59:00');
+INSERT INTO `sys_job_log` VALUES (263, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：500毫秒', '0', '', '2022-03-17 00:00:00');
+INSERT INTO `sys_job_log` VALUES (264, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：246毫秒', '0', '', '2022-03-17 00:59:00');
+INSERT INTO `sys_job_log` VALUES (265, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：241毫秒', '0', '', '2022-03-17 01:00:00');
+INSERT INTO `sys_job_log` VALUES (266, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：238毫秒', '0', '', '2022-03-17 01:59:00');
+INSERT INTO `sys_job_log` VALUES (267, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：336毫秒', '0', '', '2022-03-17 02:00:00');
+INSERT INTO `sys_job_log` VALUES (268, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：229毫秒', '0', '', '2022-03-17 02:59:00');
+INSERT INTO `sys_job_log` VALUES (269, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：276毫秒', '0', '', '2022-03-17 03:00:00');
+INSERT INTO `sys_job_log` VALUES (270, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：289毫秒', '0', '', '2022-03-17 03:59:00');
+INSERT INTO `sys_job_log` VALUES (271, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：291毫秒', '0', '', '2022-03-17 04:00:00');
+INSERT INTO `sys_job_log` VALUES (272, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：221毫秒', '0', '', '2022-03-17 04:59:00');
+INSERT INTO `sys_job_log` VALUES (273, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：264毫秒', '0', '', '2022-03-17 05:00:00');
+INSERT INTO `sys_job_log` VALUES (274, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：247毫秒', '0', '', '2022-03-17 05:59:00');
+INSERT INTO `sys_job_log` VALUES (275, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：310毫秒', '0', '', '2022-03-17 06:00:00');
+INSERT INTO `sys_job_log` VALUES (276, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：250毫秒', '0', '', '2022-03-17 06:59:00');
+INSERT INTO `sys_job_log` VALUES (277, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：321毫秒', '0', '', '2022-03-17 07:00:00');
+INSERT INTO `sys_job_log` VALUES (278, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：253毫秒', '0', '', '2022-03-17 07:59:00');
+INSERT INTO `sys_job_log` VALUES (279, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：271毫秒', '0', '', '2022-03-17 08:00:00');
+INSERT INTO `sys_job_log` VALUES (280, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：264毫秒', '0', '', '2022-03-17 08:59:00');
+INSERT INTO `sys_job_log` VALUES (281, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：299毫秒', '0', '', '2022-03-17 09:00:00');
+INSERT INTO `sys_job_log` VALUES (282, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：247毫秒', '0', '', '2022-03-17 09:59:00');
+INSERT INTO `sys_job_log` VALUES (283, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：237毫秒', '0', '', '2022-03-17 10:00:00');
+INSERT INTO `sys_job_log` VALUES (284, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：309毫秒', '0', '', '2022-03-17 10:59:00');
+INSERT INTO `sys_job_log` VALUES (285, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：289毫秒', '0', '', '2022-03-17 11:00:00');
+INSERT INTO `sys_job_log` VALUES (286, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：246毫秒', '0', '', '2022-03-17 11:59:00');
+INSERT INTO `sys_job_log` VALUES (287, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：242毫秒', '0', '', '2022-03-17 12:00:00');
+INSERT INTO `sys_job_log` VALUES (288, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：281毫秒', '0', '', '2022-03-17 12:59:00');
+INSERT INTO `sys_job_log` VALUES (289, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：243毫秒', '0', '', '2022-03-17 13:00:00');
+INSERT INTO `sys_job_log` VALUES (290, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：233毫秒', '0', '', '2022-03-17 13:59:00');
+INSERT INTO `sys_job_log` VALUES (291, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：259毫秒', '0', '', '2022-03-17 14:00:00');
+INSERT INTO `sys_job_log` VALUES (292, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：313毫秒', '0', '', '2022-03-17 14:59:00');
+INSERT INTO `sys_job_log` VALUES (293, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：234毫秒', '0', '', '2022-03-17 15:00:00');
+INSERT INTO `sys_job_log` VALUES (294, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：260毫秒', '0', '', '2022-03-17 15:59:00');
+INSERT INTO `sys_job_log` VALUES (295, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：547毫秒', '0', '', '2022-03-17 16:00:00');
+INSERT INTO `sys_job_log` VALUES (296, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：241毫秒', '0', '', '2022-03-17 16:59:00');
+INSERT INTO `sys_job_log` VALUES (297, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：286毫秒', '0', '', '2022-03-17 17:00:00');
+INSERT INTO `sys_job_log` VALUES (298, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：273毫秒', '0', '', '2022-03-17 17:59:00');
+INSERT INTO `sys_job_log` VALUES (299, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：345毫秒', '0', '', '2022-03-17 18:00:00');
+INSERT INTO `sys_job_log` VALUES (300, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：265毫秒', '0', '', '2022-03-17 18:59:00');
+INSERT INTO `sys_job_log` VALUES (301, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：411毫秒', '0', '', '2022-03-17 19:00:00');
+INSERT INTO `sys_job_log` VALUES (302, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：270毫秒', '0', '', '2022-03-17 19:59:00');
+INSERT INTO `sys_job_log` VALUES (303, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：291毫秒', '0', '', '2022-03-17 20:00:00');
+INSERT INTO `sys_job_log` VALUES (304, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：276毫秒', '0', '', '2022-03-17 20:59:00');
+INSERT INTO `sys_job_log` VALUES (305, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：233毫秒', '0', '', '2022-03-17 21:00:00');
+INSERT INTO `sys_job_log` VALUES (306, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：292毫秒', '0', '', '2022-03-17 21:59:00');
+INSERT INTO `sys_job_log` VALUES (307, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：298毫秒', '0', '', '2022-03-17 22:00:00');
+INSERT INTO `sys_job_log` VALUES (308, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：258毫秒', '0', '', '2022-03-17 22:59:00');
+INSERT INTO `sys_job_log` VALUES (309, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：265毫秒', '0', '', '2022-03-17 23:00:00');
+INSERT INTO `sys_job_log` VALUES (310, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：235毫秒', '0', '', '2022-03-17 23:59:00');
+INSERT INTO `sys_job_log` VALUES (311, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：265毫秒', '0', '', '2022-03-18 00:00:00');
+INSERT INTO `sys_job_log` VALUES (312, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：272毫秒', '0', '', '2022-03-18 00:59:00');
+INSERT INTO `sys_job_log` VALUES (313, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：249毫秒', '0', '', '2022-03-18 01:00:00');
+INSERT INTO `sys_job_log` VALUES (314, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：268毫秒', '0', '', '2022-03-18 01:59:00');
+INSERT INTO `sys_job_log` VALUES (315, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：265毫秒', '0', '', '2022-03-18 02:00:00');
+INSERT INTO `sys_job_log` VALUES (316, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：276毫秒', '0', '', '2022-03-18 02:59:00');
+INSERT INTO `sys_job_log` VALUES (317, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：218毫秒', '0', '', '2022-03-18 03:00:00');
+INSERT INTO `sys_job_log` VALUES (318, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：245毫秒', '0', '', '2022-03-18 03:59:00');
+INSERT INTO `sys_job_log` VALUES (319, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：222毫秒', '0', '', '2022-03-18 04:00:00');
+INSERT INTO `sys_job_log` VALUES (320, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：270毫秒', '0', '', '2022-03-18 04:59:00');
+INSERT INTO `sys_job_log` VALUES (321, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：241毫秒', '0', '', '2022-03-18 05:00:00');
+INSERT INTO `sys_job_log` VALUES (322, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：255毫秒', '0', '', '2022-03-18 05:59:00');
+INSERT INTO `sys_job_log` VALUES (323, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：331毫秒', '0', '', '2022-03-18 06:00:00');
+INSERT INTO `sys_job_log` VALUES (324, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：242毫秒', '0', '', '2022-03-18 06:59:00');
+INSERT INTO `sys_job_log` VALUES (325, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：277毫秒', '0', '', '2022-03-18 07:00:00');
+INSERT INTO `sys_job_log` VALUES (326, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：253毫秒', '0', '', '2022-03-18 07:59:00');
+INSERT INTO `sys_job_log` VALUES (327, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：247毫秒', '0', '', '2022-03-18 08:00:00');
+INSERT INTO `sys_job_log` VALUES (328, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：242毫秒', '0', '', '2022-03-18 08:59:00');
+INSERT INTO `sys_job_log` VALUES (329, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：321毫秒', '0', '', '2022-03-18 09:00:00');
+INSERT INTO `sys_job_log` VALUES (330, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：268毫秒', '0', '', '2022-03-18 09:59:00');
+INSERT INTO `sys_job_log` VALUES (331, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：395毫秒', '0', '', '2022-03-18 10:00:00');
+INSERT INTO `sys_job_log` VALUES (332, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：360毫秒', '0', '', '2022-03-18 10:59:00');
+INSERT INTO `sys_job_log` VALUES (333, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：285毫秒', '0', '', '2022-03-18 11:00:00');
+INSERT INTO `sys_job_log` VALUES (334, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：261毫秒', '0', '', '2022-03-18 11:59:00');
+INSERT INTO `sys_job_log` VALUES (335, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：268毫秒', '0', '', '2022-03-18 12:00:00');
+INSERT INTO `sys_job_log` VALUES (336, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：286毫秒', '0', '', '2022-03-18 12:59:00');
+INSERT INTO `sys_job_log` VALUES (337, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：282毫秒', '0', '', '2022-03-18 13:00:00');
+INSERT INTO `sys_job_log` VALUES (338, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：311毫秒', '0', '', '2022-03-18 13:59:00');
+INSERT INTO `sys_job_log` VALUES (339, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：284毫秒', '0', '', '2022-03-18 14:00:00');
+INSERT INTO `sys_job_log` VALUES (340, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：890毫秒', '0', '', '2022-03-18 14:59:00');
+INSERT INTO `sys_job_log` VALUES (341, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：511毫秒', '0', '', '2022-03-18 15:00:00');
+INSERT INTO `sys_job_log` VALUES (342, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：1156毫秒', '0', '', '2022-03-18 15:59:01');
+INSERT INTO `sys_job_log` VALUES (343, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：303毫秒', '0', '', '2022-03-18 16:00:00');
+INSERT INTO `sys_job_log` VALUES (344, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：285毫秒', '0', '', '2022-03-18 16:59:00');
+INSERT INTO `sys_job_log` VALUES (345, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：236毫秒', '0', '', '2022-03-18 17:00:00');
+INSERT INTO `sys_job_log` VALUES (346, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：270毫秒', '0', '', '2022-03-18 17:59:00');
+INSERT INTO `sys_job_log` VALUES (347, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：259毫秒', '0', '', '2022-03-18 18:00:00');
+INSERT INTO `sys_job_log` VALUES (348, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：255毫秒', '0', '', '2022-03-18 18:59:00');
+INSERT INTO `sys_job_log` VALUES (349, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：281毫秒', '0', '', '2022-03-18 19:00:03');
+INSERT INTO `sys_job_log` VALUES (350, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：252毫秒', '0', '', '2022-03-18 19:59:00');
+INSERT INTO `sys_job_log` VALUES (351, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：310毫秒', '0', '', '2022-03-18 20:00:00');
+INSERT INTO `sys_job_log` VALUES (352, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：264毫秒', '0', '', '2022-03-18 20:59:00');
+INSERT INTO `sys_job_log` VALUES (353, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：240毫秒', '0', '', '2022-03-18 21:00:00');
+INSERT INTO `sys_job_log` VALUES (354, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：276毫秒', '0', '', '2022-03-18 21:59:00');
+INSERT INTO `sys_job_log` VALUES (355, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：267毫秒', '0', '', '2022-03-18 22:00:01');
+INSERT INTO `sys_job_log` VALUES (356, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：257毫秒', '0', '', '2022-03-18 22:59:00');
+INSERT INTO `sys_job_log` VALUES (357, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：242毫秒', '0', '', '2022-03-18 23:00:00');
+INSERT INTO `sys_job_log` VALUES (358, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：240毫秒', '0', '', '2022-03-18 23:59:00');
+INSERT INTO `sys_job_log` VALUES (359, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：258毫秒', '0', '', '2022-03-19 00:00:00');
+INSERT INTO `sys_job_log` VALUES (360, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：228毫秒', '0', '', '2022-03-19 00:59:00');
+INSERT INTO `sys_job_log` VALUES (361, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：237毫秒', '0', '', '2022-03-19 01:00:00');
+INSERT INTO `sys_job_log` VALUES (362, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：259毫秒', '0', '', '2022-03-19 01:59:00');
+INSERT INTO `sys_job_log` VALUES (363, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：449毫秒', '0', '', '2022-03-19 02:00:00');
+INSERT INTO `sys_job_log` VALUES (364, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：269毫秒', '0', '', '2022-03-19 02:59:00');
+INSERT INTO `sys_job_log` VALUES (365, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：241毫秒', '0', '', '2022-03-19 03:00:00');
+INSERT INTO `sys_job_log` VALUES (366, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：241毫秒', '0', '', '2022-03-19 03:59:00');
+INSERT INTO `sys_job_log` VALUES (367, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：289毫秒', '0', '', '2022-03-19 04:00:00');
+INSERT INTO `sys_job_log` VALUES (368, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：248毫秒', '0', '', '2022-03-19 04:59:00');
+INSERT INTO `sys_job_log` VALUES (369, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：239毫秒', '0', '', '2022-03-19 05:00:00');
+INSERT INTO `sys_job_log` VALUES (370, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：266毫秒', '0', '', '2022-03-19 05:59:00');
+INSERT INTO `sys_job_log` VALUES (371, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：339毫秒', '0', '', '2022-03-19 06:00:00');
+INSERT INTO `sys_job_log` VALUES (372, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：258毫秒', '0', '', '2022-03-19 06:59:00');
+INSERT INTO `sys_job_log` VALUES (373, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：351毫秒', '0', '', '2022-03-19 07:00:00');
+INSERT INTO `sys_job_log` VALUES (374, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：265毫秒', '0', '', '2022-03-19 07:59:00');
+INSERT INTO `sys_job_log` VALUES (375, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：257毫秒', '0', '', '2022-03-19 08:00:00');
+INSERT INTO `sys_job_log` VALUES (376, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：273毫秒', '0', '', '2022-03-19 08:59:00');
+INSERT INTO `sys_job_log` VALUES (377, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：530毫秒', '0', '', '2022-03-19 09:00:00');
+INSERT INTO `sys_job_log` VALUES (378, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：267毫秒', '0', '', '2022-03-19 09:59:00');
+INSERT INTO `sys_job_log` VALUES (379, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：296毫秒', '0', '', '2022-03-19 10:00:00');
+INSERT INTO `sys_job_log` VALUES (380, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：267毫秒', '0', '', '2022-03-19 10:59:00');
+INSERT INTO `sys_job_log` VALUES (381, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：248毫秒', '0', '', '2022-03-19 11:00:00');
+INSERT INTO `sys_job_log` VALUES (382, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：256毫秒', '0', '', '2022-03-19 11:59:00');
+INSERT INTO `sys_job_log` VALUES (383, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：328毫秒', '0', '', '2022-03-19 12:00:00');
+INSERT INTO `sys_job_log` VALUES (384, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：248毫秒', '0', '', '2022-03-19 12:59:00');
+INSERT INTO `sys_job_log` VALUES (385, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：264毫秒', '0', '', '2022-03-19 13:00:00');
+INSERT INTO `sys_job_log` VALUES (386, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：235毫秒', '0', '', '2022-03-19 13:59:01');
+INSERT INTO `sys_job_log` VALUES (387, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：287毫秒', '0', '', '2022-03-19 14:00:00');
+INSERT INTO `sys_job_log` VALUES (388, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：294毫秒', '0', '', '2022-03-19 14:59:00');
+INSERT INTO `sys_job_log` VALUES (389, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：256毫秒', '0', '', '2022-03-19 15:00:00');
+INSERT INTO `sys_job_log` VALUES (390, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：248毫秒', '0', '', '2022-03-19 15:59:00');
+INSERT INTO `sys_job_log` VALUES (391, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：376毫秒', '0', '', '2022-03-19 16:00:00');
+INSERT INTO `sys_job_log` VALUES (392, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：260毫秒', '0', '', '2022-03-19 16:59:00');
+INSERT INTO `sys_job_log` VALUES (393, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：251毫秒', '0', '', '2022-03-19 17:00:00');
+INSERT INTO `sys_job_log` VALUES (394, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：256毫秒', '0', '', '2022-03-19 17:59:00');
+INSERT INTO `sys_job_log` VALUES (395, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：500毫秒', '0', '', '2022-03-19 18:00:00');
+INSERT INTO `sys_job_log` VALUES (396, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：250毫秒', '0', '', '2022-03-19 18:59:00');
+INSERT INTO `sys_job_log` VALUES (397, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：299毫秒', '0', '', '2022-03-19 19:00:00');
+INSERT INTO `sys_job_log` VALUES (398, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：266毫秒', '0', '', '2022-03-19 19:59:00');
+INSERT INTO `sys_job_log` VALUES (399, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：280毫秒', '0', '', '2022-03-19 20:00:00');
+INSERT INTO `sys_job_log` VALUES (400, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：225毫秒', '0', '', '2022-03-19 20:59:00');
+INSERT INTO `sys_job_log` VALUES (401, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：267毫秒', '0', '', '2022-03-19 21:00:00');
+INSERT INTO `sys_job_log` VALUES (402, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：255毫秒', '0', '', '2022-03-19 21:59:00');
+INSERT INTO `sys_job_log` VALUES (403, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：274毫秒', '0', '', '2022-03-19 22:00:00');
+INSERT INTO `sys_job_log` VALUES (404, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：249毫秒', '0', '', '2022-03-19 22:59:00');
+INSERT INTO `sys_job_log` VALUES (405, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：239毫秒', '0', '', '2022-03-19 23:00:00');
+INSERT INTO `sys_job_log` VALUES (406, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：237毫秒', '0', '', '2022-03-19 23:59:00');
+INSERT INTO `sys_job_log` VALUES (407, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：391毫秒', '0', '', '2022-03-20 00:00:00');
+INSERT INTO `sys_job_log` VALUES (408, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：232毫秒', '0', '', '2022-03-20 00:59:00');
+INSERT INTO `sys_job_log` VALUES (409, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：258毫秒', '0', '', '2022-03-20 01:00:00');
+INSERT INTO `sys_job_log` VALUES (410, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：281毫秒', '0', '', '2022-03-20 01:59:00');
+INSERT INTO `sys_job_log` VALUES (411, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：279毫秒', '0', '', '2022-03-20 02:00:00');
+INSERT INTO `sys_job_log` VALUES (412, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：287毫秒', '0', '', '2022-03-20 02:59:00');
+INSERT INTO `sys_job_log` VALUES (413, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：313毫秒', '0', '', '2022-03-20 03:00:00');
+INSERT INTO `sys_job_log` VALUES (414, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：258毫秒', '0', '', '2022-03-20 03:59:00');
+INSERT INTO `sys_job_log` VALUES (415, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：385毫秒', '0', '', '2022-03-20 04:00:00');
+INSERT INTO `sys_job_log` VALUES (416, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：248毫秒', '0', '', '2022-03-20 04:59:00');
+INSERT INTO `sys_job_log` VALUES (417, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：242毫秒', '0', '', '2022-03-20 05:00:00');
+INSERT INTO `sys_job_log` VALUES (418, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：235毫秒', '0', '', '2022-03-20 05:59:00');
+INSERT INTO `sys_job_log` VALUES (419, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：312毫秒', '0', '', '2022-03-20 06:00:00');
+INSERT INTO `sys_job_log` VALUES (420, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：334毫秒', '0', '', '2022-03-20 06:59:00');
+INSERT INTO `sys_job_log` VALUES (421, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：283毫秒', '0', '', '2022-03-20 07:00:00');
+INSERT INTO `sys_job_log` VALUES (422, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：276毫秒', '0', '', '2022-03-20 07:59:00');
+INSERT INTO `sys_job_log` VALUES (423, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：412毫秒', '0', '', '2022-03-20 08:00:00');
+INSERT INTO `sys_job_log` VALUES (424, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：252毫秒', '0', '', '2022-03-20 08:59:00');
+INSERT INTO `sys_job_log` VALUES (425, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：286毫秒', '0', '', '2022-03-20 09:00:00');
+INSERT INTO `sys_job_log` VALUES (426, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：256毫秒', '0', '', '2022-03-20 09:59:00');
+INSERT INTO `sys_job_log` VALUES (427, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：363毫秒', '0', '', '2022-03-20 10:00:00');
+INSERT INTO `sys_job_log` VALUES (428, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：284毫秒', '0', '', '2022-03-20 10:59:00');
+INSERT INTO `sys_job_log` VALUES (429, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：432毫秒', '0', '', '2022-03-20 11:00:00');
+INSERT INTO `sys_job_log` VALUES (430, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：259毫秒', '0', '', '2022-03-20 11:59:00');
+INSERT INTO `sys_job_log` VALUES (431, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：269毫秒', '0', '', '2022-03-20 12:00:00');
+INSERT INTO `sys_job_log` VALUES (432, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：232毫秒', '0', '', '2022-03-20 12:59:00');
+INSERT INTO `sys_job_log` VALUES (433, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：260毫秒', '0', '', '2022-03-20 13:00:00');
+INSERT INTO `sys_job_log` VALUES (434, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：238毫秒', '0', '', '2022-03-20 13:59:00');
+INSERT INTO `sys_job_log` VALUES (435, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：379毫秒', '0', '', '2022-03-20 14:00:00');
+INSERT INTO `sys_job_log` VALUES (436, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：271毫秒', '0', '', '2022-03-20 14:59:00');
+INSERT INTO `sys_job_log` VALUES (437, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：260毫秒', '0', '', '2022-03-20 15:00:00');
+INSERT INTO `sys_job_log` VALUES (438, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：694毫秒', '0', '', '2022-03-20 15:59:00');
+INSERT INTO `sys_job_log` VALUES (439, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：414毫秒', '0', '', '2022-03-20 16:00:00');
+INSERT INTO `sys_job_log` VALUES (440, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：250毫秒', '0', '', '2022-03-20 16:59:00');
+INSERT INTO `sys_job_log` VALUES (441, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：226毫秒', '0', '', '2022-03-20 17:00:00');
+INSERT INTO `sys_job_log` VALUES (442, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：237毫秒', '0', '', '2022-03-20 17:59:00');
+INSERT INTO `sys_job_log` VALUES (443, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：329毫秒', '0', '', '2022-03-20 18:00:00');
+INSERT INTO `sys_job_log` VALUES (444, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：242毫秒', '0', '', '2022-03-20 18:59:00');
+INSERT INTO `sys_job_log` VALUES (445, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：279毫秒', '0', '', '2022-03-20 19:00:00');
+INSERT INTO `sys_job_log` VALUES (446, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：249毫秒', '0', '', '2022-03-20 19:59:00');
+INSERT INTO `sys_job_log` VALUES (447, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：306毫秒', '0', '', '2022-03-20 20:00:00');
+INSERT INTO `sys_job_log` VALUES (448, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：298毫秒', '0', '', '2022-03-20 20:59:00');
+INSERT INTO `sys_job_log` VALUES (449, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：346毫秒', '0', '', '2022-03-20 21:00:00');
+INSERT INTO `sys_job_log` VALUES (450, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：240毫秒', '0', '', '2022-03-20 21:59:00');
+INSERT INTO `sys_job_log` VALUES (451, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：458毫秒', '0', '', '2022-03-20 22:00:00');
+INSERT INTO `sys_job_log` VALUES (452, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：232毫秒', '0', '', '2022-03-20 22:59:00');
+INSERT INTO `sys_job_log` VALUES (453, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：304毫秒', '0', '', '2022-03-20 23:00:00');
+INSERT INTO `sys_job_log` VALUES (454, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：335毫秒', '0', '', '2022-03-20 23:59:00');
+INSERT INTO `sys_job_log` VALUES (455, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：318毫秒', '0', '', '2022-03-21 00:00:00');
+INSERT INTO `sys_job_log` VALUES (456, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：257毫秒', '0', '', '2022-03-21 00:59:00');
+INSERT INTO `sys_job_log` VALUES (457, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：300毫秒', '0', '', '2022-03-21 01:00:00');
+INSERT INTO `sys_job_log` VALUES (458, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：239毫秒', '0', '', '2022-03-21 01:59:00');
+INSERT INTO `sys_job_log` VALUES (459, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：256毫秒', '0', '', '2022-03-21 02:00:00');
+INSERT INTO `sys_job_log` VALUES (460, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：249毫秒', '0', '', '2022-03-21 02:59:00');
+INSERT INTO `sys_job_log` VALUES (461, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：348毫秒', '0', '', '2022-03-21 03:00:00');
+INSERT INTO `sys_job_log` VALUES (462, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：243毫秒', '0', '', '2022-03-21 03:59:00');
+INSERT INTO `sys_job_log` VALUES (463, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：281毫秒', '0', '', '2022-03-21 04:00:00');
+INSERT INTO `sys_job_log` VALUES (464, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：255毫秒', '0', '', '2022-03-21 04:59:00');
+INSERT INTO `sys_job_log` VALUES (465, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：263毫秒', '0', '', '2022-03-21 05:00:00');
+INSERT INTO `sys_job_log` VALUES (466, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：224毫秒', '0', '', '2022-03-21 05:59:00');
+INSERT INTO `sys_job_log` VALUES (467, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：314毫秒', '0', '', '2022-03-21 06:00:00');
+INSERT INTO `sys_job_log` VALUES (468, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：238毫秒', '0', '', '2022-03-21 06:59:00');
+INSERT INTO `sys_job_log` VALUES (469, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：333毫秒', '0', '', '2022-03-21 07:00:00');
+INSERT INTO `sys_job_log` VALUES (470, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：271毫秒', '0', '', '2022-03-21 07:59:00');
+INSERT INTO `sys_job_log` VALUES (471, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：244毫秒', '0', '', '2022-03-21 08:00:00');
+INSERT INTO `sys_job_log` VALUES (472, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：281毫秒', '0', '', '2022-03-21 08:59:00');
+INSERT INTO `sys_job_log` VALUES (473, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：269毫秒', '0', '', '2022-03-21 09:00:00');
+INSERT INTO `sys_job_log` VALUES (474, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：257毫秒', '0', '', '2022-03-21 09:59:00');
+INSERT INTO `sys_job_log` VALUES (475, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：367毫秒', '0', '', '2022-03-21 10:00:00');
+INSERT INTO `sys_job_log` VALUES (476, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：267毫秒', '0', '', '2022-03-21 10:59:00');
+INSERT INTO `sys_job_log` VALUES (477, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：299毫秒', '0', '', '2022-03-21 11:00:00');
+INSERT INTO `sys_job_log` VALUES (478, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：286毫秒', '0', '', '2022-03-21 11:59:00');
+INSERT INTO `sys_job_log` VALUES (479, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：304毫秒', '0', '', '2022-03-21 12:00:00');
+INSERT INTO `sys_job_log` VALUES (480, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：526毫秒', '0', '', '2022-03-21 12:59:00');
+INSERT INTO `sys_job_log` VALUES (481, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：271毫秒', '0', '', '2022-03-21 13:00:00');
+INSERT INTO `sys_job_log` VALUES (482, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：253毫秒', '0', '', '2022-03-21 13:59:00');
+INSERT INTO `sys_job_log` VALUES (483, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：515毫秒', '0', '', '2022-03-21 14:00:00');
+INSERT INTO `sys_job_log` VALUES (484, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：251毫秒', '0', '', '2022-03-21 14:59:00');
+INSERT INTO `sys_job_log` VALUES (485, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：281毫秒', '0', '', '2022-03-21 15:00:00');
+INSERT INTO `sys_job_log` VALUES (486, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：236毫秒', '0', '', '2022-03-21 15:59:00');
+INSERT INTO `sys_job_log` VALUES (487, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：389毫秒', '0', '', '2022-03-21 16:00:00');
+INSERT INTO `sys_job_log` VALUES (488, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：240毫秒', '0', '', '2022-03-21 16:59:00');
+INSERT INTO `sys_job_log` VALUES (489, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：257毫秒', '0', '', '2022-03-21 17:00:00');
+INSERT INTO `sys_job_log` VALUES (490, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：368毫秒', '0', '', '2022-03-21 17:59:00');
+INSERT INTO `sys_job_log` VALUES (491, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：523毫秒', '0', '', '2022-03-21 18:00:00');
+INSERT INTO `sys_job_log` VALUES (492, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：273毫秒', '0', '', '2022-03-21 18:59:00');
+INSERT INTO `sys_job_log` VALUES (493, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：245毫秒', '0', '', '2022-03-21 19:00:00');
+INSERT INTO `sys_job_log` VALUES (494, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：257毫秒', '0', '', '2022-03-21 19:59:00');
+INSERT INTO `sys_job_log` VALUES (495, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：259毫秒', '0', '', '2022-03-21 20:00:00');
+INSERT INTO `sys_job_log` VALUES (496, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：278毫秒', '0', '', '2022-03-21 20:59:00');
+INSERT INTO `sys_job_log` VALUES (497, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：243毫秒', '0', '', '2022-03-21 21:00:00');
+INSERT INTO `sys_job_log` VALUES (498, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：485毫秒', '0', '', '2022-03-21 21:59:00');
+INSERT INTO `sys_job_log` VALUES (499, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：1439毫秒', '0', '', '2022-03-21 22:00:02');
+INSERT INTO `sys_job_log` VALUES (500, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：272毫秒', '0', '', '2022-03-21 22:59:00');
+INSERT INTO `sys_job_log` VALUES (501, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：290毫秒', '0', '', '2022-03-21 23:00:00');
+INSERT INTO `sys_job_log` VALUES (502, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：246毫秒', '0', '', '2022-03-21 23:59:00');
+INSERT INTO `sys_job_log` VALUES (503, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：348毫秒', '0', '', '2022-03-22 00:00:00');
+INSERT INTO `sys_job_log` VALUES (504, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：246毫秒', '0', '', '2022-03-22 00:59:00');
+INSERT INTO `sys_job_log` VALUES (505, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：263毫秒', '0', '', '2022-03-22 01:00:00');
+INSERT INTO `sys_job_log` VALUES (506, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：265毫秒', '0', '', '2022-03-22 01:59:00');
+INSERT INTO `sys_job_log` VALUES (507, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：275毫秒', '0', '', '2022-03-22 02:00:00');
+INSERT INTO `sys_job_log` VALUES (508, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：236毫秒', '0', '', '2022-03-22 02:59:00');
+INSERT INTO `sys_job_log` VALUES (509, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：427毫秒', '0', '', '2022-03-22 03:00:00');
+INSERT INTO `sys_job_log` VALUES (510, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：310毫秒', '0', '', '2022-03-22 03:59:00');
+INSERT INTO `sys_job_log` VALUES (511, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：397毫秒', '0', '', '2022-03-22 04:00:00');
+INSERT INTO `sys_job_log` VALUES (512, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：233毫秒', '0', '', '2022-03-22 04:59:00');
+INSERT INTO `sys_job_log` VALUES (513, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：415毫秒', '0', '', '2022-03-22 05:00:00');
+INSERT INTO `sys_job_log` VALUES (514, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：277毫秒', '0', '', '2022-03-22 05:59:00');
+INSERT INTO `sys_job_log` VALUES (515, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：294毫秒', '0', '', '2022-03-22 06:00:00');
+INSERT INTO `sys_job_log` VALUES (516, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：278毫秒', '0', '', '2022-03-22 06:59:00');
+INSERT INTO `sys_job_log` VALUES (517, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：296毫秒', '0', '', '2022-03-22 07:00:00');
+INSERT INTO `sys_job_log` VALUES (518, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：273毫秒', '0', '', '2022-03-22 07:59:00');
+INSERT INTO `sys_job_log` VALUES (519, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：654毫秒', '0', '', '2022-03-22 08:00:00');
+INSERT INTO `sys_job_log` VALUES (520, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：234毫秒', '0', '', '2022-03-22 08:59:00');
+INSERT INTO `sys_job_log` VALUES (521, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：247毫秒', '0', '', '2022-03-22 09:00:00');
+INSERT INTO `sys_job_log` VALUES (522, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：252毫秒', '0', '', '2022-03-22 09:59:00');
+INSERT INTO `sys_job_log` VALUES (523, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：420毫秒', '0', '', '2022-03-22 10:00:00');
+INSERT INTO `sys_job_log` VALUES (524, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：287毫秒', '0', '', '2022-03-22 10:59:00');
+INSERT INTO `sys_job_log` VALUES (525, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：272毫秒', '0', '', '2022-03-22 11:00:00');
+INSERT INTO `sys_job_log` VALUES (526, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：275毫秒', '0', '', '2022-03-22 11:59:00');
+INSERT INTO `sys_job_log` VALUES (527, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：315毫秒', '0', '', '2022-03-22 12:00:00');
+INSERT INTO `sys_job_log` VALUES (528, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：227毫秒', '0', '', '2022-03-22 12:59:00');
+INSERT INTO `sys_job_log` VALUES (529, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：277毫秒', '0', '', '2022-03-22 13:00:00');
+INSERT INTO `sys_job_log` VALUES (530, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：262毫秒', '0', '', '2022-03-22 13:59:00');
+INSERT INTO `sys_job_log` VALUES (531, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：239毫秒', '0', '', '2022-03-22 14:00:00');
+INSERT INTO `sys_job_log` VALUES (532, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：271毫秒', '0', '', '2022-03-22 14:59:00');
+INSERT INTO `sys_job_log` VALUES (533, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：233毫秒', '0', '', '2022-03-22 15:00:00');
+INSERT INTO `sys_job_log` VALUES (534, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：267毫秒', '0', '', '2022-03-22 15:59:00');
+INSERT INTO `sys_job_log` VALUES (535, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：275毫秒', '0', '', '2022-03-22 16:00:00');
+INSERT INTO `sys_job_log` VALUES (536, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：265毫秒', '0', '', '2022-03-22 16:59:00');
+INSERT INTO `sys_job_log` VALUES (537, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：384毫秒', '0', '', '2022-03-22 17:00:00');
+INSERT INTO `sys_job_log` VALUES (538, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：306毫秒', '0', '', '2022-03-22 17:59:00');
+INSERT INTO `sys_job_log` VALUES (539, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：342毫秒', '0', '', '2022-03-22 18:00:00');
+INSERT INTO `sys_job_log` VALUES (540, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：259毫秒', '0', '', '2022-03-22 18:59:00');
+INSERT INTO `sys_job_log` VALUES (541, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：240毫秒', '0', '', '2022-03-22 19:00:00');
+INSERT INTO `sys_job_log` VALUES (542, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：233毫秒', '0', '', '2022-03-22 19:59:00');
+INSERT INTO `sys_job_log` VALUES (543, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：366毫秒', '0', '', '2022-03-22 20:00:00');
+INSERT INTO `sys_job_log` VALUES (544, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：296毫秒', '0', '', '2022-03-22 20:59:00');
+INSERT INTO `sys_job_log` VALUES (545, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：262毫秒', '0', '', '2022-03-22 21:00:00');
+INSERT INTO `sys_job_log` VALUES (546, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：245毫秒', '0', '', '2022-03-22 21:59:00');
+INSERT INTO `sys_job_log` VALUES (547, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：220毫秒', '0', '', '2022-03-22 22:00:00');
+INSERT INTO `sys_job_log` VALUES (548, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：246毫秒', '0', '', '2022-03-22 22:59:00');
+INSERT INTO `sys_job_log` VALUES (549, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：258毫秒', '0', '', '2022-03-22 23:00:00');
+INSERT INTO `sys_job_log` VALUES (550, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：240毫秒', '0', '', '2022-03-22 23:59:00');
+INSERT INTO `sys_job_log` VALUES (551, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：393毫秒', '0', '', '2022-03-23 00:00:00');
+INSERT INTO `sys_job_log` VALUES (552, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：272毫秒', '0', '', '2022-03-23 00:59:00');
+INSERT INTO `sys_job_log` VALUES (553, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：301毫秒', '0', '', '2022-03-23 01:00:00');
+INSERT INTO `sys_job_log` VALUES (554, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：227毫秒', '0', '', '2022-03-23 01:59:00');
+INSERT INTO `sys_job_log` VALUES (555, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：249毫秒', '0', '', '2022-03-23 02:00:00');
+INSERT INTO `sys_job_log` VALUES (556, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：251毫秒', '0', '', '2022-03-23 02:59:00');
+INSERT INTO `sys_job_log` VALUES (557, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：261毫秒', '0', '', '2022-03-23 03:00:00');
+INSERT INTO `sys_job_log` VALUES (558, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：319毫秒', '0', '', '2022-03-23 03:59:00');
+INSERT INTO `sys_job_log` VALUES (559, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：291毫秒', '0', '', '2022-03-23 04:00:00');
+INSERT INTO `sys_job_log` VALUES (560, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：225毫秒', '0', '', '2022-03-23 04:59:00');
+INSERT INTO `sys_job_log` VALUES (561, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：228毫秒', '0', '', '2022-03-23 05:00:00');
+INSERT INTO `sys_job_log` VALUES (562, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：294毫秒', '0', '', '2022-03-23 05:59:00');
+INSERT INTO `sys_job_log` VALUES (563, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：532毫秒', '0', '', '2022-03-23 06:00:00');
+INSERT INTO `sys_job_log` VALUES (564, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：311毫秒', '0', '', '2022-03-23 06:59:00');
+INSERT INTO `sys_job_log` VALUES (565, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：301毫秒', '0', '', '2022-03-23 07:00:00');
+INSERT INTO `sys_job_log` VALUES (566, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：318毫秒', '0', '', '2022-03-23 07:59:00');
+INSERT INTO `sys_job_log` VALUES (567, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：576毫秒', '0', '', '2022-03-23 08:00:00');
+INSERT INTO `sys_job_log` VALUES (568, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：269毫秒', '0', '', '2022-03-23 08:59:00');
+INSERT INTO `sys_job_log` VALUES (569, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：320毫秒', '0', '', '2022-03-23 09:00:00');
+INSERT INTO `sys_job_log` VALUES (570, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：275毫秒', '0', '', '2022-03-23 09:59:00');
+INSERT INTO `sys_job_log` VALUES (571, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：276毫秒', '0', '', '2022-03-23 10:00:00');
+INSERT INTO `sys_job_log` VALUES (572, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：254毫秒', '0', '', '2022-03-23 10:59:00');
+INSERT INTO `sys_job_log` VALUES (573, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：363毫秒', '0', '', '2022-03-23 11:00:00');
+INSERT INTO `sys_job_log` VALUES (574, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：255毫秒', '0', '', '2022-03-23 11:59:00');
+INSERT INTO `sys_job_log` VALUES (575, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：243毫秒', '0', '', '2022-03-23 12:00:00');
+INSERT INTO `sys_job_log` VALUES (576, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：237毫秒', '0', '', '2022-03-23 12:59:00');
+INSERT INTO `sys_job_log` VALUES (577, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：270毫秒', '0', '', '2022-03-23 13:00:00');
+INSERT INTO `sys_job_log` VALUES (578, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：276毫秒', '0', '', '2022-03-23 13:59:00');
+INSERT INTO `sys_job_log` VALUES (579, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：311毫秒', '0', '', '2022-03-23 14:00:00');
+INSERT INTO `sys_job_log` VALUES (580, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：279毫秒', '0', '', '2022-03-23 14:59:00');
+INSERT INTO `sys_job_log` VALUES (581, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：329毫秒', '0', '', '2022-03-23 15:00:00');
+INSERT INTO `sys_job_log` VALUES (582, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：258毫秒', '0', '', '2022-03-23 15:59:00');
+INSERT INTO `sys_job_log` VALUES (583, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：368毫秒', '0', '', '2022-03-23 16:00:00');
+INSERT INTO `sys_job_log` VALUES (584, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：271毫秒', '0', '', '2022-03-23 16:59:00');
+INSERT INTO `sys_job_log` VALUES (585, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：268毫秒', '0', '', '2022-03-23 17:00:00');
+INSERT INTO `sys_job_log` VALUES (586, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：261毫秒', '0', '', '2022-03-23 17:59:00');
+INSERT INTO `sys_job_log` VALUES (587, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：294毫秒', '0', '', '2022-03-23 18:00:00');
+INSERT INTO `sys_job_log` VALUES (588, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：625毫秒', '0', '', '2022-03-23 18:59:01');
+INSERT INTO `sys_job_log` VALUES (589, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：243毫秒', '0', '', '2022-03-23 19:00:00');
+INSERT INTO `sys_job_log` VALUES (590, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：239毫秒', '0', '', '2022-03-23 19:59:00');
+INSERT INTO `sys_job_log` VALUES (591, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：332毫秒', '0', '', '2022-03-23 20:00:00');
+INSERT INTO `sys_job_log` VALUES (592, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：264毫秒', '0', '', '2022-03-23 20:59:00');
+INSERT INTO `sys_job_log` VALUES (593, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：377毫秒', '0', '', '2022-03-23 21:00:00');
+INSERT INTO `sys_job_log` VALUES (594, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：236毫秒', '0', '', '2022-03-23 21:59:00');
+INSERT INTO `sys_job_log` VALUES (595, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：427毫秒', '0', '', '2022-03-23 22:00:00');
+INSERT INTO `sys_job_log` VALUES (596, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：264毫秒', '0', '', '2022-03-23 22:59:00');
+INSERT INTO `sys_job_log` VALUES (597, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：362毫秒', '0', '', '2022-03-23 23:00:00');
+INSERT INTO `sys_job_log` VALUES (598, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：256毫秒', '0', '', '2022-03-23 23:59:00');
+INSERT INTO `sys_job_log` VALUES (599, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：321毫秒', '0', '', '2022-03-24 00:00:00');
+INSERT INTO `sys_job_log` VALUES (600, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：285毫秒', '0', '', '2022-03-24 00:59:00');
+INSERT INTO `sys_job_log` VALUES (601, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：245毫秒', '0', '', '2022-03-24 01:00:00');
+INSERT INTO `sys_job_log` VALUES (602, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：230毫秒', '0', '', '2022-03-24 01:59:00');
+INSERT INTO `sys_job_log` VALUES (603, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：227毫秒', '0', '', '2022-03-24 02:00:00');
+INSERT INTO `sys_job_log` VALUES (604, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：258毫秒', '0', '', '2022-03-24 02:59:00');
+INSERT INTO `sys_job_log` VALUES (605, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：276毫秒', '0', '', '2022-03-24 03:00:00');
+INSERT INTO `sys_job_log` VALUES (606, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：236毫秒', '0', '', '2022-03-24 03:59:00');
+INSERT INTO `sys_job_log` VALUES (607, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：491毫秒', '0', '', '2022-03-24 04:00:00');
+INSERT INTO `sys_job_log` VALUES (608, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：228毫秒', '0', '', '2022-03-24 04:59:00');
+INSERT INTO `sys_job_log` VALUES (609, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：281毫秒', '0', '', '2022-03-24 05:00:00');
+INSERT INTO `sys_job_log` VALUES (610, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：290毫秒', '0', '', '2022-03-24 05:59:00');
+INSERT INTO `sys_job_log` VALUES (611, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：330毫秒', '0', '', '2022-03-24 06:00:00');
+INSERT INTO `sys_job_log` VALUES (612, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：219毫秒', '0', '', '2022-03-24 06:59:00');
+INSERT INTO `sys_job_log` VALUES (613, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：260毫秒', '0', '', '2022-03-24 07:00:00');
+INSERT INTO `sys_job_log` VALUES (614, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：286毫秒', '0', '', '2022-03-24 07:59:00');
+INSERT INTO `sys_job_log` VALUES (615, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：301毫秒', '0', '', '2022-03-24 08:00:00');
+INSERT INTO `sys_job_log` VALUES (616, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：258毫秒', '0', '', '2022-03-24 08:59:00');
+INSERT INTO `sys_job_log` VALUES (617, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：262毫秒', '0', '', '2022-03-24 09:00:00');
+INSERT INTO `sys_job_log` VALUES (618, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：226毫秒', '0', '', '2022-03-24 09:59:00');
+INSERT INTO `sys_job_log` VALUES (619, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：267毫秒', '0', '', '2022-03-24 10:00:00');
+INSERT INTO `sys_job_log` VALUES (620, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：293毫秒', '0', '', '2022-03-24 10:59:00');
+INSERT INTO `sys_job_log` VALUES (621, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：321毫秒', '0', '', '2022-03-24 11:00:00');
+INSERT INTO `sys_job_log` VALUES (622, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：366毫秒', '0', '', '2022-03-24 11:59:00');
+INSERT INTO `sys_job_log` VALUES (623, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：287毫秒', '0', '', '2022-03-24 12:00:00');
+INSERT INTO `sys_job_log` VALUES (624, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：270毫秒', '0', '', '2022-03-24 12:59:00');
+INSERT INTO `sys_job_log` VALUES (625, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：267毫秒', '0', '', '2022-03-24 13:00:00');
+INSERT INTO `sys_job_log` VALUES (626, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：256毫秒', '0', '', '2022-03-24 13:59:00');
+INSERT INTO `sys_job_log` VALUES (627, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：310毫秒', '0', '', '2022-03-24 14:00:00');
+INSERT INTO `sys_job_log` VALUES (628, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：280毫秒', '0', '', '2022-03-24 14:59:00');
+INSERT INTO `sys_job_log` VALUES (629, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：251毫秒', '0', '', '2022-03-24 15:00:00');
+INSERT INTO `sys_job_log` VALUES (630, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：330毫秒', '0', '', '2022-03-24 15:59:00');
+INSERT INTO `sys_job_log` VALUES (631, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：287毫秒', '0', '', '2022-03-24 16:00:00');
+INSERT INTO `sys_job_log` VALUES (632, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：262毫秒', '0', '', '2022-03-24 16:59:00');
+INSERT INTO `sys_job_log` VALUES (633, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：332毫秒', '0', '', '2022-03-24 17:00:00');
+INSERT INTO `sys_job_log` VALUES (634, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：276毫秒', '0', '', '2022-03-24 17:59:00');
+INSERT INTO `sys_job_log` VALUES (635, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：267毫秒', '0', '', '2022-03-24 18:00:00');
+INSERT INTO `sys_job_log` VALUES (636, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：253毫秒', '0', '', '2022-03-24 18:59:00');
+INSERT INTO `sys_job_log` VALUES (637, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：262毫秒', '0', '', '2022-03-24 19:00:00');
+INSERT INTO `sys_job_log` VALUES (638, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：257毫秒', '0', '', '2022-03-24 19:59:00');
+INSERT INTO `sys_job_log` VALUES (639, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：290毫秒', '0', '', '2022-03-24 20:00:00');
+INSERT INTO `sys_job_log` VALUES (640, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：253毫秒', '0', '', '2022-03-24 20:59:01');
+INSERT INTO `sys_job_log` VALUES (641, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：223毫秒', '0', '', '2022-03-24 21:00:00');
+INSERT INTO `sys_job_log` VALUES (642, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：267毫秒', '0', '', '2022-03-24 21:45:32');
+INSERT INTO `sys_job_log` VALUES (643, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：857毫秒', '0', '', '2022-03-24 22:59:00');
+INSERT INTO `sys_job_log` VALUES (644, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：346毫秒', '0', '', '2022-03-24 23:00:00');
+INSERT INTO `sys_job_log` VALUES (645, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：244毫秒', '0', '', '2022-03-24 23:59:00');
+INSERT INTO `sys_job_log` VALUES (646, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：287毫秒', '0', '', '2022-03-25 00:00:00');
+INSERT INTO `sys_job_log` VALUES (647, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：226毫秒', '0', '', '2022-03-25 00:59:00');
+INSERT INTO `sys_job_log` VALUES (648, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：237毫秒', '0', '', '2022-03-25 01:00:00');
+INSERT INTO `sys_job_log` VALUES (649, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：264毫秒', '0', '', '2022-03-25 01:59:00');
+INSERT INTO `sys_job_log` VALUES (650, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：267毫秒', '0', '', '2022-03-25 02:00:00');
+INSERT INTO `sys_job_log` VALUES (651, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：245毫秒', '0', '', '2022-03-25 02:59:00');
+INSERT INTO `sys_job_log` VALUES (652, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：245毫秒', '0', '', '2022-03-25 03:00:00');
+INSERT INTO `sys_job_log` VALUES (653, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：232毫秒', '0', '', '2022-03-25 03:59:00');
+INSERT INTO `sys_job_log` VALUES (654, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：241毫秒', '0', '', '2022-03-25 04:00:00');
+INSERT INTO `sys_job_log` VALUES (655, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：248毫秒', '0', '', '2022-03-25 04:59:00');
+INSERT INTO `sys_job_log` VALUES (656, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：226毫秒', '0', '', '2022-03-25 05:00:00');
+INSERT INTO `sys_job_log` VALUES (657, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：256毫秒', '0', '', '2022-03-25 05:59:00');
+INSERT INTO `sys_job_log` VALUES (658, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：342毫秒', '0', '', '2022-03-25 06:00:00');
+INSERT INTO `sys_job_log` VALUES (659, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：284毫秒', '0', '', '2022-03-25 06:59:00');
+INSERT INTO `sys_job_log` VALUES (660, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：337毫秒', '0', '', '2022-03-25 07:00:00');
+INSERT INTO `sys_job_log` VALUES (661, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：254毫秒', '0', '', '2022-03-25 07:59:00');
+INSERT INTO `sys_job_log` VALUES (662, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：293毫秒', '0', '', '2022-03-25 08:00:00');
+INSERT INTO `sys_job_log` VALUES (663, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：300毫秒', '0', '', '2022-03-25 08:59:00');
+INSERT INTO `sys_job_log` VALUES (664, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：274毫秒', '0', '', '2022-03-25 09:00:00');
+INSERT INTO `sys_job_log` VALUES (665, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：873毫秒', '0', '', '2022-03-25 09:58:23');
+INSERT INTO `sys_job_log` VALUES (666, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：308毫秒', '0', '', '2022-03-25 09:59:00');
+INSERT INTO `sys_job_log` VALUES (667, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：204毫秒', '0', '', '2022-03-25 10:00:01');
+INSERT INTO `sys_job_log` VALUES (668, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：275毫秒', '0', '', '2022-03-25 10:59:00');
+INSERT INTO `sys_job_log` VALUES (669, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：288毫秒', '0', '', '2022-03-25 11:00:00');
+INSERT INTO `sys_job_log` VALUES (670, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：269毫秒', '0', '', '2022-03-25 11:59:00');
+INSERT INTO `sys_job_log` VALUES (671, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：255毫秒', '0', '', '2022-03-25 12:00:00');
+INSERT INTO `sys_job_log` VALUES (672, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：280毫秒', '0', '', '2022-03-25 12:59:00');
+INSERT INTO `sys_job_log` VALUES (673, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：253毫秒', '0', '', '2022-03-25 13:00:00');
+INSERT INTO `sys_job_log` VALUES (674, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：322毫秒', '0', '', '2022-03-25 13:59:00');
+INSERT INTO `sys_job_log` VALUES (675, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：316毫秒', '0', '', '2022-03-25 14:00:00');
+INSERT INTO `sys_job_log` VALUES (676, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：281毫秒', '0', '', '2022-03-25 14:59:00');
+INSERT INTO `sys_job_log` VALUES (677, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：295毫秒', '0', '', '2022-03-25 15:00:00');
+INSERT INTO `sys_job_log` VALUES (678, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：247毫秒', '0', '', '2022-03-25 15:59:00');
+INSERT INTO `sys_job_log` VALUES (679, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：277毫秒', '0', '', '2022-03-25 16:00:00');
+INSERT INTO `sys_job_log` VALUES (680, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：279毫秒', '0', '', '2022-03-25 16:59:00');
+INSERT INTO `sys_job_log` VALUES (681, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：291毫秒', '0', '', '2022-03-25 17:00:00');
+INSERT INTO `sys_job_log` VALUES (682, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：1528毫秒', '0', '', '2022-03-25 17:59:01');
+INSERT INTO `sys_job_log` VALUES (683, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：379毫秒', '0', '', '2022-03-25 18:00:00');
+INSERT INTO `sys_job_log` VALUES (684, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：1152毫秒', '0', '', '2022-03-25 18:59:01');
+INSERT INTO `sys_job_log` VALUES (685, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：275毫秒', '0', '', '2022-03-25 19:00:00');
+INSERT INTO `sys_job_log` VALUES (686, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：348毫秒', '0', '', '2022-03-25 19:59:00');
+INSERT INTO `sys_job_log` VALUES (687, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：320毫秒', '0', '', '2022-03-25 20:00:00');
+INSERT INTO `sys_job_log` VALUES (688, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：273毫秒', '0', '', '2022-03-25 20:59:00');
+INSERT INTO `sys_job_log` VALUES (689, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：287毫秒', '0', '', '2022-03-25 21:00:00');
+INSERT INTO `sys_job_log` VALUES (690, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：253毫秒', '0', '', '2022-03-25 21:59:00');
+INSERT INTO `sys_job_log` VALUES (691, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：394毫秒', '0', '', '2022-03-25 22:00:00');
+INSERT INTO `sys_job_log` VALUES (692, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：257毫秒', '0', '', '2022-03-25 22:59:00');
+INSERT INTO `sys_job_log` VALUES (693, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：848毫秒', '0', '', '2022-03-25 23:00:00');
+INSERT INTO `sys_job_log` VALUES (694, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：260毫秒', '0', '', '2022-03-25 23:59:00');
+INSERT INTO `sys_job_log` VALUES (695, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：315毫秒', '0', '', '2022-03-26 00:00:00');
+INSERT INTO `sys_job_log` VALUES (696, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：266毫秒', '0', '', '2022-03-26 00:59:00');
+INSERT INTO `sys_job_log` VALUES (697, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：254毫秒', '0', '', '2022-03-26 01:00:00');
+INSERT INTO `sys_job_log` VALUES (698, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：284毫秒', '0', '', '2022-03-26 01:59:00');
+INSERT INTO `sys_job_log` VALUES (699, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：318毫秒', '0', '', '2022-03-26 02:00:00');
+INSERT INTO `sys_job_log` VALUES (700, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：260毫秒', '0', '', '2022-03-26 02:59:00');
+INSERT INTO `sys_job_log` VALUES (701, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：255毫秒', '0', '', '2022-03-26 03:00:00');
+INSERT INTO `sys_job_log` VALUES (702, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：290毫秒', '0', '', '2022-03-26 03:59:00');
+INSERT INTO `sys_job_log` VALUES (703, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：375毫秒', '0', '', '2022-03-26 04:00:00');
+INSERT INTO `sys_job_log` VALUES (704, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：230毫秒', '0', '', '2022-03-26 04:59:00');
+INSERT INTO `sys_job_log` VALUES (705, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：234毫秒', '0', '', '2022-03-26 05:00:00');
+INSERT INTO `sys_job_log` VALUES (706, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：240毫秒', '0', '', '2022-03-26 05:59:00');
+INSERT INTO `sys_job_log` VALUES (707, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：274毫秒', '0', '', '2022-03-26 06:00:00');
+INSERT INTO `sys_job_log` VALUES (708, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：258毫秒', '0', '', '2022-03-26 06:59:00');
+INSERT INTO `sys_job_log` VALUES (709, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：258毫秒', '0', '', '2022-03-26 07:00:00');
+INSERT INTO `sys_job_log` VALUES (710, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：290毫秒', '0', '', '2022-03-26 07:59:00');
+INSERT INTO `sys_job_log` VALUES (711, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：544毫秒', '0', '', '2022-03-26 08:00:00');
+INSERT INTO `sys_job_log` VALUES (712, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：259毫秒', '0', '', '2022-03-26 08:59:00');
+INSERT INTO `sys_job_log` VALUES (713, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：259毫秒', '0', '', '2022-03-26 09:00:00');
+INSERT INTO `sys_job_log` VALUES (714, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：250毫秒', '0', '', '2022-03-26 09:59:00');
+INSERT INTO `sys_job_log` VALUES (715, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：421毫秒', '0', '', '2022-03-26 10:00:00');
+INSERT INTO `sys_job_log` VALUES (716, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：291毫秒', '0', '', '2022-03-26 10:59:00');
+INSERT INTO `sys_job_log` VALUES (717, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：277毫秒', '0', '', '2022-03-26 11:00:00');
+INSERT INTO `sys_job_log` VALUES (718, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：262毫秒', '0', '', '2022-03-26 11:59:00');
+INSERT INTO `sys_job_log` VALUES (719, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：488毫秒', '0', '', '2022-03-26 12:00:00');
+INSERT INTO `sys_job_log` VALUES (720, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：277毫秒', '0', '', '2022-03-26 12:59:00');
+INSERT INTO `sys_job_log` VALUES (721, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：366毫秒', '0', '', '2022-03-26 13:00:00');
+INSERT INTO `sys_job_log` VALUES (722, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：252毫秒', '0', '', '2022-03-26 13:59:00');
+INSERT INTO `sys_job_log` VALUES (723, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：357毫秒', '0', '', '2022-03-26 14:00:00');
+INSERT INTO `sys_job_log` VALUES (724, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：298毫秒', '0', '', '2022-03-26 14:59:00');
+INSERT INTO `sys_job_log` VALUES (725, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：260毫秒', '0', '', '2022-03-26 15:00:00');
+INSERT INTO `sys_job_log` VALUES (726, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：303毫秒', '0', '', '2022-03-26 15:59:00');
+INSERT INTO `sys_job_log` VALUES (727, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：365毫秒', '0', '', '2022-03-26 16:00:00');
+INSERT INTO `sys_job_log` VALUES (728, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：326毫秒', '0', '', '2022-03-26 16:59:00');
+INSERT INTO `sys_job_log` VALUES (729, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：297毫秒', '0', '', '2022-03-26 17:00:00');
+INSERT INTO `sys_job_log` VALUES (730, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：271毫秒', '0', '', '2022-03-26 17:59:00');
+INSERT INTO `sys_job_log` VALUES (731, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：350毫秒', '0', '', '2022-03-26 18:00:00');
+INSERT INTO `sys_job_log` VALUES (732, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：269毫秒', '0', '', '2022-03-26 18:59:00');
+INSERT INTO `sys_job_log` VALUES (733, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：270毫秒', '0', '', '2022-03-26 19:00:00');
+INSERT INTO `sys_job_log` VALUES (734, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：303毫秒', '0', '', '2022-03-26 19:59:00');
+INSERT INTO `sys_job_log` VALUES (735, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：280毫秒', '0', '', '2022-03-26 20:00:00');
+INSERT INTO `sys_job_log` VALUES (736, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：253毫秒', '0', '', '2022-03-26 20:59:00');
+INSERT INTO `sys_job_log` VALUES (737, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：271毫秒', '0', '', '2022-03-26 21:00:00');
+INSERT INTO `sys_job_log` VALUES (738, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：246毫秒', '0', '', '2022-03-26 21:59:00');
+INSERT INTO `sys_job_log` VALUES (739, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：350毫秒', '0', '', '2022-03-26 22:00:00');
+INSERT INTO `sys_job_log` VALUES (740, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：283毫秒', '0', '', '2022-03-26 22:59:00');
+INSERT INTO `sys_job_log` VALUES (741, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：251毫秒', '0', '', '2022-03-26 23:00:00');
+INSERT INTO `sys_job_log` VALUES (742, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：266毫秒', '0', '', '2022-03-26 23:59:00');
+INSERT INTO `sys_job_log` VALUES (743, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：290毫秒', '0', '', '2022-03-27 00:00:00');
+INSERT INTO `sys_job_log` VALUES (744, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：237毫秒', '0', '', '2022-03-27 00:59:00');
+INSERT INTO `sys_job_log` VALUES (745, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：237毫秒', '0', '', '2022-03-27 01:00:00');
+INSERT INTO `sys_job_log` VALUES (746, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：251毫秒', '0', '', '2022-03-27 01:59:00');
+INSERT INTO `sys_job_log` VALUES (747, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：289毫秒', '0', '', '2022-03-27 02:00:00');
+INSERT INTO `sys_job_log` VALUES (748, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：246毫秒', '0', '', '2022-03-27 02:59:00');
+INSERT INTO `sys_job_log` VALUES (749, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：240毫秒', '0', '', '2022-03-27 03:00:00');
+INSERT INTO `sys_job_log` VALUES (750, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：250毫秒', '0', '', '2022-03-27 03:59:00');
+INSERT INTO `sys_job_log` VALUES (751, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：349毫秒', '0', '', '2022-03-27 04:00:00');
+INSERT INTO `sys_job_log` VALUES (752, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：261毫秒', '0', '', '2022-03-27 04:59:00');
+INSERT INTO `sys_job_log` VALUES (753, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：249毫秒', '0', '', '2022-03-27 05:00:00');
+INSERT INTO `sys_job_log` VALUES (754, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：312毫秒', '0', '', '2022-03-27 05:59:00');
+INSERT INTO `sys_job_log` VALUES (755, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：234毫秒', '0', '', '2022-03-27 06:00:00');
+INSERT INTO `sys_job_log` VALUES (756, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：239毫秒', '0', '', '2022-03-27 06:59:00');
+INSERT INTO `sys_job_log` VALUES (757, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：425毫秒', '0', '', '2022-03-27 07:00:00');
+INSERT INTO `sys_job_log` VALUES (758, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：230毫秒', '0', '', '2022-03-27 07:59:00');
+INSERT INTO `sys_job_log` VALUES (759, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：359毫秒', '0', '', '2022-03-27 08:00:00');
+INSERT INTO `sys_job_log` VALUES (760, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：240毫秒', '0', '', '2022-03-27 08:59:00');
+INSERT INTO `sys_job_log` VALUES (761, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：284毫秒', '0', '', '2022-03-27 09:00:00');
+INSERT INTO `sys_job_log` VALUES (762, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：250毫秒', '0', '', '2022-03-27 09:59:00');
+INSERT INTO `sys_job_log` VALUES (763, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：345毫秒', '0', '', '2022-03-27 10:00:00');
+INSERT INTO `sys_job_log` VALUES (764, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：266毫秒', '0', '', '2022-03-27 10:59:00');
+INSERT INTO `sys_job_log` VALUES (765, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：322毫秒', '0', '', '2022-03-27 11:00:00');
+INSERT INTO `sys_job_log` VALUES (766, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：266毫秒', '0', '', '2022-03-27 11:59:00');
+INSERT INTO `sys_job_log` VALUES (767, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：351毫秒', '0', '', '2022-03-27 12:00:00');
+INSERT INTO `sys_job_log` VALUES (768, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：267毫秒', '0', '', '2022-03-27 12:59:00');
+INSERT INTO `sys_job_log` VALUES (769, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：291毫秒', '0', '', '2022-03-27 13:00:00');
+INSERT INTO `sys_job_log` VALUES (770, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：259毫秒', '0', '', '2022-03-27 13:59:00');
+INSERT INTO `sys_job_log` VALUES (771, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：267毫秒', '0', '', '2022-03-27 14:00:00');
+INSERT INTO `sys_job_log` VALUES (772, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：268毫秒', '0', '', '2022-03-27 14:59:00');
+INSERT INTO `sys_job_log` VALUES (773, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：269毫秒', '0', '', '2022-03-27 15:00:00');
+INSERT INTO `sys_job_log` VALUES (774, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：245毫秒', '0', '', '2022-03-27 15:59:00');
+INSERT INTO `sys_job_log` VALUES (775, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：280毫秒', '0', '', '2022-03-27 16:00:00');
+INSERT INTO `sys_job_log` VALUES (776, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：286毫秒', '0', '', '2022-03-27 16:59:00');
+INSERT INTO `sys_job_log` VALUES (777, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：247毫秒', '0', '', '2022-03-27 17:00:00');
+INSERT INTO `sys_job_log` VALUES (778, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：254毫秒', '0', '', '2022-03-27 17:59:00');
+INSERT INTO `sys_job_log` VALUES (779, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：268毫秒', '0', '', '2022-03-27 18:00:00');
+INSERT INTO `sys_job_log` VALUES (780, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：272毫秒', '0', '', '2022-03-27 18:59:00');
+INSERT INTO `sys_job_log` VALUES (781, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：327毫秒', '0', '', '2022-03-27 19:00:00');
+INSERT INTO `sys_job_log` VALUES (782, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：250毫秒', '0', '', '2022-03-27 19:59:00');
+INSERT INTO `sys_job_log` VALUES (783, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：282毫秒', '0', '', '2022-03-27 20:00:00');
+INSERT INTO `sys_job_log` VALUES (784, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：271毫秒', '0', '', '2022-03-27 20:59:00');
+INSERT INTO `sys_job_log` VALUES (785, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：389毫秒', '0', '', '2022-03-27 21:00:00');
+INSERT INTO `sys_job_log` VALUES (786, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：255毫秒', '0', '', '2022-03-27 21:59:00');
+INSERT INTO `sys_job_log` VALUES (787, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：242毫秒', '0', '', '2022-03-27 22:00:00');
+INSERT INTO `sys_job_log` VALUES (788, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：313毫秒', '0', '', '2022-03-27 22:59:00');
+INSERT INTO `sys_job_log` VALUES (789, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：295毫秒', '0', '', '2022-03-27 23:00:00');
+INSERT INTO `sys_job_log` VALUES (790, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：240毫秒', '0', '', '2022-03-27 23:59:00');
+INSERT INTO `sys_job_log` VALUES (791, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：344毫秒', '0', '', '2022-03-28 00:00:00');
+INSERT INTO `sys_job_log` VALUES (792, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：261毫秒', '0', '', '2022-03-28 00:59:00');
+INSERT INTO `sys_job_log` VALUES (793, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：268毫秒', '0', '', '2022-03-28 01:00:00');
+INSERT INTO `sys_job_log` VALUES (794, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：295毫秒', '0', '', '2022-03-28 01:59:00');
+INSERT INTO `sys_job_log` VALUES (795, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：249毫秒', '0', '', '2022-03-28 02:00:00');
+INSERT INTO `sys_job_log` VALUES (796, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：239毫秒', '0', '', '2022-03-28 02:59:00');
+INSERT INTO `sys_job_log` VALUES (797, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：233毫秒', '0', '', '2022-03-28 03:00:00');
+INSERT INTO `sys_job_log` VALUES (798, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：259毫秒', '0', '', '2022-03-28 03:59:00');
+INSERT INTO `sys_job_log` VALUES (799, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：303毫秒', '0', '', '2022-03-28 04:00:00');
+INSERT INTO `sys_job_log` VALUES (800, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：366毫秒', '0', '', '2022-03-28 04:59:00');
+INSERT INTO `sys_job_log` VALUES (801, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：264毫秒', '0', '', '2022-03-28 05:00:00');
+INSERT INTO `sys_job_log` VALUES (802, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：265毫秒', '0', '', '2022-03-28 05:59:00');
+INSERT INTO `sys_job_log` VALUES (803, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：479毫秒', '0', '', '2022-03-28 06:00:00');
+INSERT INTO `sys_job_log` VALUES (804, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：265毫秒', '0', '', '2022-03-28 06:59:00');
+INSERT INTO `sys_job_log` VALUES (805, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：231毫秒', '0', '', '2022-03-28 07:00:00');
+INSERT INTO `sys_job_log` VALUES (806, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：254毫秒', '0', '', '2022-03-28 07:59:00');
+INSERT INTO `sys_job_log` VALUES (807, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：324毫秒', '0', '', '2022-03-28 08:00:00');
+INSERT INTO `sys_job_log` VALUES (808, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：276毫秒', '0', '', '2022-03-28 08:59:00');
+INSERT INTO `sys_job_log` VALUES (809, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：312毫秒', '0', '', '2022-03-28 09:00:00');
+INSERT INTO `sys_job_log` VALUES (810, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：248毫秒', '0', '', '2022-03-28 09:59:00');
+INSERT INTO `sys_job_log` VALUES (811, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：296毫秒', '0', '', '2022-03-28 10:00:00');
+INSERT INTO `sys_job_log` VALUES (812, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：246毫秒', '0', '', '2022-03-28 10:59:00');
+INSERT INTO `sys_job_log` VALUES (813, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：235毫秒', '0', '', '2022-03-28 11:00:00');
+INSERT INTO `sys_job_log` VALUES (814, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：255毫秒', '0', '', '2022-03-28 11:59:00');
+INSERT INTO `sys_job_log` VALUES (815, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：378毫秒', '0', '', '2022-03-28 12:00:00');
+INSERT INTO `sys_job_log` VALUES (816, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：252毫秒', '0', '', '2022-03-28 12:59:00');
+INSERT INTO `sys_job_log` VALUES (817, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：271毫秒', '0', '', '2022-03-28 13:00:00');
+INSERT INTO `sys_job_log` VALUES (818, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：286毫秒', '0', '', '2022-03-28 13:59:00');
+INSERT INTO `sys_job_log` VALUES (819, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：277毫秒', '0', '', '2022-03-28 14:00:00');
+INSERT INTO `sys_job_log` VALUES (820, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：288毫秒', '0', '', '2022-03-28 14:59:00');
+INSERT INTO `sys_job_log` VALUES (821, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：286毫秒', '0', '', '2022-03-28 15:00:00');
+INSERT INTO `sys_job_log` VALUES (822, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：276毫秒', '0', '', '2022-03-28 15:59:00');
+INSERT INTO `sys_job_log` VALUES (823, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：316毫秒', '0', '', '2022-03-28 16:00:00');
+INSERT INTO `sys_job_log` VALUES (824, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：311毫秒', '0', '', '2022-03-28 16:59:00');
+INSERT INTO `sys_job_log` VALUES (825, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：278毫秒', '0', '', '2022-03-28 17:00:00');
+INSERT INTO `sys_job_log` VALUES (826, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：290毫秒', '0', '', '2022-03-28 17:59:00');
+INSERT INTO `sys_job_log` VALUES (827, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：316毫秒', '0', '', '2022-03-28 18:00:00');
+INSERT INTO `sys_job_log` VALUES (828, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：280毫秒', '0', '', '2022-03-28 18:59:00');
+INSERT INTO `sys_job_log` VALUES (829, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：334毫秒', '0', '', '2022-03-28 19:00:00');
+INSERT INTO `sys_job_log` VALUES (830, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：289毫秒', '0', '', '2022-03-28 19:59:00');
+INSERT INTO `sys_job_log` VALUES (831, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：357毫秒', '0', '', '2022-03-28 20:00:00');
+INSERT INTO `sys_job_log` VALUES (832, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：268毫秒', '0', '', '2022-03-28 20:59:00');
+INSERT INTO `sys_job_log` VALUES (833, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：294毫秒', '0', '', '2022-03-28 21:00:00');
+INSERT INTO `sys_job_log` VALUES (834, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：244毫秒', '0', '', '2022-03-28 21:59:00');
+INSERT INTO `sys_job_log` VALUES (835, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：252毫秒', '0', '', '2022-03-28 22:00:00');
+INSERT INTO `sys_job_log` VALUES (836, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：296毫秒', '0', '', '2022-03-28 22:59:00');
+INSERT INTO `sys_job_log` VALUES (837, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：398毫秒', '0', '', '2022-03-28 23:00:00');
+INSERT INTO `sys_job_log` VALUES (838, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：243毫秒', '0', '', '2022-03-28 23:59:00');
+INSERT INTO `sys_job_log` VALUES (839, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：272毫秒', '0', '', '2022-03-29 00:00:00');
+INSERT INTO `sys_job_log` VALUES (840, 'baiduAccessToken', 'DEFAULT', 'tokenTask.getOcrAccessToken()', 'baiduAccessToken 总共耗时：1207毫秒', '0', '', '2022-03-29 00:00:01');
+INSERT INTO `sys_job_log` VALUES (841, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：255毫秒', '0', '', '2022-03-29 00:59:00');
+INSERT INTO `sys_job_log` VALUES (842, 'baiduAccessToken', 'DEFAULT', 'tokenTask.getOcrAccessToken()', 'baiduAccessToken 总共耗时：189毫秒', '0', '', '2022-03-29 00:59:00');
+INSERT INTO `sys_job_log` VALUES (843, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：267毫秒', '0', '', '2022-03-29 01:00:00');
+INSERT INTO `sys_job_log` VALUES (844, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：258毫秒', '0', '', '2022-03-29 01:59:00');
+INSERT INTO `sys_job_log` VALUES (845, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：247毫秒', '0', '', '2022-03-29 02:00:00');
+INSERT INTO `sys_job_log` VALUES (846, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：249毫秒', '0', '', '2022-03-29 02:59:00');
+INSERT INTO `sys_job_log` VALUES (847, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：235毫秒', '0', '', '2022-03-29 03:00:00');
+INSERT INTO `sys_job_log` VALUES (848, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：260毫秒', '0', '', '2022-03-29 03:59:00');
+INSERT INTO `sys_job_log` VALUES (849, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：229毫秒', '0', '', '2022-03-29 04:00:00');
+INSERT INTO `sys_job_log` VALUES (850, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：231毫秒', '0', '', '2022-03-29 04:59:00');
+INSERT INTO `sys_job_log` VALUES (851, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：313毫秒', '0', '', '2022-03-29 05:00:00');
+INSERT INTO `sys_job_log` VALUES (852, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：263毫秒', '0', '', '2022-03-29 05:59:00');
+INSERT INTO `sys_job_log` VALUES (853, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：256毫秒', '0', '', '2022-03-29 06:00:00');
+INSERT INTO `sys_job_log` VALUES (854, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：238毫秒', '0', '', '2022-03-29 06:59:00');
+INSERT INTO `sys_job_log` VALUES (855, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：225毫秒', '0', '', '2022-03-29 07:00:00');
+INSERT INTO `sys_job_log` VALUES (856, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：287毫秒', '0', '', '2022-03-29 07:59:00');
+INSERT INTO `sys_job_log` VALUES (857, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：306毫秒', '0', '', '2022-03-29 08:00:00');
+INSERT INTO `sys_job_log` VALUES (858, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：240毫秒', '0', '', '2022-03-29 08:59:00');
+INSERT INTO `sys_job_log` VALUES (859, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：263毫秒', '0', '', '2022-03-29 09:00:00');
+INSERT INTO `sys_job_log` VALUES (860, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：254毫秒', '0', '', '2022-03-29 09:59:00');
+INSERT INTO `sys_job_log` VALUES (861, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：249毫秒', '0', '', '2022-03-29 10:00:00');
+INSERT INTO `sys_job_log` VALUES (862, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：249毫秒', '0', '', '2022-03-29 10:59:00');
+INSERT INTO `sys_job_log` VALUES (863, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：270毫秒', '0', '', '2022-03-29 11:00:00');
+INSERT INTO `sys_job_log` VALUES (864, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：332毫秒', '0', '', '2022-03-29 11:59:00');
+INSERT INTO `sys_job_log` VALUES (865, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：364毫秒', '0', '', '2022-03-29 12:00:00');
+INSERT INTO `sys_job_log` VALUES (866, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：271毫秒', '0', '', '2022-03-29 12:59:00');
+INSERT INTO `sys_job_log` VALUES (867, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：260毫秒', '0', '', '2022-03-29 13:00:00');
+INSERT INTO `sys_job_log` VALUES (868, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：250毫秒', '0', '', '2022-03-29 13:59:00');
+INSERT INTO `sys_job_log` VALUES (869, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：247毫秒', '0', '', '2022-03-29 14:00:00');
+INSERT INTO `sys_job_log` VALUES (870, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：270毫秒', '0', '', '2022-03-29 14:59:00');
+INSERT INTO `sys_job_log` VALUES (871, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：250毫秒', '0', '', '2022-03-29 15:00:00');
+INSERT INTO `sys_job_log` VALUES (872, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：261毫秒', '0', '', '2022-03-29 15:59:00');
+INSERT INTO `sys_job_log` VALUES (873, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：281毫秒', '0', '', '2022-03-29 16:00:00');
+INSERT INTO `sys_job_log` VALUES (874, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：269毫秒', '0', '', '2022-03-29 16:59:00');
+INSERT INTO `sys_job_log` VALUES (875, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：287毫秒', '0', '', '2022-03-29 17:00:00');
+INSERT INTO `sys_job_log` VALUES (876, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：273毫秒', '0', '', '2022-03-29 17:59:00');
+INSERT INTO `sys_job_log` VALUES (877, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：328毫秒', '0', '', '2022-03-29 18:00:00');
+INSERT INTO `sys_job_log` VALUES (878, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：261毫秒', '0', '', '2022-03-29 18:59:00');
+INSERT INTO `sys_job_log` VALUES (879, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：270毫秒', '0', '', '2022-03-29 19:00:00');
+INSERT INTO `sys_job_log` VALUES (880, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：271毫秒', '0', '', '2022-03-29 19:59:00');
+INSERT INTO `sys_job_log` VALUES (881, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：320毫秒', '0', '', '2022-03-29 20:00:00');
+INSERT INTO `sys_job_log` VALUES (882, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：268毫秒', '0', '', '2022-03-29 20:59:00');
+INSERT INTO `sys_job_log` VALUES (883, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：326毫秒', '0', '', '2022-03-29 21:00:00');
+INSERT INTO `sys_job_log` VALUES (884, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：303毫秒', '0', '', '2022-03-29 21:59:00');
+INSERT INTO `sys_job_log` VALUES (885, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：289毫秒', '0', '', '2022-03-29 22:00:00');
+INSERT INTO `sys_job_log` VALUES (886, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：271毫秒', '0', '', '2022-03-29 22:59:00');
+INSERT INTO `sys_job_log` VALUES (887, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：254毫秒', '0', '', '2022-03-29 23:00:00');
+INSERT INTO `sys_job_log` VALUES (888, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：245毫秒', '0', '', '2022-03-29 23:59:00');
+INSERT INTO `sys_job_log` VALUES (889, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：349毫秒', '0', '', '2022-03-30 00:00:00');
+INSERT INTO `sys_job_log` VALUES (890, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：251毫秒', '0', '', '2022-03-30 00:59:00');
+INSERT INTO `sys_job_log` VALUES (891, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：251毫秒', '0', '', '2022-03-30 01:00:00');
+INSERT INTO `sys_job_log` VALUES (892, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：265毫秒', '0', '', '2022-03-30 01:59:00');
+INSERT INTO `sys_job_log` VALUES (893, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：283毫秒', '0', '', '2022-03-30 02:00:00');
+INSERT INTO `sys_job_log` VALUES (894, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：319毫秒', '0', '', '2022-03-30 02:59:00');
+INSERT INTO `sys_job_log` VALUES (895, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：273毫秒', '0', '', '2022-03-30 03:00:00');
+INSERT INTO `sys_job_log` VALUES (896, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：245毫秒', '0', '', '2022-03-30 03:59:00');
+INSERT INTO `sys_job_log` VALUES (897, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：245毫秒', '0', '', '2022-03-30 04:00:00');
+INSERT INTO `sys_job_log` VALUES (898, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：227毫秒', '0', '', '2022-03-30 04:59:00');
+INSERT INTO `sys_job_log` VALUES (899, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：259毫秒', '0', '', '2022-03-30 05:00:00');
+INSERT INTO `sys_job_log` VALUES (900, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：286毫秒', '0', '', '2022-03-30 05:59:00');
+INSERT INTO `sys_job_log` VALUES (901, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：275毫秒', '0', '', '2022-03-30 06:00:00');
+INSERT INTO `sys_job_log` VALUES (902, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：274毫秒', '0', '', '2022-03-30 06:59:00');
+INSERT INTO `sys_job_log` VALUES (903, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：290毫秒', '0', '', '2022-03-30 07:00:00');
+INSERT INTO `sys_job_log` VALUES (904, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：248毫秒', '0', '', '2022-03-30 07:59:00');
+INSERT INTO `sys_job_log` VALUES (905, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：337毫秒', '0', '', '2022-03-30 08:00:00');
+INSERT INTO `sys_job_log` VALUES (906, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：262毫秒', '0', '', '2022-03-30 08:59:00');
+INSERT INTO `sys_job_log` VALUES (907, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：314毫秒', '0', '', '2022-03-30 09:00:00');
+INSERT INTO `sys_job_log` VALUES (908, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：270毫秒', '0', '', '2022-03-30 09:59:00');
+INSERT INTO `sys_job_log` VALUES (909, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：290毫秒', '0', '', '2022-03-30 10:00:00');
+INSERT INTO `sys_job_log` VALUES (910, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：300毫秒', '0', '', '2022-03-30 10:59:00');
+INSERT INTO `sys_job_log` VALUES (911, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：261毫秒', '0', '', '2022-03-30 11:00:00');
+INSERT INTO `sys_job_log` VALUES (912, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：310毫秒', '0', '', '2022-03-30 11:59:00');
+INSERT INTO `sys_job_log` VALUES (913, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：275毫秒', '0', '', '2022-03-30 12:00:00');
+INSERT INTO `sys_job_log` VALUES (914, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：307毫秒', '0', '', '2022-03-30 12:59:00');
+INSERT INTO `sys_job_log` VALUES (915, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：229毫秒', '0', '', '2022-03-30 13:00:00');
+INSERT INTO `sys_job_log` VALUES (916, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：320毫秒', '0', '', '2022-03-30 13:59:00');
+INSERT INTO `sys_job_log` VALUES (917, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：241毫秒', '0', '', '2022-03-30 14:00:00');
+INSERT INTO `sys_job_log` VALUES (918, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：246毫秒', '0', '', '2022-03-30 14:59:00');
+INSERT INTO `sys_job_log` VALUES (919, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：441毫秒', '0', '', '2022-03-30 15:00:00');
+INSERT INTO `sys_job_log` VALUES (920, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：249毫秒', '0', '', '2022-03-30 15:59:00');
+INSERT INTO `sys_job_log` VALUES (921, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：359毫秒', '0', '', '2022-03-30 16:00:00');
+INSERT INTO `sys_job_log` VALUES (922, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：261毫秒', '0', '', '2022-03-30 16:59:00');
+INSERT INTO `sys_job_log` VALUES (923, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：275毫秒', '0', '', '2022-03-30 17:00:00');
+INSERT INTO `sys_job_log` VALUES (924, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：306毫秒', '0', '', '2022-03-30 17:59:00');
+INSERT INTO `sys_job_log` VALUES (925, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：332毫秒', '0', '', '2022-03-30 18:00:00');
+INSERT INTO `sys_job_log` VALUES (926, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：268毫秒', '0', '', '2022-03-30 18:59:00');
+INSERT INTO `sys_job_log` VALUES (927, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：266毫秒', '0', '', '2022-03-30 19:00:00');
+INSERT INTO `sys_job_log` VALUES (928, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：265毫秒', '0', '', '2022-03-30 19:59:00');
+INSERT INTO `sys_job_log` VALUES (929, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：359毫秒', '0', '', '2022-03-30 20:00:00');
+INSERT INTO `sys_job_log` VALUES (930, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：264毫秒', '0', '', '2022-03-30 20:59:00');
+INSERT INTO `sys_job_log` VALUES (931, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：322毫秒', '0', '', '2022-03-30 21:00:00');
+INSERT INTO `sys_job_log` VALUES (932, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：394毫秒', '0', '', '2022-03-30 21:59:00');
+INSERT INTO `sys_job_log` VALUES (933, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：437毫秒', '0', '', '2022-03-30 22:00:00');
+INSERT INTO `sys_job_log` VALUES (934, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：242毫秒', '0', '', '2022-03-30 22:59:00');
+INSERT INTO `sys_job_log` VALUES (935, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：232毫秒', '0', '', '2022-03-30 23:00:00');
+INSERT INTO `sys_job_log` VALUES (936, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：284毫秒', '0', '', '2022-03-30 23:59:00');
+INSERT INTO `sys_job_log` VALUES (937, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：451毫秒', '0', '', '2022-03-31 00:00:00');
+INSERT INTO `sys_job_log` VALUES (938, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：289毫秒', '0', '', '2022-03-31 00:59:00');
+INSERT INTO `sys_job_log` VALUES (939, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：303毫秒', '0', '', '2022-03-31 01:00:00');
+INSERT INTO `sys_job_log` VALUES (940, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：252毫秒', '0', '', '2022-03-31 01:59:00');
+INSERT INTO `sys_job_log` VALUES (941, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：298毫秒', '0', '', '2022-03-31 02:00:00');
+INSERT INTO `sys_job_log` VALUES (942, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：229毫秒', '0', '', '2022-03-31 02:59:00');
+INSERT INTO `sys_job_log` VALUES (943, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：390毫秒', '0', '', '2022-03-31 03:00:00');
+INSERT INTO `sys_job_log` VALUES (944, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：232毫秒', '0', '', '2022-03-31 03:59:00');
+INSERT INTO `sys_job_log` VALUES (945, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：399毫秒', '0', '', '2022-03-31 04:00:00');
+INSERT INTO `sys_job_log` VALUES (946, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：235毫秒', '0', '', '2022-03-31 04:59:00');
+INSERT INTO `sys_job_log` VALUES (947, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：244毫秒', '0', '', '2022-03-31 05:00:00');
+INSERT INTO `sys_job_log` VALUES (948, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：267毫秒', '0', '', '2022-03-31 05:59:00');
+INSERT INTO `sys_job_log` VALUES (949, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：253毫秒', '0', '', '2022-03-31 06:00:00');
+INSERT INTO `sys_job_log` VALUES (950, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：288毫秒', '0', '', '2022-03-31 06:59:00');
+INSERT INTO `sys_job_log` VALUES (951, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：281毫秒', '0', '', '2022-03-31 07:00:00');
+INSERT INTO `sys_job_log` VALUES (952, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：251毫秒', '0', '', '2022-03-31 07:59:00');
+INSERT INTO `sys_job_log` VALUES (953, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：315毫秒', '0', '', '2022-03-31 08:00:00');
+INSERT INTO `sys_job_log` VALUES (954, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：304毫秒', '0', '', '2022-03-31 08:59:00');
+INSERT INTO `sys_job_log` VALUES (955, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：290毫秒', '0', '', '2022-03-31 09:00:00');
+INSERT INTO `sys_job_log` VALUES (956, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：243毫秒', '0', '', '2022-03-31 09:59:00');
+INSERT INTO `sys_job_log` VALUES (957, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：277毫秒', '0', '', '2022-03-31 10:00:00');
+INSERT INTO `sys_job_log` VALUES (958, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：267毫秒', '0', '', '2022-03-31 10:59:00');
+INSERT INTO `sys_job_log` VALUES (959, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：322毫秒', '0', '', '2022-03-31 11:00:00');
+INSERT INTO `sys_job_log` VALUES (960, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：261毫秒', '0', '', '2022-03-31 11:59:00');
+INSERT INTO `sys_job_log` VALUES (961, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：614毫秒', '0', '', '2022-03-31 12:00:00');
+INSERT INTO `sys_job_log` VALUES (962, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：272毫秒', '0', '', '2022-03-31 12:59:00');
+INSERT INTO `sys_job_log` VALUES (963, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：313毫秒', '0', '', '2022-03-31 13:00:00');
+INSERT INTO `sys_job_log` VALUES (964, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：281毫秒', '0', '', '2022-03-31 13:59:00');
+INSERT INTO `sys_job_log` VALUES (965, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：272毫秒', '0', '', '2022-03-31 14:00:00');
+INSERT INTO `sys_job_log` VALUES (966, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：315毫秒', '0', '', '2022-03-31 14:59:00');
+INSERT INTO `sys_job_log` VALUES (967, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：249毫秒', '0', '', '2022-03-31 15:00:00');
+INSERT INTO `sys_job_log` VALUES (968, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：245毫秒', '0', '', '2022-03-31 15:59:00');
+INSERT INTO `sys_job_log` VALUES (969, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：295毫秒', '0', '', '2022-03-31 16:00:00');
+INSERT INTO `sys_job_log` VALUES (970, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：250毫秒', '0', '', '2022-03-31 16:59:00');
+INSERT INTO `sys_job_log` VALUES (971, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：327毫秒', '0', '', '2022-03-31 17:00:00');
+INSERT INTO `sys_job_log` VALUES (972, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：283毫秒', '0', '', '2022-03-31 17:59:00');
+INSERT INTO `sys_job_log` VALUES (973, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：263毫秒', '0', '', '2022-03-31 18:00:00');
+INSERT INTO `sys_job_log` VALUES (974, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：255毫秒', '0', '', '2022-03-31 18:59:00');
+INSERT INTO `sys_job_log` VALUES (975, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：245毫秒', '0', '', '2022-03-31 19:00:00');
+INSERT INTO `sys_job_log` VALUES (976, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：314毫秒', '0', '', '2022-03-31 19:59:00');
+INSERT INTO `sys_job_log` VALUES (977, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：301毫秒', '0', '', '2022-03-31 20:00:00');
+INSERT INTO `sys_job_log` VALUES (978, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：284毫秒', '0', '', '2022-03-31 20:59:00');
+INSERT INTO `sys_job_log` VALUES (979, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：279毫秒', '0', '', '2022-03-31 21:00:00');
+INSERT INTO `sys_job_log` VALUES (980, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：231毫秒', '0', '', '2022-03-31 21:59:00');
+INSERT INTO `sys_job_log` VALUES (981, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：341毫秒', '0', '', '2022-03-31 22:00:00');
+INSERT INTO `sys_job_log` VALUES (982, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：247毫秒', '0', '', '2022-03-31 22:59:00');
+INSERT INTO `sys_job_log` VALUES (983, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：261毫秒', '0', '', '2022-03-31 23:00:00');
+INSERT INTO `sys_job_log` VALUES (984, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：248毫秒', '0', '', '2022-03-31 23:59:00');
+INSERT INTO `sys_job_log` VALUES (985, 'baiduAccessToken', 'DEFAULT', 'tokenTask.getOcrAccessToken()', 'baiduAccessToken 总共耗时：73毫秒', '0', '', '2022-04-01 00:00:00');
+INSERT INTO `sys_job_log` VALUES (986, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：265毫秒', '0', '', '2022-04-01 00:00:00');
+INSERT INTO `sys_job_log` VALUES (987, 'baiduAccessToken', 'DEFAULT', 'tokenTask.getOcrAccessToken()', 'baiduAccessToken 总共耗时：104毫秒', '0', '', '2022-04-01 00:59:00');
+INSERT INTO `sys_job_log` VALUES (988, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：279毫秒', '0', '', '2022-04-01 00:59:00');
+INSERT INTO `sys_job_log` VALUES (989, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：229毫秒', '0', '', '2022-04-01 01:00:00');
+INSERT INTO `sys_job_log` VALUES (990, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：234毫秒', '0', '', '2022-04-01 01:59:00');
+INSERT INTO `sys_job_log` VALUES (991, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：233毫秒', '0', '', '2022-04-01 02:00:00');
+INSERT INTO `sys_job_log` VALUES (992, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：243毫秒', '0', '', '2022-04-01 02:59:00');
+INSERT INTO `sys_job_log` VALUES (993, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：243毫秒', '0', '', '2022-04-01 03:00:00');
+INSERT INTO `sys_job_log` VALUES (994, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：264毫秒', '0', '', '2022-04-01 03:59:00');
+INSERT INTO `sys_job_log` VALUES (995, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：226毫秒', '0', '', '2022-04-01 04:00:00');
+INSERT INTO `sys_job_log` VALUES (996, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：332毫秒', '0', '', '2022-04-01 04:59:00');
+INSERT INTO `sys_job_log` VALUES (997, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：236毫秒', '0', '', '2022-04-01 05:00:00');
+INSERT INTO `sys_job_log` VALUES (998, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：317毫秒', '0', '', '2022-04-01 05:59:00');
+INSERT INTO `sys_job_log` VALUES (999, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：286毫秒', '0', '', '2022-04-01 06:00:00');
+INSERT INTO `sys_job_log` VALUES (1000, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：299毫秒', '0', '', '2022-04-01 06:59:00');
+INSERT INTO `sys_job_log` VALUES (1001, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：273毫秒', '0', '', '2022-04-01 07:00:00');
+INSERT INTO `sys_job_log` VALUES (1002, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：285毫秒', '0', '', '2022-04-01 07:59:00');
+INSERT INTO `sys_job_log` VALUES (1003, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：370毫秒', '0', '', '2022-04-01 08:00:00');
+INSERT INTO `sys_job_log` VALUES (1004, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：239毫秒', '0', '', '2022-04-01 08:59:00');
+INSERT INTO `sys_job_log` VALUES (1005, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：284毫秒', '0', '', '2022-04-01 09:00:00');
+INSERT INTO `sys_job_log` VALUES (1006, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：309毫秒', '0', '', '2022-04-01 09:59:00');
+INSERT INTO `sys_job_log` VALUES (1007, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：270毫秒', '0', '', '2022-04-01 10:00:00');
+INSERT INTO `sys_job_log` VALUES (1008, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：303毫秒', '0', '', '2022-04-01 10:59:00');
+INSERT INTO `sys_job_log` VALUES (1009, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：323毫秒', '0', '', '2022-04-01 11:00:00');
+INSERT INTO `sys_job_log` VALUES (1010, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：288毫秒', '0', '', '2022-04-01 11:59:00');
+INSERT INTO `sys_job_log` VALUES (1011, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：346毫秒', '0', '', '2022-04-01 12:00:00');
+INSERT INTO `sys_job_log` VALUES (1012, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：277毫秒', '0', '', '2022-04-01 12:59:00');
+INSERT INTO `sys_job_log` VALUES (1013, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：236毫秒', '0', '', '2022-04-01 13:00:00');
+INSERT INTO `sys_job_log` VALUES (1014, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：287毫秒', '0', '', '2022-04-01 13:59:00');
+INSERT INTO `sys_job_log` VALUES (1015, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：326毫秒', '0', '', '2022-04-01 14:00:00');
+INSERT INTO `sys_job_log` VALUES (1016, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：264毫秒', '0', '', '2022-04-01 14:59:00');
+INSERT INTO `sys_job_log` VALUES (1017, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：262毫秒', '0', '', '2022-04-01 15:00:00');
+INSERT INTO `sys_job_log` VALUES (1018, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：244毫秒', '0', '', '2022-04-01 15:59:00');
+INSERT INTO `sys_job_log` VALUES (1019, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：364毫秒', '0', '', '2022-04-01 16:00:00');
+INSERT INTO `sys_job_log` VALUES (1020, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：277毫秒', '0', '', '2022-04-01 16:59:00');
+INSERT INTO `sys_job_log` VALUES (1021, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：269毫秒', '0', '', '2022-04-01 17:00:00');
+INSERT INTO `sys_job_log` VALUES (1022, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：358毫秒', '0', '', '2022-04-01 17:59:00');
+INSERT INTO `sys_job_log` VALUES (1023, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：251毫秒', '0', '', '2022-04-01 18:00:00');
+INSERT INTO `sys_job_log` VALUES (1024, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：251毫秒', '0', '', '2022-04-01 18:59:00');
+INSERT INTO `sys_job_log` VALUES (1025, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：257毫秒', '0', '', '2022-04-01 19:00:00');
+INSERT INTO `sys_job_log` VALUES (1026, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：279毫秒', '0', '', '2022-04-01 19:59:00');
+INSERT INTO `sys_job_log` VALUES (1027, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：343毫秒', '0', '', '2022-04-01 20:00:00');
+INSERT INTO `sys_job_log` VALUES (1028, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：294毫秒', '0', '', '2022-04-01 20:59:00');
+INSERT INTO `sys_job_log` VALUES (1029, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：309毫秒', '0', '', '2022-04-01 21:00:00');
+INSERT INTO `sys_job_log` VALUES (1030, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：248毫秒', '0', '', '2022-04-01 21:59:00');
+INSERT INTO `sys_job_log` VALUES (1031, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：310毫秒', '0', '', '2022-04-01 22:00:00');
+INSERT INTO `sys_job_log` VALUES (1032, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：321毫秒', '0', '', '2022-04-01 22:59:00');
+INSERT INTO `sys_job_log` VALUES (1033, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：286毫秒', '0', '', '2022-04-01 23:00:00');
+INSERT INTO `sys_job_log` VALUES (1034, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：660毫秒', '0', '', '2022-04-01 23:59:00');
+INSERT INTO `sys_job_log` VALUES (1035, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：303毫秒', '0', '', '2022-04-02 00:00:00');
+INSERT INTO `sys_job_log` VALUES (1036, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：220毫秒', '0', '', '2022-04-02 00:59:00');
+INSERT INTO `sys_job_log` VALUES (1037, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：249毫秒', '0', '', '2022-04-02 01:00:00');
+INSERT INTO `sys_job_log` VALUES (1038, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：276毫秒', '0', '', '2022-04-02 01:59:00');
+INSERT INTO `sys_job_log` VALUES (1039, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：237毫秒', '0', '', '2022-04-02 02:00:00');
+INSERT INTO `sys_job_log` VALUES (1040, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：264毫秒', '0', '', '2022-04-02 02:59:00');
+INSERT INTO `sys_job_log` VALUES (1041, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：292毫秒', '0', '', '2022-04-02 03:00:00');
+INSERT INTO `sys_job_log` VALUES (1042, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：278毫秒', '0', '', '2022-04-02 03:59:00');
+INSERT INTO `sys_job_log` VALUES (1043, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：221毫秒', '0', '', '2022-04-02 04:00:00');
+INSERT INTO `sys_job_log` VALUES (1044, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：258毫秒', '0', '', '2022-04-02 04:59:00');
+INSERT INTO `sys_job_log` VALUES (1045, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：233毫秒', '0', '', '2022-04-02 05:00:00');
+INSERT INTO `sys_job_log` VALUES (1046, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：234毫秒', '0', '', '2022-04-02 05:59:00');
+INSERT INTO `sys_job_log` VALUES (1047, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：263毫秒', '0', '', '2022-04-02 06:00:00');
+INSERT INTO `sys_job_log` VALUES (1048, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：260毫秒', '0', '', '2022-04-02 06:59:00');
+INSERT INTO `sys_job_log` VALUES (1049, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：308毫秒', '0', '', '2022-04-02 07:00:00');
+INSERT INTO `sys_job_log` VALUES (1050, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：289毫秒', '0', '', '2022-04-02 07:59:00');
+INSERT INTO `sys_job_log` VALUES (1051, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：258毫秒', '0', '', '2022-04-02 08:00:00');
+INSERT INTO `sys_job_log` VALUES (1052, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：284毫秒', '0', '', '2022-04-02 08:59:00');
+INSERT INTO `sys_job_log` VALUES (1053, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：288毫秒', '0', '', '2022-04-02 09:00:00');
+INSERT INTO `sys_job_log` VALUES (1054, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：262毫秒', '0', '', '2022-04-02 09:59:00');
+INSERT INTO `sys_job_log` VALUES (1055, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：330毫秒', '0', '', '2022-04-02 10:00:00');
+INSERT INTO `sys_job_log` VALUES (1056, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：283毫秒', '0', '', '2022-04-02 10:59:00');
+INSERT INTO `sys_job_log` VALUES (1057, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：328毫秒', '0', '', '2022-04-02 11:00:00');
+INSERT INTO `sys_job_log` VALUES (1058, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：281毫秒', '0', '', '2022-04-02 11:59:00');
+INSERT INTO `sys_job_log` VALUES (1059, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：399毫秒', '0', '', '2022-04-02 12:00:00');
+INSERT INTO `sys_job_log` VALUES (1060, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：244毫秒', '0', '', '2022-04-02 12:59:00');
+INSERT INTO `sys_job_log` VALUES (1061, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：291毫秒', '0', '', '2022-04-02 13:00:00');
+INSERT INTO `sys_job_log` VALUES (1062, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：229毫秒', '0', '', '2022-04-02 13:59:00');
+INSERT INTO `sys_job_log` VALUES (1063, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：283毫秒', '0', '', '2022-04-02 14:00:00');
+INSERT INTO `sys_job_log` VALUES (1064, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：286毫秒', '0', '', '2022-04-02 14:59:00');
+INSERT INTO `sys_job_log` VALUES (1065, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：288毫秒', '0', '', '2022-04-02 15:00:00');
+INSERT INTO `sys_job_log` VALUES (1066, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：323毫秒', '0', '', '2022-04-02 15:59:00');
+INSERT INTO `sys_job_log` VALUES (1067, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：300毫秒', '0', '', '2022-04-02 16:00:00');
+INSERT INTO `sys_job_log` VALUES (1068, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：288毫秒', '0', '', '2022-04-02 16:59:00');
+INSERT INTO `sys_job_log` VALUES (1069, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：365毫秒', '0', '', '2022-04-02 17:00:00');
+INSERT INTO `sys_job_log` VALUES (1070, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：273毫秒', '0', '', '2022-04-02 17:59:00');
+INSERT INTO `sys_job_log` VALUES (1071, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：281毫秒', '0', '', '2022-04-02 18:00:00');
+INSERT INTO `sys_job_log` VALUES (1072, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：247毫秒', '0', '', '2022-04-02 18:59:00');
+INSERT INTO `sys_job_log` VALUES (1073, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：249毫秒', '0', '', '2022-04-02 19:00:00');
+INSERT INTO `sys_job_log` VALUES (1074, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：271毫秒', '0', '', '2022-04-02 19:59:00');
+INSERT INTO `sys_job_log` VALUES (1075, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：517毫秒', '0', '', '2022-04-02 20:00:00');
+INSERT INTO `sys_job_log` VALUES (1076, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：247毫秒', '0', '', '2022-04-02 20:59:00');
+INSERT INTO `sys_job_log` VALUES (1077, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：297毫秒', '0', '', '2022-04-02 21:00:00');
+INSERT INTO `sys_job_log` VALUES (1078, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：275毫秒', '0', '', '2022-04-02 21:59:00');
+INSERT INTO `sys_job_log` VALUES (1079, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：309毫秒', '0', '', '2022-04-02 22:00:00');
+INSERT INTO `sys_job_log` VALUES (1080, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：285毫秒', '0', '', '2022-04-02 22:59:00');
+INSERT INTO `sys_job_log` VALUES (1081, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：484毫秒', '0', '', '2022-04-02 23:00:00');
+INSERT INTO `sys_job_log` VALUES (1082, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：242毫秒', '0', '', '2022-04-02 23:59:00');
+INSERT INTO `sys_job_log` VALUES (1083, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：295毫秒', '0', '', '2022-04-03 00:00:00');
+INSERT INTO `sys_job_log` VALUES (1084, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：249毫秒', '0', '', '2022-04-03 00:59:00');
+INSERT INTO `sys_job_log` VALUES (1085, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：257毫秒', '0', '', '2022-04-03 01:00:00');
+INSERT INTO `sys_job_log` VALUES (1086, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：235毫秒', '0', '', '2022-04-03 01:59:00');
+INSERT INTO `sys_job_log` VALUES (1087, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：313毫秒', '0', '', '2022-04-03 02:00:00');
+INSERT INTO `sys_job_log` VALUES (1088, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：238毫秒', '0', '', '2022-04-03 02:59:00');
+INSERT INTO `sys_job_log` VALUES (1089, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：229毫秒', '0', '', '2022-04-03 03:00:00');
+INSERT INTO `sys_job_log` VALUES (1090, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：277毫秒', '0', '', '2022-04-03 03:59:00');
+INSERT INTO `sys_job_log` VALUES (1091, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：312毫秒', '0', '', '2022-04-03 04:00:00');
+INSERT INTO `sys_job_log` VALUES (1092, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：238毫秒', '0', '', '2022-04-03 04:59:00');
+INSERT INTO `sys_job_log` VALUES (1093, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：207毫秒', '0', '', '2022-04-03 05:00:00');
+INSERT INTO `sys_job_log` VALUES (1094, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：257毫秒', '0', '', '2022-04-03 05:59:00');
+INSERT INTO `sys_job_log` VALUES (1095, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：239毫秒', '0', '', '2022-04-03 06:00:00');
+INSERT INTO `sys_job_log` VALUES (1096, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：281毫秒', '0', '', '2022-04-03 06:59:00');
+INSERT INTO `sys_job_log` VALUES (1097, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：299毫秒', '0', '', '2022-04-03 07:00:00');
+INSERT INTO `sys_job_log` VALUES (1098, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：243毫秒', '0', '', '2022-04-03 07:59:00');
+INSERT INTO `sys_job_log` VALUES (1099, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：437毫秒', '0', '', '2022-04-03 08:00:00');
+INSERT INTO `sys_job_log` VALUES (1100, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：292毫秒', '0', '', '2022-04-03 08:59:00');
+INSERT INTO `sys_job_log` VALUES (1101, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：287毫秒', '0', '', '2022-04-03 09:00:00');
+INSERT INTO `sys_job_log` VALUES (1102, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：255毫秒', '0', '', '2022-04-03 09:59:00');
+INSERT INTO `sys_job_log` VALUES (1103, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：298毫秒', '0', '', '2022-04-03 10:00:00');
+INSERT INTO `sys_job_log` VALUES (1104, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：320毫秒', '0', '', '2022-04-03 10:59:00');
+INSERT INTO `sys_job_log` VALUES (1105, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：276毫秒', '0', '', '2022-04-03 11:00:00');
+INSERT INTO `sys_job_log` VALUES (1106, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：256毫秒', '0', '', '2022-04-03 11:59:00');
+INSERT INTO `sys_job_log` VALUES (1107, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：244毫秒', '0', '', '2022-04-03 12:00:00');
+INSERT INTO `sys_job_log` VALUES (1108, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：297毫秒', '0', '', '2022-04-03 12:59:00');
+INSERT INTO `sys_job_log` VALUES (1109, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：269毫秒', '0', '', '2022-04-03 13:00:00');
+INSERT INTO `sys_job_log` VALUES (1110, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：247毫秒', '0', '', '2022-04-03 13:59:00');
+INSERT INTO `sys_job_log` VALUES (1111, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：654毫秒', '0', '', '2022-04-03 14:00:00');
+INSERT INTO `sys_job_log` VALUES (1112, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：619毫秒', '0', '', '2022-04-03 14:59:08');
+INSERT INTO `sys_job_log` VALUES (1113, '获取微信AccessToken', 'DEFAULT', 'tokenTask.getAccessToken()', '获取微信AccessToken 总共耗时：319毫秒', '0', '', '2022-04-03 15:00:02');
 
 -- ----------------------------
 -- Table structure for sys_logininfor
@@ -965,7 +2172,7 @@ CREATE TABLE `sys_logininfor`  (
   `msg` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin NULL DEFAULT '' COMMENT '提示消息',
   `login_time` datetime NULL DEFAULT NULL COMMENT '访问时间',
   PRIMARY KEY (`info_id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 436 CHARACTER SET = utf8 COLLATE = utf8_bin COMMENT = '系统访问记录' ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 619 CHARACTER SET = utf8 COLLATE = utf8_bin COMMENT = '系统访问记录' ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of sys_logininfor
@@ -1307,6 +2514,190 @@ INSERT INTO `sys_logininfor` VALUES (433, 'admin', '127.0.0.1', '内网IP', 'Chr
 INSERT INTO `sys_logininfor` VALUES (434, 'admin', '127.0.0.1', '内网IP', 'Chrome 9', 'Windows 10', '1', '密码输入错误1次', '2022-03-04 18:12:24');
 INSERT INTO `sys_logininfor` VALUES (435, 'admin', '127.0.0.1', '内网IP', 'Chrome 9', 'Windows 10', '0', '登录成功', '2022-03-04 18:12:28');
 INSERT INTO `sys_logininfor` VALUES (436, 'admin', '127.0.0.1', '内网IP', 'Chrome 9', 'Windows 10', '0', '登录成功', '2022-03-04 20:17:55');
+INSERT INTO `sys_logininfor` VALUES (437, 'admin', '127.0.0.1', '内网IP', 'Chrome 9', 'Windows 10', '0', '登录成功', '2022-03-09 20:57:25');
+INSERT INTO `sys_logininfor` VALUES (438, 'admin', '127.0.0.1', '内网IP', 'Chrome 9', 'Windows 10', '0', '登录成功', '2022-03-09 21:12:47');
+INSERT INTO `sys_logininfor` VALUES (439, 'admin', '127.0.0.1', '内网IP', 'Chrome 9', 'Windows 10', '0', '登录成功', '2022-03-09 21:19:38');
+INSERT INTO `sys_logininfor` VALUES (440, 'admin', '127.0.0.1', '内网IP', 'Chrome 9', 'Windows 10', '0', '登录成功', '2022-03-09 21:23:49');
+INSERT INTO `sys_logininfor` VALUES (441, 'admin', '127.0.0.1', '内网IP', 'Chrome 9', 'Windows 10', '0', '登录成功', '2022-03-09 21:26:55');
+INSERT INTO `sys_logininfor` VALUES (442, 'admin', '127.0.0.1', '内网IP', 'Chrome 9', 'Windows 10', '0', '登录成功', '2022-03-09 21:32:37');
+INSERT INTO `sys_logininfor` VALUES (443, 'admin', '127.0.0.1', '内网IP', 'Chrome 9', 'Windows 10', '0', '登录成功', '2022-03-09 21:35:41');
+INSERT INTO `sys_logininfor` VALUES (444, 'admin', '127.0.0.1', '内网IP', 'Chrome 9', 'Windows 10', '0', '登录成功', '2022-03-10 14:39:48');
+INSERT INTO `sys_logininfor` VALUES (445, 'admin', '127.0.0.1', '内网IP', 'Chrome 9', 'Windows 10', '0', '登录成功', '2022-03-10 18:59:05');
+INSERT INTO `sys_logininfor` VALUES (446, 'admin', '127.0.0.1', '内网IP', 'Chrome 9', 'Windows 10', '0', '登录成功', '2022-03-10 19:19:34');
+INSERT INTO `sys_logininfor` VALUES (447, 'admin', '127.0.0.1', '内网IP', 'Chrome 9', 'Windows 10', '0', '登录成功', '2022-03-10 19:45:11');
+INSERT INTO `sys_logininfor` VALUES (448, 'admin', '127.0.0.1', '内网IP', 'Chrome 9', 'Windows 10', '0', '登录成功', '2022-03-11 15:26:31');
+INSERT INTO `sys_logininfor` VALUES (449, 'admin', '127.0.0.1', '内网IP', 'Chrome 9', 'Windows 10', '0', '登录成功', '2022-03-11 16:00:18');
+INSERT INTO `sys_logininfor` VALUES (450, 'admin', '127.0.0.1', '内网IP', 'Chrome 9', 'Windows 10', '0', '登录成功', '2022-03-11 16:23:45');
+INSERT INTO `sys_logininfor` VALUES (451, 'admin', '127.0.0.1', '内网IP', 'Chrome 9', 'Windows 10', '0', '登录成功', '2022-03-11 16:32:03');
+INSERT INTO `sys_logininfor` VALUES (452, 'admin', '127.0.0.1', '内网IP', 'Chrome 9', 'Windows 10', '0', '登录成功', '2022-03-11 16:46:38');
+INSERT INTO `sys_logininfor` VALUES (453, 'admin', '111.79.8.117', 'XX XX', 'Chrome 9', 'Windows 10', '0', '登录成功', '2022-03-11 17:41:53');
+INSERT INTO `sys_logininfor` VALUES (454, 'admin', '111.79.8.117', 'XX XX', 'Chrome 9', 'Windows 10', '0', '登录成功', '2022-03-11 19:36:30');
+INSERT INTO `sys_logininfor` VALUES (455, 'admin', '111.79.8.117', 'XX XX', 'Chrome 9', 'Windows 10', '0', '登录成功', '2022-03-11 20:44:47');
+INSERT INTO `sys_logininfor` VALUES (456, 'admin', '111.79.8.117', 'XX XX', 'Chrome 9', 'Windows 10', '0', '登录成功', '2022-03-11 21:26:21');
+INSERT INTO `sys_logininfor` VALUES (457, 'admin', '111.79.8.117', 'XX XX', 'Mobile Safari', 'Mac OS X (iPhone)', '0', '登录成功', '2022-03-11 23:32:34');
+INSERT INTO `sys_logininfor` VALUES (458, 'admin', '111.79.9.125', 'XX XX', 'Chrome 9', 'Windows 10', '0', '登录成功', '2022-03-12 17:01:10');
+INSERT INTO `sys_logininfor` VALUES (459, 'admin', '111.79.9.125', 'XX XX', 'Chrome 9', 'Windows 10', '0', '登录成功', '2022-03-12 17:05:44');
+INSERT INTO `sys_logininfor` VALUES (460, 'admin', '111.79.9.125', 'XX XX', 'Chrome 9', 'Windows 10', '0', '登录成功', '2022-03-12 17:13:22');
+INSERT INTO `sys_logininfor` VALUES (461, 'admin', '111.79.9.125', 'XX XX', 'Chrome 9', 'Windows 10', '0', '登录成功', '2022-03-12 20:42:30');
+INSERT INTO `sys_logininfor` VALUES (462, 'admin', '111.79.9.125', 'XX XX', 'Chrome 9', 'Windows 10', '0', '登录成功', '2022-03-12 21:25:59');
+INSERT INTO `sys_logininfor` VALUES (463, 'admin', '111.79.9.125', 'XX XX', 'Chrome 9', 'Windows 10', '0', '登录成功', '2022-03-13 11:18:41');
+INSERT INTO `sys_logininfor` VALUES (464, 'admin', '111.79.9.125', 'XX XX', 'Chrome 9', 'Windows 10', '0', '登录成功', '2022-03-13 12:33:08');
+INSERT INTO `sys_logininfor` VALUES (465, 'admin', '111.79.9.125', 'XX XX', 'Chrome 9', 'Windows 10', '0', '登录成功', '2022-03-13 13:39:31');
+INSERT INTO `sys_logininfor` VALUES (466, 'admin', '111.79.9.125', 'XX XX', 'Chrome 9', 'Windows 10', '0', '登录成功', '2022-03-13 16:10:16');
+INSERT INTO `sys_logininfor` VALUES (467, 'admin', '111.79.9.125', 'XX XX', 'Chrome 9', 'Windows 10', '0', '登录成功', '2022-03-13 17:23:59');
+INSERT INTO `sys_logininfor` VALUES (468, 'admin', '111.79.9.125', 'XX XX', 'Chrome 9', 'Windows 10', '0', '登录成功', '2022-03-13 18:25:56');
+INSERT INTO `sys_logininfor` VALUES (469, 'admin', '111.79.9.125', 'XX XX', 'Chrome 9', 'Windows 10', '0', '登录成功', '2022-03-13 20:51:27');
+INSERT INTO `sys_logininfor` VALUES (470, 'admin', '111.79.9.125', 'XX XX', 'Chrome 9', 'Windows 10', '0', '登录成功', '2022-03-13 21:01:57');
+INSERT INTO `sys_logininfor` VALUES (471, 'admin', '111.79.9.125', 'XX XX', 'Chrome 9', 'Windows 10', '0', '登录成功', '2022-03-14 18:55:54');
+INSERT INTO `sys_logininfor` VALUES (472, 'admin', '111.79.9.125', 'XX XX', 'Chrome 9', 'Windows 10', '0', '登录成功', '2022-03-14 21:44:57');
+INSERT INTO `sys_logininfor` VALUES (473, 'admin', '111.79.9.125', 'XX XX', 'Chrome 9', 'Windows 10', '0', '登录成功', '2022-03-14 22:00:18');
+INSERT INTO `sys_logininfor` VALUES (474, 'admin', '111.79.9.125', 'XX XX', 'Chrome 9', 'Windows 10', '0', '登录成功', '2022-03-14 22:30:32');
+INSERT INTO `sys_logininfor` VALUES (475, 'admin', '111.79.10.3', 'XX XX', 'Chrome 9', 'Windows 10', '0', '登录成功', '2022-03-15 16:54:16');
+INSERT INTO `sys_logininfor` VALUES (476, 'admin', '111.79.10.3', 'XX XX', 'Chrome 9', 'Windows 10', '0', '登录成功', '2022-03-15 17:53:53');
+INSERT INTO `sys_logininfor` VALUES (477, 'admin', '111.79.10.3', 'XX XX', 'Chrome 9', 'Windows 10', '0', '登录成功', '2022-03-15 17:56:20');
+INSERT INTO `sys_logininfor` VALUES (478, 'admin', '223.104.170.147', 'XX XX', 'Mobile Safari', 'Mac OS X (iPhone)', '0', '登录成功', '2022-03-15 18:40:08');
+INSERT INTO `sys_logininfor` VALUES (479, 'admin', '111.79.10.3', 'XX XX', 'Chrome 9', 'Windows 10', '0', '登录成功', '2022-03-15 21:26:14');
+INSERT INTO `sys_logininfor` VALUES (480, 'admin', '111.79.10.3', 'XX XX', 'Chrome 9', 'Windows 10', '0', '登录成功', '2022-03-15 21:41:13');
+INSERT INTO `sys_logininfor` VALUES (481, 'admin', '123.139.235.8', 'XX XX', 'Chrome 9', 'Windows 10', '1', '密码输入错误1次', '2022-03-15 23:06:09');
+INSERT INTO `sys_logininfor` VALUES (482, 'admin', '123.139.235.8', 'XX XX', 'Chrome 9', 'Windows 10', '1', '密码输入错误2次', '2022-03-15 23:06:17');
+INSERT INTO `sys_logininfor` VALUES (483, 'admin', '123.139.235.8', 'XX XX', 'Chrome 9', 'Windows 10', '1', '密码输入错误3次', '2022-03-15 23:07:51');
+INSERT INTO `sys_logininfor` VALUES (484, 'admin', '123.139.235.8', 'XX XX', 'Chrome 9', 'Windows 10', '1', '密码输入错误4次', '2022-03-15 23:07:53');
+INSERT INTO `sys_logininfor` VALUES (485, 'admin', '111.79.9.242', 'XX XX', 'Chrome 9', 'Windows 10', '0', '登录成功', '2022-03-16 10:27:24');
+INSERT INTO `sys_logininfor` VALUES (486, '5720191601', '182.104.69.164', 'XX XX', 'Chrome 9', 'Windows 10', '1', '用户不存在/密码错误', '2022-03-16 10:29:21');
+INSERT INTO `sys_logininfor` VALUES (487, '5720191601', '182.104.69.164', 'XX XX', 'Chrome 9', 'Windows 10', '1', '用户不存在/密码错误', '2022-03-16 10:29:26');
+INSERT INTO `sys_logininfor` VALUES (488, '5720191601', '182.104.69.164', 'XX XX', 'Chrome 9', 'Windows 10', '1', '用户不存在/密码错误', '2022-03-16 10:30:06');
+INSERT INTO `sys_logininfor` VALUES (489, '611612', '182.104.69.164', 'XX XX', 'Chrome 9', 'Windows 10', '1', '用户不存在/密码错误', '2022-03-16 10:30:17');
+INSERT INTO `sys_logininfor` VALUES (490, '611', '182.104.69.164', 'XX XX', 'Chrome 9', 'Windows 10', '1', '用户不存在/密码错误', '2022-03-16 10:30:28');
+INSERT INTO `sys_logininfor` VALUES (491, 'admin', '182.104.69.164', 'XX XX', 'Chrome 9', 'Windows 10', '0', '登录成功', '2022-03-16 10:31:04');
+INSERT INTO `sys_logininfor` VALUES (492, 'admin', '111.79.9.242', 'XX XX', 'Chrome 9', 'Windows 10', '0', '登录成功', '2022-03-16 10:35:39');
+INSERT INTO `sys_logininfor` VALUES (493, 'admin', '223.104.170.147', 'XX XX', 'Mobile Safari', 'Mac OS X (iPhone)', '0', '登录成功', '2022-03-16 17:20:49');
+INSERT INTO `sys_logininfor` VALUES (494, 'admin', '111.79.8.219', 'XX XX', 'Chrome 9', 'Windows 10', '0', '登录成功', '2022-03-16 22:12:27');
+INSERT INTO `sys_logininfor` VALUES (495, 'admin', '111.79.8.219', 'XX XX', 'Chrome 9', 'Windows 10', '0', '登录成功', '2022-03-17 10:07:22');
+INSERT INTO `sys_logininfor` VALUES (496, 'admin', '111.79.8.219', 'XX XX', 'Chrome 9', 'Windows 10', '0', '登录成功', '2022-03-17 11:30:45');
+INSERT INTO `sys_logininfor` VALUES (497, 'admin', '111.79.8.219', 'XX XX', 'Chrome 9', 'Windows 10', '0', '登录成功', '2022-03-17 16:47:14');
+INSERT INTO `sys_logininfor` VALUES (498, 'admin', '111.79.8.219', 'XX XX', 'Chrome 9', 'Windows 10', '0', '登录成功', '2022-03-17 19:15:19');
+INSERT INTO `sys_logininfor` VALUES (499, 'admin', '111.79.8.219', 'XX XX', 'Chrome 9', 'Windows 10', '0', '登录成功', '2022-03-17 19:29:07');
+INSERT INTO `sys_logininfor` VALUES (500, 'admin', '111.79.8.219', 'XX XX', 'Chrome 9', 'Windows 10', '0', '登录成功', '2022-03-17 22:42:33');
+INSERT INTO `sys_logininfor` VALUES (501, 'admin', '111.79.8.219', 'XX XX', 'Mobile Safari', 'Mac OS X (iPhone)', '1', '密码输入错误1次', '2022-03-18 13:37:34');
+INSERT INTO `sys_logininfor` VALUES (502, 'admin', '111.79.8.219', 'XX XX', 'Mobile Safari', 'Mac OS X (iPhone)', '0', '登录成功', '2022-03-18 13:37:41');
+INSERT INTO `sys_logininfor` VALUES (503, 'admin', '111.79.8.219', 'XX XX', 'Apple WebKit', 'Mac OS X (iPhone)', '1', '密码输入错误1次', '2022-03-18 14:07:21');
+INSERT INTO `sys_logininfor` VALUES (504, 'admin', '111.79.8.219', 'XX XX', 'Apple WebKit', 'Mac OS X (iPhone)', '0', '登录成功', '2022-03-18 14:07:27');
+INSERT INTO `sys_logininfor` VALUES (505, 'admin', '113.142.72.248', 'XX XX', 'Chrome Mobile', 'Android 1.x', '0', '登录成功', '2022-03-18 14:09:19');
+INSERT INTO `sys_logininfor` VALUES (506, 'admin', '111.79.8.219', 'XX XX', 'Mobile Safari', 'Mac OS X (iPhone)', '0', '登录成功', '2022-03-18 14:09:39');
+INSERT INTO `sys_logininfor` VALUES (507, 'admin', '111.79.8.219', 'XX XX', 'Chrome 9', 'Windows 10', '0', '登录成功', '2022-03-18 14:33:55');
+INSERT INTO `sys_logininfor` VALUES (508, 'admin', '111.79.8.219', 'XX XX', 'Chrome 9', 'Windows 10', '0', '登录成功', '2022-03-18 14:35:46');
+INSERT INTO `sys_logininfor` VALUES (509, 'admin', '111.79.8.219', 'XX XX', 'Mobile Safari', 'Mac OS X (iPhone)', '0', '登录成功', '2022-03-18 15:02:18');
+INSERT INTO `sys_logininfor` VALUES (510, 'admin', '111.79.8.219', 'XX XX', 'Chrome 9', 'Windows 10', '0', '登录成功', '2022-03-18 15:58:36');
+INSERT INTO `sys_logininfor` VALUES (511, 'admin', '111.79.8.219', 'XX XX', 'Chrome 9', 'Windows 10', '0', '登录成功', '2022-03-18 17:02:37');
+INSERT INTO `sys_logininfor` VALUES (512, 'admin', '111.79.8.219', 'XX XX', 'Chrome 9', 'Windows 10', '0', '登录成功', '2022-03-18 17:35:51');
+INSERT INTO `sys_logininfor` VALUES (513, 'admin', '223.148.160.8', 'XX XX', 'Chrome 9', 'Windows 10', '1', '密码输入错误1次', '2022-03-18 18:02:24');
+INSERT INTO `sys_logininfor` VALUES (514, 'admin', '111.79.8.219', 'XX XX', 'Chrome 9', 'Windows 10', '0', '登录成功', '2022-03-18 18:45:36');
+INSERT INTO `sys_logininfor` VALUES (515, 'admin', '111.79.8.219', 'XX XX', 'Chrome 9', 'Windows 10', '0', '登录成功', '2022-03-18 18:59:18');
+INSERT INTO `sys_logininfor` VALUES (516, 'admin', '111.79.8.219', 'XX XX', 'Chrome 9', 'Windows 10', '0', '登录成功', '2022-03-18 19:32:38');
+INSERT INTO `sys_logininfor` VALUES (517, 'admin', '111.79.8.219', 'XX XX', 'Chrome 9', 'Windows 10', '0', '登录成功', '2022-03-18 19:32:51');
+INSERT INTO `sys_logininfor` VALUES (518, 'admin', '111.79.8.219', 'XX XX', 'Chrome 9', 'Windows 10', '0', '登录成功', '2022-03-18 19:35:11');
+INSERT INTO `sys_logininfor` VALUES (519, 'admin', '111.79.8.219', 'XX XX', 'Chrome 9', 'Windows 10', '0', '登录成功', '2022-03-18 19:47:41');
+INSERT INTO `sys_logininfor` VALUES (520, 'admin', '111.79.8.219', 'XX XX', 'Mobile Safari', 'Mac OS X (iPhone)', '0', '登录成功', '2022-03-18 20:27:38');
+INSERT INTO `sys_logininfor` VALUES (521, 'admin', '111.79.8.219', 'XX XX', 'Chrome 9', 'Windows 10', '0', '登录成功', '2022-03-18 21:10:19');
+INSERT INTO `sys_logininfor` VALUES (522, 'yang', '111.79.8.219', 'XX XX', 'Mobile Safari', 'Mac OS X (iPhone)', '0', '登录成功', '2022-03-18 21:46:55');
+INSERT INTO `sys_logininfor` VALUES (523, 'admin', '111.79.8.219', 'XX XX', 'Chrome 9', 'Windows 10', '0', '登录成功', '2022-03-18 21:47:30');
+INSERT INTO `sys_logininfor` VALUES (524, 'admin', '111.79.8.219', 'XX XX', 'Chrome 9', 'Windows 10', '0', '退出成功', '2022-03-18 21:50:27');
+INSERT INTO `sys_logininfor` VALUES (525, 'test', '111.79.8.219', 'XX XX', 'Chrome 9', 'Windows 10', '0', '登录成功', '2022-03-18 21:50:33');
+INSERT INTO `sys_logininfor` VALUES (526, 'test', '111.79.8.219', 'XX XX', 'Chrome 9', 'Windows 10', '0', '退出成功', '2022-03-18 21:52:10');
+INSERT INTO `sys_logininfor` VALUES (527, 'admin', '111.79.8.219', 'XX XX', 'Chrome 9', 'Windows 10', '0', '登录成功', '2022-03-18 21:52:15');
+INSERT INTO `sys_logininfor` VALUES (528, 'admin', '111.79.8.219', 'XX XX', 'Chrome 9', 'Windows 10', '0', '退出成功', '2022-03-18 21:54:15');
+INSERT INTO `sys_logininfor` VALUES (529, 'test', '111.79.8.219', 'XX XX', 'Chrome 9', 'Windows 10', '1', '密码输入错误1次', '2022-03-18 21:54:21');
+INSERT INTO `sys_logininfor` VALUES (530, 'test', '111.79.8.219', 'XX XX', 'Chrome 9', 'Windows 10', '0', '登录成功', '2022-03-18 21:54:24');
+INSERT INTO `sys_logininfor` VALUES (531, 'test', '111.79.8.219', 'XX XX', 'Chrome 9', 'Windows 10', '0', '退出成功', '2022-03-18 21:56:31');
+INSERT INTO `sys_logininfor` VALUES (532, 'admin', '111.79.8.219', 'XX XX', 'Chrome 9', 'Windows 10', '0', '登录成功', '2022-03-18 21:56:35');
+INSERT INTO `sys_logininfor` VALUES (533, 'admin', '111.79.8.219', 'XX XX', 'Chrome 9', 'Windows 10', '0', '退出成功', '2022-03-18 21:58:29');
+INSERT INTO `sys_logininfor` VALUES (534, 'admin', '111.79.8.219', 'XX XX', 'Chrome 9', 'Windows 10', '0', '登录成功', '2022-03-18 21:58:38');
+INSERT INTO `sys_logininfor` VALUES (535, 'admin', '111.79.8.219', 'XX XX', 'Chrome 9', 'Windows 10', '0', '退出成功', '2022-03-18 22:04:32');
+INSERT INTO `sys_logininfor` VALUES (536, 'test', '111.79.8.219', 'XX XX', 'Chrome 9', 'Windows 10', '0', '登录成功', '2022-03-18 22:04:38');
+INSERT INTO `sys_logininfor` VALUES (537, 'admin', '111.79.8.219', 'XX XX', 'Mobile Safari', 'Mac OS X (iPhone)', '0', '登录成功', '2022-03-18 22:26:56');
+INSERT INTO `sys_logininfor` VALUES (538, 'admin', '111.79.8.219', 'XX XX', 'Mobile Safari', 'Mac OS X (iPhone)', '1', '密码输入错误1次', '2022-03-18 22:40:09');
+INSERT INTO `sys_logininfor` VALUES (539, 'admin', '111.79.8.219', 'XX XX', 'Mobile Safari', 'Mac OS X (iPhone)', '0', '登录成功', '2022-03-18 22:40:16');
+INSERT INTO `sys_logininfor` VALUES (540, 'admin', '111.79.8.219', 'XX XX', 'Mobile Safari', 'Mac OS X (iPhone)', '0', '登录成功', '2022-03-18 23:31:14');
+INSERT INTO `sys_logininfor` VALUES (541, 'admin', '223.104.170.147', 'XX XX', 'Mobile Safari', 'Mac OS X (iPhone)', '1', '密码输入错误1次', '2022-03-19 11:19:32');
+INSERT INTO `sys_logininfor` VALUES (542, 'admin', '223.104.170.147', 'XX XX', 'Mobile Safari', 'Mac OS X (iPhone)', '0', '登录成功', '2022-03-19 11:19:40');
+INSERT INTO `sys_logininfor` VALUES (543, 'admin', '223.104.170.147', 'XX XX', 'Mobile Safari', 'Mac OS X (iPhone)', '0', '登录成功', '2022-03-19 12:47:53');
+INSERT INTO `sys_logininfor` VALUES (544, 'admin', '111.79.8.219', 'XX XX', 'Chrome 9', 'Windows 10', '1', '密码输入错误1次', '2022-03-19 20:45:51');
+INSERT INTO `sys_logininfor` VALUES (545, 'admin', '111.79.8.219', 'XX XX', 'Chrome 9', 'Windows 10', '0', '登录成功', '2022-03-19 20:45:55');
+INSERT INTO `sys_logininfor` VALUES (546, 'admin', '111.79.9.164', 'XX XX', 'Chrome 9', 'Windows 10', '0', '登录成功', '2022-03-20 11:57:54');
+INSERT INTO `sys_logininfor` VALUES (547, 'admin', '120.227.32.218', 'XX XX', 'Firefox 9', 'Windows 10', '1', '密码输入错误1次', '2022-03-20 16:58:00');
+INSERT INTO `sys_logininfor` VALUES (548, 'admin', '120.227.32.218', 'XX XX', 'Firefox 9', 'Windows 10', '1', '密码输入错误1次', '2022-03-20 17:20:54');
+INSERT INTO `sys_logininfor` VALUES (549, 'admin', '120.227.32.218', 'XX XX', 'Firefox 9', 'Windows 10', '1', '用户不存在/密码错误', '2022-03-20 17:20:54');
+INSERT INTO `sys_logininfor` VALUES (550, 'admin', '111.79.9.164', 'XX XX', 'Mobile Safari', 'Mac OS X (iPhone)', '0', '登录成功', '2022-03-20 22:54:33');
+INSERT INTO `sys_logininfor` VALUES (551, 'admin', '111.79.9.164', 'XX XX', 'Mobile Safari', 'Mac OS X (iPhone)', '0', '登录成功', '2022-03-21 08:08:35');
+INSERT INTO `sys_logininfor` VALUES (552, 'admin', '111.79.9.164', 'XX XX', 'Chrome 9', 'Windows 10', '0', '登录成功', '2022-03-21 10:18:04');
+INSERT INTO `sys_logininfor` VALUES (553, 'admin', '58.56.56.250', 'XX XX', 'Chrome 8', 'Windows 10', '1', '密码输入错误1次', '2022-03-21 15:11:37');
+INSERT INTO `sys_logininfor` VALUES (554, 'admin', '58.56.56.250', 'XX XX', 'Chrome 8', 'Windows 10', '1', '密码输入错误2次', '2022-03-21 15:11:41');
+INSERT INTO `sys_logininfor` VALUES (555, 'admin', '58.56.56.250', 'XX XX', 'Chrome 8', 'Windows 10', '1', '密码输入错误3次', '2022-03-21 15:11:50');
+INSERT INTO `sys_logininfor` VALUES (556, 'admin', '58.56.56.250', 'XX XX', 'Chrome 8', 'Windows 10', '1', '密码输入错误4次', '2022-03-21 15:11:50');
+INSERT INTO `sys_logininfor` VALUES (557, 'admin', '111.79.9.164', 'XX XX', 'Chrome 9', 'Windows 10', '0', '登录成功', '2022-03-21 18:14:06');
+INSERT INTO `sys_logininfor` VALUES (558, 'admin', '111.79.10.213', 'XX XX', 'Chrome 9', 'Windows 10', '1', '密码输入错误1次', '2022-03-22 10:01:57');
+INSERT INTO `sys_logininfor` VALUES (559, 'admin', '111.79.10.213', 'XX XX', 'Chrome 9', 'Windows 10', '0', '登录成功', '2022-03-22 10:02:01');
+INSERT INTO `sys_logininfor` VALUES (560, 'admin', '223.104.170.147', 'XX XX', 'Mobile Safari', 'Mac OS X (iPhone)', '0', '登录成功', '2022-03-23 15:29:12');
+INSERT INTO `sys_logininfor` VALUES (561, 'admin', '111.79.10.213', 'XX XX', 'Chrome 9', 'Windows 10', '0', '登录成功', '2022-03-23 20:43:25');
+INSERT INTO `sys_logininfor` VALUES (562, 'admin', '60.10.15.35', 'XX XX', 'Firefox 9', 'Windows 10', '1', '密码输入错误1次', '2022-03-24 17:41:54');
+INSERT INTO `sys_logininfor` VALUES (563, 'admin', '60.10.15.35', 'XX XX', 'Firefox 9', 'Windows 10', '1', '密码输入错误2次', '2022-03-24 17:42:01');
+INSERT INTO `sys_logininfor` VALUES (564, 'admin', '60.10.15.35', 'XX XX', 'Firefox 9', 'Windows 10', '1', '密码输入错误1次', '2022-03-24 18:03:34');
+INSERT INTO `sys_logininfor` VALUES (565, 'admin', '111.79.11.111', 'XX XX', 'Chrome 9', 'Windows 10', '0', '登录成功', '2022-03-24 19:39:14');
+INSERT INTO `sys_logininfor` VALUES (566, 'admin', '111.79.11.111', 'XX XX', 'Chrome 9', 'Windows 10', '0', '登录成功', '2022-03-24 21:19:46');
+INSERT INTO `sys_logininfor` VALUES (567, 'admin', '111.79.11.111', 'XX XX', 'Chrome 9', 'Windows 10', '0', '登录成功', '2022-03-24 21:44:44');
+INSERT INTO `sys_logininfor` VALUES (568, 'admin', '111.79.8.103', 'XX XX', 'Chrome 9', 'Windows 10', '0', '登录成功', '2022-03-25 09:18:20');
+INSERT INTO `sys_logininfor` VALUES (569, 'admin', '111.79.8.103', 'XX XX', 'Chrome 9', 'Windows 10', '0', '登录成功', '2022-03-25 09:57:15');
+INSERT INTO `sys_logininfor` VALUES (570, 'admin', '223.104.170.147', 'XX XX', 'Chrome 9', 'Windows 10', '0', '登录成功', '2022-03-25 15:09:59');
+INSERT INTO `sys_logininfor` VALUES (571, 'admin', '111.79.8.103', 'XX XX', 'Chrome 9', 'Windows 10', '1', '密码输入错误1次', '2022-03-25 16:39:01');
+INSERT INTO `sys_logininfor` VALUES (572, 'admin', '111.79.8.103', 'XX XX', 'Chrome 9', 'Windows 10', '0', '登录成功', '2022-03-25 16:39:07');
+INSERT INTO `sys_logininfor` VALUES (573, 'admin', '111.79.8.103', 'XX XX', 'Chrome 9', 'Windows 10', '0', '登录成功', '2022-03-25 17:45:14');
+INSERT INTO `sys_logininfor` VALUES (574, 'admin', '127.0.0.1', '内网IP', 'Chrome 9', 'Windows 10', '1', '密码输入错误1次', '2022-03-25 17:49:21');
+INSERT INTO `sys_logininfor` VALUES (575, 'admin', '127.0.0.1', '内网IP', 'Chrome 9', 'Windows 10', '1', '密码输入错误2次', '2022-03-25 17:49:24');
+INSERT INTO `sys_logininfor` VALUES (576, 'admin', '127.0.0.1', '内网IP', 'Chrome 9', 'Windows 10', '1', '密码输入错误3次', '2022-03-25 17:49:28');
+INSERT INTO `sys_logininfor` VALUES (577, 'admin', '127.0.0.1', '内网IP', 'Chrome 9', 'Windows 10', '1', '密码输入错误4次', '2022-03-25 17:49:39');
+INSERT INTO `sys_logininfor` VALUES (578, 'admin', '127.0.0.1', '内网IP', 'Chrome 9', 'Windows 10', '0', '登录成功', '2022-03-25 17:49:44');
+INSERT INTO `sys_logininfor` VALUES (579, 'admin', '127.0.0.1', '内网IP', 'Chrome 9', 'Windows 10', '1', '验证码错误', '2022-03-25 17:56:23');
+INSERT INTO `sys_logininfor` VALUES (580, 'admin', '127.0.0.1', '内网IP', 'Chrome 9', 'Windows 10', '0', '登录成功', '2022-03-25 17:56:25');
+INSERT INTO `sys_logininfor` VALUES (581, 'admin', '127.0.0.1', '内网IP', 'Chrome 9', 'Windows 10', '0', '登录成功', '2022-03-25 18:02:30');
+INSERT INTO `sys_logininfor` VALUES (582, 'admin', '127.0.0.1', '内网IP', 'Chrome 9', 'Windows 10', '0', '登录成功', '2022-03-25 18:05:19');
+INSERT INTO `sys_logininfor` VALUES (583, 'admin', '127.0.0.1', '内网IP', 'Chrome 9', 'Windows 10', '0', '登录成功', '2022-03-25 18:07:12');
+INSERT INTO `sys_logininfor` VALUES (584, 'admin', '111.79.8.103', 'XX XX', 'Chrome 9', 'Windows 10', '0', '登录成功', '2022-03-25 18:39:41');
+INSERT INTO `sys_logininfor` VALUES (585, 'admin', '111.79.8.103', 'XX XX', 'Chrome 9', 'Windows 10', '1', '密码输入错误1次', '2022-03-25 22:37:12');
+INSERT INTO `sys_logininfor` VALUES (586, 'admin', '111.79.8.103', 'XX XX', 'Chrome 9', 'Windows 10', '0', '登录成功', '2022-03-25 22:37:18');
+INSERT INTO `sys_logininfor` VALUES (587, 'admin', '111.79.8.103', 'XX XX', 'Mobile Safari', 'Mac OS X (iPhone)', '0', '登录成功', '2022-03-26 10:52:40');
+INSERT INTO `sys_logininfor` VALUES (588, 'admin', '111.79.8.103', 'XX XX', 'Chrome 9', 'Windows 10', '0', '登录成功', '2022-03-27 10:35:43');
+INSERT INTO `sys_logininfor` VALUES (589, 'admin', '127.0.0.1', '内网IP', 'Chrome 9', 'Windows 10', '0', '登录成功', '2022-03-27 10:36:52');
+INSERT INTO `sys_logininfor` VALUES (590, 'admin', '127.0.0.1', '内网IP', 'Chrome 9', 'Windows 10', '0', '登录成功', '2022-03-27 10:41:50');
+INSERT INTO `sys_logininfor` VALUES (591, 'admin', '111.79.8.103', 'XX XX', 'Chrome 9', 'Windows 10', '0', '登录成功', '2022-03-28 22:04:31');
+INSERT INTO `sys_logininfor` VALUES (592, 'admin', '223.104.10.220', 'XX XX', 'Mobile Safari', 'Mac OS X (iPhone)', '0', '登录成功', '2022-03-29 09:48:25');
+INSERT INTO `sys_logininfor` VALUES (593, 'admin', '111.79.8.103', 'XX XX', 'Chrome 9', 'Windows 10', '1', '密码输入错误1次', '2022-03-29 16:23:36');
+INSERT INTO `sys_logininfor` VALUES (594, 'admin', '111.79.8.103', 'XX XX', 'Chrome 9', 'Windows 10', '0', '登录成功', '2022-03-29 16:23:42');
+INSERT INTO `sys_logininfor` VALUES (595, 'admin', '127.0.0.1', '内网IP', 'Chrome 9', 'Windows 10', '0', '登录成功', '2022-03-29 17:08:40');
+INSERT INTO `sys_logininfor` VALUES (596, 'admin', '127.0.0.1', '内网IP', 'Chrome 9', 'Windows 10', '0', '登录成功', '2022-03-29 17:26:41');
+INSERT INTO `sys_logininfor` VALUES (597, 'admin', '111.79.8.103', 'XX XX', 'Chrome 9', 'Windows 10', '0', '登录成功', '2022-03-30 18:11:48');
+INSERT INTO `sys_logininfor` VALUES (598, 'admin', '111.79.8.103', 'XX XX', 'Mobile Safari', 'Mac OS X (iPhone)', '0', '登录成功', '2022-03-30 21:47:16');
+INSERT INTO `sys_logininfor` VALUES (599, 'admin', '223.104.10.220', 'XX XX', 'Mobile Safari', 'Mac OS X (iPhone)', '0', '登录成功', '2022-03-31 09:38:16');
+INSERT INTO `sys_logininfor` VALUES (600, 'admin', '183.6.54.3', 'XX XX', 'Firefox 9', 'Windows 10', '1', '密码输入错误1次', '2022-03-31 17:22:01');
+INSERT INTO `sys_logininfor` VALUES (601, 'ry', '183.6.54.3', 'XX XX', 'Firefox 9', 'Windows 10', '1', '对不起，您的账号已被删除', '2022-03-31 17:22:09');
+INSERT INTO `sys_logininfor` VALUES (602, 'test', '183.6.54.3', 'XX XX', 'Firefox 9', 'Windows 10', '0', '登录成功', '2022-03-31 17:22:18');
+INSERT INTO `sys_logininfor` VALUES (603, 'test', '183.6.54.3', 'XX XX', 'Firefox 9', 'Windows 10', '0', '退出成功', '2022-03-31 17:29:17');
+INSERT INTO `sys_logininfor` VALUES (604, 'test', '183.6.54.3', 'XX XX', 'Firefox 9', 'Windows 10', '0', '登录成功', '2022-03-31 17:36:16');
+INSERT INTO `sys_logininfor` VALUES (605, 'test', '183.6.54.3', 'XX XX', 'Firefox 9', 'Windows 10', '0', '退出成功', '2022-03-31 17:41:11');
+INSERT INTO `sys_logininfor` VALUES (606, 'admin', '111.79.8.103', 'XX XX', 'Chrome 9', 'Windows 10', '0', '登录成功', '2022-03-31 22:05:42');
+INSERT INTO `sys_logininfor` VALUES (607, 'admin', '111.79.8.103', 'XX XX', 'Chrome 9', 'Windows 10', '0', '登录成功', '2022-03-31 22:06:16');
+INSERT INTO `sys_logininfor` VALUES (608, 'admin', '111.79.8.103', 'XX XX', 'Chrome 9', 'Windows 10', '0', '退出成功', '2022-03-31 22:06:29');
+INSERT INTO `sys_logininfor` VALUES (609, 'admin', '111.79.8.103', 'XX XX', 'Chrome 9', 'Windows 10', '0', '登录成功', '2022-03-31 22:06:39');
+INSERT INTO `sys_logininfor` VALUES (610, 'admin', '127.0.0.1', '内网IP', 'Chrome 9', 'Windows 10', '1', '密码输入错误1次', '2022-04-01 08:55:45');
+INSERT INTO `sys_logininfor` VALUES (611, 'admin', '127.0.0.1', '内网IP', 'Chrome 9', 'Windows 10', '0', '登录成功', '2022-04-01 08:56:25');
+INSERT INTO `sys_logininfor` VALUES (612, 'admin', '127.0.0.1', '内网IP', 'Chrome 9', 'Windows 10', '1', '验证码错误', '2022-04-01 09:03:23');
+INSERT INTO `sys_logininfor` VALUES (613, 'admin', '111.79.8.103', 'XX XX', 'Chrome 9', 'Windows 10', '0', '登录成功', '2022-04-01 21:04:36');
+INSERT INTO `sys_logininfor` VALUES (614, 'admin', '111.79.8.103', 'XX XX', 'Chrome 9', 'Windows 10', '0', '登录成功', '2022-04-01 23:22:27');
+INSERT INTO `sys_logininfor` VALUES (615, 'test', '223.104.67.20', 'XX XX', 'Chrome Mobile', 'Android 1.x', '0', '登录成功', '2022-04-02 18:57:36');
+INSERT INTO `sys_logininfor` VALUES (616, 'test', '113.69.170.44', 'XX XX', 'Chrome 10', 'Windows 10', '0', '登录成功', '2022-04-02 19:06:00');
+INSERT INTO `sys_logininfor` VALUES (617, 'admin', '111.79.8.103', 'XX XX', 'Chrome 9', 'Windows 10', '0', '登录成功', '2022-04-03 15:02:07');
+INSERT INTO `sys_logininfor` VALUES (618, 'admin', '127.0.0.1', '内网IP', 'Chrome 9', 'Windows 10', '0', '登录成功', '2022-04-03 15:02:25');
+INSERT INTO `sys_logininfor` VALUES (619, 'admin', '127.0.0.1', '内网IP', 'Chrome 9', 'Windows 10', '0', '登录成功', '2022-04-03 15:19:41');
+INSERT INTO `sys_logininfor` VALUES (620, 'admin', '127.0.0.1', '内网IP', 'Chrome 9', 'Windows 10', '0', '登录成功', '2022-04-03 15:27:42');
 
 -- ----------------------------
 -- Table structure for sys_menu
@@ -1330,7 +2721,7 @@ CREATE TABLE `sys_menu`  (
   `update_time` datetime NULL DEFAULT NULL COMMENT '更新时间',
   `remark` varchar(500) CHARACTER SET utf8 COLLATE utf8_bin NULL DEFAULT '' COMMENT '备注',
   PRIMARY KEY (`menu_id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 2030 CHARACTER SET = utf8 COLLATE = utf8_bin COMMENT = '菜单权限表' ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 2032 CHARACTER SET = utf8 COLLATE = utf8_bin COMMENT = '菜单权限表' ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of sys_menu
@@ -1450,6 +2841,7 @@ INSERT INTO `sys_menu` VALUES (2027, '导出评论列表', 2004, 2, '#', 'menuIt
 INSERT INTO `sys_menu` VALUES (2028, '添加评论', 2004, 3, '#', 'menuItem', 'F', '0', '1', 'wx:comment:add', '#', 'admin', '2021-12-26 17:15:31', '', NULL, '');
 INSERT INTO `sys_menu` VALUES (2029, '删除评论', 2004, 4, '#', 'menuItem', 'F', '0', '1', 'wx:comment:remove', '#', 'admin', '2021-12-26 17:15:58', 'admin', '2021-12-26 17:17:21', '');
 INSERT INTO `sys_menu` VALUES (2030, '修改评论信息', 2004, 5, '#', 'menuItem', 'F', '0', '1', 'wx:comment:edit', '#', 'admin', '2021-12-26 17:17:06', '', NULL, '');
+INSERT INTO `sys_menu` VALUES (2031, '消息推送', 4, 6, '/wx/push', 'menuItem', 'M', '0', '0', 'wx:push:view', 'fa fa-asl-interpreting', 'admin', '2022-03-24 21:21:03', '', NULL, '');
 
 -- ----------------------------
 -- Table structure for sys_notice
@@ -1467,7 +2859,7 @@ CREATE TABLE `sys_notice`  (
   `update_time` datetime NULL DEFAULT NULL COMMENT '更新时间',
   `remark` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin NULL DEFAULT NULL COMMENT '备注',
   PRIMARY KEY (`notice_id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 2 CHARACTER SET = utf8 COLLATE = utf8_bin COMMENT = '通知公告表' ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 3 CHARACTER SET = utf8 COLLATE = utf8_bin COMMENT = '通知公告表' ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of sys_notice
@@ -1497,7 +2889,7 @@ CREATE TABLE `sys_oper_log`  (
   `error_msg` varchar(2000) CHARACTER SET utf8 COLLATE utf8_bin NULL DEFAULT '' COMMENT '错误消息',
   `oper_time` datetime NULL DEFAULT NULL COMMENT '操作时间',
   PRIMARY KEY (`oper_id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 847 CHARACTER SET = utf8 COLLATE = utf8_bin COMMENT = '操作日志记录' ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 1494 CHARACTER SET = utf8 COLLATE = utf8_bin COMMENT = '操作日志记录' ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of sys_oper_log
@@ -2249,6 +3641,656 @@ INSERT INTO `sys_oper_log` VALUES (843, '帖子留言', 1, 'com.ruoyi.web.contro
 INSERT INTO `sys_oper_log` VALUES (844, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '127.0.0.1', '内网IP', '{\"comContent\":\"11\",\"comRelId\":175,\"params\":{}}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-08 22:34:10');
 INSERT INTO `sys_oper_log` VALUES (845, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '127.0.0.1', '内网IP', '{\"comContent\":\"11\",\"comRelId\":175,\"params\":{},\"parentId\":186}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-08 22:34:13');
 INSERT INTO `sys_oper_log` VALUES (846, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '127.0.0.1', '内网IP', '{\"comContent\":\"111\",\"comRelId\":175,\"params\":{},\"parentId\":187}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-08 22:34:17');
+INSERT INTO `sys_oper_log` VALUES (847, '代码生成', 2, 'com.ruoyi.generator.controller.GenController.editSave()', 'POST', 1, 'admin', '校园失物管理系统', '/tool/gen/edit', '127.0.0.1', '内网IP', '{\"tableId\":[\"20\"],\"tableName\":[\"laf_student\"],\"tableComment\":[\"学生表\"],\"className\":[\"LafStudent\"],\"functionAuthor\":[\"yang\"],\"remark\":[\"\"],\"columns[0].columnId\":[\"236\"],\"columns[0].sort\":[\"1\"],\"columns[0].columnComment\":[\"学生ID\"],\"columns[0].javaType\":[\"Long\"],\"columns[0].javaField\":[\"stuId\"],\"columns[0].isInsert\":[\"1\"],\"columns[0].isList\":[\"1\"],\"columns[0].isQuery\":[\"1\"],\"columns[0].queryType\":[\"EQ\"],\"columns[0].htmlType\":[\"input\"],\"columns[0].dictType\":[\"\"],\"columns[1].columnId\":[\"237\"],\"columns[1].sort\":[\"2\"],\"columns[1].columnComment\":[\"昵称\"],\"columns[1].javaType\":[\"String\"],\"columns[1].javaField\":[\"stuNick\"],\"columns[1].isInsert\":[\"1\"],\"columns[1].isEdit\":[\"1\"],\"columns[1].isList\":[\"1\"],\"columns[1].isQuery\":[\"1\"],\"columns[1].queryType\":[\"EQ\"],\"columns[1].htmlType\":[\"input\"],\"columns[1].dictType\":[\"\"],\"columns[2].columnId\":[\"238\"],\"columns[2].sort\":[\"3\"],\"columns[2].columnComment\":[\"姓名\"],\"columns[2].javaType\":[\"String\"],\"columns[2].javaField\":[\"stuName\"],\"columns[2].isInsert\":[\"1\"],\"columns[2].isEdit\":[\"1\"],\"columns[2].isList\":[\"1\"],\"columns[2].isQuery\":[\"1\"],\"columns[2].queryType\":[\"LIKE\"],\"columns[2].htmlType\":[\"input\"],\"columns[2].dictType\":[\"\"],\"columns[3].columnId\":[\"239\"],\"columns[3].sort\":[\"4\"],\"columns[3].columnComment\":[\"性别\"],\"columns[3].javaType\":[\"String\"],\"columns[3].javaField\":[\"stuSex\"],\"columns[3].isInsert\":[\"1\"],\"columns[3].isEdit\":[\"1\"],\"columns[3].isList\":[\"1\"],\"columns[3].isQuery\":[\"1\"],\"columns[3].queryType\":[\"EQ\"],\"columns[3].htmlType\":[\"select\"],\"columns[3].dictType\":[\"laf_user_sex\"],\"columns[4].columnId\":[\"240\"],\"columns[4].sort\":[\"5\"],\"columns[4].columnComment\":[\"学号\"],\"columns[4].javaType\":[\"String\"],\"columns[4].javaField\":[\"stuXh\"],\"columns[4].isInsert\":[\"1\"],\"columns[4].isEdit\":[\"1\"],\"columns[4].isList\":[\"1\"],\"columns[4].isQuery\":[\"1\"],\"columns[4].queryType\":[\"EQ\"],\"columns[4].htmlType\":[\"input\"],\"columns[4].dictType\":[\"\"],\"columns[5].columnId\":[\"241\"],\"columns[5].sort\":[\"6\"],\"columns[5].columnComment\":[\"密码\"],\"columns[5].javaType\":[\"String\"]', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-09 21:09:23');
+INSERT INTO `sys_oper_log` VALUES (848, '代码生成', 2, 'com.ruoyi.generator.controller.GenController.editSave()', 'POST', 1, 'admin', '校园失物管理系统', '/tool/gen/edit', '127.0.0.1', '内网IP', '{\"tableId\":[\"21\"],\"tableName\":[\"laf_release\"],\"tableComment\":[\"帖子表\"],\"className\":[\"LafRelease\"],\"functionAuthor\":[\"yang\"],\"remark\":[\"\"],\"columns[0].columnId\":[\"251\"],\"columns[0].sort\":[\"1\"],\"columns[0].columnComment\":[\"帖子ID\"],\"columns[0].javaType\":[\"Long\"],\"columns[0].javaField\":[\"relId\"],\"columns[0].isInsert\":[\"1\"],\"columns[0].isList\":[\"1\"],\"columns[0].isQuery\":[\"1\"],\"columns[0].queryType\":[\"EQ\"],\"columns[0].htmlType\":[\"input\"],\"columns[0].dictType\":[\"\"],\"columns[1].columnId\":[\"252\"],\"columns[1].sort\":[\"2\"],\"columns[1].columnComment\":[\"标题\"],\"columns[1].javaType\":[\"String\"],\"columns[1].javaField\":[\"relTitle\"],\"columns[1].isInsert\":[\"1\"],\"columns[1].isEdit\":[\"1\"],\"columns[1].isList\":[\"1\"],\"columns[1].isQuery\":[\"1\"],\"columns[1].queryType\":[\"LIKE\"],\"columns[1].htmlType\":[\"input\"],\"columns[1].dictType\":[\"\"],\"columns[2].columnId\":[\"253\"],\"columns[2].sort\":[\"3\"],\"columns[2].columnComment\":[\"描述\"],\"columns[2].javaType\":[\"String\"],\"columns[2].javaField\":[\"relDesc\"],\"columns[2].isInsert\":[\"1\"],\"columns[2].isEdit\":[\"1\"],\"columns[2].isList\":[\"1\"],\"columns[2].isQuery\":[\"1\"],\"columns[2].queryType\":[\"LIKE\"],\"columns[2].htmlType\":[\"input\"],\"columns[2].dictType\":[\"\"],\"columns[3].columnId\":[\"254\"],\"columns[3].sort\":[\"4\"],\"columns[3].columnComment\":[\"联系方式\"],\"columns[3].javaType\":[\"String\"],\"columns[3].javaField\":[\"relContact\"],\"columns[3].isInsert\":[\"1\"],\"columns[3].isEdit\":[\"1\"],\"columns[3].isList\":[\"1\"],\"columns[3].isQuery\":[\"1\"],\"columns[3].queryType\":[\"LIKE\"],\"columns[3].htmlType\":[\"input\"],\"columns[3].dictType\":[\"\"],\"columns[4].columnId\":[\"255\"],\"columns[4].sort\":[\"5\"],\"columns[4].columnComment\":[\"物品种类\"],\"columns[4].javaType\":[\"Long\"],\"columns[4].javaField\":[\"relCateId\"],\"columns[4].isInsert\":[\"1\"],\"columns[4].isEdit\":[\"1\"],\"columns[4].isList\":[\"1\"],\"columns[4].isQuery\":[\"1\"],\"columns[4].queryType\":[\"EQ\"],\"columns[4].htmlType\":[\"select\"],\"columns[4].dictType\":[\"laf_category\"],\"columns[5].columnId\":[\"256\"],\"columns[5].sort\":[\"6\"],\"columns[5].columnComment\":[\"认领时间\"],\"columns[5].jav', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-09 21:24:43');
+INSERT INTO `sys_oper_log` VALUES (849, '代码生成', 2, 'com.ruoyi.generator.controller.GenController.editSave()', 'POST', 1, 'admin', '校园失物管理系统', '/tool/gen/edit', '127.0.0.1', '内网IP', '{\"tableId\":[\"19\"],\"tableName\":[\"laf_category\"],\"tableComment\":[\"物品种类\"],\"className\":[\"LafCategory\"],\"functionAuthor\":[\"yang\"],\"remark\":[\"\"],\"columns[0].columnId\":[\"230\"],\"columns[0].sort\":[\"1\"],\"columns[0].columnComment\":[\"物品ID\"],\"columns[0].javaType\":[\"Long\"],\"columns[0].javaField\":[\"cateId\"],\"columns[0].isInsert\":[\"1\"],\"columns[0].isList\":[\"1\"],\"columns[0].isQuery\":[\"1\"],\"columns[0].queryType\":[\"EQ\"],\"columns[0].htmlType\":[\"input\"],\"columns[0].dictType\":[\"\"],\"columns[1].columnId\":[\"285\"],\"columns[1].sort\":[\"2\"],\"columns[1].columnComment\":[\"所属id\"],\"columns[1].javaType\":[\"Long\"],\"columns[1].javaField\":[\"parentId\"],\"columns[1].isInsert\":[\"1\"],\"columns[1].isEdit\":[\"1\"],\"columns[1].isList\":[\"1\"],\"columns[1].isQuery\":[\"1\"],\"columns[1].queryType\":[\"EQ\"],\"columns[1].isRequired\":[\"1\"],\"columns[1].htmlType\":[\"input\"],\"columns[1].dictType\":[\"\"],\"columns[2].columnId\":[\"232\"],\"columns[2].sort\":[\"3\"],\"columns[2].columnComment\":[\"名称\"],\"columns[2].javaType\":[\"String\"],\"columns[2].javaField\":[\"cateName\"],\"columns[2].isInsert\":[\"1\"],\"columns[2].isEdit\":[\"1\"],\"columns[2].isList\":[\"1\"],\"columns[2].isQuery\":[\"1\"],\"columns[2].queryType\":[\"LIKE\"],\"columns[2].htmlType\":[\"input\"],\"columns[2].dictType\":[\"\"],\"columns[3].columnId\":[\"233\"],\"columns[3].sort\":[\"4\"],\"columns[3].columnComment\":[\"创建时间\"],\"columns[3].javaType\":[\"Date\"],\"columns[3].javaField\":[\"createTime\"],\"columns[3].isInsert\":[\"1\"],\"columns[3].queryType\":[\"EQ\"],\"columns[3].htmlType\":[\"datetime\"],\"columns[3].dictType\":[\"\"],\"columns[4].columnId\":[\"234\"],\"columns[4].sort\":[\"5\"],\"columns[4].columnComment\":[\"创建者\"],\"columns[4].javaType\":[\"String\"],\"columns[4].javaField\":[\"createBy\"],\"columns[4].isInsert\":[\"1\"],\"columns[4].queryType\":[\"EQ\"],\"columns[4].htmlType\":[\"input\"],\"columns[4].dictType\":[\"\"],\"columns[5].columnId\":[\"284\"],\"columns[5].sort\":[\"6\"],\"columns[5].columnComment\":[\"状态\"],\"columns[5].javaType\":[\"String\"],\"columns[5].javaField\":[\"cateStatus\"],\"columns[5].isInsert\":[\"1\"],\"columns[5].isEdit\":[\"1\"],\"columns[5].isList\":[\"1\"],\"colu', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-09 21:28:18');
+INSERT INTO `sys_oper_log` VALUES (850, '代码生成', 8, 'com.ruoyi.generator.controller.GenController.download()', 'GET', 1, 'admin', '校园失物管理系统', '/tool/gen/download/laf_category', '127.0.0.1', '内网IP', '\"laf_category\"', NULL, 0, NULL, '2022-03-09 21:30:12');
+INSERT INTO `sys_oper_log` VALUES (851, '代码生成', 2, 'com.ruoyi.generator.controller.GenController.editSave()', 'POST', 1, 'admin', '校园失物管理系统', '/tool/gen/edit', '127.0.0.1', '内网IP', '{\"tableId\":[\"19\"],\"tableName\":[\"laf_category\"],\"tableComment\":[\"物品种类\"],\"className\":[\"LafCategory\"],\"functionAuthor\":[\"yang\"],\"remark\":[\"\"],\"columns[0].columnId\":[\"230\"],\"columns[0].sort\":[\"1\"],\"columns[0].columnComment\":[\"物品ID\"],\"columns[0].javaType\":[\"Long\"],\"columns[0].javaField\":[\"cateId\"],\"columns[0].isInsert\":[\"1\"],\"columns[0].isEdit\":[\"1\"],\"columns[0].isList\":[\"1\"],\"columns[0].isQuery\":[\"1\"],\"columns[0].queryType\":[\"EQ\"],\"columns[0].htmlType\":[\"input\"],\"columns[0].dictType\":[\"\"],\"columns[1].columnId\":[\"285\"],\"columns[1].sort\":[\"2\"],\"columns[1].columnComment\":[\"所属id\"],\"columns[1].javaType\":[\"Long\"],\"columns[1].javaField\":[\"parentId\"],\"columns[1].isInsert\":[\"1\"],\"columns[1].isEdit\":[\"1\"],\"columns[1].isList\":[\"1\"],\"columns[1].isQuery\":[\"1\"],\"columns[1].queryType\":[\"EQ\"],\"columns[1].isRequired\":[\"1\"],\"columns[1].htmlType\":[\"input\"],\"columns[1].dictType\":[\"\"],\"columns[2].columnId\":[\"232\"],\"columns[2].sort\":[\"3\"],\"columns[2].columnComment\":[\"名称\"],\"columns[2].javaType\":[\"String\"],\"columns[2].javaField\":[\"cateName\"],\"columns[2].isInsert\":[\"1\"],\"columns[2].isEdit\":[\"1\"],\"columns[2].isList\":[\"1\"],\"columns[2].isQuery\":[\"1\"],\"columns[2].queryType\":[\"LIKE\"],\"columns[2].htmlType\":[\"input\"],\"columns[2].dictType\":[\"\"],\"columns[3].columnId\":[\"233\"],\"columns[3].sort\":[\"4\"],\"columns[3].columnComment\":[\"创建时间\"],\"columns[3].javaType\":[\"Date\"],\"columns[3].javaField\":[\"createTime\"],\"columns[3].isInsert\":[\"1\"],\"columns[3].queryType\":[\"EQ\"],\"columns[3].htmlType\":[\"datetime\"],\"columns[3].dictType\":[\"\"],\"columns[4].columnId\":[\"234\"],\"columns[4].sort\":[\"5\"],\"columns[4].columnComment\":[\"创建者\"],\"columns[4].javaType\":[\"String\"],\"columns[4].javaField\":[\"createBy\"],\"columns[4].isInsert\":[\"1\"],\"columns[4].queryType\":[\"EQ\"],\"columns[4].htmlType\":[\"input\"],\"columns[4].dictType\":[\"\"],\"columns[5].columnId\":[\"284\"],\"columns[5].sort\":[\"6\"],\"columns[5].columnComment\":[\"状态\"],\"columns[5].javaType\":[\"String\"],\"columns[5].javaField\":[\"cateStatus\"],\"columns[5].isInsert\":[\"1\"],\"columns[5].isEdit\":[\"1\"],\"colu', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-09 21:34:15');
+INSERT INTO `sys_oper_log` VALUES (852, '代码生成', 2, 'com.ruoyi.generator.controller.GenController.editSave()', 'POST', 1, 'admin', '校园失物管理系统', '/tool/gen/edit', '127.0.0.1', '内网IP', '{\"tableId\":[\"19\"],\"tableName\":[\"laf_category\"],\"tableComment\":[\"物品种类\"],\"className\":[\"LafCategory\"],\"functionAuthor\":[\"yang\"],\"remark\":[\"\"],\"columns[0].columnId\":[\"230\"],\"columns[0].sort\":[\"1\"],\"columns[0].columnComment\":[\"物品ID\"],\"columns[0].javaType\":[\"Long\"],\"columns[0].javaField\":[\"cateId\"],\"columns[0].isInsert\":[\"1\"],\"columns[0].isList\":[\"1\"],\"columns[0].isQuery\":[\"1\"],\"columns[0].queryType\":[\"EQ\"],\"columns[0].htmlType\":[\"input\"],\"columns[0].dictType\":[\"\"],\"columns[1].columnId\":[\"285\"],\"columns[1].sort\":[\"2\"],\"columns[1].columnComment\":[\"所属id\"],\"columns[1].javaType\":[\"Long\"],\"columns[1].javaField\":[\"parentId\"],\"columns[1].isInsert\":[\"1\"],\"columns[1].isEdit\":[\"1\"],\"columns[1].isList\":[\"1\"],\"columns[1].isQuery\":[\"1\"],\"columns[1].queryType\":[\"EQ\"],\"columns[1].isRequired\":[\"1\"],\"columns[1].htmlType\":[\"input\"],\"columns[1].dictType\":[\"\"],\"columns[2].columnId\":[\"232\"],\"columns[2].sort\":[\"3\"],\"columns[2].columnComment\":[\"名称\"],\"columns[2].javaType\":[\"String\"],\"columns[2].javaField\":[\"cateName\"],\"columns[2].isInsert\":[\"1\"],\"columns[2].isEdit\":[\"1\"],\"columns[2].isList\":[\"1\"],\"columns[2].isQuery\":[\"1\"],\"columns[2].queryType\":[\"LIKE\"],\"columns[2].htmlType\":[\"input\"],\"columns[2].dictType\":[\"\"],\"columns[3].columnId\":[\"233\"],\"columns[3].sort\":[\"4\"],\"columns[3].columnComment\":[\"创建时间\"],\"columns[3].javaType\":[\"Date\"],\"columns[3].javaField\":[\"createTime\"],\"columns[3].isInsert\":[\"1\"],\"columns[3].queryType\":[\"EQ\"],\"columns[3].htmlType\":[\"datetime\"],\"columns[3].dictType\":[\"\"],\"columns[4].columnId\":[\"234\"],\"columns[4].sort\":[\"5\"],\"columns[4].columnComment\":[\"创建者\"],\"columns[4].javaType\":[\"String\"],\"columns[4].javaField\":[\"createBy\"],\"columns[4].isInsert\":[\"1\"],\"columns[4].queryType\":[\"EQ\"],\"columns[4].htmlType\":[\"input\"],\"columns[4].dictType\":[\"\"],\"columns[5].columnId\":[\"284\"],\"columns[5].sort\":[\"6\"],\"columns[5].columnComment\":[\"状态\"],\"columns[5].javaType\":[\"String\"],\"columns[5].javaField\":[\"cateStatus\"],\"columns[5].isInsert\":[\"1\"],\"columns[5].isEdit\":[\"1\"],\"columns[5].isList\":[\"1\"],\"colu', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-09 21:34:28');
+INSERT INTO `sys_oper_log` VALUES (853, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '127.0.0.1', '内网IP', '{\"comContent\":\"111\",\"comRelId\":174,\"params\":{},\"parentId\":152}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-10 13:13:39');
+INSERT INTO `sys_oper_log` VALUES (854, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '127.0.0.1', '内网IP', '{\"comContent\":\"1111\",\"comRelId\":122,\"params\":{},\"parentId\":5}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-10 13:24:36');
+INSERT INTO `sys_oper_log` VALUES (855, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '127.0.0.1', '内网IP', '{\"comContent\":\"111\",\"comRelId\":122,\"params\":{},\"parentId\":60}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-10 13:30:42');
+INSERT INTO `sys_oper_log` VALUES (856, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '127.0.0.1', '内网IP', '{\"comContent\":\"111\",\"comRelId\":122,\"params\":{},\"parentId\":64}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-10 13:34:16');
+INSERT INTO `sys_oper_log` VALUES (857, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '127.0.0.1', '内网IP', '{\"comContent\":\"你好\",\"comRelId\":122,\"params\":{},\"parentId\":64}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-10 13:36:02');
+INSERT INTO `sys_oper_log` VALUES (858, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '127.0.0.1', '内网IP', '{\"comContent\":\"1111\",\"comRelId\":122,\"params\":{},\"parentId\":60}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-10 13:40:02');
+INSERT INTO `sys_oper_log` VALUES (859, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '127.0.0.1', '内网IP', '{\"comContent\":\"1111\",\"comRelId\":122,\"params\":{},\"parentId\":60}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-10 13:53:52');
+INSERT INTO `sys_oper_log` VALUES (860, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '127.0.0.1', '内网IP', '{\"comContent\":\"1111\",\"comRelId\":122,\"params\":{},\"parentId\":60}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-10 13:54:20');
+INSERT INTO `sys_oper_log` VALUES (861, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '127.0.0.1', '内网IP', '{\"comContent\":\"你好\",\"comRelId\":122,\"params\":{},\"parentId\":64}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-10 13:54:59');
+INSERT INTO `sys_oper_log` VALUES (862, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '127.0.0.1', '内网IP', '{\"comContent\":\"你好\",\"comRelId\":122,\"params\":{},\"parentId\":60}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-10 13:55:41');
+INSERT INTO `sys_oper_log` VALUES (863, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '127.0.0.1', '内网IP', '{\"comContent\":\"你是谁？\",\"comRelId\":122,\"params\":{},\"parentId\":60}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-10 13:56:45');
+INSERT INTO `sys_oper_log` VALUES (864, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '127.0.0.1', '内网IP', '{\"comContent\":\"11111\",\"comRelId\":132,\"params\":{},\"parentId\":100}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-10 13:58:03');
+INSERT INTO `sys_oper_log` VALUES (865, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '127.0.0.1', '内网IP', '{\"comContent\":\"1111\",\"comRelId\":149,\"params\":{},\"parentId\":157}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-10 13:58:39');
+INSERT INTO `sys_oper_log` VALUES (866, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '127.0.0.1', '内网IP', '{\"comContent\":\"煞笔\",\"comRelId\":122,\"params\":{},\"parentId\":5}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-10 13:59:23');
+INSERT INTO `sys_oper_log` VALUES (867, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '127.0.0.1', '内网IP', '{\"comContent\":\"在吗\",\"comRelId\":122,\"params\":{},\"parentId\":5}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-10 13:59:28');
+INSERT INTO `sys_oper_log` VALUES (868, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '127.0.0.1', '内网IP', '{\"comContent\":\"123\",\"comRelId\":175,\"params\":{},\"parentId\":186}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-10 14:00:27');
+INSERT INTO `sys_oper_log` VALUES (869, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '127.0.0.1', '内网IP', '{\"comContent\":\"111\",\"comRelId\":120,\"params\":{},\"parentId\":66}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-10 14:18:38');
+INSERT INTO `sys_oper_log` VALUES (870, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '127.0.0.1', '内网IP', '{\"comContent\":\"3.10\",\"comRelId\":120,\"params\":{},\"parentId\":66}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-10 14:30:08');
+INSERT INTO `sys_oper_log` VALUES (871, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '127.0.0.1', '内网IP', '{\"comContent\":\"找到了许世平\",\"comRelId\":124,\"params\":{}}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-10 14:30:34');
+INSERT INTO `sys_oper_log` VALUES (872, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '127.0.0.1', '内网IP', '{\"comContent\":\"测试\",\"comRelId\":128,\"params\":{}}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-10 14:30:43');
+INSERT INTO `sys_oper_log` VALUES (873, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '127.0.0.1', '内网IP', '{\"comContent\":\"11111\",\"comRelId\":174,\"params\":{}}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-10 14:31:53');
+INSERT INTO `sys_oper_log` VALUES (874, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '127.0.0.1', '内网IP', '{\"comContent\":\"115154546464\",\"comRelId\":174,\"params\":{},\"parentId\":189}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-10 14:32:13');
+INSERT INTO `sys_oper_log` VALUES (875, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '127.0.0.1', '内网IP', '{\"comContent\":\"你好\",\"comRelId\":131,\"params\":{},\"parentId\":90}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-10 14:33:13');
+INSERT INTO `sys_oper_log` VALUES (876, '代码生成', 6, 'com.ruoyi.generator.controller.GenController.importTableSave()', 'POST', 1, 'admin', '校园失物管理系统', '/tool/gen/importTable', '127.0.0.1', '内网IP', '{\"tables\":[\"laf_api_token\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-10 15:08:06');
+INSERT INTO `sys_oper_log` VALUES (877, '代码生成', 2, 'com.ruoyi.generator.controller.GenController.editSave()', 'POST', 1, 'admin', '校园失物管理系统', '/tool/gen/edit', '127.0.0.1', '内网IP', '{\"tableId\":[\"25\"],\"tableName\":[\"laf_api_token\"],\"tableComment\":[\"apiToken\"],\"className\":[\"LafApiToken\"],\"functionAuthor\":[\"yang\"],\"remark\":[\"\"],\"columns[0].columnId\":[\"312\"],\"columns[0].sort\":[\"1\"],\"columns[0].columnComment\":[\"ID\"],\"columns[0].javaType\":[\"Long\"],\"columns[0].javaField\":[\"id\"],\"columns[0].isInsert\":[\"1\"],\"columns[0].isList\":[\"1\"],\"columns[0].isQuery\":[\"1\"],\"columns[0].queryType\":[\"EQ\"],\"columns[0].htmlType\":[\"input\"],\"columns[0].dictType\":[\"\"],\"columns[1].columnId\":[\"313\"],\"columns[1].sort\":[\"2\"],\"columns[1].columnComment\":[\"Token\"],\"columns[1].javaType\":[\"String\"],\"columns[1].javaField\":[\"token\"],\"columns[1].isInsert\":[\"1\"],\"columns[1].isEdit\":[\"1\"],\"columns[1].isList\":[\"1\"],\"columns[1].isQuery\":[\"1\"],\"columns[1].queryType\":[\"EQ\"],\"columns[1].htmlType\":[\"input\"],\"columns[1].dictType\":[\"\"],\"columns[2].columnId\":[\"314\"],\"columns[2].sort\":[\"3\"],\"columns[2].columnComment\":[\"创建时间\"],\"columns[2].javaType\":[\"Date\"],\"columns[2].javaField\":[\"createTime\"],\"columns[2].isInsert\":[\"1\"],\"columns[2].isEdit\":[\"1\"],\"columns[2].isList\":[\"1\"],\"columns[2].isQuery\":[\"1\"],\"columns[2].queryType\":[\"EQ\"],\"columns[2].htmlType\":[\"datetime\"],\"columns[2].dictType\":[\"\"],\"tplCategory\":[\"crud\"],\"packageName\":[\"com.ruoyi.wx\"],\"moduleName\":[\"wx\"],\"businessName\":[\"token\"],\"functionName\":[\"ApiToken\"],\"params[parentMenuId]\":[\"4\"],\"params[parentMenuName]\":[\"失物招领\"],\"genType\":[\"0\"],\"genPath\":[\"/\"],\"subTableName\":[\"\"],\"params[treeCode]\":[\"\"],\"params[treeParentCode]\":[\"\"],\"params[treeName]\":[\"\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-10 15:17:11');
+INSERT INTO `sys_oper_log` VALUES (878, '代码生成', 8, 'com.ruoyi.generator.controller.GenController.download()', 'GET', 1, 'admin', '校园失物管理系统', '/tool/gen/download/laf_api_token', '127.0.0.1', '内网IP', '\"laf_api_token\"', NULL, 0, NULL, '2022-03-10 15:18:37');
+INSERT INTO `sys_oper_log` VALUES (879, '代码生成', 2, 'com.ruoyi.generator.controller.GenController.synchDb()', 'GET', 1, 'admin', '校园失物管理系统', '/tool/gen/synchDb/laf_api_token', '127.0.0.1', '内网IP', '\"laf_api_token\"', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-10 18:59:10');
+INSERT INTO `sys_oper_log` VALUES (880, '代码生成', 2, 'com.ruoyi.generator.controller.GenController.editSave()', 'POST', 1, 'admin', '校园失物管理系统', '/tool/gen/edit', '127.0.0.1', '内网IP', '{\"tableId\":[\"25\"],\"tableName\":[\"laf_api_token\"],\"tableComment\":[\"apiToken\"],\"className\":[\"LafApiToken\"],\"functionAuthor\":[\"yang\"],\"remark\":[\"\"],\"columns[0].columnId\":[\"312\"],\"columns[0].sort\":[\"1\"],\"columns[0].columnComment\":[\"ID\"],\"columns[0].javaType\":[\"Long\"],\"columns[0].javaField\":[\"id\"],\"columns[0].isInsert\":[\"1\"],\"columns[0].isList\":[\"1\"],\"columns[0].isQuery\":[\"1\"],\"columns[0].queryType\":[\"EQ\"],\"columns[0].htmlType\":[\"input\"],\"columns[0].dictType\":[\"\"],\"columns[1].columnId\":[\"313\"],\"columns[1].sort\":[\"2\"],\"columns[1].columnComment\":[\"Token\"],\"columns[1].javaType\":[\"String\"],\"columns[1].javaField\":[\"token\"],\"columns[1].isInsert\":[\"1\"],\"columns[1].isEdit\":[\"1\"],\"columns[1].isList\":[\"1\"],\"columns[1].isQuery\":[\"1\"],\"columns[1].queryType\":[\"EQ\"],\"columns[1].htmlType\":[\"input\"],\"columns[1].dictType\":[\"\"],\"columns[2].columnId\":[\"315\"],\"columns[2].sort\":[\"2\"],\"columns[2].columnComment\":[\"名称\"],\"columns[2].javaType\":[\"String\"],\"columns[2].javaField\":[\"name\"],\"columns[2].isInsert\":[\"1\"],\"columns[2].isEdit\":[\"1\"],\"columns[2].isList\":[\"1\"],\"columns[2].isQuery\":[\"1\"],\"columns[2].queryType\":[\"LIKE\"],\"columns[2].htmlType\":[\"input\"],\"columns[2].dictType\":[\"\"],\"columns[3].columnId\":[\"314\"],\"columns[3].sort\":[\"3\"],\"columns[3].columnComment\":[\"创建时间\"],\"columns[3].javaType\":[\"Date\"],\"columns[3].javaField\":[\"createTime\"],\"columns[3].isInsert\":[\"1\"],\"columns[3].isEdit\":[\"1\"],\"columns[3].isList\":[\"1\"],\"columns[3].isQuery\":[\"1\"],\"columns[3].queryType\":[\"EQ\"],\"columns[3].htmlType\":[\"datetime\"],\"columns[3].dictType\":[\"\"],\"tplCategory\":[\"crud\"],\"packageName\":[\"com.ruoyi.wx\"],\"moduleName\":[\"wx\"],\"businessName\":[\"token\"],\"functionName\":[\"ApiToken\"],\"params[parentMenuId]\":[\"4\"],\"params[parentMenuName]\":[\"失物招领\"],\"genType\":[\"0\"],\"genPath\":[\"/\"],\"subTableName\":[\"\"],\"params[treeCode]\":[\"\"],\"params[treeParentCode]\":[\"\"],\"params[treeName]\":[\"\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-10 18:59:23');
+INSERT INTO `sys_oper_log` VALUES (881, '定时任务', 1, 'com.ruoyi.quartz.controller.SysJobController.addSave()', 'POST', 1, 'admin', '校园失物管理系统', '/monitor/job/add', '127.0.0.1', '内网IP', '{\"createBy\":[\"admin\"],\"jobName\":[\"获取微信AccessToken\"],\"jobGroup\":[\"DEFAULT\"],\"invokeTarget\":[\"tokenTask.getAccessToken()\"],\"cronExpression\":[\"0 0/59 * * * ? \"],\"misfirePolicy\":[\"1\"],\"concurrent\":[\"1\"],\"status\":[\"0\"],\"remark\":[\"\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-10 19:18:33');
+INSERT INTO `sys_oper_log` VALUES (882, '定时任务', 2, 'com.ruoyi.quartz.controller.SysJobController.changeStatus()', 'POST', 1, 'admin', '校园失物管理系统', '/monitor/job/changeStatus', '127.0.0.1', '内网IP', '{\"jobId\":[\"100\"],\"jobGroup\":[\"DEFAULT\"],\"status\":[\"0\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-10 19:18:37');
+INSERT INTO `sys_oper_log` VALUES (883, '定时任务', 2, 'com.ruoyi.quartz.controller.SysJobController.run()', 'POST', 1, 'admin', '校园失物管理系统', '/monitor/job/run', '127.0.0.1', '内网IP', '{\"jobId\":[\"100\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-10 19:19:49');
+INSERT INTO `sys_oper_log` VALUES (884, '定时任务', 2, 'com.ruoyi.quartz.controller.SysJobController.run()', 'POST', 1, 'admin', '校园失物管理系统', '/monitor/job/run', '127.0.0.1', '内网IP', '{\"jobId\":[\"100\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-10 19:20:46');
+INSERT INTO `sys_oper_log` VALUES (885, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '127.0.0.1', '内网IP', '{\"comContent\":\"1111\",\"comRelId\":125,\"params\":{}}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-10 19:22:26');
+INSERT INTO `sys_oper_log` VALUES (886, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '127.0.0.1', '内网IP', '{\"comContent\":\"1111\",\"comRelId\":175,\"params\":{}}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-10 19:25:18');
+INSERT INTO `sys_oper_log` VALUES (887, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '127.0.0.1', '内网IP', '{\"comContent\":\"1111\",\"comRelId\":175,\"params\":{},\"parentId\":186}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-10 19:25:28');
+INSERT INTO `sys_oper_log` VALUES (888, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '127.0.0.1', '内网IP', '{\"comContent\":\"1111\",\"comRelId\":175,\"params\":{},\"parentId\":213}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-10 19:25:46');
+INSERT INTO `sys_oper_log` VALUES (889, '定时任务', 1, 'com.ruoyi.quartz.controller.SysJobController.addSave()', 'POST', 1, 'admin', '校园失物管理系统', '/monitor/job/add', '127.0.0.1', '内网IP', '{\"createBy\":[\"admin\"],\"jobName\":[\"baiduAccessToken\"],\"jobGroup\":[\"DEFAULT\"],\"invokeTarget\":[\"tokenTask.getOcrAccessToken()\"],\"cronExpression\":[\"0 0/59 0 1/28 1/1 ? \"],\"misfirePolicy\":[\"1\"],\"concurrent\":[\"1\"],\"status\":[\"0\"],\"remark\":[\"\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-10 19:42:09');
+INSERT INTO `sys_oper_log` VALUES (890, '定时任务', 2, 'com.ruoyi.quartz.controller.SysJobController.changeStatus()', 'POST', 1, 'admin', '校园失物管理系统', '/monitor/job/changeStatus', '127.0.0.1', '内网IP', '{\"jobId\":[\"101\"],\"jobGroup\":[\"DEFAULT\"],\"status\":[\"0\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-10 19:45:16');
+INSERT INTO `sys_oper_log` VALUES (891, '定时任务', 2, 'com.ruoyi.quartz.controller.SysJobController.run()', 'POST', 1, 'admin', '校园失物管理系统', '/monitor/job/run', '127.0.0.1', '内网IP', '{\"jobId\":[\"101\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-10 19:45:34');
+INSERT INTO `sys_oper_log` VALUES (892, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '127.0.0.1', '内网IP', '{\"comContent\":\"1111\",\"comRelId\":174,\"params\":{}}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-10 19:46:15');
+INSERT INTO `sys_oper_log` VALUES (893, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '127.0.0.1', '内网IP', '{\"comContent\":\"111\",\"comRelId\":175,\"params\":{},\"parentId\":213}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-10 20:02:11');
+INSERT INTO `sys_oper_log` VALUES (894, '帖子留言', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.remove()', 'GET', 1, NULL, NULL, '/wx/api/info/auth/comment/delete', '127.0.0.1', '内网IP', '{\"id\":[\"189\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-10 20:03:49');
+INSERT INTO `sys_oper_log` VALUES (895, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '127.0.0.1', '内网IP', '{\"comContent\":\"11\",\"comRelId\":174,\"params\":{},\"parentId\":210}', NULL, 1, '\r\n### Error updating database.  Cause: java.sql.SQLIntegrityConstraintViolationException: Cannot add or update a child row: a foreign key constraint fails (`laf`.`laf_comment`, CONSTRAINT `del_comment` FOREIGN KEY (`parent_id`) REFERENCES `laf_comment` (`com_id`) ON DELETE CASCADE ON UPDATE CASCADE)\r\n### The error may exist in file [D:\\Programs\\WXapp\\失物招领app\\web-laf\\yang-wxlaf\\target\\classes\\mapper\\wx\\LafCommentMapper.xml]\r\n### The error may involve com.ruoyi.wx.mapper.LafCommentMapper.insertLafComment-Inline\r\n### The error occurred while setting parameters\r\n### SQL: insert into laf_comment          ( parent_id,             com_rel_id,             com_stu_id,             com_content,             create_time )           values ( ?,             ?,             ?,             ?,             ? )\r\n### Cause: java.sql.SQLIntegrityConstraintViolationException: Cannot add or update a child row: a foreign key constraint fails (`laf`.`laf_comment`, CONSTRAINT `del_comment` FOREIGN KEY (`parent_id`) REFERENCES `laf_comment` (`com_id`) ON DELETE CASCADE ON UPDATE CASCADE)\n; Cannot add or update a child row: a foreign key constraint fails (`laf`.`laf_comment`, CONSTRAINT `del_comment` FOREIGN KEY (`parent_id`) REFERENCES `laf_comment` (`com_id`) ON DELETE CASCADE ON UPDATE CASCADE); nested exception is java.sql.SQLIntegrityConstraintViolationException: Cannot add or update a child row: a foreign key constraint fails (`laf`.`laf_comment`, CONSTRAINT `del_comment` FOREIGN KEY (`parent_id`) REFERENCES `laf_comment` (`com_id`) ON DELETE CASCADE ON UPDATE CASCADE)', '2022-03-10 20:03:59');
+INSERT INTO `sys_oper_log` VALUES (896, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '127.0.0.1', '内网IP', '{\"comContent\":\"234234\",\"comRelId\":174,\"params\":{}}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-10 20:06:52');
+INSERT INTO `sys_oper_log` VALUES (897, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '127.0.0.1', '内网IP', '{\"comContent\":\"234324\",\"comRelId\":174,\"params\":{},\"parentId\":219}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-10 20:06:57');
+INSERT INTO `sys_oper_log` VALUES (898, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '127.0.0.1', '内网IP', '{\"comContent\":\"324\",\"comRelId\":174,\"params\":{},\"parentId\":220}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-10 20:07:01');
+INSERT INTO `sys_oper_log` VALUES (899, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '127.0.0.1', '内网IP', '{\"comContent\":\"234\",\"comRelId\":174,\"params\":{},\"parentId\":152}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-10 20:07:06');
+INSERT INTO `sys_oper_log` VALUES (900, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '127.0.0.1', '内网IP', '{\"comContent\":\"234\",\"comRelId\":174,\"params\":{},\"parentId\":222}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-10 20:07:15');
+INSERT INTO `sys_oper_log` VALUES (901, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '127.0.0.1', '内网IP', '{\"comContent\":\"23432\",\"comRelId\":174,\"params\":{},\"parentId\":223}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-10 20:07:19');
+INSERT INTO `sys_oper_log` VALUES (902, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '127.0.0.1', '内网IP', '{\"comContent\":\"2342134\",\"comRelId\":174,\"params\":{},\"parentId\":152}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-10 20:07:22');
+INSERT INTO `sys_oper_log` VALUES (903, '帖子留言', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.remove()', 'GET', 1, NULL, NULL, '/wx/api/info/auth/comment/delete', '127.0.0.1', '内网IP', '{\"id\":[\"223\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-10 20:07:44');
+INSERT INTO `sys_oper_log` VALUES (904, '帖子留言', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.remove()', 'GET', 1, NULL, NULL, '/wx/api/info/auth/comment/delete', '127.0.0.1', '内网IP', '{\"id\":[\"222\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-10 20:07:47');
+INSERT INTO `sys_oper_log` VALUES (905, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '127.0.0.1', '内网IP', '{\"comContent\":\"11\",\"comRelId\":172,\"params\":{}}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-10 20:07:54');
+INSERT INTO `sys_oper_log` VALUES (906, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '127.0.0.1', '内网IP', '{\"comContent\":\"111\",\"comRelId\":172,\"params\":{},\"parentId\":226}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-10 20:07:58');
+INSERT INTO `sys_oper_log` VALUES (907, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '127.0.0.1', '内网IP', '{\"comContent\":\"hee\",\"comRelId\":172,\"params\":{},\"parentId\":227}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-10 20:08:08');
+INSERT INTO `sys_oper_log` VALUES (908, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '127.0.0.1', '内网IP', '{\"comContent\":\"测试视图\",\"comRelId\":175,\"params\":{}}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-10 21:15:12');
+INSERT INTO `sys_oper_log` VALUES (909, '帖子留言', 3, 'com.ruoyi.web.controller.wx.LafCommentController.remove()', 'GET', 1, 'admin', '校园失物管理系统', '/wx/comment/remove/229', '127.0.0.1', '内网IP', '229', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-11 15:27:12');
+INSERT INTO `sys_oper_log` VALUES (910, '帖子留言', 3, 'com.ruoyi.web.controller.wx.LafCommentController.remove()', 'GET', 1, 'admin', '校园失物管理系统', '/wx/comment/remove/213', '127.0.0.1', '内网IP', '213', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-11 15:27:18');
+INSERT INTO `sys_oper_log` VALUES (911, '帖子', 3, 'com.ruoyi.web.controller.wx.LafReleaseController.remove()', 'POST', 1, 'admin', '校园失物管理系统', '/wx/release/remove', '127.0.0.1', '内网IP', '{\"ids\":[\"173\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-11 15:28:04');
+INSERT INTO `sys_oper_log` VALUES (912, '帖子', 3, 'com.ruoyi.web.controller.wx.LafReleaseController.remove()', 'POST', 1, 'admin', '校园失物管理系统', '/wx/release/remove', '127.0.0.1', '内网IP', '{\"ids\":[\"172\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-11 15:28:34');
+INSERT INTO `sys_oper_log` VALUES (913, '学生', 3, 'com.ruoyi.web.controller.wx.LafStudentController.remove()', 'POST', 1, 'admin', '校园失物管理系统', '/wx/student/remove', '127.0.0.1', '内网IP', '{\"ids\":[\"5\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-11 15:29:57');
+INSERT INTO `sys_oper_log` VALUES (914, '帖子', 2, 'com.ruoyi.web.controller.wx.LafReleaseController.editSave()', 'POST', 1, 'admin', '校园失物管理系统', '/wx/release/edit', '127.0.0.1', '内网IP', '{\"relId\":[\"168\"],\"relTitle\":[\"1\"],\"relDesc\":[\"哈哈\"],\"relContact\":[\"apipost\"],\"relCateId\":[\"1\"],\"relTime\":[\"\"],\"relCampus\":[\"南昌校区\"],\"createPlace\":[\"\"],\"createId\":[\"4\"],\"relImage\":[\"/img/user/tiezi/wDEbmeeRgTWMc6f76911d74279584875503a867e7d4f.png\"],\"relStatus\":[\"1\"],\"relStar\":[\"0\"],\"relFlag\":[\"2\"],\"relFlow\":[\"1\"],\"relDel\":[\"2\"],\"relClaimId\":[\"\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-11 15:31:14');
+INSERT INTO `sys_oper_log` VALUES (915, '代码生成', 6, 'com.ruoyi.generator.controller.GenController.importTableSave()', 'POST', 1, 'admin', '校园失物管理系统', '/tool/gen/importTable', '127.0.0.1', '内网IP', '{\"tables\":[\"laf_wx_pushview\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-11 16:00:28');
+INSERT INTO `sys_oper_log` VALUES (916, '代码生成', 2, 'com.ruoyi.generator.controller.GenController.editSave()', 'POST', 1, 'admin', '校园失物管理系统', '/tool/gen/edit', '127.0.0.1', '内网IP', '{\"tableId\":[\"26\"],\"tableName\":[\"laf_wx_pushview\"],\"tableComment\":[\"VIEW\"],\"className\":[\"LafWxPushview\"],\"functionAuthor\":[\"yang\"],\"remark\":[\"\"],\"columns[0].columnId\":[\"316\"],\"columns[0].sort\":[\"1\"],\"columns[0].columnComment\":[\"评论id\"],\"columns[0].javaType\":[\"Long\"],\"columns[0].javaField\":[\"comId\"],\"columns[0].isInsert\":[\"1\"],\"columns[0].isEdit\":[\"1\"],\"columns[0].isList\":[\"1\"],\"columns[0].isQuery\":[\"1\"],\"columns[0].queryType\":[\"EQ\"],\"columns[0].isRequired\":[\"1\"],\"columns[0].htmlType\":[\"input\"],\"columns[0].dictType\":[\"\"],\"columns[1].columnId\":[\"317\"],\"columns[1].sort\":[\"2\"],\"columns[1].columnComment\":[\"评论内容\"],\"columns[1].javaType\":[\"String\"],\"columns[1].javaField\":[\"comContent\"],\"columns[1].isInsert\":[\"1\"],\"columns[1].isEdit\":[\"1\"],\"columns[1].isList\":[\"1\"],\"columns[1].isQuery\":[\"1\"],\"columns[1].queryType\":[\"EQ\"],\"columns[1].htmlType\":[\"summernote\"],\"columns[1].dictType\":[\"\"],\"columns[2].columnId\":[\"318\"],\"columns[2].sort\":[\"3\"],\"columns[2].columnComment\":[\"创建时间\"],\"columns[2].javaType\":[\"Date\"],\"columns[2].javaField\":[\"comTime\"],\"columns[2].isInsert\":[\"1\"],\"columns[2].isEdit\":[\"1\"],\"columns[2].isList\":[\"1\"],\"columns[2].isQuery\":[\"1\"],\"columns[2].queryType\":[\"EQ\"],\"columns[2].htmlType\":[\"datetime\"],\"columns[2].dictType\":[\"\"],\"columns[3].columnId\":[\"319\"],\"columns[3].sort\":[\"4\"],\"columns[3].columnComment\":[\"学生别名昵称\"],\"columns[3].javaType\":[\"String\"],\"columns[3].javaField\":[\"comNick\"],\"columns[3].isInsert\":[\"1\"],\"columns[3].isEdit\":[\"1\"],\"columns[3].isList\":[\"1\"],\"columns[3].isQuery\":[\"1\"],\"columns[3].queryType\":[\"EQ\"],\"columns[3].htmlType\":[\"input\"],\"columns[3].dictType\":[\"\"],\"columns[4].columnId\":[\"320\"],\"columns[4].sort\":[\"5\"],\"columns[4].columnComment\":[\"学生姓名\"],\"columns[4].javaType\":[\"String\"],\"columns[4].javaField\":[\"comName\"],\"columns[4].isInsert\":[\"1\"],\"columns[4].isEdit\":[\"1\"],\"columns[4].isList\":[\"1\"],\"columns[4].isQuery\":[\"1\"],\"columns[4].queryType\":[\"LIKE\"],\"columns[4].htmlType\":[\"input\"],\"columns[4].dictType\":[\"\"],\"columns[5].columnId\":[\"321\"],\"columns[5].sort\"', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-11 16:00:35');
+INSERT INTO `sys_oper_log` VALUES (917, '代码生成', 2, 'com.ruoyi.generator.controller.GenController.synchDb()', 'GET', 1, 'admin', '校园失物管理系统', '/tool/gen/synchDb/laf_wx_pushview', '127.0.0.1', '内网IP', '\"laf_wx_pushview\"', NULL, 1, '同步数据失败，原表结构不存在', '2022-03-11 16:02:30');
+INSERT INTO `sys_oper_log` VALUES (918, '代码生成', 3, 'com.ruoyi.generator.controller.GenController.remove()', 'POST', 1, 'admin', '校园失物管理系统', '/tool/gen/remove', '127.0.0.1', '内网IP', '{\"ids\":[\"26\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-11 16:02:34');
+INSERT INTO `sys_oper_log` VALUES (919, '代码生成', 6, 'com.ruoyi.generator.controller.GenController.importTableSave()', 'POST', 1, 'admin', '校园失物管理系统', '/tool/gen/importTable', '127.0.0.1', '内网IP', '{\"tables\":[\"laf_wx_push_view\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-11 16:02:41');
+INSERT INTO `sys_oper_log` VALUES (920, '代码生成', 8, 'com.ruoyi.generator.controller.GenController.download()', 'GET', 1, 'admin', '校园失物管理系统', '/tool/gen/download/laf_wx_push_view', '127.0.0.1', '内网IP', '\"laf_wx_push_view\"', NULL, 0, NULL, '2022-03-11 16:04:22');
+INSERT INTO `sys_oper_log` VALUES (921, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '127.0.0.1', '内网IP', '{\"comContent\":\"1111\",\"comRelId\":174,\"params\":{},\"parentId\":225}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-11 16:17:48');
+INSERT INTO `sys_oper_log` VALUES (922, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '127.0.0.1', '内网IP', '{\"comContent\":\"你好啊\",\"comRelId\":174,\"params\":{},\"parentId\":230}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-11 16:19:27');
+INSERT INTO `sys_oper_log` VALUES (923, '代码生成', 2, 'com.ruoyi.generator.controller.GenController.synchDb()', 'GET', 1, 'admin', '校园失物管理系统', '/tool/gen/synchDb/laf_wx_push_view', '127.0.0.1', '内网IP', '\"laf_wx_push_view\"', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-11 16:32:46');
+INSERT INTO `sys_oper_log` VALUES (924, '代码生成', 2, 'com.ruoyi.generator.controller.GenController.editSave()', 'POST', 1, 'admin', '校园失物管理系统', '/tool/gen/edit', '127.0.0.1', '内网IP', '{\"tableId\":[\"27\"],\"tableName\":[\"laf_wx_push_view\"],\"tableComment\":[\"VIEW\"],\"className\":[\"LafWxPushView\"],\"functionAuthor\":[\"yang\"],\"remark\":[\"\"],\"columns[0].columnId\":[\"328\"],\"columns[0].sort\":[\"1\"],\"columns[0].columnComment\":[\"评论id\"],\"columns[0].javaType\":[\"Long\"],\"columns[0].javaField\":[\"comId\"],\"columns[0].isInsert\":[\"1\"],\"columns[0].isEdit\":[\"1\"],\"columns[0].isList\":[\"1\"],\"columns[0].isQuery\":[\"1\"],\"columns[0].queryType\":[\"EQ\"],\"columns[0].isRequired\":[\"1\"],\"columns[0].htmlType\":[\"input\"],\"columns[0].dictType\":[\"\"],\"columns[1].columnId\":[\"329\"],\"columns[1].sort\":[\"2\"],\"columns[1].columnComment\":[\"评论内容\"],\"columns[1].javaType\":[\"String\"],\"columns[1].javaField\":[\"comContent\"],\"columns[1].isInsert\":[\"1\"],\"columns[1].isEdit\":[\"1\"],\"columns[1].isList\":[\"1\"],\"columns[1].isQuery\":[\"1\"],\"columns[1].queryType\":[\"EQ\"],\"columns[1].htmlType\":[\"summernote\"],\"columns[1].dictType\":[\"\"],\"columns[2].columnId\":[\"330\"],\"columns[2].sort\":[\"3\"],\"columns[2].columnComment\":[\"创建时间\"],\"columns[2].javaType\":[\"Date\"],\"columns[2].javaField\":[\"comTime\"],\"columns[2].isInsert\":[\"1\"],\"columns[2].isEdit\":[\"1\"],\"columns[2].isList\":[\"1\"],\"columns[2].isQuery\":[\"1\"],\"columns[2].queryType\":[\"EQ\"],\"columns[2].htmlType\":[\"datetime\"],\"columns[2].dictType\":[\"\"],\"columns[3].columnId\":[\"331\"],\"columns[3].sort\":[\"4\"],\"columns[3].columnComment\":[\"评论者网名\"],\"columns[3].javaType\":[\"String\"],\"columns[3].javaField\":[\"comNick\"],\"columns[3].isInsert\":[\"1\"],\"columns[3].isEdit\":[\"1\"],\"columns[3].isList\":[\"1\"],\"columns[3].isQuery\":[\"1\"],\"columns[3].queryType\":[\"EQ\"],\"columns[3].htmlType\":[\"input\"],\"columns[3].dictType\":[\"\"],\"columns[4].columnId\":[\"332\"],\"columns[4].sort\":[\"5\"],\"columns[4].columnComment\":[\"评论者姓名\"],\"columns[4].javaType\":[\"String\"],\"columns[4].javaField\":[\"comName\"],\"columns[4].isInsert\":[\"1\"],\"columns[4].isEdit\":[\"1\"],\"columns[4].isList\":[\"1\"],\"columns[4].isQuery\":[\"1\"],\"columns[4].queryType\":[\"LIKE\"],\"columns[4].htmlType\":[\"input\"],\"columns[4].dictType\":[\"\"],\"columns[5].columnId\":[\"333\"],\"columns[5].sort', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-11 16:34:25');
+INSERT INTO `sys_oper_log` VALUES (925, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '127.0.0.1', '内网IP', '{\"comContent\":\"111\",\"comRelId\":175,\"params\":{},\"parentId\":186}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-11 16:46:22');
+INSERT INTO `sys_oper_log` VALUES (926, '定时任务', 2, 'com.ruoyi.quartz.controller.SysJobController.run()', 'POST', 1, 'admin', '校园失物管理系统', '/monitor/job/run', '127.0.0.1', '内网IP', '{\"jobId\":[\"101\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-11 16:46:50');
+INSERT INTO `sys_oper_log` VALUES (927, '定时任务', 2, 'com.ruoyi.quartz.controller.SysJobController.run()', 'POST', 1, 'admin', '校园失物管理系统', '/monitor/job/run', '127.0.0.1', '内网IP', '{\"jobId\":[\"100\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-11 16:46:53');
+INSERT INTO `sys_oper_log` VALUES (928, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '127.0.0.1', '内网IP', '{\"comContent\":\"111\",\"comRelId\":175,\"params\":{}}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-11 16:47:02');
+INSERT INTO `sys_oper_log` VALUES (929, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '127.0.0.1', '内网IP', '{\"comContent\":\"1111\",\"comRelId\":174,\"params\":{},\"parentId\":231}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-11 16:47:48');
+INSERT INTO `sys_oper_log` VALUES (930, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '192.168.3.98', '内网IP', '{\"comContent\":\"111\",\"comRelId\":175,\"params\":{}}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-11 17:26:32');
+INSERT INTO `sys_oper_log` VALUES (931, '帖子', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseController.remove()', 'GET', 1, NULL, NULL, '/wx/api/release/auth/delete', '111.79.8.117', 'XX XX', '{\"id\":[\"175\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-11 17:44:01');
+INSERT INTO `sys_oper_log` VALUES (932, '帖子', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseController.remove()', 'GET', 1, NULL, NULL, '/wx/api/release/auth/delete', '111.79.8.117', 'XX XX', '{\"id\":[\"174\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-11 17:44:03');
+INSERT INTO `sys_oper_log` VALUES (933, '帖子', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseController.remove()', 'GET', 1, NULL, NULL, '/wx/api/release/auth/delete', '111.79.8.117', 'XX XX', '{\"id\":[\"171\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-11 17:44:04');
+INSERT INTO `sys_oper_log` VALUES (934, '帖子', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseController.remove()', 'GET', 1, NULL, NULL, '/wx/api/release/auth/delete', '111.79.8.117', 'XX XX', '{\"id\":[\"149\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-11 17:44:15');
+INSERT INTO `sys_oper_log` VALUES (935, '帖子', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseController.remove()', 'GET', 1, NULL, NULL, '/wx/api/release/auth/delete', '111.79.8.117', 'XX XX', '{\"id\":[\"148\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-11 17:44:23');
+INSERT INTO `sys_oper_log` VALUES (936, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '111.79.8.117', 'XX XX', '{\"comContent\":\"你是谁\",\"comRelId\":176,\"params\":{}}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-11 17:48:16');
+INSERT INTO `sys_oper_log` VALUES (937, '帖子', 2, 'com.ruoyi.web.controller.wx.LafReleaseController.editSave()', 'POST', 1, 'admin', '校园失物管理系统', '/wx/release/edit', '111.79.8.117', 'XX XX', '{\"relId\":[\"176\"],\"relTitle\":[\"1\"],\"relDesc\":[\"\"],\"relContact\":[\"1\"],\"relCateId\":[\"1\"],\"relTime\":[\"2022-03-11\"],\"relCampus\":[\"不选择\"],\"createPlace\":[\"\"],\"createId\":[\"4\"],\"relImage\":[\"/img/user/tiezi/tmp_4b5dccd24e38ec3d2630167f94a7d78d.jpg\"],\"relStatus\":[\"1\"],\"relStar\":[\"0\"],\"relFlag\":[\"2\"],\"relFlow\":[\"1\"],\"relDel\":[\"1\"],\"relClaimId\":[\"\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-11 19:37:07');
+INSERT INTO `sys_oper_log` VALUES (938, '帖子', 2, 'com.ruoyi.web.controller.wx.LafReleaseController.editSave()', 'POST', 1, 'admin', '校园失物管理系统', '/wx/release/edit', '111.79.8.117', 'XX XX', '{\"relId\":[\"176\"],\"relTitle\":[\"1\"],\"relDesc\":[\"\"],\"relContact\":[\"1\"],\"relCateId\":[\"1\"],\"relTime\":[\"2022-03-11\"],\"relCampus\":[\"不选择\"],\"createPlace\":[\"\"],\"createId\":[\"4\"],\"relImage\":[\"/img/user/tiezi/tmp_4b5dccd24e38ec3d2630167f94a7d78d.jpg\"],\"relStatus\":[\"1\"],\"relStar\":[\"0\"],\"relFlag\":[\"2\"],\"relFlow\":[\"1\"],\"relDel\":[\"1\"],\"relClaimId\":[\"4\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-11 19:37:20');
+INSERT INTO `sys_oper_log` VALUES (939, '帖子', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseController.remove()', 'GET', 1, NULL, NULL, '/wx/api/release/auth/delete', '111.79.9.125', 'XX XX', '{\"id\":[\"161\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-12 15:57:39');
+INSERT INTO `sys_oper_log` VALUES (940, '帖子', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseController.remove()', 'GET', 1, NULL, NULL, '/wx/api/release/auth/delete', '111.79.9.125', 'XX XX', '{\"id\":[\"178\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-12 15:57:56');
+INSERT INTO `sys_oper_log` VALUES (941, '帖子', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseController.remove()', 'GET', 1, NULL, NULL, '/wx/api/release/auth/delete', '111.79.9.125', 'XX XX', '{\"id\":[\"114\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-12 16:42:10');
+INSERT INTO `sys_oper_log` VALUES (942, '帖子', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseController.remove()', 'GET', 1, NULL, NULL, '/wx/api/release/auth/delete', '111.79.9.125', 'XX XX', '{\"id\":[\"181\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-12 16:45:05');
+INSERT INTO `sys_oper_log` VALUES (943, '帖子', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseController.remove()', 'GET', 1, NULL, NULL, '/wx/api/release/auth/delete', '111.79.9.125', 'XX XX', '{\"id\":[\"180\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-12 16:45:09');
+INSERT INTO `sys_oper_log` VALUES (944, '帖子', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseController.remove()', 'GET', 1, NULL, NULL, '/wx/api/release/auth/delete', '111.79.9.125', 'XX XX', '{\"id\":[\"179\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-12 16:45:13');
+INSERT INTO `sys_oper_log` VALUES (945, '帖子', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseController.remove()', 'GET', 1, NULL, NULL, '/wx/api/release/auth/delete', '111.79.9.125', 'XX XX', '{\"id\":[\"184\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-12 16:49:00');
+INSERT INTO `sys_oper_log` VALUES (946, '帖子', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseController.remove()', 'GET', 1, NULL, NULL, '/wx/api/release/auth/delete', '111.79.9.125', 'XX XX', '{\"id\":[\"183\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-12 16:49:49');
+INSERT INTO `sys_oper_log` VALUES (947, '帖子', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseController.remove()', 'GET', 1, NULL, NULL, '/wx/api/release/auth/delete', '111.79.9.125', 'XX XX', '{\"id\":[\"132\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-12 16:49:57');
+INSERT INTO `sys_oper_log` VALUES (948, '帖子', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseController.remove()', 'GET', 1, NULL, NULL, '/wx/api/release/auth/delete', '111.79.9.125', 'XX XX', '{\"id\":[\"182\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-12 16:50:29');
+INSERT INTO `sys_oper_log` VALUES (949, '帖子', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseController.remove()', 'GET', 1, NULL, NULL, '/wx/api/release/auth/delete', '111.79.9.125', 'XX XX', '{\"id\":[\"190\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-12 16:53:27');
+INSERT INTO `sys_oper_log` VALUES (950, '帖子', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseController.remove()', 'GET', 1, NULL, NULL, '/wx/api/release/auth/delete', '111.79.9.125', 'XX XX', '{\"id\":[\"189\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-12 16:53:34');
+INSERT INTO `sys_oper_log` VALUES (951, '帖子', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseController.remove()', 'GET', 1, NULL, NULL, '/wx/api/release/auth/delete', '111.79.9.125', 'XX XX', '{\"id\":[\"188\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-12 16:55:46');
+INSERT INTO `sys_oper_log` VALUES (952, '帖子', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseController.remove()', 'GET', 1, NULL, NULL, '/wx/api/release/auth/delete', '111.79.9.125', 'XX XX', '{\"id\":[\"185\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-12 16:56:37');
+INSERT INTO `sys_oper_log` VALUES (953, '帖子', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseController.remove()', 'GET', 1, NULL, NULL, '/wx/api/release/auth/delete', '111.79.9.125', 'XX XX', '{\"id\":[\"187\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-12 16:56:41');
+INSERT INTO `sys_oper_log` VALUES (954, '帖子', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseController.remove()', 'GET', 1, NULL, NULL, '/wx/api/release/auth/delete', '111.79.9.125', 'XX XX', '{\"id\":[\"192\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-12 16:58:45');
+INSERT INTO `sys_oper_log` VALUES (955, '帖子', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseController.remove()', 'GET', 1, NULL, NULL, '/wx/api/release/auth/delete', '111.79.9.125', 'XX XX', '{\"id\":[\"193\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-12 16:58:53');
+INSERT INTO `sys_oper_log` VALUES (956, '帖子', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseController.remove()', 'GET', 1, NULL, NULL, '/wx/api/release/auth/delete', '111.79.9.125', 'XX XX', '{\"id\":[\"191\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-12 16:58:58');
+INSERT INTO `sys_oper_log` VALUES (957, '帖子', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseController.remove()', 'GET', 1, NULL, NULL, '/wx/api/release/auth/delete', '111.79.9.125', 'XX XX', '{\"id\":[\"195\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-12 17:00:19');
+INSERT INTO `sys_oper_log` VALUES (958, '帖子', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseController.remove()', 'GET', 1, NULL, NULL, '/wx/api/release/auth/delete', '111.79.9.125', 'XX XX', '{\"id\":[\"196\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-12 17:00:22');
+INSERT INTO `sys_oper_log` VALUES (959, '帖子', 1, 'com.ruoyi.web.controller.wx.LafReleaseController.addSave()', 'POST', 1, 'admin', '校园失物管理系统', '/wx/release/add', '111.79.9.125', 'XX XX', '{\"relTitle\":[\"1\"],\"relDesc\":[\"1\"],\"relContact\":[\"\"],\"relCateId\":[\"1\"],\"relTime\":[\"\"],\"relCampus\":[\"不选择\"],\"createPlace\":[\"\"],\"createId\":[\"13\"],\"relImage\":[\"\"],\"relStatus\":[\"1\"],\"relFlag\":[\"1\"],\"relClaimId\":[\"\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-12 17:01:48');
+INSERT INTO `sys_oper_log` VALUES (960, '帖子', 1, 'com.ruoyi.web.controller.wx.LafReleaseController.addSave()', 'POST', 1, 'admin', '校园失物管理系统', '/wx/release/add', '111.79.9.125', 'XX XX', '{\"relTitle\":[\"123121414124\"],\"relDesc\":[\"\"],\"relContact\":[\"\"],\"relCateId\":[\"1\"],\"relTime\":[\"\"],\"relCampus\":[\"不选择\"],\"createPlace\":[\"\"],\"createId\":[\"13\"],\"relImage\":[\"\"],\"relStatus\":[\"1\"],\"relFlag\":[\"1\"],\"relClaimId\":[\"\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-12 17:02:22');
+INSERT INTO `sys_oper_log` VALUES (961, '帖子', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseController.remove()', 'GET', 1, NULL, NULL, '/wx/api/release/auth/delete', '111.79.9.125', 'XX XX', '{\"id\":[\"198\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-12 17:02:32');
+INSERT INTO `sys_oper_log` VALUES (962, '帖子', 2, 'com.ruoyi.web.controller.wx.LafReleaseController.editSave()', 'POST', 1, 'admin', '校园失物管理系统', '/wx/release/edit', '111.79.9.125', 'XX XX', '{\"relId\":[\"196\"],\"relTitle\":[\"去\"],\"relDesc\":[\"\"],\"relContact\":[\"q\"],\"relCateId\":[\"1\"],\"relTime\":[\"\"],\"relCampus\":[\"不选择\"],\"createPlace\":[\"\"],\"createId\":[\"13\"],\"relImage\":[\"\"],\"relStatus\":[\"1\"],\"relStar\":[\"0\"],\"relFlag\":[\"1\"],\"relFlow\":[\"1\"],\"relDel\":[\"1\"],\"relClaimId\":[\"\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-12 17:02:56');
+INSERT INTO `sys_oper_log` VALUES (963, '帖子', 2, 'com.ruoyi.web.controller.wx.LafReleaseController.editSave()', 'POST', 1, 'admin', '校园失物管理系统', '/wx/release/edit', '111.79.9.125', 'XX XX', '{\"relId\":[\"198\"],\"relTitle\":[\"1\"],\"relDesc\":[\"1\"],\"relContact\":[\"\"],\"relCateId\":[\"1\"],\"relTime\":[\"\"],\"relCampus\":[\"不选择\"],\"createPlace\":[\"\"],\"createId\":[\"13\"],\"relImage\":[\"\"],\"relStatus\":[\"1\"],\"relStar\":[\"0\"],\"relFlag\":[\"1\"],\"relFlow\":[\"1\"],\"relDel\":[\"1\"],\"relClaimId\":[\"\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-12 17:03:02');
+INSERT INTO `sys_oper_log` VALUES (964, '帖子', 2, 'com.ruoyi.web.controller.wx.LafReleaseController.editSave()', 'POST', 1, 'admin', '校园失物管理系统', '/wx/release/edit', '111.79.9.125', 'XX XX', '{\"relId\":[\"195\"],\"relTitle\":[\"1\"],\"relDesc\":[\"\"],\"relContact\":[\"1\"],\"relCateId\":[\"1\"],\"relTime\":[\"\"],\"relCampus\":[\"不选择\"],\"createPlace\":[\"\"],\"createId\":[\"13\"],\"relImage\":[\"\"],\"relStatus\":[\"1\"],\"relStar\":[\"0\"],\"relFlag\":[\"1\"],\"relFlow\":[\"1\"],\"relDel\":[\"1\"],\"relClaimId\":[\"\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-12 17:03:07');
+INSERT INTO `sys_oper_log` VALUES (965, '帖子', 2, 'com.ruoyi.web.controller.wx.LafReleaseController.editSave()', 'POST', 1, 'admin', '校园失物管理系统', '/wx/release/edit', '111.79.9.125', 'XX XX', '{\"relId\":[\"193\"],\"relTitle\":[\"1\"],\"relDesc\":[\"\"],\"relContact\":[\"1\"],\"relCateId\":[\"1\"],\"relTime\":[\"\"],\"relCampus\":[\"不选择\"],\"createPlace\":[\"\"],\"createId\":[\"13\"],\"relImage\":[\"\"],\"relStatus\":[\"1\"],\"relStar\":[\"0\"],\"relFlag\":[\"1\"],\"relFlow\":[\"1\"],\"relDel\":[\"1\"],\"relClaimId\":[\"\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-12 17:03:18');
+INSERT INTO `sys_oper_log` VALUES (966, '帖子', 2, 'com.ruoyi.web.controller.wx.LafReleaseController.editSave()', 'POST', 1, 'admin', '校园失物管理系统', '/wx/release/edit', '111.79.9.125', 'XX XX', '{\"relId\":[\"192\"],\"relTitle\":[\"1\"],\"relDesc\":[\"\"],\"relContact\":[\"1\"],\"relCateId\":[\"1\"],\"relTime\":[\"\"],\"relCampus\":[\"不选择\"],\"createPlace\":[\"\"],\"createId\":[\"13\"],\"relImage\":[\"\"],\"relStatus\":[\"1\"],\"relStar\":[\"0\"],\"relFlag\":[\"1\"],\"relFlow\":[\"1\"],\"relDel\":[\"1\"],\"relClaimId\":[\"\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-12 17:03:24');
+INSERT INTO `sys_oper_log` VALUES (967, '帖子', 2, 'com.ruoyi.web.controller.wx.LafReleaseController.editSave()', 'POST', 1, 'admin', '校园失物管理系统', '/wx/release/edit', '111.79.9.125', 'XX XX', '{\"relId\":[\"191\"],\"relTitle\":[\"1\"],\"relDesc\":[\"\"],\"relContact\":[\"1\"],\"relCateId\":[\"1\"],\"relTime\":[\"\"],\"relCampus\":[\"不选择\"],\"createPlace\":[\"\"],\"createId\":[\"13\"],\"relImage\":[\"\"],\"relStatus\":[\"1\"],\"relStar\":[\"0\"],\"relFlag\":[\"1\"],\"relFlow\":[\"1\"],\"relDel\":[\"1\"],\"relClaimId\":[\"\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-12 17:03:29');
+INSERT INTO `sys_oper_log` VALUES (968, '帖子', 2, 'com.ruoyi.web.controller.wx.LafReleaseController.editSave()', 'POST', 1, 'admin', '校园失物管理系统', '/wx/release/edit', '111.79.9.125', 'XX XX', '{\"relId\":[\"190\"],\"relTitle\":[\"q\"],\"relDesc\":[\"\"],\"relContact\":[\"q\"],\"relCateId\":[\"1\"],\"relTime\":[\"\"],\"relCampus\":[\"不选择\"],\"createPlace\":[\"\"],\"createId\":[\"13\"],\"relImage\":[\"\"],\"relStatus\":[\"1\"],\"relStar\":[\"0\"],\"relFlag\":[\"1\"],\"relFlow\":[\"1\"],\"relDel\":[\"1\"],\"relClaimId\":[\"\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-12 17:03:33');
+INSERT INTO `sys_oper_log` VALUES (969, '帖子', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseController.remove()', 'GET', 1, NULL, NULL, '/wx/api/release/auth/delete', '111.79.9.125', 'XX XX', '{\"id\":[\"198\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-12 17:04:43');
+INSERT INTO `sys_oper_log` VALUES (970, '帖子', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseController.remove()', 'GET', 1, NULL, NULL, '/wx/api/release/auth/delete', '111.79.9.125', 'XX XX', '{\"id\":[\"197\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-12 17:05:08');
+INSERT INTO `sys_oper_log` VALUES (971, '帖子', 1, 'com.ruoyi.web.controller.wx.LafReleaseController.addSave()', 'POST', 1, 'admin', '校园失物管理系统', '/wx/release/add', '111.79.9.125', 'XX XX', '{\"relTitle\":[\"123124214\"],\"relDesc\":[\"\"],\"relContact\":[\"\"],\"relCateId\":[\"1\"],\"relTime\":[\"\"],\"relCampus\":[\"不选择\"],\"createPlace\":[\"\"],\"createId\":[\"13\"],\"relImage\":[\"\"],\"relStatus\":[\"2\"],\"relFlag\":[\"1\"],\"relClaimId\":[\"\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-12 17:06:05');
+INSERT INTO `sys_oper_log` VALUES (972, '帖子', 1, 'com.ruoyi.web.controller.wx.LafReleaseController.addSave()', 'POST', 1, 'admin', '校园失物管理系统', '/wx/release/add', '111.79.9.125', 'XX XX', '{\"relTitle\":[\"1\"],\"relDesc\":[\"\"],\"relContact\":[\"\"],\"relCateId\":[\"1\"],\"relTime\":[\"\"],\"relCampus\":[\"不选择\"],\"createPlace\":[\"\"],\"createId\":[\"13\"],\"relImage\":[\"\"],\"relStatus\":[\"2\"],\"relFlag\":[\"1\"],\"relClaimId\":[\"\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-12 17:06:18');
+INSERT INTO `sys_oper_log` VALUES (973, '帖子', 1, 'com.ruoyi.web.controller.wx.LafReleaseController.addSave()', 'POST', 1, 'admin', '校园失物管理系统', '/wx/release/add', '111.79.9.125', 'XX XX', '{\"relTitle\":[\"1\"],\"relDesc\":[\"\"],\"relContact\":[\"\"],\"relCateId\":[\"1\"],\"relTime\":[\"\"],\"relCampus\":[\"不选择\"],\"createPlace\":[\"\"],\"createId\":[\"13\"],\"relImage\":[\"\"],\"relStatus\":[\"2\"],\"relFlag\":[\"1\"],\"relClaimId\":[\"\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-12 17:06:27');
+INSERT INTO `sys_oper_log` VALUES (974, '帖子', 1, 'com.ruoyi.web.controller.wx.LafReleaseController.addSave()', 'POST', 1, 'admin', '校园失物管理系统', '/wx/release/add', '111.79.9.125', 'XX XX', '{\"relTitle\":[\"1\"],\"relDesc\":[\"\"],\"relContact\":[\"\"],\"relCateId\":[\"1\"],\"relTime\":[\"\"],\"relCampus\":[\"不选择\"],\"createPlace\":[\"\"],\"createId\":[\"\"],\"relImage\":[\"\"],\"relStatus\":[\"2\"],\"relFlag\":[\"1\"],\"relClaimId\":[\"\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-12 17:06:33');
+INSERT INTO `sys_oper_log` VALUES (975, '帖子', 2, 'com.ruoyi.web.controller.wx.LafReleaseController.editSave()', 'POST', 1, 'admin', '校园失物管理系统', '/wx/release/edit', '111.79.9.125', 'XX XX', '{\"relId\":[\"203\"],\"relTitle\":[\"1\"],\"relDesc\":[\"\"],\"relContact\":[\"\"],\"relCateId\":[\"1\"],\"relTime\":[\"\"],\"relCampus\":[\"不选择\"],\"createPlace\":[\"\"],\"createId\":[\"12\"],\"relImage\":[\"\"],\"relStatus\":[\"2\"],\"relStar\":[\"0\"],\"relFlag\":[\"1\"],\"relFlow\":[\"1\"],\"relDel\":[\"1\"],\"relClaimId\":[\"\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-12 17:06:53');
+INSERT INTO `sys_oper_log` VALUES (976, '帖子', 2, 'com.ruoyi.web.controller.wx.LafReleaseController.editSave()', 'POST', 1, 'admin', '校园失物管理系统', '/wx/release/edit', '111.79.9.125', 'XX XX', '{\"relId\":[\"203\"],\"relTitle\":[\"1\"],\"relDesc\":[\"\"],\"relContact\":[\"\"],\"relCateId\":[\"1\"],\"relTime\":[\"\"],\"relCampus\":[\"不选择\"],\"createPlace\":[\"\"],\"createId\":[\"100\"],\"relImage\":[\"\"],\"relStatus\":[\"2\"],\"relStar\":[\"0\"],\"relFlag\":[\"1\"],\"relFlow\":[\"1\"],\"relDel\":[\"1\"],\"relClaimId\":[\"\"]}', NULL, 1, '\n### Error updating database.  Cause: java.sql.SQLIntegrityConstraintViolationException: Cannot add or update a child row: a foreign key constraint fails (`laf`.`laf_release`, CONSTRAINT `stu_fk` FOREIGN KEY (`create_id`) REFERENCES `laf_student` (`stu_id`) ON DELETE CASCADE ON UPDATE CASCADE)\n### The error may exist in URL [jar:file:/www/laf/ruoyi-admin.jar!/BOOT-INF/lib/yang-wxlaf-4.7.0.jar!/mapper/wx/LafReleaseMapper.xml]\n### The error may involve com.ruoyi.wx.mapper.LafReleaseMapper.updateLafRelease-Inline\n### The error occurred while setting parameters\n### SQL: update laf_release          SET rel_title = ?,             rel_desc = ?,             rel_contact = ?,             rel_cate_id = ?,             rel_time = ?,             rel_campus = ?,             create_place = ?,                          create_id = ?,             rel_image = ?,             rel_status = ?,             rel_star = ?,             rel_flag = ?,             rel_flow = ?,             rel_del = ?,             rel_claim_id = ?          where rel_id = ?\n### Cause: java.sql.SQLIntegrityConstraintViolationException: Cannot add or update a child row: a foreign key constraint fails (`laf`.`laf_release`, CONSTRAINT `stu_fk` FOREIGN KEY (`create_id`) REFERENCES `laf_student` (`stu_id`) ON DELETE CASCADE ON UPDATE CASCADE)\n; Cannot add or update a child row: a foreign key constraint fails (`laf`.`laf_release`, CONSTRAINT `stu_fk` FOREIGN KEY (`create_id`) REFERENCES `laf_student` (`stu_id`) ON DELETE CASCADE ON UPDATE CASCADE); nested exception is java.sql.SQLIntegrityConstraintViolationException: Cannot add or update a child row: a foreign key constraint fails (`laf`.`laf_release`, CONSTRAINT `stu_fk` FOREIGN KEY (`create_id`) REFERENCES `laf_student` (`stu_id`) ON DELETE CASCADE ON UPDATE CASCADE)', '2022-03-12 17:06:58');
+INSERT INTO `sys_oper_log` VALUES (977, '帖子', 2, 'com.ruoyi.web.controller.wx.LafReleaseController.editSave()', 'POST', 1, 'admin', '校园失物管理系统', '/wx/release/edit', '111.79.9.125', 'XX XX', '{\"relId\":[\"203\"],\"relTitle\":[\"1\"],\"relDesc\":[\"\"],\"relContact\":[\"\"],\"relCateId\":[\"1\"],\"relTime\":[\"\"],\"relCampus\":[\"不选择\"],\"createPlace\":[\"\"],\"createId\":[\"99\"],\"relImage\":[\"\"],\"relStatus\":[\"2\"],\"relStar\":[\"0\"],\"relFlag\":[\"1\"],\"relFlow\":[\"1\"],\"relDel\":[\"1\"],\"relClaimId\":[\"\"]}', NULL, 1, '\n### Error updating database.  Cause: java.sql.SQLIntegrityConstraintViolationException: Cannot add or update a child row: a foreign key constraint fails (`laf`.`laf_release`, CONSTRAINT `stu_fk` FOREIGN KEY (`create_id`) REFERENCES `laf_student` (`stu_id`) ON DELETE CASCADE ON UPDATE CASCADE)\n### The error may exist in URL [jar:file:/www/laf/ruoyi-admin.jar!/BOOT-INF/lib/yang-wxlaf-4.7.0.jar!/mapper/wx/LafReleaseMapper.xml]\n### The error may involve com.ruoyi.wx.mapper.LafReleaseMapper.updateLafRelease-Inline\n### The error occurred while setting parameters\n### SQL: update laf_release          SET rel_title = ?,             rel_desc = ?,             rel_contact = ?,             rel_cate_id = ?,             rel_time = ?,             rel_campus = ?,             create_place = ?,                          create_id = ?,             rel_image = ?,             rel_status = ?,             rel_star = ?,             rel_flag = ?,             rel_flow = ?,             rel_del = ?,             rel_claim_id = ?          where rel_id = ?\n### Cause: java.sql.SQLIntegrityConstraintViolationException: Cannot add or update a child row: a foreign key constraint fails (`laf`.`laf_release`, CONSTRAINT `stu_fk` FOREIGN KEY (`create_id`) REFERENCES `laf_student` (`stu_id`) ON DELETE CASCADE ON UPDATE CASCADE)\n; Cannot add or update a child row: a foreign key constraint fails (`laf`.`laf_release`, CONSTRAINT `stu_fk` FOREIGN KEY (`create_id`) REFERENCES `laf_student` (`stu_id`) ON DELETE CASCADE ON UPDATE CASCADE); nested exception is java.sql.SQLIntegrityConstraintViolationException: Cannot add or update a child row: a foreign key constraint fails (`laf`.`laf_release`, CONSTRAINT `stu_fk` FOREIGN KEY (`create_id`) REFERENCES `laf_student` (`stu_id`) ON DELETE CASCADE ON UPDATE CASCADE)', '2022-03-12 17:07:06');
+INSERT INTO `sys_oper_log` VALUES (978, '帖子', 2, 'com.ruoyi.web.controller.wx.LafReleaseController.editSave()', 'POST', 1, 'admin', '校园失物管理系统', '/wx/release/edit', '111.79.9.125', 'XX XX', '{\"relId\":[\"203\"],\"relTitle\":[\"1\"],\"relDesc\":[\"\"],\"relContact\":[\"\"],\"relCateId\":[\"1\"],\"relTime\":[\"\"],\"relCampus\":[\"不选择\"],\"createPlace\":[\"\"],\"createId\":[\"12\"],\"relImage\":[\"\"],\"relStatus\":[\"2\"],\"relStar\":[\"0\"],\"relFlag\":[\"1\"],\"relFlow\":[\"1\"],\"relDel\":[\"1\"],\"relClaimId\":[\"\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-12 17:07:13');
+INSERT INTO `sys_oper_log` VALUES (979, '帖子', 2, 'com.ruoyi.web.controller.wx.LafReleaseController.editSave()', 'POST', 1, 'admin', '校园失物管理系统', '/wx/release/edit', '111.79.9.125', 'XX XX', '{\"relId\":[\"203\"],\"relTitle\":[\"1\"],\"relDesc\":[\"\"],\"relContact\":[\"\"],\"relCateId\":[\"1\"],\"relTime\":[\"\"],\"relCampus\":[\"不选择\"],\"createPlace\":[\"\"],\"createId\":[\"13\"],\"relImage\":[\"\"],\"relStatus\":[\"2\"],\"relStar\":[\"0\"],\"relFlag\":[\"1\"],\"relFlow\":[\"1\"],\"relDel\":[\"1\"],\"relClaimId\":[\"\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-12 17:07:51');
+INSERT INTO `sys_oper_log` VALUES (980, '帖子', 1, 'com.ruoyi.web.controller.wx.LafReleaseController.addSave()', 'POST', 1, 'admin', '校园失物管理系统', '/wx/release/add', '111.79.9.125', 'XX XX', '{\"relTitle\":[\"1\"],\"relDesc\":[\"\"],\"relContact\":[\"\"],\"relCateId\":[\"1\"],\"relTime\":[\"\"],\"relCampus\":[\"不选择\"],\"createPlace\":[\"\"],\"createId\":[\"13\"],\"relImage\":[\"\"],\"relStatus\":[\"2\"],\"relFlag\":[\"1\"],\"relClaimId\":[\"\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-12 17:08:02');
+INSERT INTO `sys_oper_log` VALUES (981, '帖子', 2, 'com.ruoyi.web.controller.wx.LafReleaseController.editSave()', 'POST', 1, 'admin', '校园失物管理系统', '/wx/release/edit', '111.79.9.125', 'XX XX', '{\"relId\":[\"198\"],\"relTitle\":[\"1\"],\"relDesc\":[\"1\"],\"relContact\":[\"\"],\"relCateId\":[\"1\"],\"relTime\":[\"\"],\"relCampus\":[\"不选择\"],\"createPlace\":[\"\"],\"createId\":[\"13\"],\"relImage\":[\"\"],\"relStatus\":[\"1\"],\"relStar\":[\"0\"],\"relFlag\":[\"2\"],\"relFlow\":[\"1\"],\"relDel\":[\"1\"],\"relClaimId\":[\"\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-12 17:13:36');
+INSERT INTO `sys_oper_log` VALUES (982, '帖子', 2, 'com.ruoyi.web.controller.wx.LafReleaseController.editSave()', 'POST', 1, 'admin', '校园失物管理系统', '/wx/release/edit', '111.79.9.125', 'XX XX', '{\"relId\":[\"197\"],\"relTitle\":[\"1\"],\"relDesc\":[\"\"],\"relContact\":[\"1\"],\"relCateId\":[\"1\"],\"relTime\":[\"\"],\"relCampus\":[\"不选择\"],\"createPlace\":[\"\"],\"createId\":[\"13\"],\"relImage\":[\"\"],\"relStatus\":[\"1\"],\"relStar\":[\"0\"],\"relFlag\":[\"2\"],\"relFlow\":[\"1\"],\"relDel\":[\"1\"],\"relClaimId\":[\"\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-12 17:13:41');
+INSERT INTO `sys_oper_log` VALUES (983, '帖子', 2, 'com.ruoyi.web.controller.wx.LafReleaseController.editSave()', 'POST', 1, 'admin', '校园失物管理系统', '/wx/release/edit', '111.79.9.125', 'XX XX', '{\"relId\":[\"189\"],\"relTitle\":[\"1\"],\"relDesc\":[\"\"],\"relContact\":[\"1\"],\"relCateId\":[\"2\"],\"relTime\":[\"\"],\"relCampus\":[\"不选择\"],\"createPlace\":[\"\"],\"createId\":[\"13\"],\"relImage\":[\"\"],\"relStatus\":[\"2\"],\"relStar\":[\"0\"],\"relFlag\":[\"2\"],\"relFlow\":[\"1\"],\"relDel\":[\"2\"],\"relClaimId\":[\"\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-12 17:14:03');
+INSERT INTO `sys_oper_log` VALUES (984, '帖子', 2, 'com.ruoyi.web.controller.wx.LafReleaseController.editSave()', 'POST', 1, 'admin', '校园失物管理系统', '/wx/release/edit', '111.79.9.125', 'XX XX', '{\"relId\":[\"189\"],\"relTitle\":[\"1\"],\"relDesc\":[\"\"],\"relContact\":[\"1\"],\"relCateId\":[\"2\"],\"relTime\":[\"\"],\"relCampus\":[\"不选择\"],\"createPlace\":[\"\"],\"createId\":[\"13\"],\"relImage\":[\"\"],\"relStatus\":[\"2\"],\"relStar\":[\"0\"],\"relFlag\":[\"2\"],\"relFlow\":[\"1\"],\"relDel\":[\"1\"],\"relClaimId\":[\"\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-12 17:14:07');
+INSERT INTO `sys_oper_log` VALUES (985, '帖子', 2, 'com.ruoyi.web.controller.wx.LafReleaseController.editSave()', 'POST', 1, 'admin', '校园失物管理系统', '/wx/release/edit', '111.79.9.125', 'XX XX', '{\"relId\":[\"188\"],\"relTitle\":[\"1\"],\"relDesc\":[\"\"],\"relContact\":[\"1\"],\"relCateId\":[\"1\"],\"relTime\":[\"\"],\"relCampus\":[\"不选择\"],\"createPlace\":[\"\"],\"createId\":[\"13\"],\"relImage\":[\"\"],\"relStatus\":[\"1\"],\"relStar\":[\"0\"],\"relFlag\":[\"2\"],\"relFlow\":[\"1\"],\"relDel\":[\"1\"],\"relClaimId\":[\"\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-12 17:14:14');
+INSERT INTO `sys_oper_log` VALUES (986, '帖子', 2, 'com.ruoyi.web.controller.wx.LafReleaseController.editSave()', 'POST', 1, 'admin', '校园失物管理系统', '/wx/release/edit', '111.79.9.125', 'XX XX', '{\"relId\":[\"187\"],\"relTitle\":[\"1\"],\"relDesc\":[\"\"],\"relContact\":[\"1\"],\"relCateId\":[\"1\"],\"relTime\":[\"\"],\"relCampus\":[\"不选择\"],\"createPlace\":[\"\"],\"createId\":[\"13\"],\"relImage\":[\"\"],\"relStatus\":[\"1\"],\"relStar\":[\"0\"],\"relFlag\":[\"2\"],\"relFlow\":[\"1\"],\"relDel\":[\"1\"],\"relClaimId\":[\"\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-12 17:14:20');
+INSERT INTO `sys_oper_log` VALUES (987, '帖子', 2, 'com.ruoyi.web.controller.wx.LafReleaseController.editSave()', 'POST', 1, 'admin', '校园失物管理系统', '/wx/release/edit', '111.79.9.125', 'XX XX', '{\"relId\":[\"185\"],\"relTitle\":[\"1\"],\"relDesc\":[\"\"],\"relContact\":[\"1\"],\"relCateId\":[\"1\"],\"relTime\":[\"\"],\"relCampus\":[\"不选择\"],\"createPlace\":[\"\"],\"createId\":[\"13\"],\"relImage\":[\"\"],\"relStatus\":[\"1\"],\"relStar\":[\"0\"],\"relFlag\":[\"2\"],\"relFlow\":[\"1\"],\"relDel\":[\"1\"],\"relClaimId\":[\"\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-12 17:14:26');
+INSERT INTO `sys_oper_log` VALUES (988, '帖子', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseController.remove()', 'GET', 1, NULL, NULL, '/wx/api/release/auth/delete', '111.79.9.125', 'XX XX', '{\"id\":[\"199\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-12 17:22:27');
+INSERT INTO `sys_oper_log` VALUES (989, '帖子', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseController.remove()', 'GET', 1, NULL, NULL, '/wx/api/release/auth/delete', '111.79.9.125', 'XX XX', '{\"id\":[\"198\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-12 17:22:35');
+INSERT INTO `sys_oper_log` VALUES (990, '帖子', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseController.remove()', 'GET', 1, NULL, NULL, '/wx/api/release/auth/delete', '111.79.9.125', 'XX XX', '{\"id\":[\"194\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-12 17:24:01');
+INSERT INTO `sys_oper_log` VALUES (991, '帖子', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseController.remove()', 'GET', 1, NULL, NULL, '/wx/api/release/auth/delete', '111.79.9.125', 'XX XX', '{\"id\":[\"203\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-12 17:24:08');
+INSERT INTO `sys_oper_log` VALUES (992, '帖子', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseController.remove()', 'GET', 1, NULL, NULL, '/wx/api/release/auth/delete', '111.79.9.125', 'XX XX', '{\"id\":[\"195\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-12 17:28:12');
+INSERT INTO `sys_oper_log` VALUES (993, '帖子', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseController.remove()', 'GET', 1, NULL, NULL, '/wx/api/release/auth/delete', '111.79.9.125', 'XX XX', '{\"id\":[\"204\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-12 17:28:23');
+INSERT INTO `sys_oper_log` VALUES (994, '帖子', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseController.remove()', 'GET', 1, NULL, NULL, '/wx/api/release/auth/delete', '111.79.9.125', 'XX XX', '{\"id\":[\"196\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-12 17:28:38');
+INSERT INTO `sys_oper_log` VALUES (995, '帖子', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseController.remove()', 'GET', 1, NULL, NULL, '/wx/api/release/auth/delete', '111.79.9.125', 'XX XX', '{\"id\":[\"197\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-12 17:28:45');
+INSERT INTO `sys_oper_log` VALUES (996, '帖子', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseController.remove()', 'GET', 1, NULL, NULL, '/wx/api/release/auth/delete', '111.79.9.125', 'XX XX', '{\"id\":[\"205\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-12 17:56:07');
+INSERT INTO `sys_oper_log` VALUES (997, '帖子', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseController.remove()', 'GET', 1, NULL, NULL, '/wx/api/release/auth/delete', '111.79.9.125', 'XX XX', '{\"id\":[\"206\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-13 07:35:30');
+INSERT INTO `sys_oper_log` VALUES (998, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '111.79.9.125', 'XX XX', '{\"comContent\":\"123\",\"comRelId\":235,\"params\":{}}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-13 21:12:16');
+INSERT INTO `sys_oper_log` VALUES (999, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '111.79.9.125', 'XX XX', '{\"comContent\":\"123\",\"comRelId\":235,\"params\":{},\"parentId\":237}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-13 21:12:20');
+INSERT INTO `sys_oper_log` VALUES (1000, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '137.116.161.234', 'XX XX', '{\"comContent\":\"niub\",\"comRelId\":234,\"params\":{}}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-14 15:59:48');
+INSERT INTO `sys_oper_log` VALUES (1001, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '137.116.161.234', 'XX XX', '{\"comContent\":\"hhhhh\",\"comRelId\":234,\"params\":{},\"parentId\":239}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-14 16:00:01');
+INSERT INTO `sys_oper_log` VALUES (1002, '帖子留言', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.remove()', 'GET', 1, NULL, NULL, '/wx/api/info/auth/comment/delete', '137.116.161.234', 'XX XX', '{\"id\":[\"239\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-14 16:00:29');
+INSERT INTO `sys_oper_log` VALUES (1003, '帖子', 3, 'com.ruoyi.web.controller.wx.LafReleaseController.remove()', 'POST', 1, 'admin', '校园失物管理系统', '/wx/release/remove', '111.79.9.125', 'XX XX', '{\"ids\":[\"239\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-14 21:53:20');
+INSERT INTO `sys_oper_log` VALUES (1004, '帖子', 3, 'com.ruoyi.web.controller.wx.LafReleaseController.remove()', 'POST', 1, 'admin', '校园失物管理系统', '/wx/release/remove', '111.79.9.125', 'XX XX', '{\"ids\":[\"238\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-14 21:53:22');
+INSERT INTO `sys_oper_log` VALUES (1005, '帖子', 3, 'com.ruoyi.web.controller.wx.LafReleaseController.remove()', 'POST', 1, 'admin', '校园失物管理系统', '/wx/release/remove', '111.79.9.125', 'XX XX', '{\"ids\":[\"237\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-14 21:53:24');
+INSERT INTO `sys_oper_log` VALUES (1006, '帖子', 3, 'com.ruoyi.web.controller.wx.LafReleaseController.remove()', 'POST', 1, 'admin', '校园失物管理系统', '/wx/release/remove', '111.79.9.125', 'XX XX', '{\"ids\":[\"242\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-14 22:00:24');
+INSERT INTO `sys_oper_log` VALUES (1007, '帖子', 3, 'com.ruoyi.web.controller.wx.LafReleaseController.remove()', 'POST', 1, 'admin', '校园失物管理系统', '/wx/release/remove', '111.79.9.125', 'XX XX', '{\"ids\":[\"245\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-14 22:30:38');
+INSERT INTO `sys_oper_log` VALUES (1008, '帖子', 3, 'com.ruoyi.web.controller.wx.LafReleaseController.remove()', 'POST', 1, 'admin', '校园失物管理系统', '/wx/release/remove', '111.79.9.125', 'XX XX', '{\"ids\":[\"244\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-14 22:30:43');
+INSERT INTO `sys_oper_log` VALUES (1009, '帖子', 3, 'com.ruoyi.web.controller.wx.LafReleaseController.remove()', 'POST', 1, 'admin', '校园失物管理系统', '/wx/release/remove', '111.79.9.125', 'XX XX', '{\"ids\":[\"247\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-14 22:31:47');
+INSERT INTO `sys_oper_log` VALUES (1010, '帖子', 3, 'com.ruoyi.web.controller.wx.LafReleaseController.remove()', 'POST', 1, 'admin', '校园失物管理系统', '/wx/release/remove', '111.79.9.125', 'XX XX', '{\"ids\":[\"249\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-14 22:32:49');
+INSERT INTO `sys_oper_log` VALUES (1011, '帖子', 3, 'com.ruoyi.web.controller.wx.LafReleaseController.remove()', 'POST', 1, 'admin', '校园失物管理系统', '/wx/release/remove', '111.79.9.125', 'XX XX', '{\"ids\":[\"248\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-14 22:32:54');
+INSERT INTO `sys_oper_log` VALUES (1012, '帖子', 3, 'com.ruoyi.web.controller.wx.LafReleaseController.remove()', 'POST', 1, 'admin', '校园失物管理系统', '/wx/release/remove', '111.79.9.125', 'XX XX', '{\"ids\":[\"246\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-14 22:33:00');
+INSERT INTO `sys_oper_log` VALUES (1013, '帖子', 3, 'com.ruoyi.web.controller.wx.LafReleaseController.remove()', 'POST', 1, 'admin', '校园失物管理系统', '/wx/release/remove', '111.79.9.125', 'XX XX', '{\"ids\":[\"254\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-14 22:36:21');
+INSERT INTO `sys_oper_log` VALUES (1014, '帖子', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseController.remove()', 'GET', 1, NULL, NULL, '/wx/api/release/auth/delete', '111.79.9.125', 'XX XX', '{\"id\":[\"255\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-14 22:44:45');
+INSERT INTO `sys_oper_log` VALUES (1015, '帖子', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseController.remove()', 'GET', 1, NULL, NULL, '/wx/api/release/auth/delete', '223.104.170.147', 'XX XX', '{\"id\":[\"253\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-15 09:05:28');
+INSERT INTO `sys_oper_log` VALUES (1016, '帖子', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseController.remove()', 'GET', 1, NULL, NULL, '/wx/api/release/auth/delete', '223.104.170.147', 'XX XX', '{\"id\":[\"127\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-15 09:05:41');
+INSERT INTO `sys_oper_log` VALUES (1017, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '111.79.10.3', 'XX XX', '{\"comContent\":\"234\",\"comRelId\":268,\"params\":{}}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-15 10:56:22');
+INSERT INTO `sys_oper_log` VALUES (1018, '帖子', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseController.remove()', 'GET', 1, NULL, NULL, '/wx/api/release/auth/delete', '35.74.61.175', 'XX XX', '{\"id\":[\"265\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-15 11:32:31');
+INSERT INTO `sys_oper_log` VALUES (1019, '帖子', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseController.remove()', 'GET', 1, NULL, NULL, '/wx/api/release/auth/delete', '35.74.61.175', 'XX XX', '{\"id\":[\"265\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-15 11:34:00');
+INSERT INTO `sys_oper_log` VALUES (1020, '帖子', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseController.remove()', 'GET', 1, NULL, NULL, '/wx/api/release/auth/delete', '35.74.61.175', 'XX XX', '{\"id\":[\"269\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-15 11:35:28');
+INSERT INTO `sys_oper_log` VALUES (1021, '帖子', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseController.remove()', 'GET', 1, NULL, NULL, '/wx/api/release/auth/delete', '35.74.61.175', 'XX XX', '{\"id\":[\"267\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-15 11:35:33');
+INSERT INTO `sys_oper_log` VALUES (1022, '帖子', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseController.remove()', 'GET', 1, NULL, NULL, '/wx/api/release/auth/delete', '111.79.10.3', 'XX XX', '{\"id\":[\"272\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-15 13:32:52');
+INSERT INTO `sys_oper_log` VALUES (1023, '帖子', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseController.remove()', 'GET', 1, NULL, NULL, '/wx/api/release/auth/delete', '111.79.10.3', 'XX XX', '{\"id\":[\"271\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-15 13:33:09');
+INSERT INTO `sys_oper_log` VALUES (1024, '帖子', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseController.remove()', 'GET', 1, NULL, NULL, '/wx/api/release/auth/delete', '111.79.10.3', 'XX XX', '{\"id\":[\"268\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-15 13:33:11');
+INSERT INTO `sys_oper_log` VALUES (1025, '帖子', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseController.remove()', 'GET', 1, NULL, NULL, '/wx/api/release/auth/delete', '111.79.10.3', 'XX XX', '{\"id\":[\"266\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-15 13:33:13');
+INSERT INTO `sys_oper_log` VALUES (1026, '帖子', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseController.remove()', 'GET', 1, NULL, NULL, '/wx/api/release/auth/delete', '111.79.10.3', 'XX XX', '{\"id\":[\"264\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-15 13:33:15');
+INSERT INTO `sys_oper_log` VALUES (1027, '帖子', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseController.remove()', 'GET', 1, NULL, NULL, '/wx/api/release/auth/delete', '111.79.10.3', 'XX XX', '{\"id\":[\"263\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-15 13:33:17');
+INSERT INTO `sys_oper_log` VALUES (1028, '帖子', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseController.remove()', 'GET', 1, NULL, NULL, '/wx/api/release/auth/delete', '111.79.10.3', 'XX XX', '{\"id\":[\"262\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-15 13:33:19');
+INSERT INTO `sys_oper_log` VALUES (1029, '帖子', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseController.remove()', 'GET', 1, NULL, NULL, '/wx/api/release/auth/delete', '111.79.10.3', 'XX XX', '{\"id\":[\"261\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-15 13:33:20');
+INSERT INTO `sys_oper_log` VALUES (1030, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '111.79.10.3', 'XX XX', '{\"comContent\":\"1\",\"comRelId\":260,\"params\":{}}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-15 13:37:56');
+INSERT INTO `sys_oper_log` VALUES (1031, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '111.79.10.3', 'XX XX', '{\"comContent\":\"1\",\"comRelId\":260,\"params\":{},\"parentId\":242}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-15 13:38:00');
+INSERT INTO `sys_oper_log` VALUES (1032, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '111.79.10.3', 'XX XX', '{\"comContent\":\"1\",\"comRelId\":270,\"params\":{}}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-15 13:38:28');
+INSERT INTO `sys_oper_log` VALUES (1033, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '111.79.10.3', 'XX XX', '{\"comContent\":\"1\",\"comRelId\":270,\"params\":{},\"parentId\":244}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-15 13:38:32');
+INSERT INTO `sys_oper_log` VALUES (1034, '帖子', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseController.remove()', 'GET', 1, NULL, NULL, '/wx/api/release/auth/delete', '111.79.10.3', 'XX XX', '{\"id\":[\"273\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-15 13:38:57');
+INSERT INTO `sys_oper_log` VALUES (1035, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '111.79.10.3', 'XX XX', '{\"comContent\":\"1\",\"comRelId\":274,\"params\":{}}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-15 13:43:10');
+INSERT INTO `sys_oper_log` VALUES (1036, '帖子留言', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.remove()', 'GET', 1, NULL, NULL, '/wx/api/info/auth/comment/delete', '111.79.10.3', 'XX XX', '{\"id\":[\"246\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-15 13:43:13');
+INSERT INTO `sys_oper_log` VALUES (1037, '帖子', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseController.remove()', 'GET', 1, NULL, NULL, '/wx/api/release/auth/delete', '111.79.10.3', 'XX XX', '{\"id\":[\"275\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-15 13:43:23');
+INSERT INTO `sys_oper_log` VALUES (1038, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '111.79.10.3', 'XX XX', '{\"comContent\":\"111\",\"comRelId\":276,\"params\":{}}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-15 13:50:00');
+INSERT INTO `sys_oper_log` VALUES (1039, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '111.79.10.3', 'XX XX', '{\"comContent\":\"1\",\"comRelId\":274,\"params\":{}}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-15 13:53:04');
+INSERT INTO `sys_oper_log` VALUES (1040, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '111.79.10.3', 'XX XX', '{\"comContent\":\"我1\",\"comRelId\":276,\"params\":{}}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-15 13:57:26');
+INSERT INTO `sys_oper_log` VALUES (1041, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '111.79.10.3', 'XX XX', '{\"comContent\":\"1\",\"comRelId\":276,\"params\":{},\"parentId\":249}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-15 13:58:03');
+INSERT INTO `sys_oper_log` VALUES (1042, '帖子留言', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.remove()', 'GET', 1, NULL, NULL, '/wx/api/info/auth/comment/delete', '111.79.10.3', 'XX XX', '{\"id\":[\"249\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-15 13:58:59');
+INSERT INTO `sys_oper_log` VALUES (1043, '帖子', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseController.remove()', 'GET', 1, NULL, NULL, '/wx/api/release/auth/delete', '111.79.10.3', 'XX XX', '{\"id\":[\"276\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-15 13:59:27');
+INSERT INTO `sys_oper_log` VALUES (1044, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '111.79.10.3', 'XX XX', '{\"comContent\":\"你好\",\"comRelId\":274,\"params\":{}}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-15 14:01:30');
+INSERT INTO `sys_oper_log` VALUES (1045, '帖子', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseController.remove()', 'GET', 1, NULL, NULL, '/wx/api/release/auth/delete', '111.79.10.3', 'XX XX', '{\"id\":[\"176\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-15 14:02:02');
+INSERT INTO `sys_oper_log` VALUES (1046, '帖子', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseController.remove()', 'GET', 1, NULL, NULL, '/wx/api/release/auth/delete', '111.79.10.3', 'XX XX', '{\"id\":[\"177\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-15 14:02:04');
+INSERT INTO `sys_oper_log` VALUES (1047, '帖子', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseController.remove()', 'GET', 1, NULL, NULL, '/wx/api/release/auth/delete', '111.79.10.3', 'XX XX', '{\"id\":[\"240\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-15 14:02:05');
+INSERT INTO `sys_oper_log` VALUES (1048, '帖子', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseController.remove()', 'GET', 1, NULL, NULL, '/wx/api/release/auth/delete', '111.79.10.3', 'XX XX', '{\"id\":[\"241\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-15 14:02:08');
+INSERT INTO `sys_oper_log` VALUES (1049, '帖子', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseController.remove()', 'GET', 1, NULL, NULL, '/wx/api/release/auth/delete', '111.79.10.3', 'XX XX', '{\"id\":[\"250\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-15 14:02:10');
+INSERT INTO `sys_oper_log` VALUES (1050, '帖子', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseController.remove()', 'GET', 1, NULL, NULL, '/wx/api/release/auth/delete', '111.79.10.3', 'XX XX', '{\"id\":[\"251\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-15 14:02:12');
+INSERT INTO `sys_oper_log` VALUES (1051, '帖子', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseController.remove()', 'GET', 1, NULL, NULL, '/wx/api/release/auth/delete', '111.79.10.3', 'XX XX', '{\"id\":[\"252\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-15 14:02:14');
+INSERT INTO `sys_oper_log` VALUES (1052, '帖子', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseController.remove()', 'GET', 1, NULL, NULL, '/wx/api/release/auth/delete', '111.79.10.3', 'XX XX', '{\"id\":[\"277\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-15 14:03:18');
+INSERT INTO `sys_oper_log` VALUES (1053, '帖子', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseController.remove()', 'GET', 1, NULL, NULL, '/wx/api/release/auth/delete', '111.79.10.3', 'XX XX', '{\"id\":[\"235\"]}', '{\"msg\":\"删除失败\",\"code\":500}', 0, NULL, '2022-03-15 14:04:43');
+INSERT INTO `sys_oper_log` VALUES (1054, '帖子', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseController.remove()', 'GET', 1, NULL, NULL, '/wx/api/release/auth/delete', '111.79.10.3', 'XX XX', '{\"id\":[\"235\"]}', '{\"msg\":\"删除失败\",\"code\":500}', 0, NULL, '2022-03-15 14:04:45');
+INSERT INTO `sys_oper_log` VALUES (1055, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '111.79.10.3', 'XX XX', '{\"comContent\":\"1\",\"comRelId\":279,\"params\":{}}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-15 14:11:01');
+INSERT INTO `sys_oper_log` VALUES (1056, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '111.79.10.3', 'XX XX', '{\"comContent\":\"1\",\"comRelId\":278,\"params\":{}}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-15 15:01:59');
+INSERT INTO `sys_oper_log` VALUES (1057, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '111.79.10.3', 'XX XX', '{\"comContent\":\"1\",\"comRelId\":278,\"params\":{},\"parentId\":253}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-15 15:02:17');
+INSERT INTO `sys_oper_log` VALUES (1058, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '111.79.10.3', 'XX XX', '{\"comContent\":\"牛逼\",\"comRelId\":278,\"params\":{},\"parentId\":253}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-15 16:23:15');
+INSERT INTO `sys_oper_log` VALUES (1059, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '111.79.10.3', 'XX XX', '{\"comContent\":\"等会哈\",\"comRelId\":278,\"params\":{},\"parentId\":253}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-15 16:23:38');
+INSERT INTO `sys_oper_log` VALUES (1060, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '111.79.10.3', 'XX XX', '{\"comContent\":\"傻逼\",\"comRelId\":270,\"params\":{}}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-15 16:25:50');
+INSERT INTO `sys_oper_log` VALUES (1061, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '111.79.10.3', 'XX XX', '{\"comContent\":\" 我\",\"comRelId\":279,\"params\":{}}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-15 16:27:48');
+INSERT INTO `sys_oper_log` VALUES (1062, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '111.79.10.3', 'XX XX', '{\"comContent\":\"你\",\"comRelId\":279,\"params\":{},\"parentId\":258}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-15 16:27:55');
+INSERT INTO `sys_oper_log` VALUES (1063, '帖子', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseController.remove()', 'GET', 1, NULL, NULL, '/wx/api/release/auth/delete', '111.79.10.3', 'XX XX', '{\"id\":[\"193\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-15 16:28:51');
+INSERT INTO `sys_oper_log` VALUES (1064, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '111.79.10.3', 'XX XX', '{\"comContent\":\"afsd \",\"comRelId\":279,\"params\":{}}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-15 16:32:35');
+INSERT INTO `sys_oper_log` VALUES (1065, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '111.79.10.3', 'XX XX', '{\"comContent\":\"\",\"comImage\":\"/img/user/tiezi/tmp_f971b9dbbfe3bd224c94a573aeeb767d.jpg\",\"comRelId\":270,\"params\":{}}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-15 23:26:12');
+INSERT INTO `sys_oper_log` VALUES (1066, '帖子', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseController.remove()', 'GET', 1, NULL, NULL, '/wx/api/release/auth/delete', '111.79.10.3', 'XX XX', '{\"id\":[\"274\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-15 23:26:38');
+INSERT INTO `sys_oper_log` VALUES (1067, '帖子', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseController.remove()', 'GET', 1, NULL, NULL, '/wx/api/release/auth/delete', '111.79.10.3', 'XX XX', '{\"id\":[\"260\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-15 23:26:43');
+INSERT INTO `sys_oper_log` VALUES (1068, '帖子', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseController.remove()', 'GET', 1, NULL, NULL, '/wx/api/release/auth/delete', '111.79.10.3', 'XX XX', '{\"id\":[\"235\"]}', '{\"msg\":\"删除失败\",\"code\":500}', 0, NULL, '2022-03-15 23:27:01');
+INSERT INTO `sys_oper_log` VALUES (1069, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '182.104.69.164', 'XX XX', '{\"comContent\":\"好多bug\",\"comRelId\":308,\"params\":{}}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-16 10:27:42');
+INSERT INTO `sys_oper_log` VALUES (1070, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '223.104.170.147', 'XX XX', '{\"comContent\":\"那些bug\",\"comRelId\":308,\"params\":{},\"parentId\":262}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-16 16:08:16');
+INSERT INTO `sys_oper_log` VALUES (1071, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '182.97.113.101', 'XX XX', '{\"comContent\":\"6666\",\"comRelId\":311,\"params\":{}}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-16 17:35:32');
+INSERT INTO `sys_oper_log` VALUES (1072, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '182.97.113.101', 'XX XX', '{\"comContent\":\"哈哈哈哈\",\"comRelId\":311,\"params\":{}}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-16 17:35:38');
+INSERT INTO `sys_oper_log` VALUES (1073, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '182.97.113.101', 'XX XX', '{\"comContent\":\"嘎嘎嘎\",\"comRelId\":311,\"params\":{}}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-16 17:35:50');
+INSERT INTO `sys_oper_log` VALUES (1074, '帖子留言', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.remove()', 'GET', 1, NULL, NULL, '/wx/api/info/auth/comment/delete', '182.97.113.101', 'XX XX', '{\"id\":[\"264\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-16 17:35:57');
+INSERT INTO `sys_oper_log` VALUES (1075, '帖子留言', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.remove()', 'GET', 1, NULL, NULL, '/wx/api/info/auth/comment/delete', '182.97.113.101', 'XX XX', '{\"id\":[\"265\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-16 17:35:59');
+INSERT INTO `sys_oper_log` VALUES (1076, '帖子留言', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.remove()', 'GET', 1, NULL, NULL, '/wx/api/info/auth/comment/delete', '182.97.113.101', 'XX XX', '{\"id\":[\"266\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-16 17:36:00');
+INSERT INTO `sys_oper_log` VALUES (1077, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '223.104.170.147', 'XX XX', '{\"comContent\":\"gun\",\"comRelId\":270,\"params\":{}}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-16 17:41:10');
+INSERT INTO `sys_oper_log` VALUES (1078, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '223.104.170.147', 'XX XX', '{\"comContent\":\"11\",\"comRelId\":270,\"params\":{}}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-16 17:41:30');
+INSERT INTO `sys_oper_log` VALUES (1079, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '182.97.113.101', 'XX XX', '{\"comContent\":\"社会社会\",\"comRelId\":313,\"params\":{}}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-16 17:42:02');
+INSERT INTO `sys_oper_log` VALUES (1080, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '223.104.170.147', 'XX XX', '{\"comContent\":\"gun\",\"comRelId\":270,\"params\":{}}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-16 17:42:09');
+INSERT INTO `sys_oper_log` VALUES (1081, '帖子', 3, 'com.ruoyi.web.controller.wx.LafReleaseController.remove()', 'POST', 1, 'admin', '校园失物管理系统', '/wx/release/remove', '111.79.8.219', 'XX XX', '{\"ids\":[\"286\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-17 10:25:56');
+INSERT INTO `sys_oper_log` VALUES (1082, '帖子', 3, 'com.ruoyi.web.controller.wx.LafReleaseController.remove()', 'POST', 1, 'admin', '校园失物管理系统', '/wx/release/remove', '111.79.8.219', 'XX XX', '{\"ids\":[\"285\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-17 10:25:58');
+INSERT INTO `sys_oper_log` VALUES (1083, '帖子', 3, 'com.ruoyi.web.controller.wx.LafReleaseController.remove()', 'POST', 1, 'admin', '校园失物管理系统', '/wx/release/remove', '111.79.8.219', 'XX XX', '{\"ids\":[\"284\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-17 10:26:00');
+INSERT INTO `sys_oper_log` VALUES (1084, '帖子', 3, 'com.ruoyi.web.controller.wx.LafReleaseController.remove()', 'POST', 1, 'admin', '校园失物管理系统', '/wx/release/remove', '111.79.8.219', 'XX XX', '{\"ids\":[\"283\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-17 10:26:02');
+INSERT INTO `sys_oper_log` VALUES (1085, '帖子', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseController.remove()', 'GET', 1, NULL, NULL, '/wx/api/release/auth/delete', '223.104.170.147', 'XX XX', '{\"id\":[\"312\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-17 15:13:09');
+INSERT INTO `sys_oper_log` VALUES (1086, '帖子', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseController.remove()', 'GET', 1, NULL, NULL, '/wx/api/release/auth/delete', '223.104.170.147', 'XX XX', '{\"id\":[\"281\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-17 15:13:16');
+INSERT INTO `sys_oper_log` VALUES (1087, '帖子', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseController.remove()', 'GET', 1, NULL, NULL, '/wx/api/release/auth/delete', '223.104.170.147', 'XX XX', '{\"id\":[\"282\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-17 15:13:27');
+INSERT INTO `sys_oper_log` VALUES (1088, '帖子', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseController.remove()', 'GET', 1, NULL, NULL, '/wx/api/release/auth/delete', '223.104.170.147', 'XX XX', '{\"id\":[\"280\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-17 15:13:32');
+INSERT INTO `sys_oper_log` VALUES (1089, '帖子', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseController.remove()', 'GET', 1, NULL, NULL, '/wx/api/release/auth/delete', '223.104.170.147', 'XX XX', '{\"id\":[\"313\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-17 15:30:41');
+INSERT INTO `sys_oper_log` VALUES (1090, '帖子', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseController.remove()', 'GET', 1, NULL, NULL, '/wx/api/release/auth/delete', '223.104.170.147', 'XX XX', '{\"id\":[\"310\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-17 15:30:44');
+INSERT INTO `sys_oper_log` VALUES (1091, '帖子', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseController.remove()', 'GET', 1, NULL, NULL, '/wx/api/release/auth/delete', '223.104.170.147', 'XX XX', '{\"id\":[\"318\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-17 17:48:32');
+INSERT INTO `sys_oper_log` VALUES (1092, '帖子', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseController.remove()', 'GET', 1, NULL, NULL, '/wx/api/release/auth/delete', '223.104.170.147', 'XX XX', '{\"id\":[\"319\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-17 17:52:55');
+INSERT INTO `sys_oper_log` VALUES (1093, '帖子', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseController.remove()', 'GET', 1, NULL, NULL, '/wx/api/release/auth/delete', '223.104.170.147', 'XX XX', '{\"id\":[\"320\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-17 17:53:21');
+INSERT INTO `sys_oper_log` VALUES (1094, '帖子', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseController.remove()', 'GET', 1, NULL, NULL, '/wx/api/release/auth/delete', '111.79.8.219', 'XX XX', '{\"id\":[\"324\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-17 19:21:51');
+INSERT INTO `sys_oper_log` VALUES (1095, '帖子', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseController.remove()', 'GET', 1, NULL, NULL, '/wx/api/release/auth/delete', '111.79.8.219', 'XX XX', '{\"id\":[\"327\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-17 19:23:25');
+INSERT INTO `sys_oper_log` VALUES (1096, '帖子', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseController.remove()', 'GET', 1, NULL, NULL, '/wx/api/release/auth/delete', '223.104.170.147', 'XX XX', '{\"id\":[\"328\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-17 19:25:46');
+INSERT INTO `sys_oper_log` VALUES (1097, '帖子', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseController.remove()', 'GET', 1, NULL, NULL, '/wx/api/release/auth/delete', '111.79.8.219', 'XX XX', '{\"id\":[\"334\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-17 20:38:12');
+INSERT INTO `sys_oper_log` VALUES (1098, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '111.79.8.219', 'XX XX', '{\"comContent\":\"1\",\"comRelId\":349,\"params\":{}}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-18 13:00:06');
+INSERT INTO `sys_oper_log` VALUES (1099, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '111.79.8.219', 'XX XX', '{\"comContent\":\"1\",\"comRelId\":349,\"params\":{}}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-18 13:00:11');
+INSERT INTO `sys_oper_log` VALUES (1100, '帖子', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseController.remove()', 'GET', 1, NULL, NULL, '/wx/api/release/auth/delete', '111.79.8.219', 'XX XX', '{\"id\":[\"344\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-18 13:01:09');
+INSERT INTO `sys_oper_log` VALUES (1101, '帖子', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseController.remove()', 'GET', 1, NULL, NULL, '/wx/api/release/auth/delete', '111.79.8.219', 'XX XX', '{\"id\":[\"279\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-18 13:02:37');
+INSERT INTO `sys_oper_log` VALUES (1102, '帖子', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseController.remove()', 'GET', 1, NULL, NULL, '/wx/api/release/auth/delete', '111.79.8.219', 'XX XX', '{\"id\":[\"332\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-18 13:03:00');
+INSERT INTO `sys_oper_log` VALUES (1103, '帖子', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseController.remove()', 'GET', 1, NULL, NULL, '/wx/api/release/auth/delete', '111.79.8.219', 'XX XX', '{\"id\":[\"351\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-18 13:03:57');
+INSERT INTO `sys_oper_log` VALUES (1104, '帖子', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseController.remove()', 'GET', 1, NULL, NULL, '/wx/api/release/auth/delete', '111.79.8.219', 'XX XX', '{\"id\":[\"350\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-18 13:04:57');
+INSERT INTO `sys_oper_log` VALUES (1105, '帖子', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseController.remove()', 'GET', 1, NULL, NULL, '/wx/api/release/auth/delete', '111.79.8.219', 'XX XX', '{\"id\":[\"350\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-18 13:05:04');
+INSERT INTO `sys_oper_log` VALUES (1106, '帖子', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseController.remove()', 'GET', 1, NULL, NULL, '/wx/api/release/auth/delete', '111.79.8.219', 'XX XX', '{\"id\":[\"349\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-18 13:05:35');
+INSERT INTO `sys_oper_log` VALUES (1107, '帖子', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseController.remove()', 'GET', 1, NULL, NULL, '/wx/api/release/auth/delete', '111.79.8.219', 'XX XX', '{\"id\":[\"131\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-18 13:06:43');
+INSERT INTO `sys_oper_log` VALUES (1108, '帖子', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseController.remove()', 'GET', 1, NULL, NULL, '/wx/api/release/auth/delete', '111.79.8.219', 'XX XX', '{\"id\":[\"329\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-18 13:07:16');
+INSERT INTO `sys_oper_log` VALUES (1109, '帖子', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseController.remove()', 'GET', 1, NULL, NULL, '/wx/api/release/auth/delete', '111.79.8.219', 'XX XX', '{\"id\":[\"325\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-18 13:07:19');
+INSERT INTO `sys_oper_log` VALUES (1110, '帖子', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseController.remove()', 'GET', 1, NULL, NULL, '/wx/api/release/auth/delete', '111.79.8.219', 'XX XX', '{\"id\":[\"326\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-18 13:07:23');
+INSERT INTO `sys_oper_log` VALUES (1111, '帖子', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseController.remove()', 'GET', 1, NULL, NULL, '/wx/api/release/auth/delete', '111.79.8.219', 'XX XX', '{\"id\":[\"129\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-18 13:08:27');
+INSERT INTO `sys_oper_log` VALUES (1112, '帖子', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseController.remove()', 'GET', 1, NULL, NULL, '/wx/api/release/auth/delete', '111.79.8.219', 'XX XX', '{\"id\":[\"129\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-18 13:08:30');
+INSERT INTO `sys_oper_log` VALUES (1113, '帖子', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseController.remove()', 'GET', 1, NULL, NULL, '/wx/api/release/auth/delete', '111.79.8.219', 'XX XX', '{\"id\":[\"335\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-18 13:08:51');
+INSERT INTO `sys_oper_log` VALUES (1114, '帖子', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseController.remove()', 'GET', 1, NULL, NULL, '/wx/api/release/auth/delete', '111.79.8.219', 'XX XX', '{\"id\":[\"128\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-18 13:23:56');
+INSERT INTO `sys_oper_log` VALUES (1115, '帖子', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseController.remove()', 'GET', 1, NULL, NULL, '/wx/api/release/auth/delete', '111.79.8.219', 'XX XX', '{\"id\":[\"121\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-18 13:30:25');
+INSERT INTO `sys_oper_log` VALUES (1116, '帖子', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseController.remove()', 'GET', 1, NULL, NULL, '/wx/api/release/auth/delete', '111.79.8.219', 'XX XX', '{\"id\":[\"105\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-18 13:30:37');
+INSERT INTO `sys_oper_log` VALUES (1117, '学生', 3, 'com.ruoyi.web.controller.wx.LafStudentController.remove()', 'POST', 1, 'admin', '校园失物管理系统', '/wx/student/remove', '111.79.8.219', 'XX XX', '{\"ids\":[\"14\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-18 14:16:40');
+INSERT INTO `sys_oper_log` VALUES (1118, '帖子', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseController.remove()', 'GET', 1, NULL, NULL, '/wx/api/release/auth/delete', '111.79.8.219', 'XX XX', '{\"id\":[\"352\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-18 14:30:14');
+INSERT INTO `sys_oper_log` VALUES (1119, '帖子', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseController.remove()', 'GET', 1, NULL, NULL, '/wx/api/release/auth/delete', '111.79.8.219', 'XX XX', '{\"id\":[\"116\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-18 14:30:18');
+INSERT INTO `sys_oper_log` VALUES (1120, '学生', 3, 'com.ruoyi.web.controller.wx.LafStudentController.remove()', 'POST', 1, 'admin', '校园失物管理系统', '/wx/student/remove', '111.79.8.219', 'XX XX', '{\"ids\":[\"15\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-18 14:35:57');
+INSERT INTO `sys_oper_log` VALUES (1121, '学生', 3, 'com.ruoyi.web.controller.wx.LafStudentController.remove()', 'POST', 1, 'admin', '校园失物管理系统', '/wx/student/remove', '111.79.8.219', 'XX XX', '{\"ids\":[\"16\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-18 14:35:59');
+INSERT INTO `sys_oper_log` VALUES (1122, '学生', 3, 'com.ruoyi.web.controller.wx.LafStudentController.remove()', 'POST', 1, 'admin', '校园失物管理系统', '/wx/student/remove', '111.79.8.219', 'XX XX', '{\"ids\":[\"20\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-18 14:37:26');
+INSERT INTO `sys_oper_log` VALUES (1123, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '111.79.8.219', 'XX XX', '{\"comContent\":\"股海护航\",\"comRelId\":345,\"params\":{}}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-18 15:10:25');
+INSERT INTO `sys_oper_log` VALUES (1124, '帖子留言', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.remove()', 'GET', 1, NULL, NULL, '/wx/api/info/auth/comment/delete', '111.79.8.219', 'XX XX', '{\"id\":[\"273\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-18 15:10:29');
+INSERT INTO `sys_oper_log` VALUES (1125, '帖子', 3, 'com.ruoyi.web.controller.wx.LafReleaseController.remove()', 'POST', 1, 'admin', '校园失物管理系统', '/wx/release/remove', '111.79.8.219', 'XX XX', '{\"ids\":[\"351\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-18 15:59:51');
+INSERT INTO `sys_oper_log` VALUES (1126, '帖子', 3, 'com.ruoyi.web.controller.wx.LafReleaseController.remove()', 'POST', 1, 'admin', '校园失物管理系统', '/wx/release/remove', '111.79.8.219', 'XX XX', '{\"ids\":[\"350\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-18 15:59:53');
+INSERT INTO `sys_oper_log` VALUES (1127, '帖子', 3, 'com.ruoyi.web.controller.wx.LafReleaseController.remove()', 'POST', 1, 'admin', '校园失物管理系统', '/wx/release/remove', '111.79.8.219', 'XX XX', '{\"ids\":[\"348\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-18 15:59:55');
+INSERT INTO `sys_oper_log` VALUES (1128, '帖子', 3, 'com.ruoyi.web.controller.wx.LafReleaseController.remove()', 'POST', 1, 'admin', '校园失物管理系统', '/wx/release/remove', '111.79.8.219', 'XX XX', '{\"ids\":[\"347\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-18 15:59:58');
+INSERT INTO `sys_oper_log` VALUES (1129, '帖子', 3, 'com.ruoyi.web.controller.wx.LafReleaseController.remove()', 'POST', 1, 'admin', '校园失物管理系统', '/wx/release/remove', '111.79.8.219', 'XX XX', '{\"ids\":[\"345\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-18 16:00:02');
+INSERT INTO `sys_oper_log` VALUES (1130, '帖子', 3, 'com.ruoyi.web.controller.wx.LafReleaseController.remove()', 'POST', 1, 'admin', '校园失物管理系统', '/wx/release/remove', '111.79.8.219', 'XX XX', '{\"ids\":[\"344\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-18 16:00:04');
+INSERT INTO `sys_oper_log` VALUES (1131, '帖子', 3, 'com.ruoyi.web.controller.wx.LafReleaseController.remove()', 'POST', 1, 'admin', '校园失物管理系统', '/wx/release/remove', '111.79.8.219', 'XX XX', '{\"ids\":[\"342\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-18 16:00:06');
+INSERT INTO `sys_oper_log` VALUES (1132, '帖子', 3, 'com.ruoyi.web.controller.wx.LafReleaseController.remove()', 'POST', 1, 'admin', '校园失物管理系统', '/wx/release/remove', '111.79.8.219', 'XX XX', '{\"ids\":[\"341,340,339,338,337,336\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-18 16:00:16');
+INSERT INTO `sys_oper_log` VALUES (1133, '帖子', 3, 'com.ruoyi.web.controller.wx.LafReleaseController.remove()', 'POST', 1, 'admin', '校园失物管理系统', '/wx/release/remove', '111.79.8.219', 'XX XX', '{\"ids\":[\"343,335,334,333,332,331,330\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-18 16:00:37');
+INSERT INTO `sys_oper_log` VALUES (1134, '帖子', 3, 'com.ruoyi.web.controller.wx.LafReleaseController.remove()', 'POST', 1, 'admin', '校园失物管理系统', '/wx/release/remove', '111.79.8.219', 'XX XX', '{\"ids\":[\"328,327,324,323\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-18 16:00:52');
+INSERT INTO `sys_oper_log` VALUES (1135, '帖子', 3, 'com.ruoyi.web.controller.wx.LafReleaseController.remove()', 'POST', 1, 'admin', '校园失物管理系统', '/wx/release/remove', '111.79.8.219', 'XX XX', '{\"ids\":[\"318,317,316,315,314,313,312,310,309\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-18 16:01:35');
+INSERT INTO `sys_oper_log` VALUES (1136, '帖子', 3, 'com.ruoyi.web.controller.wx.LafReleaseController.remove()', 'POST', 1, 'admin', '校园失物管理系统', '/wx/release/remove', '111.79.8.219', 'XX XX', '{\"ids\":[\"307,306,305,304,303,302,301,300\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-18 16:01:55');
+INSERT INTO `sys_oper_log` VALUES (1137, '帖子', 3, 'com.ruoyi.web.controller.wx.LafReleaseController.remove()', 'POST', 1, 'admin', '校园失物管理系统', '/wx/release/remove', '111.79.8.219', 'XX XX', '{\"ids\":[\"299,298,297,296,295,294\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-18 16:02:12');
+INSERT INTO `sys_oper_log` VALUES (1138, '帖子', 3, 'com.ruoyi.web.controller.wx.LafReleaseController.remove()', 'POST', 1, 'admin', '校园失物管理系统', '/wx/release/remove', '111.79.8.219', 'XX XX', '{\"ids\":[\"282\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-18 16:02:18');
+INSERT INTO `sys_oper_log` VALUES (1139, '帖子', 3, 'com.ruoyi.web.controller.wx.LafReleaseController.remove()', 'POST', 1, 'admin', '校园失物管理系统', '/wx/release/remove', '111.79.8.219', 'XX XX', '{\"ids\":[\"269,268,267,266,265,264,263,262,261,260\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-18 16:02:30');
+INSERT INTO `sys_oper_log` VALUES (1140, '帖子', 3, 'com.ruoyi.web.controller.wx.LafReleaseController.remove()', 'POST', 1, 'admin', '校园失物管理系统', '/wx/release/remove', '111.79.8.219', 'XX XX', '{\"ids\":[\"241,240,230,229\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-18 16:02:49');
+INSERT INTO `sys_oper_log` VALUES (1141, '帖子', 3, 'com.ruoyi.web.controller.wx.LafReleaseController.remove()', 'POST', 1, 'admin', '校园失物管理系统', '/wx/release/remove', '111.79.8.219', 'XX XX', '{\"ids\":[\"228,226,225\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-18 16:03:04');
+INSERT INTO `sys_oper_log` VALUES (1142, '帖子', 3, 'com.ruoyi.web.controller.wx.LafReleaseController.remove()', 'POST', 1, 'admin', '校园失物管理系统', '/wx/release/remove', '111.79.8.219', 'XX XX', '{\"ids\":[\"224\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-18 16:03:08');
+INSERT INTO `sys_oper_log` VALUES (1143, '帖子', 3, 'com.ruoyi.web.controller.wx.LafReleaseController.remove()', 'POST', 1, 'admin', '校园失物管理系统', '/wx/release/remove', '111.79.8.219', 'XX XX', '{\"ids\":[\"220,219,218,217,216,215,214,210,211,213\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-18 16:03:13');
+INSERT INTO `sys_oper_log` VALUES (1144, '帖子', 3, 'com.ruoyi.web.controller.wx.LafReleaseController.remove()', 'POST', 1, 'admin', '校园失物管理系统', '/wx/release/remove', '111.79.8.219', 'XX XX', '{\"ids\":[\"212,209,208,207,206,205,204,203,202,201\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-18 16:03:20');
+INSERT INTO `sys_oper_log` VALUES (1145, '帖子', 3, 'com.ruoyi.web.controller.wx.LafReleaseController.remove()', 'POST', 1, 'admin', '校园失物管理系统', '/wx/release/remove', '111.79.8.219', 'XX XX', '{\"ids\":[\"200,199,198,197,196,195,194,193,192,191\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-18 16:03:24');
+INSERT INTO `sys_oper_log` VALUES (1146, '帖子', 3, 'com.ruoyi.web.controller.wx.LafReleaseController.remove()', 'POST', 1, 'admin', '校园失物管理系统', '/wx/release/remove', '111.79.8.219', 'XX XX', '{\"ids\":[\"190,189,188,187,186,185,184,183,182,181\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-18 16:03:29');
+INSERT INTO `sys_oper_log` VALUES (1147, '帖子', 3, 'com.ruoyi.web.controller.wx.LafReleaseController.remove()', 'POST', 1, 'admin', '校园失物管理系统', '/wx/release/remove', '111.79.8.219', 'XX XX', '{\"ids\":[\"180,179,178,177,176,175,174,171,170,169\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-18 16:03:35');
+INSERT INTO `sys_oper_log` VALUES (1148, '帖子', 3, 'com.ruoyi.web.controller.wx.LafReleaseController.remove()', 'POST', 1, 'admin', '校园失物管理系统', '/wx/release/remove', '111.79.8.219', 'XX XX', '{\"ids\":[\"168,167,166,165,164,163,162,161,160,157\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-18 16:03:39');
+INSERT INTO `sys_oper_log` VALUES (1149, '帖子', 3, 'com.ruoyi.web.controller.wx.LafReleaseController.remove()', 'POST', 1, 'admin', '校园失物管理系统', '/wx/release/remove', '111.79.8.219', 'XX XX', '{\"ids\":[\"149,148,129,128,125,124\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-18 16:03:53');
+INSERT INTO `sys_oper_log` VALUES (1150, '帖子', 3, 'com.ruoyi.web.controller.wx.LafReleaseController.remove()', 'POST', 1, 'admin', '校园失物管理系统', '/wx/release/remove', '111.79.8.219', 'XX XX', '{\"ids\":[\"108,105\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-18 16:04:06');
+INSERT INTO `sys_oper_log` VALUES (1151, '帖子', 2, 'com.ruoyi.web.controller.wx.LafReleaseController.editSave()', 'POST', 1, 'admin', '校园失物管理系统', '/wx/release/edit', '111.79.8.219', 'XX XX', '{\"relId\":[\"132\"],\"relTitle\":[\"test1.0.0\"],\"relDesc\":[\"寻找一个demo\"],\"relContact\":[\"123456\"],\"relCateId\":[\"1\"],\"relTime\":[\"\"],\"relCampus\":[\"南昌校区\"],\"createPlace\":[\"\"],\"createId\":[\"4\"],\"relImage\":[\"/img/user/tiezi/tmp_264c59b67ad78526eddb2f6ce9770a1a.jpg\"],\"relStatus\":[\"2\"],\"relStar\":[\"0\"],\"relFlag\":[\"2\"],\"relFlow\":[\"1\"],\"relDel\":[\"1\"],\"relClaimId\":[\"\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-18 16:04:22');
+INSERT INTO `sys_oper_log` VALUES (1152, '帖子', 2, 'com.ruoyi.web.controller.wx.LafReleaseController.editSave()', 'POST', 1, 'admin', '校园失物管理系统', '/wx/release/edit', '111.79.8.219', 'XX XX', '{\"relId\":[\"114\"],\"relTitle\":[\"寻找一卡通\"],\"relDesc\":[\"华晨宇名字\"],\"relContact\":[\"qq123456\"],\"relCateId\":[\"2\"],\"relTime\":[\"\"],\"relCampus\":[\"南昌校区\"],\"createPlace\":[\"\"],\"createId\":[\"4\"],\"relImage\":[\"/img/user/tiezi/tmp_486f11cbdd01b7b000b82941458ee48e.jpg\"],\"relStatus\":[\"1\"],\"relStar\":[\"1\"],\"relFlag\":[\"1\"],\"relFlow\":[\"1\"],\"relDel\":[\"1\"],\"relClaimId\":[\"\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-18 16:04:39');
+INSERT INTO `sys_oper_log` VALUES (1153, '帖子', 3, 'com.ruoyi.web.controller.wx.LafReleaseController.remove()', 'POST', 1, 'admin', '校园失物管理系统', '/wx/release/remove', '111.79.8.219', 'XX XX', '{\"ids\":[\"276,273,271,270\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-18 16:05:22');
+INSERT INTO `sys_oper_log` VALUES (1154, '帖子', 3, 'com.ruoyi.web.controller.wx.LafReleaseController.remove()', 'POST', 1, 'admin', '校园失物管理系统', '/wx/release/remove', '111.79.8.219', 'XX XX', '{\"ids\":[\"255,253,252,251,250\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-18 16:06:14');
+INSERT INTO `sys_oper_log` VALUES (1155, '帖子', 3, 'com.ruoyi.web.controller.wx.LafReleaseController.remove()', 'POST', 1, 'admin', '校园失物管理系统', '/wx/release/remove', '111.79.8.219', 'XX XX', '{\"ids\":[\"329\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-18 16:06:27');
+INSERT INTO `sys_oper_log` VALUES (1156, '帖子', 3, 'com.ruoyi.web.controller.wx.LafReleaseController.remove()', 'POST', 1, 'admin', '校园失物管理系统', '/wx/release/remove', '111.79.8.219', 'XX XX', '{\"ids\":[\"223,222,221\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-18 16:06:39');
+INSERT INTO `sys_oper_log` VALUES (1157, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '182.97.235.211', 'XX XX', '{\"comContent\":\"真好哇\",\"comRelId\":322,\"params\":{}}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-18 16:06:50');
+INSERT INTO `sys_oper_log` VALUES (1158, '帖子留言', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.remove()', 'GET', 1, NULL, NULL, '/wx/api/info/auth/comment/delete', '182.97.235.211', 'XX XX', '{\"id\":[\"274\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-18 16:07:00');
+INSERT INTO `sys_oper_log` VALUES (1159, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '182.97.235.211', 'XX XX', '{\"comContent\":\"纳尼\",\"comRelId\":322,\"params\":{}}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-18 16:07:16');
+INSERT INTO `sys_oper_log` VALUES (1160, '帖子留言', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.remove()', 'GET', 1, NULL, NULL, '/wx/api/info/auth/comment/delete', '182.97.235.211', 'XX XX', '{\"id\":[\"275\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-18 16:07:27');
+INSERT INTO `sys_oper_log` VALUES (1161, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '182.97.235.211', 'XX XX', '{\"comContent\":\"思考\",\"comRelId\":322,\"params\":{}}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-18 16:07:56');
+INSERT INTO `sys_oper_log` VALUES (1162, '帖子留言', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.remove()', 'GET', 1, NULL, NULL, '/wx/api/info/auth/comment/delete', '182.97.235.211', 'XX XX', '{\"id\":[\"276\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-18 16:07:58');
+INSERT INTO `sys_oper_log` VALUES (1163, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '111.79.8.219', 'XX XX', '{\"comContent\":\"1\",\"comRelId\":322,\"params\":{}}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-18 16:09:10');
+INSERT INTO `sys_oper_log` VALUES (1164, '帖子', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseController.remove()', 'GET', 1, NULL, NULL, '/wx/api/release/auth/delete', '111.79.8.219', 'XX XX', '{\"id\":[\"107\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-18 16:10:32');
+INSERT INTO `sys_oper_log` VALUES (1165, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '182.97.235.211', 'XX XX', '{\"comContent\":\"٩( \'ω\' )و get！\",\"comRelId\":322,\"params\":{}}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-18 16:11:24');
+INSERT INTO `sys_oper_log` VALUES (1166, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '182.97.235.211', 'XX XX', '{\"comContent\":\"嘿呀\",\"comRelId\":346,\"params\":{}}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-18 16:12:24');
+INSERT INTO `sys_oper_log` VALUES (1167, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '182.102.16.126', 'XX XX', '{\"comContent\":\"已找回。\",\"comRelId\":353,\"params\":{}}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-18 16:26:48');
+INSERT INTO `sys_oper_log` VALUES (1168, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '111.79.8.219', 'XX XX', '{\"comContent\":\"。。\",\"comRelId\":353,\"params\":{},\"parentId\":280}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-18 16:43:53');
+INSERT INTO `sys_oper_log` VALUES (1169, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '182.102.16.126', 'XX XX', '{\"comContent\":\"…\",\"comRelId\":353,\"params\":{},\"parentId\":281}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-18 16:44:06');
+INSERT INTO `sys_oper_log` VALUES (1170, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '111.79.8.219', 'XX XX', '{\"comContent\":\"可以收到我的订阅通知吗\",\"comRelId\":353,\"params\":{},\"parentId\":282}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-18 16:44:28');
+INSERT INTO `sys_oper_log` VALUES (1171, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '182.102.16.126', 'XX XX', '{\"comContent\":\"可以\",\"comRelId\":353,\"params\":{},\"parentId\":283}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-18 16:44:37');
+INSERT INTO `sys_oper_log` VALUES (1172, '帖子留言', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.remove()', 'GET', 1, NULL, NULL, '/wx/api/info/auth/comment/delete', '111.79.8.219', 'XX XX', '{\"id\":[\"202\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-18 16:46:02');
+INSERT INTO `sys_oper_log` VALUES (1173, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '182.102.16.126', 'XX XX', '{\"comContent\":\"\",\"comImage\":\"/img/user/tiezi/tmp_0bb6c6f5d18071af0191f867413ba83db88947a27457c66e.jpg\",\"comRelId\":353,\"params\":{},\"parentId\":280}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-18 16:46:30');
+INSERT INTO `sys_oper_log` VALUES (1174, '帖子留言', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.remove()', 'GET', 1, NULL, NULL, '/wx/api/info/auth/comment/delete', '182.102.16.126', 'XX XX', '{\"id\":[\"285\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-18 16:48:34');
+INSERT INTO `sys_oper_log` VALUES (1175, '帖子', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseController.remove()', 'GET', 1, NULL, NULL, '/wx/api/release/auth/delete', '182.102.16.126', 'XX XX', '{\"id\":[\"354\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-18 16:58:15');
+INSERT INTO `sys_oper_log` VALUES (1176, '帖子', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseController.remove()', 'GET', 1, NULL, NULL, '/wx/api/release/auth/delete', '111.79.8.219', 'XX XX', '{\"id\":[\"355\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-18 16:58:49');
+INSERT INTO `sys_oper_log` VALUES (1177, '帖子', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseController.remove()', 'GET', 1, NULL, NULL, '/wx/api/release/auth/delete', '182.102.16.126', 'XX XX', '{\"id\":[\"356\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-18 17:05:49');
+INSERT INTO `sys_oper_log` VALUES (1178, '帖子', 3, 'com.ruoyi.web.controller.wx.LafReleaseController.remove()', 'POST', 1, 'admin', '校园失物管理系统', '/wx/release/remove', '111.79.8.219', 'XX XX', '{\"ids\":[\"356\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-18 17:07:49');
+INSERT INTO `sys_oper_log` VALUES (1179, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '182.102.16.126', 'XX XX', '{\"comContent\":\"全网寻找有缘人\",\"comRelId\":357,\"params\":{}}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-18 17:13:22');
+INSERT INTO `sys_oper_log` VALUES (1180, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '182.102.16.126', 'XX XX', '{\"comContent\":\"\",\"comImage\":\"/img/user/tiezi/tmp_e6f2e61e11c7cc4c1abe944207d6f4822118f40e334724a5.jpg\",\"comRelId\":357,\"params\":{}}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-18 17:14:01');
+INSERT INTO `sys_oper_log` VALUES (1181, '帖子留言', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.remove()', 'GET', 1, NULL, NULL, '/wx/api/info/auth/comment/delete', '182.102.16.126', 'XX XX', '{\"id\":[\"286\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-18 17:15:01');
+INSERT INTO `sys_oper_log` VALUES (1182, '帖子留言', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.remove()', 'GET', 1, NULL, NULL, '/wx/api/info/auth/comment/delete', '182.97.235.211', 'XX XX', '{\"id\":[\"279\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-18 17:21:39');
+INSERT INTO `sys_oper_log` VALUES (1183, '帖子留言', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.remove()', 'GET', 1, NULL, NULL, '/wx/api/info/auth/comment/delete', '182.97.235.211', 'XX XX', '{\"id\":[\"279\"]}', '{\"msg\":\"删除失败\",\"code\":500}', 0, NULL, '2022-03-18 17:21:41');
+INSERT INTO `sys_oper_log` VALUES (1184, '帖子留言', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.remove()', 'GET', 1, NULL, NULL, '/wx/api/info/auth/comment/delete', '182.97.235.211', 'XX XX', '{\"id\":[\"279\"]}', '{\"msg\":\"操作失败\",\"code\":500}', 0, NULL, '2022-03-18 17:21:45');
+INSERT INTO `sys_oper_log` VALUES (1185, '帖子', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseController.remove()', 'GET', 1, NULL, NULL, '/wx/api/release/auth/delete', '182.97.235.211', 'XX XX', '{\"id\":[\"291\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-18 17:22:17');
+INSERT INTO `sys_oper_log` VALUES (1186, '帖子', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseController.remove()', 'GET', 1, NULL, NULL, '/wx/api/release/auth/delete', '182.97.235.211', 'XX XX', '{\"id\":[\"289\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-18 17:22:19');
+INSERT INTO `sys_oper_log` VALUES (1187, '帖子', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseController.remove()', 'GET', 1, NULL, NULL, '/wx/api/release/auth/delete', '182.97.235.211', 'XX XX', '{\"id\":[\"288\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-18 17:22:21');
+INSERT INTO `sys_oper_log` VALUES (1188, '帖子', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseController.remove()', 'GET', 1, NULL, NULL, '/wx/api/release/auth/delete', '182.97.235.211', 'XX XX', '{\"id\":[\"287\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-18 17:22:23');
+INSERT INTO `sys_oper_log` VALUES (1189, '帖子', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseController.remove()', 'GET', 1, NULL, NULL, '/wx/api/release/auth/delete', '182.97.235.211', 'XX XX', '{\"id\":[\"256\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-18 17:22:27');
+INSERT INTO `sys_oper_log` VALUES (1190, '帖子', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseController.remove()', 'GET', 1, NULL, NULL, '/wx/api/release/auth/delete', '182.97.235.211', 'XX XX', '{\"id\":[\"258\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-18 17:22:29');
+INSERT INTO `sys_oper_log` VALUES (1191, '帖子', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseController.remove()', 'GET', 1, NULL, NULL, '/wx/api/release/auth/delete', '182.97.235.211', 'XX XX', '{\"id\":[\"257\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-18 17:22:31');
+INSERT INTO `sys_oper_log` VALUES (1192, '帖子', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseController.remove()', 'GET', 1, NULL, NULL, '/wx/api/release/auth/delete', '182.97.235.211', 'XX XX', '{\"id\":[\"259\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-18 17:22:33');
+INSERT INTO `sys_oper_log` VALUES (1193, '帖子', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseController.remove()', 'GET', 1, NULL, NULL, '/wx/api/release/auth/delete', '182.97.235.211', 'XX XX', '{\"id\":[\"290\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-18 17:22:35');
+INSERT INTO `sys_oper_log` VALUES (1194, '帖子', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseController.remove()', 'GET', 1, NULL, NULL, '/wx/api/release/auth/delete', '182.97.235.211', 'XX XX', '{\"id\":[\"243\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-18 17:22:42');
+INSERT INTO `sys_oper_log` VALUES (1195, '帖子', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseController.remove()', 'GET', 1, NULL, NULL, '/wx/api/release/auth/delete', '182.97.235.211', 'XX XX', '{\"id\":[\"321\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-18 17:22:45');
+INSERT INTO `sys_oper_log` VALUES (1196, '帖子', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseController.remove()', 'GET', 1, NULL, NULL, '/wx/api/release/auth/delete', '182.97.235.211', 'XX XX', '{\"id\":[\"234\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-18 17:22:47');
+INSERT INTO `sys_oper_log` VALUES (1197, '帖子', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseController.remove()', 'GET', 1, NULL, NULL, '/wx/api/release/auth/delete', '182.97.235.211', 'XX XX', '{\"id\":[\"233\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-18 17:22:49');
+INSERT INTO `sys_oper_log` VALUES (1198, '帖子', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseController.remove()', 'GET', 1, NULL, NULL, '/wx/api/release/auth/delete', '182.97.235.211', 'XX XX', '{\"id\":[\"231\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-18 17:22:54');
+INSERT INTO `sys_oper_log` VALUES (1199, '帖子', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseController.remove()', 'GET', 1, NULL, NULL, '/wx/api/release/auth/delete', '182.97.235.211', 'XX XX', '{\"id\":[\"227\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-18 17:22:56');
+INSERT INTO `sys_oper_log` VALUES (1200, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '182.97.235.211', 'XX XX', '{\"comContent\":\"我为什么要找徐乐的身份证\",\"comRelId\":346,\"params\":{}}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-18 17:27:36');
+INSERT INTO `sys_oper_log` VALUES (1201, '帖子', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseController.remove()', 'GET', 1, NULL, NULL, '/wx/api/release/auth/delete', '111.79.8.219', 'XX XX', '{\"id\":[\"119\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-18 17:37:50');
+INSERT INTO `sys_oper_log` VALUES (1202, '帖子', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseController.remove()', 'GET', 1, NULL, NULL, '/wx/api/release/auth/delete', '111.79.8.219', 'XX XX', '{\"id\":[\"359\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-18 17:38:14');
+INSERT INTO `sys_oper_log` VALUES (1203, '帖子', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseController.remove()', 'GET', 1, NULL, NULL, '/wx/api/release/auth/delete', '111.79.8.219', 'XX XX', '{\"id\":[\"322\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-18 17:38:17');
+INSERT INTO `sys_oper_log` VALUES (1204, '帖子', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseController.remove()', 'GET', 1, NULL, NULL, '/wx/api/release/auth/delete', '111.79.8.219', 'XX XX', '{\"id\":[\"311\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-18 17:38:19');
+INSERT INTO `sys_oper_log` VALUES (1205, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '182.97.235.211', 'XX XX', '{\"comContent\":\"没做联系方式的校验uu，回头补≥﹏≤\",\"comRelId\":358,\"params\":{}}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-18 17:45:56');
+INSERT INTO `sys_oper_log` VALUES (1206, '帖子', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseController.remove()', 'GET', 1, NULL, NULL, '/wx/api/release/auth/delete', '111.79.8.219', 'XX XX', '{\"id\":[\"132\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-18 18:07:05');
+INSERT INTO `sys_oper_log` VALUES (1207, '帖子', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseController.remove()', 'GET', 1, NULL, NULL, '/wx/api/release/auth/delete', '111.79.8.219', 'XX XX', '{\"id\":[\"113\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-18 18:07:07');
+INSERT INTO `sys_oper_log` VALUES (1208, '帖子', 2, 'com.ruoyi.web.controller.wx.LafReleaseController.editSave()', 'POST', 1, 'admin', '校园失物管理系统', '/wx/release/edit', '111.79.8.219', 'XX XX', '{\"relId\":[\"132\"],\"relTitle\":[\"test1.0.0\"],\"relDesc\":[\"寻找一个demo\"],\"relContact\":[\"123456\"],\"relCateId\":[\"1\"],\"relTime\":[\"\"],\"relCampus\":[\"南昌校区\"],\"createPlace\":[\"\"],\"createId\":[\"4\"],\"relImage\":[\"/img/user/tiezi/tmp_264c59b67ad78526eddb2f6ce9770a1a.jpg\"],\"relStatus\":[\"2\"],\"relStar\":[\"0\"],\"relFlag\":[\"2\"],\"relFlow\":[\"1\"],\"relDel\":[\"1\"],\"relClaimId\":[\"\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-18 18:46:13');
+INSERT INTO `sys_oper_log` VALUES (1209, '帖子', 2, 'com.ruoyi.web.controller.wx.LafReleaseController.editSave()', 'POST', 1, 'admin', '校园失物管理系统', '/wx/release/edit', '111.79.8.219', 'XX XX', '{\"relId\":[\"113\"],\"relTitle\":[\"寻找一卡通\"],\"relDesc\":[\"1203教室丢失\"],\"relContact\":[\"qq6876203\"],\"relCateId\":[\"2\"],\"relTime\":[\"\"],\"relCampus\":[\"南昌校区\"],\"createPlace\":[\"\"],\"createId\":[\"4\"],\"relImage\":[\"/img/user/tiezi/tmp_72dc3decade9181c831e1348e8bd75e2.jpg\"],\"relStatus\":[\"2\"],\"relStar\":[\"1\"],\"relFlag\":[\"1\"],\"relFlow\":[\"1\"],\"relDel\":[\"1\"],\"relClaimId\":[\"\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-18 18:46:25');
+INSERT INTO `sys_oper_log` VALUES (1210, '帖子', 3, 'com.ruoyi.web.controller.wx.LafReleaseController.remove()', 'POST', 1, 'admin', '校园失物管理系统', '/wx/release/remove', '111.79.8.219', 'XX XX', '{\"ids\":[\"231,227,131,127,121,119,116\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-18 18:47:15');
+INSERT INTO `sys_oper_log` VALUES (1211, '帖子', 3, 'com.ruoyi.web.controller.wx.LafReleaseController.remove()', 'POST', 1, 'admin', '校园失物管理系统', '/wx/release/remove', '111.79.8.219', 'XX XX', '{\"ids\":[\"359,355,354,352,349,325,326,322,321,320\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-18 18:47:24');
+INSERT INTO `sys_oper_log` VALUES (1212, '帖子', 3, 'com.ruoyi.web.controller.wx.LafReleaseController.remove()', 'POST', 1, 'admin', '校园失物管理系统', '/wx/release/remove', '111.79.8.219', 'XX XX', '{\"ids\":[\"319,311,291,290,289,288,287,281,280,279\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-18 18:47:30');
+INSERT INTO `sys_oper_log` VALUES (1213, '帖子', 3, 'com.ruoyi.web.controller.wx.LafReleaseController.remove()', 'POST', 1, 'admin', '校园失物管理系统', '/wx/release/remove', '111.79.8.219', 'XX XX', '{\"ids\":[\"277,274,272,259,257,258,256,243,234,233\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-18 18:47:35');
+INSERT INTO `sys_oper_log` VALUES (1214, '帖子', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseController.remove()', 'GET', 1, NULL, NULL, '/wx/api/release/auth/delete', '182.97.235.211', 'XX XX', '{\"id\":[\"292\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-18 19:21:31');
+INSERT INTO `sys_oper_log` VALUES (1215, '帖子留言', 3, 'com.ruoyi.web.controller.wx.LafCommentController.remove()', 'GET', 1, 'admin', '校园失物管理系统', '/wx/comment/remove/287', '111.79.8.219', 'XX XX', '287', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-18 19:22:58');
+INSERT INTO `sys_oper_log` VALUES (1216, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '111.79.8.219', 'XX XX', '{\"comContent\":\"牛牛\",\"comRelId\":361,\"params\":{}}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-18 19:43:13');
+INSERT INTO `sys_oper_log` VALUES (1217, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '111.79.8.219', 'XX XX', '{\"comContent\":\"牛的\",\"comRelId\":361,\"params\":{}}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-18 19:43:13');
+INSERT INTO `sys_oper_log` VALUES (1218, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '111.79.8.219', 'XX XX', '{\"comContent\":\"苏寒\",\"comRelId\":360,\"params\":{}}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-18 19:43:19');
+INSERT INTO `sys_oper_log` VALUES (1219, '帖子留言', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.remove()', 'GET', 1, NULL, NULL, '/wx/api/info/auth/comment/delete', '111.79.8.219', 'XX XX', '{\"id\":[\"291\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-18 19:43:33');
+INSERT INTO `sys_oper_log` VALUES (1220, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '111.79.8.219', 'XX XX', '{\"comContent\":\"牛牛\",\"comImage\":\"/img/user/tiezi/tmp_d286927255ede4cd89c3904fda868aee4dde1e500e002104.jpg\",\"comRelId\":361,\"params\":{}}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-18 19:43:39');
+INSERT INTO `sys_oper_log` VALUES (1221, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '111.79.8.219', 'XX XX', '{\"comContent\":\"这是图书馆吗\",\"comRelId\":362,\"params\":{}}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-18 20:14:31');
+INSERT INTO `sys_oper_log` VALUES (1222, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '111.79.8.219', 'XX XX', '{\"comContent\":\"同款\",\"comImage\":\"/img/user/tiezi/tmp_e8768d0c3d859919bb7ff18c58d8b3cd.jpg\",\"comRelId\":363,\"params\":{}}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-18 20:19:07');
+INSERT INTO `sys_oper_log` VALUES (1223, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '111.79.8.219', 'XX XX', '{\"comContent\":\"\",\"comImage\":\"/img/user/tiezi/tmp_e8768d0c3d859919bb7ff18c58d8b3cd.jpg\",\"comRelId\":363,\"params\":{}}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-18 20:19:10');
+INSERT INTO `sys_oper_log` VALUES (1224, '帖子留言', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.remove()', 'GET', 1, NULL, NULL, '/wx/api/info/auth/comment/delete', '111.79.8.219', 'XX XX', '{\"id\":[\"296\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-18 20:19:14');
+INSERT INTO `sys_oper_log` VALUES (1225, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '111.79.8.219', 'XX XX', '{\"comContent\":\"绷不住了\",\"comRelId\":362,\"params\":{}}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-18 20:20:42');
+INSERT INTO `sys_oper_log` VALUES (1226, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '111.79.8.219', 'XX XX', '{\"comContent\":\"\",\"comImage\":\"/img/user/tiezi/tmp_a43f6eb0ed000b70d9d89b43090f83740dc4d3ca897fc296.jpg\",\"comRelId\":367,\"params\":{}}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-18 20:22:33');
+INSERT INTO `sys_oper_log` VALUES (1227, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '111.79.8.219', 'XX XX', '{\"comContent\":\"\",\"comImage\":\"/img/user/tiezi/tmp_a43f6eb0ed000b70d9d89b43090f83740dc4d3ca897fc296.jpg\",\"comRelId\":367,\"params\":{}}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-18 20:22:33');
+INSERT INTO `sys_oper_log` VALUES (1228, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '111.79.8.219', 'XX XX', '{\"comContent\":\"\",\"comImage\":\"/img/user/tiezi/tmp_a43f6eb0ed000b70d9d89b43090f83740dc4d3ca897fc296.jpg\",\"comRelId\":367,\"params\":{}}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-18 20:22:34');
+INSERT INTO `sys_oper_log` VALUES (1229, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '111.79.8.219', 'XX XX', '{\"comContent\":\"四\",\"comImage\":\"/img/user/tiezi/tmp_a43f6eb0ed000b70d9d89b43090f83740dc4d3ca897fc296.jpg\",\"comRelId\":367,\"params\":{}}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-18 20:22:34');
+INSERT INTO `sys_oper_log` VALUES (1230, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '111.79.8.219', 'XX XX', '{\"comContent\":\"是吧\",\"comRelId\":367,\"params\":{}}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-18 20:22:37');
+INSERT INTO `sys_oper_log` VALUES (1231, '帖子留言', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.remove()', 'GET', 1, NULL, NULL, '/wx/api/info/auth/comment/delete', '111.79.8.219', 'XX XX', '{\"id\":[\"301\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-18 20:22:41');
+INSERT INTO `sys_oper_log` VALUES (1232, '帖子留言', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.remove()', 'GET', 1, NULL, NULL, '/wx/api/info/auth/comment/delete', '111.79.8.219', 'XX XX', '{\"id\":[\"301\"]}', '{\"msg\":\"删除失败\",\"code\":500}', 0, NULL, '2022-03-18 20:22:42');
+INSERT INTO `sys_oper_log` VALUES (1233, '帖子留言', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.remove()', 'GET', 1, NULL, NULL, '/wx/api/info/auth/comment/delete', '111.79.8.219', 'XX XX', '{\"id\":[\"302\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-18 20:22:43');
+INSERT INTO `sys_oper_log` VALUES (1234, '帖子留言', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.remove()', 'GET', 1, NULL, NULL, '/wx/api/info/auth/comment/delete', '111.79.8.219', 'XX XX', '{\"id\":[\"300\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-18 20:22:45');
+INSERT INTO `sys_oper_log` VALUES (1235, '帖子留言', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.remove()', 'GET', 1, NULL, NULL, '/wx/api/info/auth/comment/delete', '111.79.8.219', 'XX XX', '{\"id\":[\"298\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-18 20:22:47');
+INSERT INTO `sys_oper_log` VALUES (1236, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '111.79.8.219', 'XX XX', '{\"comContent\":\"不是吧，是吧，是吧，不是吧\",\"comRelId\":362,\"params\":{},\"parentId\":294}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-18 20:23:18');
+INSERT INTO `sys_oper_log` VALUES (1237, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '111.79.8.219', 'XX XX', '{\"comContent\":\"图片发错了，是这个\",\"comImage\":\"/img/user/tiezi/tmp_1aad4fd85d117ad81315deab6fd8a5519069c353bfb251fe.jpg\",\"comRelId\":369,\"params\":{}}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-18 20:28:29');
+INSERT INTO `sys_oper_log` VALUES (1238, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '111.79.8.219', 'XX XX', '{\"comContent\":\"\",\"comImage\":\"/img/user/tiezi/tmp_63d36250ccdeecc2024d16e44801044b.jpg\",\"comRelId\":368,\"params\":{}}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-18 20:28:50');
+INSERT INTO `sys_oper_log` VALUES (1239, '帖子', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseController.remove()', 'GET', 1, NULL, NULL, '/wx/api/release/auth/delete', '111.79.8.219', 'XX XX', '{\"id\":[\"370\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-18 21:00:14');
+INSERT INTO `sys_oper_log` VALUES (1240, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '182.97.235.211', 'XX XX', '{\"comContent\":\"好呀好呀\",\"comRelId\":371,\"params\":{}}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-18 21:08:13');
+INSERT INTO `sys_oper_log` VALUES (1241, '帖子', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseController.remove()', 'GET', 1, NULL, NULL, '/wx/api/release/auth/delete', '182.102.16.126', 'XX XX', '{\"id\":[\"353\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-18 21:08:19');
+INSERT INTO `sys_oper_log` VALUES (1242, '帖子', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseController.remove()', 'GET', 1, NULL, NULL, '/wx/api/release/auth/delete', '117.136.79.227', 'XX XX', '{\"id\":[\"372\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-18 21:08:50');
+INSERT INTO `sys_oper_log` VALUES (1243, '帖子', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseController.remove()', 'GET', 1, NULL, NULL, '/wx/api/release/auth/delete', '117.136.79.227', 'XX XX', '{\"id\":[\"371\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-18 21:08:53');
+INSERT INTO `sys_oper_log` VALUES (1244, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '182.97.235.211', 'XX XX', '{\"comContent\":\"它长什么样你还记得吗\",\"comRelId\":371,\"params\":{}}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-18 21:08:54');
+INSERT INTO `sys_oper_log` VALUES (1245, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '111.79.8.219', 'XX XX', '{\"comContent\":\"？？？？\",\"comRelId\":373,\"params\":{}}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-18 21:19:56');
+INSERT INTO `sys_oper_log` VALUES (1246, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '111.79.8.219', 'XX XX', '{\"comContent\":\"Xsp邀请您三食堂共用犀米家\",\"comRelId\":373,\"params\":{}}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-18 21:21:22');
+INSERT INTO `sys_oper_log` VALUES (1247, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '111.79.8.219', 'XX XX', '{\"comContent\":\"小学生\",\"comRelId\":373,\"params\":{},\"parentId\":309}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-18 21:22:12');
+INSERT INTO `sys_oper_log` VALUES (1248, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '111.79.8.219', 'XX XX', '{\"comContent\":\"就是这位\",\"comRelId\":373,\"params\":{},\"parentId\":310}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-18 21:26:03');
+INSERT INTO `sys_oper_log` VALUES (1249, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '111.79.8.219', 'XX XX', '{\"comContent\":\"打钱\",\"comImage\":\"/img/user/tiezi/tmp_2c12d648d9ab33189489b7257304197e.jpg\",\"comRelId\":369,\"params\":{}}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-18 21:26:16');
+INSERT INTO `sys_oper_log` VALUES (1250, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '111.79.8.219', 'XX XX', '{\"comContent\":\"\",\"comImage\":\"/img/user/tiezi/tmp_d9e13adfa88c0499b1b365ba026ea21189edb2102c40f2bd.jpg\",\"comRelId\":369,\"params\":{},\"parentId\":312}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-18 21:27:10');
+INSERT INTO `sys_oper_log` VALUES (1251, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '111.79.8.219', 'XX XX', '{\"comContent\":\"\",\"comImage\":\"/img/user/tiezi/tmp_d9e13adfa88c0499b1b365ba026ea21189edb2102c40f2bd.jpg\",\"comRelId\":369,\"params\":{}}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-18 21:27:12');
+INSERT INTO `sys_oper_log` VALUES (1252, '帖子留言', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.remove()', 'GET', 1, NULL, NULL, '/wx/api/info/auth/comment/delete', '111.79.8.219', 'XX XX', '{\"id\":[\"314\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-18 21:27:16');
+INSERT INTO `sys_oper_log` VALUES (1253, '帖子留言', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.remove()', 'GET', 1, NULL, NULL, '/wx/api/info/auth/comment/delete', '111.79.8.219', 'XX XX', '{\"id\":[\"313\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-18 21:28:05');
+INSERT INTO `sys_oper_log` VALUES (1254, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '182.97.235.211', 'XX XX', '{\"comContent\":\"社死T_T\",\"comRelId\":373,\"params\":{}}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-18 21:38:41');
+INSERT INTO `sys_oper_log` VALUES (1255, '用户管理', 3, 'com.ruoyi.web.controller.system.SysUserController.remove()', 'POST', 1, 'admin', '校园失物管理系统', '/system/user/remove', '111.79.8.219', 'XX XX', '{\"ids\":[\"103\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-18 21:47:40');
+INSERT INTO `sys_oper_log` VALUES (1256, '用户管理', 3, 'com.ruoyi.web.controller.system.SysUserController.remove()', 'POST', 1, 'admin', '校园失物管理系统', '/system/user/remove', '111.79.8.219', 'XX XX', '{\"ids\":[\"102\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-18 21:47:42');
+INSERT INTO `sys_oper_log` VALUES (1257, '用户管理', 3, 'com.ruoyi.web.controller.system.SysUserController.remove()', 'POST', 1, 'admin', '校园失物管理系统', '/system/user/remove', '111.79.8.219', 'XX XX', '{\"ids\":[\"101\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-18 21:47:45');
+INSERT INTO `sys_oper_log` VALUES (1258, '用户管理', 1, 'com.ruoyi.web.controller.system.SysUserController.addSave()', 'POST', 1, 'admin', '校园失物管理系统', '/system/user/add', '111.79.8.219', 'XX XX', '{\"deptId\":[\"103\"],\"userName\":[\"测试员\"],\"deptName\":[\"南昌校区\"],\"phonenumber\":[\"\"],\"email\":[\"12345678@qq.com\"],\"loginName\":[\"test\"],\"sex\":[\"1\"],\"role\":[\"2\"],\"remark\":[\"\"],\"status\":[\"0\"],\"roleIds\":[\"2\"],\"postIds\":[\"4\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-18 21:48:35');
+INSERT INTO `sys_oper_log` VALUES (1259, '用户管理', 2, 'com.ruoyi.web.controller.system.SysUserController.editSave()', 'POST', 1, 'admin', '校园失物管理系统', '/system/user/edit', '111.79.8.219', 'XX XX', '{\"userId\":[\"104\"],\"deptId\":[\"103\"],\"userName\":[\"测试员\"],\"dept.deptName\":[\"南昌校区\"],\"phonenumber\":[\"18888888888\"],\"email\":[\"12345678@qq.com\"],\"loginName\":[\"test\"],\"sex\":[\"1\"],\"role\":[\"2\"],\"remark\":[\"\"],\"status\":[\"0\"],\"roleIds\":[\"2\"],\"postIds\":[\"4\"]}', '{\"msg\":\"修改用户\'test\'失败，手机号码已存在\",\"code\":500}', 0, NULL, '2022-03-18 21:48:44');
+INSERT INTO `sys_oper_log` VALUES (1260, '用户管理', 2, 'com.ruoyi.web.controller.system.SysUserController.editSave()', 'POST', 1, 'admin', '校园失物管理系统', '/system/user/edit', '111.79.8.219', 'XX XX', '{\"userId\":[\"104\"],\"deptId\":[\"103\"],\"userName\":[\"测试员\"],\"dept.deptName\":[\"南昌校区\"],\"phonenumber\":[\"18436002417\"],\"email\":[\"12345678@qq.com\"],\"loginName\":[\"test\"],\"sex\":[\"1\"],\"role\":[\"2\"],\"remark\":[\"\"],\"status\":[\"0\"],\"roleIds\":[\"2\"],\"postIds\":[\"4\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-18 21:49:21');
+INSERT INTO `sys_oper_log` VALUES (1261, '重置密码', 2, 'com.ruoyi.web.controller.system.SysProfileController.resetPwd()', 'POST', 1, 'admin', '校园失物管理系统', '/system/user/profile/resetPwd', '111.79.8.219', 'XX XX', '{\"userId\":[\"1\"],\"loginName\":[\"admin\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-18 21:50:04');
+INSERT INTO `sys_oper_log` VALUES (1262, '帖子留言', 3, 'com.ruoyi.web.controller.wx.LafCommentController.remove()', 'GET', 1, 'test', '南昌校区', '/wx/comment/remove/299', '111.79.8.219', 'XX XX', '299', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-18 21:51:54');
+INSERT INTO `sys_oper_log` VALUES (1263, '重置密码', 2, 'com.ruoyi.web.controller.system.SysProfileController.resetPwd()', 'POST', 1, 'admin', '校园失物管理系统', '/system/user/profile/resetPwd', '111.79.8.219', 'XX XX', '{\"userId\":[\"1\"],\"loginName\":[\"admin\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-18 21:52:32');
+INSERT INTO `sys_oper_log` VALUES (1264, '角色管理', 2, 'com.ruoyi.web.controller.system.SysRoleController.editSave()', 'POST', 1, 'admin', '校园失物管理系统', '/system/role/edit', '111.79.8.219', 'XX XX', '{\"roleId\":[\"102\"],\"roleName\":[\"游客\"],\"roleKey\":[\"gust\"],\"roleSort\":[\"4\"],\"status\":[\"0\"],\"remark\":[\"\"],\"menuIds\":[\"4,2003,2005,2008,2002,2011,2012,2001,2021,2022,2004,2026,2027\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-18 21:53:18');
+INSERT INTO `sys_oper_log` VALUES (1265, '角色管理', 2, 'com.ruoyi.web.controller.system.SysRoleController.editSave()', 'POST', 1, 'admin', '校园失物管理系统', '/system/role/edit', '111.79.8.219', 'XX XX', '{\"roleId\":[\"102\"],\"roleName\":[\"游客\"],\"roleKey\":[\"gust\"],\"roleSort\":[\"4\"],\"status\":[\"0\"],\"remark\":[\"\"],\"menuIds\":[\"4,2003,2005,2008,2002,2011,2012,2001,2021,2022,2004,2026,2027\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-18 21:53:35');
+INSERT INTO `sys_oper_log` VALUES (1266, '用户管理', 2, 'com.ruoyi.web.controller.system.SysUserController.editSave()', 'POST', 1, 'admin', '校园失物管理系统', '/system/user/edit', '111.79.8.219', 'XX XX', '{\"userId\":[\"104\"],\"deptId\":[\"103\"],\"userName\":[\"测试员\"],\"dept.deptName\":[\"南昌校区\"],\"phonenumber\":[\"18436002417\"],\"email\":[\"12345678@qq.com\"],\"loginName\":[\"test\"],\"sex\":[\"1\"],\"role\":[\"102\"],\"remark\":[\"\"],\"status\":[\"0\"],\"roleIds\":[\"102\"],\"postIds\":[\"4\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-18 21:53:46');
+INSERT INTO `sys_oper_log` VALUES (1267, '重置密码', 2, 'com.ruoyi.web.controller.system.SysProfileController.resetPwd()', 'POST', 1, 'admin', '校园失物管理系统', '/system/user/profile/resetPwd', '111.79.8.219', 'XX XX', '{\"userId\":[\"1\"],\"loginName\":[\"admin\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-18 21:56:59');
+INSERT INTO `sys_oper_log` VALUES (1268, '学生', 2, 'com.ruoyi.web.controller.wx.LafStudentController.editSave()', 'POST', 1, 'admin', '校园失物管理系统', '/wx/student/edit', '111.79.8.219', 'XX XX', '{\"stuId\":[\"4\"],\"stuNick\":[\"空城\"],\"stuName\":[\"许肖阳\"],\"stuSex\":[\"3\"],\"stuXh\":[\"5720191930\"],\"stuPassword\":[\"123456\"],\"stuDepartment\":[\"软件工程学院\"],\"stuMajor\":[\"软件开发\"],\"stuClassname\":[\"193班\"],\"stuQq\":[\"1347456958\"],\"stuEmail\":[\"88888@qq.com\"],\"stuImage\":[\"https://thirdwx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTJ0ev3v9wh9pIrmqcmNxXzhib0X9eUBnhu3M4MmvE0n7icVgVohQwvIVibaDrthuXMNUVdEtVuI9y3ibQ/132\"],\"stuStatus\":[\"1\"],\"openid\":[\"o-AmG4kLqQvGARX1O4zVONdtNCi0\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-18 22:03:28');
+INSERT INTO `sys_oper_log` VALUES (1269, '学生', 2, 'com.ruoyi.web.controller.wx.LafStudentController.editSave()', 'POST', 1, 'admin', '校园失物管理系统', '/wx/student/edit', '111.79.8.219', 'XX XX', '{\"stuId\":[\"4\"],\"stuNick\":[\"空城\"],\"stuName\":[\"许肖阳\"],\"stuSex\":[\"3\"],\"stuXh\":[\"5720191930\"],\"stuPassword\":[\"********\"],\"stuDepartment\":[\"软件工程学院\"],\"stuMajor\":[\"软件开发\"],\"stuClassname\":[\"193班\"],\"stuQq\":[\"1347456958\"],\"stuEmail\":[\"88888@qq.com\"],\"stuImage\":[\"https://thirdwx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTJ0ev3v9wh9pIrmqcmNxXzhib0X9eUBnhu3M4MmvE0n7icVgVohQwvIVibaDrthuXMNUVdEtVuI9y3ibQ/132\"],\"stuStatus\":[\"1\"],\"openid\":[\"o-AmG4kLqQvGARX1O4zVONdtNCi0\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-18 22:04:01');
+INSERT INTO `sys_oper_log` VALUES (1270, '学生', 2, 'com.ruoyi.web.controller.wx.LafStudentController.editSave()', 'POST', 1, 'admin', '校园失物管理系统', '/wx/student/edit', '111.79.8.219', 'XX XX', '{\"stuId\":[\"4\"],\"stuNick\":[\"空城\"],\"stuName\":[\"许肖阳\"],\"stuSex\":[\"3\"],\"stuXh\":[\"5720191930\"],\"stuPassword\":[\"********\"],\"stuDepartment\":[\"软件工程学院\"],\"stuMajor\":[\"软件开发\"],\"stuClassname\":[\"193班\"],\"stuQq\":[\"1347456958\"],\"stuEmail\":[\"1347456958@qq.com\"],\"stuImage\":[\"https://thirdwx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTJ0ev3v9wh9pIrmqcmNxXzhib0X9eUBnhu3M4MmvE0n7icVgVohQwvIVibaDrthuXMNUVdEtVuI9y3ibQ/132\"],\"stuStatus\":[\"1\"],\"openid\":[\"o-AmG4kLqQvGARX1O4zVONdtNCi0\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-18 22:04:18');
+INSERT INTO `sys_oper_log` VALUES (1271, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '111.79.8.219', 'XX XX', '{\"comContent\":\"\",\"comImage\":\"/img/user/tiezi/tmp_60395ca7aee11f9c238fa42b0195f64fca1de2046afdfdf9.jpg\",\"comRelId\":367,\"params\":{}}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-18 22:37:52');
+INSERT INTO `sys_oper_log` VALUES (1272, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '112.97.49.44', 'XX XX', '{\"comContent\":\"哇美女\",\"comRelId\":373,\"params\":{}}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-18 22:43:57');
+INSERT INTO `sys_oper_log` VALUES (1273, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '112.97.49.44', 'XX XX', '{\"comContent\":\"我是二级评论\",\"comRelId\":373,\"params\":{},\"parentId\":317}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-18 22:44:11');
+INSERT INTO `sys_oper_log` VALUES (1274, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '112.97.49.44', 'XX XX', '{\"comContent\":\"有三级吗\",\"comRelId\":373,\"params\":{},\"parentId\":318}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-18 22:44:27');
+INSERT INTO `sys_oper_log` VALUES (1275, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '112.97.49.44', 'XX XX', '{\"comContent\":\"无限级的嘛\",\"comRelId\":373,\"params\":{},\"parentId\":319}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-18 22:44:55');
+INSERT INTO `sys_oper_log` VALUES (1276, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '182.97.235.211', 'XX XX', '{\"comContent\":\"你想皮尺\",\"comRelId\":373,\"params\":{},\"parentId\":320}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-18 22:59:30');
+INSERT INTO `sys_oper_log` VALUES (1277, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '182.97.235.211', 'XX XX', '{\"comContent\":\"尴尬\",\"comRelId\":373,\"params\":{},\"parentId\":317}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-18 23:00:03');
+INSERT INTO `sys_oper_log` VALUES (1278, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '111.79.8.219', 'XX XX', '{\"comContent\":\"真帅\",\"comRelId\":375,\"params\":{}}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-18 23:03:53');
+INSERT INTO `sys_oper_log` VALUES (1279, '帖子', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseController.remove()', 'GET', 1, NULL, NULL, '/wx/api/release/auth/delete', '111.79.8.219', 'XX XX', '{\"id\":[\"375\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-18 23:04:33');
+INSERT INTO `sys_oper_log` VALUES (1280, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '111.79.10.195', 'XX XX', '{\"comContent\":\"\\\\n\\\\n\",\"comRelId\":377,\"params\":{}}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-19 09:22:02');
+INSERT INTO `sys_oper_log` VALUES (1281, '帖子留言', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.remove()', 'GET', 1, NULL, NULL, '/wx/api/info/auth/comment/delete', '111.79.10.195', 'XX XX', '{\"id\":[\"324\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-19 09:22:08');
+INSERT INTO `sys_oper_log` VALUES (1282, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '182.97.113.189', 'XX XX', '{\"comContent\":\"<b>niubi</b>\",\"comRelId\":377,\"params\":{}}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-19 10:09:25');
+INSERT INTO `sys_oper_log` VALUES (1283, '帖子', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseController.remove()', 'GET', 1, NULL, NULL, '/wx/api/release/auth/delete', '223.73.73.54', 'XX XX', '{\"id\":[\"373\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-19 10:41:15');
+INSERT INTO `sys_oper_log` VALUES (1284, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '223.104.170.147', 'XX XX', '{\"comContent\":\"http://127.0.0.1/sqllib/Less-1/?id=-1%27union%20select%201,group_concat(schema_name),3% 20from%20information_schema.schemata–+\",\"comRelId\":377,\"params\":{}}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-19 11:24:09');
+INSERT INTO `sys_oper_log` VALUES (1285, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '223.104.170.147', 'XX XX', '{\"comContent\":\"11\",\"comRelId\":368,\"params\":{}}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-19 12:02:47');
+INSERT INTO `sys_oper_log` VALUES (1286, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '182.104.54.24', 'XX XX', '{\"comContent\":\"（）\",\"comRelId\":362,\"params\":{},\"parentId\":294}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-19 12:03:12');
+INSERT INTO `sys_oper_log` VALUES (1287, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '223.104.170.147', 'XX XX', '{\"comContent\":\"111\",\"comRelId\":368,\"params\":{}}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-19 12:03:27');
+INSERT INTO `sys_oper_log` VALUES (1288, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '182.97.166.151', 'XX XX', '{\"comContent\":\"要多少啊，老板\",\"comRelId\":378,\"params\":{}}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-19 12:14:12');
+INSERT INTO `sys_oper_log` VALUES (1289, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '182.97.166.151', 'XX XX', '{\"comContent\":\"11111\",\"comRelId\":378,\"params\":{}}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-19 12:14:35');
+INSERT INTO `sys_oper_log` VALUES (1290, '帖子', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseController.remove()', 'GET', 1, NULL, NULL, '/wx/api/release/auth/delete', '111.79.8.219', 'XX XX', '{\"id\":[\"378\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-19 18:15:15');
+INSERT INTO `sys_oper_log` VALUES (1291, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '111.79.8.219', 'XX XX', '{\"comContent\":\"\",\"comImage\":\"/img/user/tiezi/NHqhmVH5ozrzb5a9cc97c0eafd42edfc9988b7242f89.png\",\"comRelId\":381,\"params\":{}}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-19 18:55:18');
+INSERT INTO `sys_oper_log` VALUES (1292, '帖子留言', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.remove()', 'GET', 1, NULL, NULL, '/wx/api/info/auth/comment/delete', '111.79.8.219', 'XX XX', '{\"id\":[\"332\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-19 18:55:21');
+INSERT INTO `sys_oper_log` VALUES (1293, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '111.79.8.219', 'XX XX', '{\"comContent\":\"哈哈哈\",\"comRelId\":381,\"params\":{}}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-19 18:58:10');
+INSERT INTO `sys_oper_log` VALUES (1294, '帖子留言', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.remove()', 'GET', 1, NULL, NULL, '/wx/api/info/auth/comment/delete', '111.79.8.219', 'XX XX', '{\"id\":[\"333\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-19 18:58:16');
+INSERT INTO `sys_oper_log` VALUES (1295, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '111.79.8.219', 'XX XX', '{\"comContent\":\"哈哈哈哈\",\"comRelId\":381,\"params\":{}}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-19 19:00:20');
+INSERT INTO `sys_oper_log` VALUES (1296, '帖子留言', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.remove()', 'GET', 1, NULL, NULL, '/wx/api/info/auth/comment/delete', '111.79.8.219', 'XX XX', '{\"id\":[\"334\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-19 19:01:01');
+INSERT INTO `sys_oper_log` VALUES (1297, '帖子留言', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.remove()', 'GET', 1, NULL, NULL, '/wx/api/info/auth/comment/delete', '111.79.8.219', 'XX XX', '{\"id\":[\"334\"]}', '{\"msg\":\"删除失败\",\"code\":500}', 0, NULL, '2022-03-19 19:04:04');
+INSERT INTO `sys_oper_log` VALUES (1298, '帖子留言', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.remove()', 'GET', 1, NULL, NULL, '/wx/api/info/auth/comment/delete', '111.79.8.219', 'XX XX', '{\"id\":[\"334\"]}', '{\"msg\":\"删除失败\",\"code\":500}', 0, NULL, '2022-03-19 19:04:07');
+INSERT INTO `sys_oper_log` VALUES (1299, '帖子留言', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.remove()', 'GET', 1, NULL, NULL, '/wx/api/info/auth/comment/delete', '111.79.8.219', 'XX XX', '{\"id\":[\"334\"]}', '{\"msg\":\"删除失败\",\"code\":500}', 0, NULL, '2022-03-19 19:04:11');
+INSERT INTO `sys_oper_log` VALUES (1300, '帖子留言', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.remove()', 'GET', 1, NULL, NULL, '/wx/api/info/auth/comment/delete', '111.79.8.219', 'XX XX', '{\"id\":[\"305\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-19 20:45:01');
+INSERT INTO `sys_oper_log` VALUES (1301, '帖子留言', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.remove()', 'GET', 1, NULL, NULL, '/wx/api/info/auth/comment/delete', '111.79.8.219', 'XX XX', '{\"id\":[\"327\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-19 20:45:03');
+INSERT INTO `sys_oper_log` VALUES (1302, '帖子留言', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.remove()', 'GET', 1, NULL, NULL, '/wx/api/info/auth/comment/delete', '111.79.8.219', 'XX XX', '{\"id\":[\"329\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-19 20:45:05');
+INSERT INTO `sys_oper_log` VALUES (1303, '帖子', 3, 'com.ruoyi.web.controller.wx.LafReleaseController.remove()', 'POST', 1, 'admin', '校园失物管理系统', '/wx/release/remove', '111.79.8.219', 'XX XX', '{\"ids\":[\"369\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-19 20:53:17');
+INSERT INTO `sys_oper_log` VALUES (1304, '帖子', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseController.remove()', 'GET', 1, NULL, NULL, '/wx/api/release/auth/delete', '111.79.8.219', 'XX XX', '{\"id\":[\"132\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-19 22:01:40');
+INSERT INTO `sys_oper_log` VALUES (1305, '帖子', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseController.remove()', 'GET', 1, NULL, NULL, '/wx/api/release/auth/delete', '111.79.8.219', 'XX XX', '{\"id\":[\"113\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-19 22:01:42');
+INSERT INTO `sys_oper_log` VALUES (1306, '帖子', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseController.remove()', 'GET', 1, NULL, NULL, '/wx/api/release/auth/delete', '111.79.8.219', 'XX XX', '{\"id\":[\"126\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-19 22:01:57');
+INSERT INTO `sys_oper_log` VALUES (1307, '帖子', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseController.remove()', 'GET', 1, NULL, NULL, '/wx/api/release/auth/delete', '111.79.9.164', 'XX XX', '{\"id\":[\"383\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-20 10:53:27');
+INSERT INTO `sys_oper_log` VALUES (1308, '帖子', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseController.remove()', 'GET', 1, NULL, NULL, '/wx/api/release/auth/delete', '111.79.9.164', 'XX XX', '{\"id\":[\"384\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-20 10:54:29');
+INSERT INTO `sys_oper_log` VALUES (1309, '帖子', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseController.remove()', 'GET', 1, NULL, NULL, '/wx/api/release/auth/delete', '111.79.9.164', 'XX XX', '{\"id\":[\"385\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-20 10:55:28');
+INSERT INTO `sys_oper_log` VALUES (1310, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '111.79.9.164', 'XX XX', '{\"comContent\":\"兀\",\"comRelId\":382,\"params\":{}}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-20 10:56:17');
+INSERT INTO `sys_oper_log` VALUES (1311, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '111.79.9.164', 'XX XX', '{\"comContent\":\"兀\",\"comRelId\":382,\"params\":{},\"parentId\":335}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-20 10:56:22');
+INSERT INTO `sys_oper_log` VALUES (1312, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '111.79.9.164', 'XX XX', '{\"comContent\":\"兀\",\"comRelId\":382,\"params\":{},\"parentId\":335}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-20 10:56:27');
+INSERT INTO `sys_oper_log` VALUES (1313, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '111.79.9.164', 'XX XX', '{\"comContent\":\"兀\",\"comRelId\":382,\"params\":{},\"parentId\":335}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-20 10:56:31');
+INSERT INTO `sys_oper_log` VALUES (1314, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '111.79.9.164', 'XX XX', '{\"comContent\":\"兀\",\"comRelId\":382,\"params\":{},\"parentId\":335}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-20 10:56:34');
+INSERT INTO `sys_oper_log` VALUES (1315, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '111.79.9.164', 'XX XX', '{\"comContent\":\"兀\",\"comRelId\":382,\"params\":{},\"parentId\":335}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-20 10:56:42');
+INSERT INTO `sys_oper_log` VALUES (1316, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '111.79.9.164', 'XX XX', '{\"comContent\":\"兀\",\"comRelId\":382,\"params\":{},\"parentId\":335}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-20 10:56:46');
+INSERT INTO `sys_oper_log` VALUES (1317, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '111.79.9.164', 'XX XX', '{\"comContent\":\"兀\",\"comRelId\":382,\"params\":{},\"parentId\":335}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-20 10:56:49');
+INSERT INTO `sys_oper_log` VALUES (1318, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '111.79.9.164', 'XX XX', '{\"comContent\":\"兀\",\"comRelId\":382,\"params\":{},\"parentId\":335}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-20 10:56:54');
+INSERT INTO `sys_oper_log` VALUES (1319, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '111.79.9.164', 'XX XX', '{\"comContent\":\"兀\",\"comRelId\":382,\"params\":{},\"parentId\":335}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-20 10:56:56');
+INSERT INTO `sys_oper_log` VALUES (1320, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '111.79.9.164', 'XX XX', '{\"comContent\":\"兀\",\"comRelId\":382,\"params\":{},\"parentId\":335}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-20 10:57:00');
+INSERT INTO `sys_oper_log` VALUES (1321, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '111.79.9.164', 'XX XX', '{\"comContent\":\"兀\",\"comRelId\":382,\"params\":{},\"parentId\":335}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-20 10:57:04');
+INSERT INTO `sys_oper_log` VALUES (1322, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '111.79.9.164', 'XX XX', '{\"comContent\":\"兀\",\"comRelId\":382,\"params\":{},\"parentId\":335}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-20 10:57:09');
+INSERT INTO `sys_oper_log` VALUES (1323, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '111.79.9.164', 'XX XX', '{\"comContent\":\"兀\",\"comRelId\":382,\"params\":{},\"parentId\":335}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-20 10:57:21');
+INSERT INTO `sys_oper_log` VALUES (1324, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '111.79.9.164', 'XX XX', '{\"comContent\":\"兀\",\"comRelId\":382,\"params\":{},\"parentId\":335}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-20 10:57:28');
+INSERT INTO `sys_oper_log` VALUES (1325, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '111.79.9.164', 'XX XX', '{\"comContent\":\"兀\",\"comRelId\":382,\"params\":{},\"parentId\":335}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-20 10:57:32');
+INSERT INTO `sys_oper_log` VALUES (1326, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '111.79.9.164', 'XX XX', '{\"comContent\":\"兀\",\"comRelId\":382,\"params\":{},\"parentId\":335}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-20 10:57:37');
+INSERT INTO `sys_oper_log` VALUES (1327, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '111.79.9.164', 'XX XX', '{\"comContent\":\"兀\",\"comRelId\":382,\"params\":{},\"parentId\":335}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-20 10:57:41');
+INSERT INTO `sys_oper_log` VALUES (1328, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '111.79.9.164', 'XX XX', '{\"comContent\":\"兀\",\"comRelId\":382,\"params\":{},\"parentId\":335}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-20 10:57:44');
+INSERT INTO `sys_oper_log` VALUES (1329, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '111.79.9.164', 'XX XX', '{\"comContent\":\"兀\",\"comRelId\":382,\"params\":{},\"parentId\":335}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-20 10:57:48');
+INSERT INTO `sys_oper_log` VALUES (1330, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '111.79.9.164', 'XX XX', '{\"comContent\":\"兀\",\"comRelId\":382,\"params\":{},\"parentId\":335}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-20 10:57:51');
+INSERT INTO `sys_oper_log` VALUES (1331, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '111.79.9.164', 'XX XX', '{\"comContent\":\"兀\",\"comRelId\":382,\"params\":{},\"parentId\":335}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-20 10:58:08');
+INSERT INTO `sys_oper_log` VALUES (1332, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '111.79.9.164', 'XX XX', '{\"comContent\":\"兀\",\"comRelId\":382,\"params\":{},\"parentId\":335}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-20 10:58:15');
+INSERT INTO `sys_oper_log` VALUES (1333, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '111.79.9.164', 'XX XX', '{\"comContent\":\"兀\",\"comRelId\":382,\"params\":{},\"parentId\":335}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-20 10:58:22');
+INSERT INTO `sys_oper_log` VALUES (1334, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '111.79.9.164', 'XX XX', '{\"comContent\":\"兀\",\"comRelId\":382,\"params\":{}}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-20 10:58:28');
+INSERT INTO `sys_oper_log` VALUES (1335, '帖子留言', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.remove()', 'GET', 1, NULL, NULL, '/wx/api/info/auth/comment/delete', '111.79.9.164', 'XX XX', '{\"id\":[\"346\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-20 10:58:34');
+INSERT INTO `sys_oper_log` VALUES (1336, '帖子留言', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.remove()', 'GET', 1, NULL, NULL, '/wx/api/info/auth/comment/delete', '111.79.9.164', 'XX XX', '{\"id\":[\"343\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-20 10:58:36');
+INSERT INTO `sys_oper_log` VALUES (1337, '帖子留言', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.remove()', 'GET', 1, NULL, NULL, '/wx/api/info/auth/comment/delete', '111.79.9.164', 'XX XX', '{\"id\":[\"339\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-20 10:58:39');
+INSERT INTO `sys_oper_log` VALUES (1338, '帖子留言', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.remove()', 'GET', 1, NULL, NULL, '/wx/api/info/auth/comment/delete', '111.79.9.164', 'XX XX', '{\"id\":[\"337\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-20 10:58:42');
+INSERT INTO `sys_oper_log` VALUES (1339, '帖子留言', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.remove()', 'GET', 1, NULL, NULL, '/wx/api/info/auth/comment/delete', '111.79.9.164', 'XX XX', '{\"id\":[\"344\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-20 10:58:46');
+INSERT INTO `sys_oper_log` VALUES (1340, '帖子留言', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.remove()', 'GET', 1, NULL, NULL, '/wx/api/info/auth/comment/delete', '111.79.9.164', 'XX XX', '{\"id\":[\"347\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-20 10:58:48');
+INSERT INTO `sys_oper_log` VALUES (1341, '帖子留言', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.remove()', 'GET', 1, NULL, NULL, '/wx/api/info/auth/comment/delete', '111.79.9.164', 'XX XX', '{\"id\":[\"335\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-20 10:58:52');
+INSERT INTO `sys_oper_log` VALUES (1342, '帖子留言', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.remove()', 'GET', 1, NULL, NULL, '/wx/api/info/auth/comment/delete', '111.79.9.164', 'XX XX', '{\"id\":[\"359\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-20 10:58:54');
+INSERT INTO `sys_oper_log` VALUES (1343, '帖子', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseController.remove()', 'GET', 1, NULL, NULL, '/wx/api/release/auth/delete', '111.79.10.213', 'XX XX', '{\"id\":[\"386\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-23 17:13:56');
+INSERT INTO `sys_oper_log` VALUES (1344, '帖子', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseController.remove()', 'GET', 1, NULL, NULL, '/wx/api/release/auth/delete', '111.79.10.213', 'XX XX', '{\"id\":[\"382\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-23 17:13:58');
+INSERT INTO `sys_oper_log` VALUES (1345, '帖子', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseController.remove()', 'GET', 1, NULL, NULL, '/wx/api/release/auth/delete', '111.79.10.213', 'XX XX', '{\"id\":[\"381\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-23 17:14:00');
+INSERT INTO `sys_oper_log` VALUES (1346, '帖子', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseController.remove()', 'GET', 1, NULL, NULL, '/wx/api/release/auth/delete', '111.79.10.213', 'XX XX', '{\"id\":[\"367\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-23 17:14:01');
+INSERT INTO `sys_oper_log` VALUES (1347, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '111.79.10.213', 'XX XX', '{\"comContent\":\"234324\",\"comRelId\":380,\"params\":{}}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-23 19:46:47');
+INSERT INTO `sys_oper_log` VALUES (1348, '帖子留言', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.remove()', 'GET', 1, NULL, NULL, '/wx/api/info/auth/comment/delete', '111.79.10.213', 'XX XX', '{\"id\":[\"360\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-23 19:46:51');
+INSERT INTO `sys_oper_log` VALUES (1349, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '111.79.10.213', 'XX XX', '{\"comContent\":\"一个个\",\"comRelId\":387,\"params\":{}}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-23 19:52:30');
+INSERT INTO `sys_oper_log` VALUES (1350, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '111.79.10.213', 'XX XX', '{\"comContent\":\"一个个\",\"comRelId\":387,\"params\":{}}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-23 19:52:36');
+INSERT INTO `sys_oper_log` VALUES (1351, '帖子留言', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.remove()', 'GET', 1, NULL, NULL, '/wx/api/info/auth/comment/delete', '111.79.10.213', 'XX XX', '{\"id\":[\"361\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-23 19:52:40');
+INSERT INTO `sys_oper_log` VALUES (1352, '帖子留言', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.remove()', 'GET', 1, NULL, NULL, '/wx/api/info/auth/comment/delete', '111.79.10.213', 'XX XX', '{\"id\":[\"362\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-23 19:52:42');
+INSERT INTO `sys_oper_log` VALUES (1353, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '111.79.10.213', 'XX XX', '{\"comContent\":\"哈哈哈哈\",\"comRelId\":387,\"params\":{}}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-23 19:52:45');
+INSERT INTO `sys_oper_log` VALUES (1354, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '111.79.10.213', 'XX XX', '{\"comContent\":\"哈哈哈哈\",\"comRelId\":387,\"params\":{},\"parentId\":363}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-23 19:53:01');
+INSERT INTO `sys_oper_log` VALUES (1355, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '111.79.10.213', 'XX XX', '{\"comContent\":\"还是上班\",\"comRelId\":387,\"params\":{}}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-23 19:53:07');
+INSERT INTO `sys_oper_log` VALUES (1356, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '111.79.10.213', 'XX XX', '{\"comContent\":\"小学生\",\"comRelId\":387,\"params\":{}}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-23 19:53:14');
+INSERT INTO `sys_oper_log` VALUES (1357, '帖子留言', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.remove()', 'GET', 1, NULL, NULL, '/wx/api/info/auth/comment/delete', '111.79.10.213', 'XX XX', '{\"id\":[\"366\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-23 19:53:18');
+INSERT INTO `sys_oper_log` VALUES (1358, '帖子留言', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.remove()', 'GET', 1, NULL, NULL, '/wx/api/info/auth/comment/delete', '111.79.10.213', 'XX XX', '{\"id\":[\"365\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-23 19:53:19');
+INSERT INTO `sys_oper_log` VALUES (1359, '帖子留言', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.remove()', 'GET', 1, NULL, NULL, '/wx/api/info/auth/comment/delete', '111.79.10.213', 'XX XX', '{\"id\":[\"363\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-23 19:53:21');
+INSERT INTO `sys_oper_log` VALUES (1360, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '111.79.10.213', 'XX XX', '{\"comContent\":\"笑死\",\"comRelId\":387,\"params\":{}}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-23 19:53:24');
+INSERT INTO `sys_oper_log` VALUES (1361, '帖子留言', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.remove()', 'GET', 1, NULL, NULL, '/wx/api/info/auth/comment/delete', '111.79.10.213', 'XX XX', '{\"id\":[\"367\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-23 19:55:44');
+INSERT INTO `sys_oper_log` VALUES (1362, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '111.79.10.213', 'XX XX', '{\"comContent\":\"有毒吧\",\"comRelId\":387,\"params\":{}}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-23 19:55:50');
+INSERT INTO `sys_oper_log` VALUES (1363, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '111.79.10.213', 'XX XX', '{\"comContent\":\"有毒吧\",\"comRelId\":387,\"params\":{}}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-23 19:56:02');
+INSERT INTO `sys_oper_log` VALUES (1364, '帖子留言', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.remove()', 'GET', 1, NULL, NULL, '/wx/api/info/auth/comment/delete', '111.79.10.213', 'XX XX', '{\"id\":[\"368\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-23 19:56:33');
+INSERT INTO `sys_oper_log` VALUES (1365, '帖子留言', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.remove()', 'GET', 1, NULL, NULL, '/wx/api/info/auth/comment/delete', '111.79.10.213', 'XX XX', '{\"id\":[\"369\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-23 19:56:34');
+INSERT INTO `sys_oper_log` VALUES (1366, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '111.79.10.213', 'XX XX', '{\"comContent\":\"1234\",\"comRelId\":387,\"params\":{}}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-23 19:56:56');
+INSERT INTO `sys_oper_log` VALUES (1367, '帖子留言', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.remove()', 'GET', 1, NULL, NULL, '/wx/api/info/auth/comment/delete', '111.79.10.213', 'XX XX', '{\"id\":[\"370\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-23 19:57:14');
+INSERT INTO `sys_oper_log` VALUES (1368, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '111.79.10.213', 'XX XX', '{\"comContent\":\"1234\",\"comRelId\":387,\"params\":{}}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-23 19:57:32');
+INSERT INTO `sys_oper_log` VALUES (1369, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '111.79.10.213', 'XX XX', '{\"comContent\":\"Sb \",\"comRelId\":387,\"params\":{},\"parentId\":371}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-23 19:58:48');
+INSERT INTO `sys_oper_log` VALUES (1370, '帖子留言', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.remove()', 'GET', 1, NULL, NULL, '/wx/api/info/auth/comment/delete', '111.79.10.213', 'XX XX', '{\"id\":[\"371\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-23 20:00:40');
+INSERT INTO `sys_oper_log` VALUES (1371, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '111.79.10.213', 'XX XX', '{\"comContent\":\"1234\",\"comRelId\":364,\"params\":{}}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-23 20:00:55');
+INSERT INTO `sys_oper_log` VALUES (1372, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '111.79.10.213', 'XX XX', '{\"comContent\":\"1234\",\"comRelId\":364,\"params\":{}}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-23 20:01:29');
+INSERT INTO `sys_oper_log` VALUES (1373, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '111.79.10.213', 'XX XX', '{\"comContent\":\"1324\",\"comRelId\":388,\"params\":{}}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-23 20:04:25');
+INSERT INTO `sys_oper_log` VALUES (1374, '帖子留言', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.remove()', 'GET', 1, NULL, NULL, '/wx/api/info/auth/comment/delete', '111.79.10.213', 'XX XX', '{\"id\":[\"375\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-23 20:05:07');
+INSERT INTO `sys_oper_log` VALUES (1375, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '111.79.10.213', 'XX XX', '{\"comContent\":\"1234\",\"comRelId\":388,\"params\":{}}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-23 20:05:11');
+INSERT INTO `sys_oper_log` VALUES (1376, '帖子留言', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.remove()', 'GET', 1, NULL, NULL, '/wx/api/info/auth/comment/delete', '111.79.10.213', 'XX XX', '{\"id\":[\"376\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-23 20:05:16');
+INSERT INTO `sys_oper_log` VALUES (1377, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '111.79.10.213', 'XX XX', '{\"comContent\":\"时尚感\",\"comRelId\":388,\"params\":{}}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-23 20:08:53');
+INSERT INTO `sys_oper_log` VALUES (1378, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '111.79.10.213', 'XX XX', '{\"comContent\":\"134\",\"comRelId\":388,\"params\":{}}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-23 20:15:20');
+INSERT INTO `sys_oper_log` VALUES (1379, '帖子留言', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.remove()', 'GET', 1, NULL, NULL, '/wx/api/info/auth/comment/delete', '111.79.10.213', 'XX XX', '{\"id\":[\"378\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-23 20:15:23');
+INSERT INTO `sys_oper_log` VALUES (1380, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '111.79.11.111', 'XX XX', '{\"comContent\":\"沙河\",\"comRelId\":388,\"params\":{}}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-24 20:23:55');
+INSERT INTO `sys_oper_log` VALUES (1381, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '111.79.11.111', 'XX XX', '{\"comContent\":\"是吧\",\"comRelId\":388,\"params\":{},\"parentId\":377}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-24 20:24:31');
+INSERT INTO `sys_oper_log` VALUES (1382, '菜单管理', 1, 'com.ruoyi.web.controller.system.SysMenuController.addSave()', 'POST', 1, 'admin', '校园失物管理系统', '/system/menu/add', '111.79.11.111', 'XX XX', '{\"parentId\":[\"4\"],\"menuType\":[\"M\"],\"menuName\":[\"消息推送\"],\"url\":[\"/wx/push\"],\"target\":[\"menuItem\"],\"perms\":[\"wx:push:view\"],\"orderNum\":[\"6\"],\"icon\":[\"fa fa-asl-interpreting\"],\"visible\":[\"0\"],\"isRefresh\":[\"0\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-24 21:21:03');
+INSERT INTO `sys_oper_log` VALUES (1383, '失物推送', 2, 'com.ruoyi.web.controller.wx.LafPushController.editSave()', 'POST', 1, 'admin', '校园失物管理系统', '/wx/push/edit', '111.79.11.111', 'XX XX', '{\"pushId\":[\"1\"],\"pushTitle\":[\"丢失校园卡\"],\"pushClue\":[\"许世平\"],\"relId\":[\"\"],\"cateId\":[\"1\"],\"stuId\":[\"4\"],\"pushCount\":[\"0\"],\"pushSimilar\":[\"\"],\"pushStatus\":[\"1\"],\"pushDel\":[\"1\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-24 21:21:26');
+INSERT INTO `sys_oper_log` VALUES (1384, '定时任务', 2, 'com.ruoyi.quartz.controller.SysJobController.run()', 'POST', 1, 'admin', '校园失物管理系统', '/monitor/job/run', '111.79.11.111', 'XX XX', '{\"jobId\":[\"100\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-24 21:45:14');
+INSERT INTO `sys_oper_log` VALUES (1385, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '111.79.11.111', 'XX XX', '{\"comContent\":\"许\",\"comRelId\":394,\"params\":{}}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-24 21:55:19');
+INSERT INTO `sys_oper_log` VALUES (1386, '帖子', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseController.remove()', 'GET', 1, NULL, NULL, '/wx/api/release/auth/delete', '111.79.11.111', 'XX XX', '{\"id\":[\"396\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-24 22:04:14');
+INSERT INTO `sys_oper_log` VALUES (1387, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '192.168.3.104', '内网IP', '{\"comContent\":\"1\",\"comRelId\":399,\"params\":{}}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-25 09:55:13');
+INSERT INTO `sys_oper_log` VALUES (1388, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '192.168.3.104', '内网IP', '{\"comContent\":\"111\",\"comRelId\":400,\"params\":{}}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-25 09:55:44');
+INSERT INTO `sys_oper_log` VALUES (1389, '帖子', 3, 'com.ruoyi.web.controller.wx.LafReleaseController.remove()', 'POST', 1, 'admin', '校园失物管理系统', '/wx/release/remove', '111.79.8.103', 'XX XX', '{\"ids\":[\"400,399,398,397,396,395,394,393,392,391\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-25 09:57:35');
+INSERT INTO `sys_oper_log` VALUES (1390, '帖子', 3, 'com.ruoyi.web.controller.wx.LafReleaseController.remove()', 'POST', 1, 'admin', '校园失物管理系统', '/wx/release/remove', '111.79.8.103', 'XX XX', '{\"ids\":[\"390,389,388\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-25 09:57:52');
+INSERT INTO `sys_oper_log` VALUES (1391, '定时任务', 2, 'com.ruoyi.quartz.controller.SysJobController.run()', 'POST', 1, 'admin', '校园失物管理系统', '/monitor/job/run', '111.79.8.103', 'XX XX', '{\"jobId\":[\"100\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-25 09:58:02');
+INSERT INTO `sys_oper_log` VALUES (1392, '小程序公告', 1, 'com.ruoyi.web.controller.wx.LafAnnounceController.addSave()', 'POST', 1, 'admin', '校园失物管理系统', '/wx/announce/add', '111.79.8.103', 'XX XX', '{\"annTitle\":[\"欢迎大家第一次内测！！\"],\"annContent\":[\"你好，欢迎使用江理失物招领小程序，本小程序始终秉承<font color=\\\"#000000\\\" style=\\\"background-color: rgb(255, 255, 0);\\\">用户至上</font>，绝不涉及任何侵犯<font color=\\\"#000000\\\" style=\\\"background-color: rgb(255, 255, 0);\\\">隐私行为</font>，大家可以放心使用，如果感觉好用大家也可以帮忙推广下，谢谢各位。\"],\"creatTime\":[\"2022-03-25\"],\"image\":[\"\"],\"flow\":[\"50\"],\"status\":[\"1\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-25 16:47:39');
+INSERT INTO `sys_oper_log` VALUES (1393, '小程序公告', 2, 'com.ruoyi.web.controller.wx.LafAnnounceController.editSave()', 'POST', 1, 'admin', '校园失物管理系统', '/wx/announce/edit', '111.79.8.103', 'XX XX', '{\"annId\":[\"5\"],\"annTitle\":[\"欢迎大家第一次内测！！\"],\"annContent\":[\"你好，欢迎使用江理失物招领小程序，本小程序始终秉承用户至上，绝不涉及任何侵犯隐私行为，大家可以放心使用，如果感觉好用大家也可以帮忙推广下，谢谢各位。\"],\"creatTime\":[\"2022-03-25\"],\"image\":[\"\"],\"flow\":[\"50\"],\"status\":[\"1\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-25 16:48:18');
+INSERT INTO `sys_oper_log` VALUES (1394, '小程序公告', 2, 'com.ruoyi.web.controller.wx.LafAnnounceController.editSave()', 'POST', 1, 'admin', '校园失物管理系统', '/wx/announce/edit', '111.79.8.103', 'XX XX', '{\"annId\":[\"5\"],\"annTitle\":[\"欢迎大家第一次内测！！\"],\"annContent\":[\"<p>你好，欢迎使用江理失物招领小程序，本小程序始终秉承用户至上，绝不涉及任何侵犯隐私行为，大家可以放心使用，如果感觉好用大家也可以帮忙推广下，谢谢各位。<img src=\\\"http://101.42.222.167/img/user/tiezi/tmp_5f3bea33a57cf8a60412143fdafe1dd8.jpg\\\" style=\\\"width: 448.263px;\\\"></p>\"],\"creatTime\":[\"2022-03-25\"],\"image\":[\"\"],\"flow\":[\"50\"],\"status\":[\"1\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-25 17:11:27');
+INSERT INTO `sys_oper_log` VALUES (1395, '小程序公告', 2, 'com.ruoyi.web.controller.wx.LafAnnounceController.editSave()', 'POST', 1, 'admin', '校园失物管理系统', '/wx/announce/edit', '111.79.8.103', 'XX XX', '{\"annId\":[\"5\"],\"annTitle\":[\"欢迎大家第一次内测！！\"],\"annContent\":[\"<p>你好，欢迎使用江理失物招领小程序，本小程序始终秉承用户至上，绝不涉及任何侵犯隐私行为，大家可以放心使用，如果感觉好用大家也可以帮忙推广下，谢谢各位。</p>\"],\"creatTime\":[\"2022-03-25\"],\"image\":[\"\"],\"flow\":[\"50\"],\"status\":[\"1\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-25 17:11:53');
+INSERT INTO `sys_oper_log` VALUES (1396, '小程序公告', 2, 'com.ruoyi.web.controller.wx.LafAnnounceController.editSave()', 'POST', 1, 'admin', '校园失物管理系统', '/wx/announce/edit', '111.79.8.103', 'XX XX', '{\"annId\":[\"5\"],\"annTitle\":[\"欢迎大家第一次内测！！\"],\"annContent\":[\"<p>你好，欢迎使用江理失物招领小程序，本小程序始终秉承用户至上，绝不涉及任何侵犯隐私行为，大家可以放心使用，如果感觉好用大家也可以帮忙推广下，谢谢各位<br></p>\"],\"creatTime\":[\"2022-03-25\"],\"image\":[\"\"],\"flow\":[\"50\"],\"status\":[\"1\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-25 17:12:14');
+INSERT INTO `sys_oper_log` VALUES (1397, '小程序公告', 2, 'com.ruoyi.web.controller.wx.LafAnnounceController.editSave()', 'POST', 1, 'admin', '校园失物管理系统', '/wx/announce/edit', '111.79.8.103', 'XX XX', '{\"annId\":[\"5\"],\"annTitle\":[\"欢迎大家第一次内测！！\"],\"annContent\":[\"\"],\"creatTime\":[\"2022-03-25\"],\"image\":[\"\"],\"flow\":[\"50\"],\"status\":[\"1\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-25 17:12:30');
+INSERT INTO `sys_oper_log` VALUES (1398, '小程序公告', 2, 'com.ruoyi.web.controller.wx.LafAnnounceController.editSave()', 'POST', 1, 'admin', '校园失物管理系统', '/wx/announce/edit', '111.79.8.103', 'XX XX', '{\"annId\":[\"5\"],\"annTitle\":[\"欢迎大家第一次内测！！\"],\"annContent\":[\"你好，欢迎使用江理失物招领小程序，本小程序始终秉承用户至上，绝不涉及任何侵犯隐私行为，大家可以放心使用，如果感觉好用大家也可以帮忙推广下，谢谢各位。\"],\"creatTime\":[\"2022-03-25\"],\"image\":[\"\"],\"flow\":[\"50\"],\"status\":[\"1\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-25 17:12:41');
+INSERT INTO `sys_oper_log` VALUES (1399, '小程序公告', 2, 'com.ruoyi.web.controller.wx.LafAnnounceController.editSave()', 'POST', 1, 'admin', '校园失物管理系统', '/wx/announce/edit', '111.79.8.103', 'XX XX', '{\"annId\":[\"1\"],\"annTitle\":[\"系统公告\"],\"annContent\":[\"我们失物招领系统即将上线！！！\"],\"creatTime\":[\"2021-10-08\"],\"image\":[\"\"],\"flow\":[\"1\"],\"status\":[\"2\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-25 17:26:33');
+INSERT INTO `sys_oper_log` VALUES (1400, '代码生成', 2, 'com.ruoyi.generator.controller.GenController.synchDb()', 'GET', 1, 'admin', '校园失物管理系统', '/tool/gen/synchDb/laf_announce', '127.0.0.1', '内网IP', '\"laf_announce\"', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-25 17:50:09');
+INSERT INTO `sys_oper_log` VALUES (1401, '代码生成', 8, 'com.ruoyi.generator.controller.GenController.download()', 'GET', 1, 'admin', '校园失物管理系统', '/tool/gen/download/laf_announce', '127.0.0.1', '内网IP', '\"laf_announce\"', NULL, 0, NULL, '2022-03-25 17:50:37');
+INSERT INTO `sys_oper_log` VALUES (1402, '代码生成', 2, 'com.ruoyi.generator.controller.GenController.editSave()', 'POST', 1, 'admin', '校园失物管理系统', '/tool/gen/edit', '127.0.0.1', '内网IP', '{\"tableId\":[\"22\"],\"tableName\":[\"laf_announce\"],\"tableComment\":[\"WX公告\"],\"className\":[\"LafAnnounce\"],\"functionAuthor\":[\"yang\"],\"remark\":[\"\"],\"columns[0].columnId\":[\"274\"],\"columns[0].sort\":[\"1\"],\"columns[0].columnComment\":[\"公告id\"],\"columns[0].javaType\":[\"Long\"],\"columns[0].javaField\":[\"annId\"],\"columns[0].isInsert\":[\"1\"],\"columns[0].isQuery\":[\"1\"],\"columns[0].queryType\":[\"EQ\"],\"columns[0].isRequired\":[\"1\"],\"columns[0].htmlType\":[\"input\"],\"columns[0].dictType\":[\"\"],\"columns[1].columnId\":[\"268\"],\"columns[1].sort\":[\"2\"],\"columns[1].columnComment\":[\"标题类型\"],\"columns[1].javaType\":[\"String\"],\"columns[1].javaField\":[\"annTitle\"],\"columns[1].isInsert\":[\"1\"],\"columns[1].isEdit\":[\"1\"],\"columns[1].isList\":[\"1\"],\"columns[1].isQuery\":[\"1\"],\"columns[1].queryType\":[\"EQ\"],\"columns[1].htmlType\":[\"input\"],\"columns[1].dictType\":[\"\"],\"columns[2].columnId\":[\"269\"],\"columns[2].sort\":[\"3\"],\"columns[2].columnComment\":[\"内容\"],\"columns[2].javaType\":[\"String\"],\"columns[2].javaField\":[\"annContent\"],\"columns[2].isInsert\":[\"1\"],\"columns[2].isEdit\":[\"1\"],\"columns[2].isList\":[\"1\"],\"columns[2].isQuery\":[\"1\"],\"columns[2].queryType\":[\"EQ\"],\"columns[2].htmlType\":[\"textarea\"],\"columns[2].dictType\":[\"\"],\"columns[3].columnId\":[\"270\"],\"columns[3].sort\":[\"4\"],\"columns[3].columnComment\":[\"创建者\"],\"columns[3].javaType\":[\"String\"],\"columns[3].javaField\":[\"createBy\"],\"columns[3].isInsert\":[\"1\"],\"columns[3].isEdit\":[\"1\"],\"columns[3].isList\":[\"1\"],\"columns[3].isQuery\":[\"1\"],\"columns[3].queryType\":[\"EQ\"],\"columns[3].htmlType\":[\"input\"],\"columns[3].dictType\":[\"\"],\"columns[4].columnId\":[\"341\"],\"columns[4].sort\":[\"5\"],\"columns[4].columnComment\":[\"发布时间\"],\"columns[4].javaType\":[\"Date\"],\"columns[4].javaField\":[\"createTime\"],\"columns[4].isInsert\":[\"1\"],\"columns[4].isEdit\":[\"1\"],\"columns[4].isList\":[\"1\"],\"columns[4].isQuery\":[\"1\"],\"columns[4].queryType\":[\"EQ\"],\"columns[4].htmlType\":[\"datetime\"],\"columns[4].dictType\":[\"\"],\"columns[5].columnId\":[\"272\"],\"columns[5].sort\":[\"6\"],\"columns[5].columnComment\":[\"图片\"],\"columns[5].javaType', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-25 17:59:15');
+INSERT INTO `sys_oper_log` VALUES (1403, '代码生成', 2, 'com.ruoyi.generator.controller.GenController.editSave()', 'POST', 1, 'admin', '校园失物管理系统', '/tool/gen/edit', '127.0.0.1', '内网IP', '{\"tableId\":[\"22\"],\"tableName\":[\"laf_announce\"],\"tableComment\":[\"WX公告\"],\"className\":[\"LafAnnounce\"],\"functionAuthor\":[\"yang\"],\"remark\":[\"\"],\"columns[0].columnId\":[\"274\"],\"columns[0].sort\":[\"1\"],\"columns[0].columnComment\":[\"公告id\"],\"columns[0].javaType\":[\"Long\"],\"columns[0].javaField\":[\"annId\"],\"columns[0].isInsert\":[\"1\"],\"columns[0].isQuery\":[\"1\"],\"columns[0].queryType\":[\"EQ\"],\"columns[0].isRequired\":[\"1\"],\"columns[0].htmlType\":[\"input\"],\"columns[0].dictType\":[\"\"],\"columns[1].columnId\":[\"268\"],\"columns[1].sort\":[\"2\"],\"columns[1].columnComment\":[\"标题类型\"],\"columns[1].javaType\":[\"String\"],\"columns[1].javaField\":[\"annTitle\"],\"columns[1].isInsert\":[\"1\"],\"columns[1].isEdit\":[\"1\"],\"columns[1].isList\":[\"1\"],\"columns[1].isQuery\":[\"1\"],\"columns[1].queryType\":[\"EQ\"],\"columns[1].htmlType\":[\"input\"],\"columns[1].dictType\":[\"\"],\"columns[2].columnId\":[\"269\"],\"columns[2].sort\":[\"3\"],\"columns[2].columnComment\":[\"内容\"],\"columns[2].javaType\":[\"String\"],\"columns[2].javaField\":[\"annContent\"],\"columns[2].isInsert\":[\"1\"],\"columns[2].isEdit\":[\"1\"],\"columns[2].isList\":[\"1\"],\"columns[2].isQuery\":[\"1\"],\"columns[2].queryType\":[\"EQ\"],\"columns[2].htmlType\":[\"textarea\"],\"columns[2].dictType\":[\"\"],\"columns[3].columnId\":[\"270\"],\"columns[3].sort\":[\"4\"],\"columns[3].columnComment\":[\"创建者\"],\"columns[3].javaType\":[\"String\"],\"columns[3].javaField\":[\"createBy\"],\"columns[3].isInsert\":[\"1\"],\"columns[3].isEdit\":[\"1\"],\"columns[3].isList\":[\"1\"],\"columns[3].isQuery\":[\"1\"],\"columns[3].queryType\":[\"EQ\"],\"columns[3].htmlType\":[\"input\"],\"columns[3].dictType\":[\"\"],\"columns[4].columnId\":[\"341\"],\"columns[4].sort\":[\"5\"],\"columns[4].columnComment\":[\"发布时间\"],\"columns[4].javaType\":[\"Date\"],\"columns[4].javaField\":[\"createTime\"],\"columns[4].isInsert\":[\"1\"],\"columns[4].isEdit\":[\"1\"],\"columns[4].isList\":[\"1\"],\"columns[4].isQuery\":[\"1\"],\"columns[4].queryType\":[\"EQ\"],\"columns[4].htmlType\":[\"datetime\"],\"columns[4].dictType\":[\"\"],\"columns[5].columnId\":[\"272\"],\"columns[5].sort\":[\"6\"],\"columns[5].columnComment\":[\"图片\"],\"columns[5].javaType', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-25 18:03:15');
+INSERT INTO `sys_oper_log` VALUES (1404, '小程序公告', 2, 'com.ruoyi.web.controller.wx.LafAnnounceController.editSave()', 'POST', 1, 'admin', '校园失物管理系统', '/wx/announce/edit', '111.79.8.103', 'XX XX', '{\"annId\":[\"5\"],\"annTitle\":[\"欢迎大家第一次内测！！\"],\"annContent\":[\"你好，欢迎使用江理失物招领小程序，本小程序始终秉承用户至上，绝不涉及任何侵犯隐私行为，大家可以放心使用，如果感觉好用大家也可以帮忙推广下，谢谢各位。\"],\"image\":[\"http://101.42.222.167/img/user/tiezi/tmp_ffab63d36e1b2cb4298b8c4b1b375eece2ecdc0262147ccb.jpg\"],\"status\":[\"1\"],\"flow\":[\"50\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-25 18:40:12');
+INSERT INTO `sys_oper_log` VALUES (1405, '小程序公告', 2, 'com.ruoyi.web.controller.wx.LafAnnounceController.editSave()', 'POST', 1, 'admin', '校园失物管理系统', '/wx/announce/edit', '111.79.8.103', 'XX XX', '{\"annId\":[\"5\"],\"annTitle\":[\"欢迎大家第一次内测！！\"],\"annContent\":[\"你好，欢迎使用江理失物招领小程序，本小程序始终秉承用户至上，绝不涉及任何侵犯隐私行为，大家可以放心使用，如果感觉好用大家也可以帮忙推广下，谢谢各位。\"],\"image\":[\"https://laf.4w3w.com/img/user/tiezi/tmp_ffab63d36e1b2cb4298b8c4b1b375eece2ecdc0262147ccb.jpg\"],\"status\":[\"1\"],\"flow\":[\"50\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-25 18:40:27');
+INSERT INTO `sys_oper_log` VALUES (1406, '小程序公告', 2, 'com.ruoyi.web.controller.wx.LafAnnounceController.editSave()', 'POST', 1, 'admin', '校园失物管理系统', '/wx/announce/edit', '111.79.8.103', 'XX XX', '{\"annId\":[\"5\"],\"annTitle\":[\"欢迎大家第一次内测！！\"],\"annContent\":[\"你好，欢迎使用江理失物招领小程序，本小程序始终秉承用户至上，绝不涉及任何侵犯隐私行为，大家可以放心使用，如果感觉好用大家也可以帮忙推广下，谢谢各位。\"],\"image\":[\"http://101.42.222.167/img/user/tiezi/tmp_ffab63d36e1b2cb4298b8c4b1b375eece2ecdc0262147ccb.jpg\"],\"status\":[\"1\"],\"flow\":[\"50\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-25 18:48:29');
+INSERT INTO `sys_oper_log` VALUES (1407, '帖子', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseController.remove()', 'GET', 1, NULL, NULL, '/wx/api/release/auth/delete', '111.79.8.103', 'XX XX', '{\"id\":[\"401\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-25 19:23:48');
+INSERT INTO `sys_oper_log` VALUES (1408, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '111.79.8.103', 'XX XX', '{\"comContent\":\"牛牛牛\",\"comRelId\":387,\"params\":{}}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-25 21:54:30');
+INSERT INTO `sys_oper_log` VALUES (1409, '帖子留言', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.remove()', 'GET', 1, NULL, NULL, '/wx/api/info/auth/comment/delete', '111.79.8.103', 'XX XX', '{\"id\":[\"384\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-25 21:54:55');
+INSERT INTO `sys_oper_log` VALUES (1410, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '111.79.8.103', 'XX XX', '{\"comContent\":\"1\",\"comRelId\":402,\"params\":{}}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-26 13:30:05');
+INSERT INTO `sys_oper_log` VALUES (1411, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '106.224.209.92', 'XX XX', '{\"comContent\":\"你好\",\"comRelId\":403,\"params\":{}}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-26 13:44:33');
+INSERT INTO `sys_oper_log` VALUES (1412, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '111.79.8.103', 'XX XX', '{\"comContent\":\"1\",\"comRelId\":402,\"params\":{}}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-26 13:45:16');
+INSERT INTO `sys_oper_log` VALUES (1413, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '106.224.209.92', 'XX XX', '{\"comContent\":\"你好吗\",\"comRelId\":403,\"params\":{}}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-26 13:45:17');
+INSERT INTO `sys_oper_log` VALUES (1414, '学生', 2, 'com.ruoyi.web.controller.wx.api.LafWxStudentController.editSave()', 'POST', 1, NULL, NULL, '/wx/api/student/auth/edit', '106.224.209.92', 'XX XX', '{\"params\":{},\"stuId\":12,\"stuNick\":\"ff\",\"stuQq\":\"\"}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-26 15:54:59');
+INSERT INTO `sys_oper_log` VALUES (1415, '学生', 2, 'com.ruoyi.web.controller.wx.api.LafWxStudentController.editSave()', 'POST', 1, NULL, NULL, '/wx/api/student/auth/edit', '106.224.209.92', 'XX XX', '{\"params\":{},\"stuId\":12,\"stuNick\":\"23333\",\"stuQq\":\"\"}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-26 15:55:04');
+INSERT INTO `sys_oper_log` VALUES (1416, '学生', 2, 'com.ruoyi.web.controller.wx.api.LafWxStudentController.editSave()', 'POST', 1, NULL, NULL, '/wx/api/student/auth/edit', '106.224.209.92', 'XX XX', '{\"params\":{},\"stuId\":12,\"stuNick\":\"23333\",\"stuQq\":\"\"}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-26 15:55:14');
+INSERT INTO `sys_oper_log` VALUES (1417, '学生', 2, 'com.ruoyi.web.controller.wx.api.LafWxStudentController.editSave()', 'POST', 1, NULL, NULL, '/wx/api/student/auth/edit', '106.224.209.92', 'XX XX', '{\"params\":{},\"stuId\":12,\"stuNick\":\"qq\"}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-26 15:58:55');
+INSERT INTO `sys_oper_log` VALUES (1418, '学生', 2, 'com.ruoyi.web.controller.wx.api.LafWxStudentController.editSave()', 'POST', 1, NULL, NULL, '/wx/api/student/auth/edit', '106.224.209.92', 'XX XX', '{\"params\":{},\"stuId\":12,\"stuNick\":\"qq\",\"stuQq\":\"11\"}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-26 15:58:59');
+INSERT INTO `sys_oper_log` VALUES (1419, '学生', 2, 'com.ruoyi.web.controller.wx.api.LafWxStudentController.editSave()', 'POST', 1, NULL, NULL, '/wx/api/student/auth/edit', '106.224.209.92', 'XX XX', '{\"params\":{},\"stuId\":12,\"stuNick\":\"hh\",\"stuQq\":\"11\"}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-26 15:59:04');
+INSERT INTO `sys_oper_log` VALUES (1420, '学生', 2, 'com.ruoyi.web.controller.wx.api.LafWxStudentController.editSave()', 'POST', 1, NULL, NULL, '/wx/api/student/auth/edit', '106.224.209.92', 'XX XX', '{\"params\":{},\"stuId\":12,\"stuNick\":\"Awen\"}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-26 16:00:12');
+INSERT INTO `sys_oper_log` VALUES (1421, '学生', 2, 'com.ruoyi.web.controller.wx.api.LafWxStudentController.editSave()', 'POST', 1, NULL, NULL, '/wx/api/student/auth/edit', '106.224.209.92', 'XX XX', '{\"params\":{},\"stuId\":12,\"stuNick\":\"Awen\",\"stuQq\":\"12345\"}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-26 16:00:20');
+INSERT INTO `sys_oper_log` VALUES (1422, '学生', 2, 'com.ruoyi.web.controller.wx.api.LafWxStudentController.editSave()', 'POST', 1, NULL, NULL, '/wx/api/student/auth/edit', '106.224.209.92', 'XX XX', '{\"params\":{},\"stuId\":12,\"stuNick\":\"Evy\",\"stuQq\":\"11\"}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-26 16:08:13');
+INSERT INTO `sys_oper_log` VALUES (1423, '学生', 2, 'com.ruoyi.web.controller.wx.api.LafWxStudentController.editSave()', 'POST', 1, NULL, NULL, '/wx/api/student/auth/edit', '106.224.209.92', 'XX XX', '{\"params\":{},\"stuId\":12,\"stuNick\":\"Evy\",\"stuQq\":\"11\"}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-26 16:08:25');
+INSERT INTO `sys_oper_log` VALUES (1424, '学生', 2, 'com.ruoyi.web.controller.wx.api.LafWxStudentController.editSave()', 'POST', 1, NULL, NULL, '/wx/api/student/auth/edit', '106.224.209.92', 'XX XX', '{\"params\":{},\"stuId\":12,\"stuNick\":\"Evy\",\"stuQq\":\"11\"}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-26 16:08:41');
+INSERT INTO `sys_oper_log` VALUES (1425, '学生', 2, 'com.ruoyi.web.controller.wx.api.LafWxStudentController.editSave()', 'POST', 1, NULL, NULL, '/wx/api/student/auth/edit', '106.224.209.92', 'XX XX', '{\"params\":{},\"stuId\":12,\"stuNick\":\"Evy\",\"stuQq\":\"11\"}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-26 16:09:07');
+INSERT INTO `sys_oper_log` VALUES (1426, '学生', 2, 'com.ruoyi.web.controller.wx.api.LafWxStudentController.editSave()', 'POST', 1, NULL, NULL, '/wx/api/student/auth/edit', '106.224.209.92', 'XX XX', '{\"params\":{},\"stuId\":12,\"stuNick\":\"Evy\",\"stuQq\":\"11\"}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-26 16:11:16');
+INSERT INTO `sys_oper_log` VALUES (1427, '学生', 2, 'com.ruoyi.web.controller.wx.api.LafWxStudentController.editSave()', 'POST', 1, NULL, NULL, '/wx/api/student/auth/edit', '106.224.209.92', 'XX XX', '{\"params\":{},\"stuId\":12,\"stuNick\":\"hh\"}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-26 16:18:26');
+INSERT INTO `sys_oper_log` VALUES (1428, '学生', 2, 'com.ruoyi.web.controller.wx.api.LafWxStudentController.editSave()', 'POST', 1, NULL, NULL, '/wx/api/student/auth/edit', '106.224.209.92', 'XX XX', '{\"params\":{},\"stuId\":12,\"stuNick\":\"233\"}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-26 16:21:01');
+INSERT INTO `sys_oper_log` VALUES (1429, '学生', 2, 'com.ruoyi.web.controller.wx.api.LafWxStudentController.editSave()', 'POST', 1, NULL, NULL, '/wx/api/student/auth/edit', '106.224.209.92', 'XX XX', '{\"params\":{},\"stuId\":12,\"stuNick\":\"333\",\"stuQq\":\"11\"}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-26 17:02:01');
+INSERT INTO `sys_oper_log` VALUES (1430, '学生', 2, 'com.ruoyi.web.controller.wx.api.LafWxStudentController.editSave()', 'POST', 1, NULL, NULL, '/wx/api/student/auth/edit', '106.224.209.92', 'XX XX', '{\"params\":{},\"stuId\":12,\"stuNick\":\"888\",\"stuQq\":\"11\"}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-26 17:02:41');
+INSERT INTO `sys_oper_log` VALUES (1431, '学生', 2, 'com.ruoyi.web.controller.wx.api.LafWxStudentController.editSave()', 'POST', 1, NULL, NULL, '/wx/api/student/auth/edit', '106.224.209.92', 'XX XX', '{\"params\":{},\"stuId\":12,\"stuNick\":\"777\",\"stuQq\":\"11\"}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-26 17:05:08');
+INSERT INTO `sys_oper_log` VALUES (1432, '学生', 2, 'com.ruoyi.web.controller.wx.api.LafWxStudentController.editSave()', 'POST', 1, NULL, NULL, '/wx/api/student/auth/edit', '106.224.209.92', 'XX XX', '{\"params\":{},\"stuId\":12,\"stuNick\":\"999\",\"stuQq\":\"11\"}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-26 17:06:34');
+INSERT INTO `sys_oper_log` VALUES (1433, '学生', 2, 'com.ruoyi.web.controller.wx.api.LafWxStudentController.editSave()', 'POST', 1, NULL, NULL, '/wx/api/student/auth/edit', '106.224.209.92', 'XX XX', '{\"params\":{},\"stuId\":12,\"stuNick\":\"777\",\"stuQq\":\"11\"}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-26 17:22:33');
+INSERT INTO `sys_oper_log` VALUES (1434, '学生', 2, 'com.ruoyi.web.controller.wx.api.LafWxStudentController.editSave()', 'POST', 1, NULL, NULL, '/wx/api/student/auth/edit', '106.224.209.92', 'XX XX', '{\"params\":{},\"stuId\":12,\"stuNick\":\"778\",\"stuQq\":\"11\"}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-26 17:26:19');
+INSERT INTO `sys_oper_log` VALUES (1435, '学生', 2, 'com.ruoyi.web.controller.wx.api.LafWxStudentController.editSave()', 'POST', 1, NULL, NULL, '/wx/api/student/auth/edit', '106.224.209.92', 'XX XX', '{\"params\":{},\"stuId\":12,\"stuNick\":\"333\",\"stuQq\":\"11\"}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-26 17:28:04');
+INSERT INTO `sys_oper_log` VALUES (1436, '学生', 2, 'com.ruoyi.web.controller.wx.api.LafWxStudentController.editSave()', 'POST', 1, NULL, NULL, '/wx/api/student/auth/edit', '106.224.209.92', 'XX XX', '{\"params\":{},\"stuId\":12,\"stuNick\":\"999\",\"stuQq\":\"11\"}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-26 17:28:30');
+INSERT INTO `sys_oper_log` VALUES (1437, '学生', 2, 'com.ruoyi.web.controller.wx.api.LafWxStudentController.editSave()', 'POST', 1, NULL, NULL, '/wx/api/student/auth/edit', '106.224.209.92', 'XX XX', '{\"params\":{},\"stuId\":12,\"stuNick\":\"000\",\"stuQq\":\"11\"}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-26 17:29:34');
+INSERT INTO `sys_oper_log` VALUES (1438, '学生', 2, 'com.ruoyi.web.controller.wx.api.LafWxStudentController.editSave()', 'POST', 1, NULL, NULL, '/wx/api/student/auth/edit', '106.224.209.92', 'XX XX', '{\"params\":{},\"stuId\":12,\"stuNick\":\"678\",\"stuQq\":\"11\"}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-26 17:37:36');
+INSERT INTO `sys_oper_log` VALUES (1439, '学生', 2, 'com.ruoyi.web.controller.wx.api.LafWxStudentController.editSave()', 'POST', 1, NULL, NULL, '/wx/api/student/auth/edit', '106.224.209.92', 'XX XX', '{\"params\":{},\"stuId\":12,\"stuNick\":\"456\",\"stuQq\":\"11\"}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-26 17:37:45');
+INSERT INTO `sys_oper_log` VALUES (1440, '学生', 2, 'com.ruoyi.web.controller.wx.api.LafWxStudentController.editSave()', 'POST', 1, NULL, NULL, '/wx/api/student/auth/edit', '106.224.209.92', 'XX XX', '{\"params\":{},\"stuId\":12,\"stuNick\":\"789\",\"stuQq\":\"11\"}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-26 17:45:47');
+INSERT INTO `sys_oper_log` VALUES (1441, '学生', 2, 'com.ruoyi.web.controller.wx.api.LafWxStudentController.editSave()', 'POST', 1, NULL, NULL, '/wx/api/student/auth/edit', '106.224.209.92', 'XX XX', '{\"params\":{},\"stuId\":12,\"stuNick\":\"567\",\"stuQq\":\"11\"}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-26 17:49:55');
+INSERT INTO `sys_oper_log` VALUES (1442, '学生', 2, 'com.ruoyi.web.controller.wx.api.LafWxStudentController.editSave()', 'POST', 1, NULL, NULL, '/wx/api/student/auth/edit', '106.224.209.92', 'XX XX', '{\"params\":{},\"stuId\":12,\"stuNick\":\"im567\",\"stuQq\":\"11\"}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-26 17:51:31');
+INSERT INTO `sys_oper_log` VALUES (1443, '学生', 2, 'com.ruoyi.web.controller.wx.api.LafWxStudentController.editSave()', 'POST', 1, NULL, NULL, '/wx/api/student/auth/edit', '106.224.209.92', 'XX XX', '{\"params\":{},\"stuId\":12,\"stuNick\":\"i567\",\"stuQq\":\"11\"}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-26 17:53:20');
+INSERT INTO `sys_oper_log` VALUES (1444, '学生', 2, 'com.ruoyi.web.controller.wx.api.LafWxStudentController.editSave()', 'POST', 1, NULL, NULL, '/wx/api/student/auth/edit', '106.224.209.92', 'XX XX', '{\"params\":{},\"stuId\":12,\"stuNick\":\"im567\",\"stuQq\":\"11\"}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-26 17:53:52');
+INSERT INTO `sys_oper_log` VALUES (1445, '学生', 2, 'com.ruoyi.web.controller.wx.api.LafWxStudentController.editSave()', 'POST', 1, NULL, NULL, '/wx/api/student/auth/edit', '106.224.209.92', 'XX XX', '{\"params\":{},\"stuId\":12,\"stuNick\":\"567\",\"stuQq\":\"11\"}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-26 18:01:44');
+INSERT INTO `sys_oper_log` VALUES (1446, '学生', 2, 'com.ruoyi.web.controller.wx.api.LafWxStudentController.editSave()', 'POST', 1, NULL, NULL, '/wx/api/student/auth/edit', '106.224.209.92', 'XX XX', '{\"params\":{},\"stuId\":12,\"stuNick\":\"i567\",\"stuQq\":\"11\"}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-26 18:02:20');
+INSERT INTO `sys_oper_log` VALUES (1447, '学生', 2, 'com.ruoyi.web.controller.wx.api.LafWxStudentController.editSave()', 'POST', 1, NULL, NULL, '/wx/api/student/auth/edit', '106.224.209.92', 'XX XX', '{\"params\":{},\"stuId\":12,\"stuNick\":\"568\",\"stuQq\":\"11\"}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-26 18:03:02');
+INSERT INTO `sys_oper_log` VALUES (1448, '学生', 2, 'com.ruoyi.web.controller.wx.api.LafWxStudentController.editSave()', 'POST', 1, NULL, NULL, '/wx/api/student/auth/edit', '106.224.209.92', 'XX XX', '{\"params\":{},\"stuId\":12,\"stuNick\":\"hh\",\"stuQq\":\"11\"}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-26 18:07:39');
+INSERT INTO `sys_oper_log` VALUES (1449, '学生', 2, 'com.ruoyi.web.controller.wx.api.LafWxStudentController.editSave()', 'POST', 1, NULL, NULL, '/wx/api/student/auth/edit', '106.224.209.92', 'XX XX', '{\"params\":{},\"stuId\":12,\"stuNick\":\"大傻\",\"stuQq\":\"11\"}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-26 20:22:35');
+INSERT INTO `sys_oper_log` VALUES (1450, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '111.79.8.103', 'XX XX', '{\"comContent\":\"1\",\"comRelId\":404,\"params\":{}}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-27 10:13:21');
+INSERT INTO `sys_oper_log` VALUES (1451, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '127.0.0.1', '内网IP', '{\"comContent\":\"11\",\"comRelId\":404,\"params\":{},\"parentId\":389}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-27 10:15:16');
+INSERT INTO `sys_oper_log` VALUES (1452, '帖子', 3, 'com.ruoyi.web.controller.wx.LafReleaseController.remove()', 'POST', 1, 'admin', '校园失物管理系统', '/wx/release/remove', '111.79.8.103', 'XX XX', '{\"ids\":[\"416,415,414,413,412,411,410,409,408,407\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-27 10:54:15');
+INSERT INTO `sys_oper_log` VALUES (1453, '帖子', 3, 'com.ruoyi.web.controller.wx.LafReleaseController.remove()', 'POST', 1, 'admin', '校园失物管理系统', '/wx/release/remove', '111.79.8.103', 'XX XX', '{\"ids\":[\"406\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-27 10:54:20');
+INSERT INTO `sys_oper_log` VALUES (1454, '学生', 2, 'com.ruoyi.web.controller.wx.api.LafWxStudentController.editSave()', 'POST', 1, NULL, NULL, '/wx/api/student/auth/edit', '111.74.30.64', 'XX XX', '{\"params\":{},\"stuId\":12,\"stuNick\":\"567\",\"stuQq\":\"11\"}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-27 13:43:08');
+INSERT INTO `sys_oper_log` VALUES (1455, '学生', 2, 'com.ruoyi.web.controller.wx.api.LafWxStudentController.editSave()', 'POST', 1, NULL, NULL, '/wx/api/student/auth/edit', '182.104.19.140', 'XX XX', '{\"params\":{},\"stuId\":12,\"stuNick\":\"cjw\",\"stuQq\":\"11\"}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-27 16:52:51');
+INSERT INTO `sys_oper_log` VALUES (1456, '学生', 2, 'com.ruoyi.web.controller.wx.api.LafWxStudentController.editSave()', 'POST', 1, NULL, NULL, '/wx/api/student/auth/edit', '182.104.19.140', 'XX XX', '{\"params\":{},\"stuId\":12,\"stuNick\":\"超级无敌宇宙美少女特工队\",\"stuQq\":\"11\"}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-27 17:01:15');
+INSERT INTO `sys_oper_log` VALUES (1457, '学生', 2, 'com.ruoyi.web.controller.wx.api.LafWxStudentController.editSave()', 'POST', 1, NULL, NULL, '/wx/api/student/auth/edit', '182.104.19.140', 'XX XX', '{\"params\":{},\"stuId\":12,\"stuNick\":\"超级无敌宇宙美少女特工队队长\",\"stuQq\":\"11\"}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-27 17:01:26');
+INSERT INTO `sys_oper_log` VALUES (1458, '学生', 2, 'com.ruoyi.web.controller.wx.api.LafWxStudentController.editSave()', 'POST', 1, NULL, NULL, '/wx/api/student/auth/edit', '182.104.19.140', 'XX XX', '{\"params\":{},\"stuId\":12,\"stuNick\":\"超级无敌宇宙美少女特工队队长\",\"stuQq\":\"11\"}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-27 17:01:32');
+INSERT INTO `sys_oper_log` VALUES (1459, '学生', 2, 'com.ruoyi.web.controller.wx.api.LafWxStudentController.editSave()', 'POST', 1, NULL, NULL, '/wx/api/student/auth/edit', '182.104.19.140', 'XX XX', '{\"params\":{},\"stuId\":12,\"stuNick\":\"宇宙无敌美少女队队长\",\"stuQq\":\"11\"}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-27 17:19:10');
+INSERT INTO `sys_oper_log` VALUES (1460, '学生', 2, 'com.ruoyi.web.controller.wx.api.LafWxStudentController.editSave()', 'POST', 1, NULL, NULL, '/wx/api/student/auth/edit', '182.104.19.140', 'XX XX', '{\"params\":{},\"stuId\":12,\"stuNick\":\"微凉\",\"stuQq\":\"11\"}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-27 17:19:50');
+INSERT INTO `sys_oper_log` VALUES (1461, '学生', 2, 'com.ruoyi.web.controller.wx.api.LafWxStudentController.editSave()', 'POST', 1, NULL, NULL, '/wx/api/student/auth/edit', '223.104.10.220', 'XX XX', '{\"params\":{},\"stuId\":4,\"stuNick\":\"楚门\",\"stuQq\":\"1347456958\"}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-28 08:26:35');
+INSERT INTO `sys_oper_log` VALUES (1462, '学生', 2, 'com.ruoyi.web.controller.wx.api.LafWxStudentController.editSave()', 'POST', 1, NULL, NULL, '/wx/api/student/auth/edit', '223.104.10.220', 'XX XX', '{\"params\":{},\"stuId\":4,\"stuNick\":\"空城\",\"stuQq\":\"1347456958\"}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-28 08:26:54');
+INSERT INTO `sys_oper_log` VALUES (1463, '学生', 2, 'com.ruoyi.web.controller.wx.api.LafWxStudentController.editSave()', 'POST', 1, NULL, NULL, '/wx/api/student/auth/edit', '223.104.10.220', 'XX XX', '{\"params\":{},\"stuId\":4,\"stuNick\":\"空城\",\"stuQq\":\"18436002417\"}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-28 08:27:09');
+INSERT INTO `sys_oper_log` VALUES (1464, '学生', 2, 'com.ruoyi.web.controller.wx.api.LafWxStudentController.editSave()', 'POST', 1, NULL, NULL, '/wx/api/student/auth/edit', '223.104.10.220', 'XX XX', '{\"params\":{},\"stuId\":4,\"stuNick\":\"空城\",\"stuQq\":\"1347456958\"}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-28 08:27:42');
+INSERT INTO `sys_oper_log` VALUES (1465, '学生', 2, 'com.ruoyi.web.controller.wx.api.LafWxStudentController.editSave()', 'POST', 1, NULL, NULL, '/wx/api/student/auth/edit', '223.104.10.220', 'XX XX', '{\"params\":{},\"stuId\":4,\"stuNick\":\"华晨宇\",\"stuQq\":\"1347456958\"}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-28 10:23:54');
+INSERT INTO `sys_oper_log` VALUES (1466, '学生', 2, 'com.ruoyi.web.controller.wx.api.LafWxStudentController.editSave()', 'POST', 1, NULL, NULL, '/wx/api/student/auth/edit', '223.104.10.220', 'XX XX', '{\"params\":{},\"stuId\":4,\"stuNick\":\"空城\",\"stuQq\":\"1347456958\"}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-28 10:24:26');
+INSERT INTO `sys_oper_log` VALUES (1467, '学生', 2, 'com.ruoyi.web.controller.wx.api.LafWxStudentController.editSave()', 'POST', 1, NULL, NULL, '/wx/api/student/auth/edit', '182.104.10.90', 'XX XX', '{\"params\":{},\"stuId\":12,\"stuNick\":\"微凉\",\"stuQq\":\"567\"}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-28 21:49:40');
+INSERT INTO `sys_oper_log` VALUES (1468, '帖子', 3, 'com.ruoyi.web.controller.wx.LafReleaseController.remove()', 'POST', 1, 'admin', '校园失物管理系统', '/wx/release/remove', '111.79.8.103', 'XX XX', '{\"ids\":[\"386,385,384,383\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-28 22:08:21');
+INSERT INTO `sys_oper_log` VALUES (1469, '帖子', 3, 'com.ruoyi.web.controller.wx.LafReleaseController.remove()', 'POST', 1, 'admin', '校园失物管理系统', '/wx/release/remove', '111.79.8.103', 'XX XX', '{\"ids\":[\"401,382,381\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-28 22:08:34');
+INSERT INTO `sys_oper_log` VALUES (1470, '帖子', 3, 'com.ruoyi.web.controller.wx.LafReleaseController.remove()', 'POST', 1, 'admin', '校园失物管理系统', '/wx/release/remove', '111.79.8.103', 'XX XX', '{\"ids\":[\"372,371,370,368,367\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-28 22:09:03');
+INSERT INTO `sys_oper_log` VALUES (1471, '帖子', 3, 'com.ruoyi.web.controller.wx.LafReleaseController.remove()', 'POST', 1, 'admin', '校园失物管理系统', '/wx/release/remove', '111.79.8.103', 'XX XX', '{\"ids\":[\"292\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-28 22:09:20');
+INSERT INTO `sys_oper_log` VALUES (1472, '学生', 2, 'com.ruoyi.web.controller.wx.api.LafWxStudentController.editSave()', 'POST', 1, NULL, NULL, '/wx/api/student/auth/edit', '111.79.8.103', 'XX XX', '{\"params\":{},\"stuId\":4,\"stuNick\":\"空城\",\"stuQq\":\"18436002417\"}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-28 22:15:55');
+INSERT INTO `sys_oper_log` VALUES (1473, '学生', 2, 'com.ruoyi.web.controller.wx.api.LafWxStudentController.editSave()', 'POST', 1, NULL, NULL, '/wx/api/student/auth/edit', '111.79.8.103', 'XX XX', '{\"params\":{},\"stuId\":4,\"stuNick\":\"你好\",\"stuQq\":\"18436002417\"}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-28 22:16:02');
+INSERT INTO `sys_oper_log` VALUES (1474, '学生', 2, 'com.ruoyi.web.controller.wx.api.LafWxStudentController.editSave()', 'POST', 1, NULL, NULL, '/wx/api/student/auth/edit', '111.79.8.103', 'XX XX', '{\"params\":{},\"stuId\":4,\"stuNick\":\"你好\",\"stuQq\":\"1347456958\"}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-28 22:17:15');
+INSERT INTO `sys_oper_log` VALUES (1475, '学生', 2, 'com.ruoyi.web.controller.wx.api.LafWxStudentController.editSave()', 'POST', 1, NULL, NULL, '/wx/api/student/auth/edit', '182.104.75.118', 'XX XX', '{\"params\":{},\"stuId\":12,\"stuNick\":\"\",\"stuQq\":\"567\"}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-29 15:08:00');
+INSERT INTO `sys_oper_log` VALUES (1476, '学生', 2, 'com.ruoyi.web.controller.wx.api.LafWxStudentController.editSave()', 'POST', 1, NULL, NULL, '/wx/api/student/auth/edit', '182.104.75.118', 'XX XX', '{\"params\":{},\"stuId\":12,\"stuNick\":\"微凉\",\"stuQq\":\"567\"}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-29 15:08:07');
+INSERT INTO `sys_oper_log` VALUES (1477, '帖子', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseController.remove()', 'GET', 1, NULL, NULL, '/wx/api/release/auth/delete', '111.79.8.103', 'XX XX', '{\"id\":[\"419\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-29 19:44:22');
+INSERT INTO `sys_oper_log` VALUES (1478, '帖子', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseController.remove()', 'GET', 1, NULL, NULL, '/wx/api/release/auth/delete', '182.97.173.71', 'XX XX', '{\"id\":[\"423\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-30 14:00:14');
+INSERT INTO `sys_oper_log` VALUES (1479, '帖子', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseController.remove()', 'GET', 1, NULL, NULL, '/wx/api/release/auth/delete', '182.97.173.71', 'XX XX', '{\"id\":[\"422\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-30 14:00:17');
+INSERT INTO `sys_oper_log` VALUES (1480, '帖子', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseController.remove()', 'GET', 1, NULL, NULL, '/wx/api/release/auth/delete', '182.97.173.71', 'XX XX', '{\"id\":[\"420\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-30 14:00:19');
+INSERT INTO `sys_oper_log` VALUES (1481, '帖子', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseController.remove()', 'GET', 1, NULL, NULL, '/wx/api/release/auth/delete', '182.97.173.71', 'XX XX', '{\"id\":[\"421\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-30 14:00:22');
+INSERT INTO `sys_oper_log` VALUES (1482, '帖子留言', 1, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.addSave()', 'POST', 1, NULL, NULL, '/wx/api/info/auth/comment/add', '223.104.10.220', 'XX XX', '{\"comContent\":\"挺严\",\"comRelId\":424,\"params\":{}}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-30 14:31:21');
+INSERT INTO `sys_oper_log` VALUES (1483, '帖子留言', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseInfoController.remove()', 'GET', 1, NULL, NULL, '/wx/api/info/auth/comment/delete', '223.104.10.220', 'XX XX', '{\"id\":[\"391\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-30 14:31:26');
+INSERT INTO `sys_oper_log` VALUES (1484, '帖子', 2, 'com.ruoyi.web.controller.wx.LafReleaseController.editSave()', 'POST', 1, 'admin', '校园失物管理系统', '/wx/release/edit', '111.79.8.103', 'XX XX', '{\"relId\":[\"424\"],\"relTitle\":[\"1\"],\"relDesc\":[\"\"],\"relContact\":[\"QQ:567\"],\"relCateId\":[\"1\"],\"relTime\":[\"\"],\"relCampus\":[\"不选择\"],\"createPlace\":[\"\"],\"createId\":[\"12\"],\"relImage\":[\"/img/user/shiwu.png\"],\"relStatus\":[\"1\"],\"relStar\":[\"0\"],\"relFlag\":[\"1\"],\"relFlow\":[\"9\"],\"relDel\":[\"2\"],\"relClaimId\":[\"\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-30 18:11:58');
+INSERT INTO `sys_oper_log` VALUES (1485, '帖子', 2, 'com.ruoyi.web.controller.wx.LafReleaseController.editSave()', 'POST', 1, 'admin', '校园失物管理系统', '/wx/release/edit', '111.79.8.103', 'XX XX', '{\"relId\":[\"418\"],\"relTitle\":[\"丢失冰柜\"],\"relDesc\":[\"需要冰点\"],\"relContact\":[\"QQ:567\"],\"relCateId\":[\"1\"],\"relTime\":[\"\"],\"relCampus\":[\"南昌校区\"],\"createPlace\":[\"地球\"],\"createId\":[\"12\"],\"relImage\":[\"/img/user/tiezi/tmp_c9271fb7705945e92846e671f3b4fc0c4173398aaf25b887.jpg\"],\"relStatus\":[\"2\"],\"relStar\":[\"0\"],\"relFlag\":[\"1\"],\"relFlow\":[\"4\"],\"relDel\":[\"2\"],\"relClaimId\":[\"\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-03-30 18:12:03');
+INSERT INTO `sys_oper_log` VALUES (1486, '帖子', 3, 'com.ruoyi.web.controller.wx.LafReleaseController.remove()', 'POST', 1, 'admin', '校园失物管理系统', '/wx/release/remove', '111.79.8.103', 'XX XX', '{\"ids\":[\"424,423,422,421,420\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-04-01 21:05:30');
+INSERT INTO `sys_oper_log` VALUES (1487, '帖子', 3, 'com.ruoyi.web.controller.wx.api.LafWxReleaseController.remove()', 'GET', 1, NULL, NULL, '/wx/api/release/auth/delete', '111.79.8.103', 'XX XX', '{\"id\":[\"426\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-04-01 23:20:47');
+INSERT INTO `sys_oper_log` VALUES (1488, '帖子', 3, 'com.ruoyi.web.controller.wx.LafReleaseController.remove()', 'POST', 1, 'admin', '校园失物管理系统', '/wx/release/remove', '111.79.8.103', 'XX XX', '{\"ids\":[\"426\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-04-01 23:22:34');
+INSERT INTO `sys_oper_log` VALUES (1489, '帖子', 2, 'com.ruoyi.web.controller.wx.LafReleaseController.editSave()', 'POST', 1, 'admin', '校园失物管理系统', '/wx/release/edit', '111.79.8.103', 'XX XX', '{\"relId\":[\"373\"],\"relTitle\":[\"诶呀\"],\"relDesc\":[\"球球快来带走\"],\"relContact\":[\"1508001272\"],\"relCateId\":[\"1\"],\"relTime\":[\"\"],\"relCampus\":[\"南昌校区\"],\"createPlace\":[\"校园\"],\"createId\":[\"34\"],\"relImage\":[\"/img/user/tiezi/tmp_e57b41a8a7f446f58ae76ab8c23eab2b7c2687e6d206d36d.jpg\"],\"relStatus\":[\"1\"],\"relStar\":[\"0\"],\"relFlag\":[\"1\"],\"relFlow\":[\"1\"],\"relDel\":[\"2\"],\"relClaimId\":[\"\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-04-01 23:22:44');
+INSERT INTO `sys_oper_log` VALUES (1490, '帖子', 2, 'com.ruoyi.web.controller.wx.LafReleaseController.editSave()', 'POST', 1, 'admin', '校园失物管理系统', '/wx/release/edit', '111.79.8.103', 'XX XX', '{\"relId\":[\"353\"],\"relTitle\":[\"蓝牙耳机\"],\"relDesc\":[\"昨晚10点于操场丢失\"],\"relContact\":[\"11111111111\"],\"relCateId\":[\"1\"],\"relTime\":[\"\"],\"relCampus\":[\"南昌校区\"],\"createPlace\":[\"操场\"],\"createId\":[\"22\"],\"relImage\":[\"/img/user/tiezi/tmp_9316b9bcc29ce1fb31d47d1e179e7292a48f4944104df831.jpg\"],\"relStatus\":[\"2\"],\"relStar\":[\"0\"],\"relFlag\":[\"2\"],\"relFlow\":[\"1\"],\"relDel\":[\"2\"],\"relClaimId\":[\"\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-04-01 23:22:57');
+INSERT INTO `sys_oper_log` VALUES (1491, '帖子', 2, 'com.ruoyi.web.controller.wx.LafReleaseController.editSave()', 'POST', 1, 'admin', '校园失物管理系统', '/wx/release/edit', '111.79.8.103', 'XX XX', '{\"relId\":[\"132\"],\"relTitle\":[\"test1.0.0\"],\"relDesc\":[\"寻找一个demo\"],\"relContact\":[\"123456\"],\"relCateId\":[\"1\"],\"relTime\":[\"\"],\"relCampus\":[\"南昌校区\"],\"createPlace\":[\"\"],\"createId\":[\"4\"],\"relImage\":[\"/img/user/tiezi/tmp_264c59b67ad78526eddb2f6ce9770a1a.jpg\"],\"relStatus\":[\"2\"],\"relStar\":[\"0\"],\"relFlag\":[\"2\"],\"relFlow\":[\"1\"],\"relDel\":[\"2\"],\"relClaimId\":[\"\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-04-01 23:23:13');
+INSERT INTO `sys_oper_log` VALUES (1492, '帖子', 2, 'com.ruoyi.web.controller.wx.LafReleaseController.editSave()', 'POST', 1, 'admin', '校园失物管理系统', '/wx/release/edit', '111.79.8.103', 'XX XX', '{\"relId\":[\"107\"],\"relTitle\":[\"我的\"],\"relDesc\":[\"我们\"],\"relContact\":[\"123456\"],\"relCateId\":[\"2\"],\"relTime\":[\"\"],\"relCampus\":[\"红旗校区\"],\"createPlace\":[\"\"],\"createId\":[\"4\"],\"relImage\":[\"/img/user/tiezi/tmp_cde98bf3232b71e4f420e9549516ca4b.jpg\"],\"relStatus\":[\"2\"],\"relStar\":[\"1\"],\"relFlag\":[\"2\"],\"relFlow\":[\"1\"],\"relDel\":[\"2\"],\"relClaimId\":[\"\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-04-01 23:23:25');
+INSERT INTO `sys_oper_log` VALUES (1493, '学生', 2, 'com.ruoyi.web.controller.wx.api.LafWxStudentController.editSave()', 'POST', 1, NULL, NULL, '/wx/api/student/auth/edit', '111.79.8.103', 'XX XX', '{\"params\":{},\"stuId\":4,\"stuNick\":\"空城\",\"stuQq\":\"1347456958\"}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-04-01 23:26:40');
+INSERT INTO `sys_oper_log` VALUES (1494, '代码生成', 6, 'com.ruoyi.generator.controller.GenController.importTableSave()', 'POST', 1, 'admin', '校园失物管理系统', '/tool/gen/importTable', '127.0.0.1', '内网IP', '{\"tables\":[\"laf_push\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-04-03 15:05:19');
+INSERT INTO `sys_oper_log` VALUES (1495, '学生', 2, 'com.ruoyi.web.controller.wx.LafStudentController.editSave()', 'POST', 1, 'admin', '校园失物管理系统', '/wx/student/edit', '127.0.0.1', '内网IP', '{\"stuId\":[\"19\"],\"stuNick\":[\"低调\"],\"stuName\":[\"\"],\"stuSex\":[\"1\"],\"stuXh\":[\"\"],\"stuPassword\":[\"\"],\"stuDepartment\":[\"\"],\"stuMajor\":[\"\"],\"stuClassname\":[\"\"],\"stuQq\":[\"\"],\"stuEmail\":[\"\"],\"stuImage\":[\"https://thirdwx.qlogo.cn/mmopen/vi_32/qVyWEqek2Yib7yBD93286UJg1oNw7tKMb79XA6icq6xapRzbohjJWk9avibmG1tWFXqUL6IvunANRzcsFVY7icxh8A/132\"],\"stuStatus\":[\"2\"],\"openid\":[\"o-AmG4n0lZ2shTMM_NeyVy2-s5-4\"]}', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-04-03 15:08:44');
+INSERT INTO `sys_oper_log` VALUES (1496, '代码生成', 2, 'com.ruoyi.generator.controller.GenController.editSave()', 'POST', 1, 'admin', '校园失物管理系统', '/tool/gen/edit', '127.0.0.1', '内网IP', '{\"tableId\":[\"28\"],\"tableName\":[\"laf_push\"],\"tableComment\":[\"推送表\"],\"className\":[\"LafPush\"],\"functionAuthor\":[\"yang\"],\"remark\":[\"\"],\"columns[0].columnId\":[\"343\"],\"columns[0].sort\":[\"1\"],\"columns[0].columnComment\":[\"ID\"],\"columns[0].javaType\":[\"Long\"],\"columns[0].javaField\":[\"pushId\"],\"columns[0].queryType\":[\"EQ\"],\"columns[0].htmlType\":[\"input\"],\"columns[0].dictType\":[\"\"],\"columns[1].columnId\":[\"344\"],\"columns[1].sort\":[\"2\"],\"columns[1].columnComment\":[\"标题\"],\"columns[1].javaType\":[\"String\"],\"columns[1].javaField\":[\"pushTitle\"],\"columns[1].isInsert\":[\"1\"],\"columns[1].isEdit\":[\"1\"],\"columns[1].isList\":[\"1\"],\"columns[1].isQuery\":[\"1\"],\"columns[1].queryType\":[\"EQ\"],\"columns[1].htmlType\":[\"input\"],\"columns[1].dictType\":[\"\"],\"columns[2].columnId\":[\"345\"],\"columns[2].sort\":[\"3\"],\"columns[2].columnComment\":[\"线索\"],\"columns[2].javaType\":[\"String\"],\"columns[2].javaField\":[\"pushClue\"],\"columns[2].isInsert\":[\"1\"],\"columns[2].isEdit\":[\"1\"],\"columns[2].isList\":[\"1\"],\"columns[2].isQuery\":[\"1\"],\"columns[2].queryType\":[\"EQ\"],\"columns[2].htmlType\":[\"input\"],\"columns[2].dictType\":[\"\"],\"columns[3].columnId\":[\"346\"],\"columns[3].sort\":[\"4\"],\"columns[3].columnComment\":[\"推送帖子ID\"],\"columns[3].javaType\":[\"String\"],\"columns[3].javaField\":[\"relId\"],\"columns[3].isInsert\":[\"1\"],\"columns[3].isEdit\":[\"1\"],\"columns[3].isList\":[\"1\"],\"columns[3].isQuery\":[\"1\"],\"columns[3].queryType\":[\"EQ\"],\"columns[3].htmlType\":[\"input\"],\"columns[3].dictType\":[\"\"],\"columns[4].columnId\":[\"347\"],\"columns[4].sort\":[\"5\"],\"columns[4].columnComment\":[\"所属种类\"],\"columns[4].javaType\":[\"Long\"],\"columns[4].javaField\":[\"cateId\"],\"columns[4].isInsert\":[\"1\"],\"columns[4].isEdit\":[\"1\"],\"columns[4].isList\":[\"1\"],\"columns[4].isQuery\":[\"1\"],\"columns[4].queryType\":[\"EQ\"],\"columns[4].htmlType\":[\"input\"],\"columns[4].dictType\":[\"\"],\"columns[5].columnId\":[\"348\"],\"columns[5].sort\":[\"6\"],\"columns[5].columnComment\":[\"UID\"],\"columns[5].javaType\":[\"Long\"],\"columns[5].javaField\":[\"stuId\"],\"columns[5].isInsert\":[\"1\"],\"columns[5].isEdit\":[\"1\"],\"columns[', '{\"msg\":\"操作成功\",\"code\":0}', 0, NULL, '2022-04-03 15:16:08');
 
 -- ----------------------------
 -- Table structure for sys_post
@@ -2266,7 +4308,7 @@ CREATE TABLE `sys_post`  (
   `update_time` datetime NULL DEFAULT NULL COMMENT '更新时间',
   `remark` varchar(500) CHARACTER SET utf8 COLLATE utf8_bin NULL DEFAULT NULL COMMENT '备注',
   PRIMARY KEY (`post_id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 4 CHARACTER SET = utf8 COLLATE = utf8_bin COMMENT = '岗位信息表' ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 5 CHARACTER SET = utf8 COLLATE = utf8_bin COMMENT = '岗位信息表' ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of sys_post
@@ -2293,7 +4335,7 @@ CREATE TABLE `sys_role`  (
   `update_time` datetime NULL DEFAULT NULL COMMENT '更新时间',
   `remark` varchar(500) CHARACTER SET utf8 COLLATE utf8_bin NULL DEFAULT NULL COMMENT '备注',
   PRIMARY KEY (`role_id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 102 CHARACTER SET = utf8 COLLATE = utf8_bin COMMENT = '角色信息表' ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 103 CHARACTER SET = utf8 COLLATE = utf8_bin COMMENT = '角色信息表' ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of sys_role
@@ -2302,7 +4344,7 @@ INSERT INTO `sys_role` VALUES (1, '超级管理员', 'admin', 1, '1', '0', '0', 
 INSERT INTO `sys_role` VALUES (2, '普通角色', 'common', 2, '4', '0', '0', 'admin', '2021-09-22 15:36:14', 'admin', '2021-12-31 09:26:05', '普通角色');
 INSERT INTO `sys_role` VALUES (100, '校区管理员', 'user', 2, '1', '0', '0', 'yang', '2021-12-28 11:52:25', '', NULL, NULL);
 INSERT INTO `sys_role` VALUES (101, '学生', 'student', 3, '1', '0', '2', 'yang', '2021-12-28 16:17:37', '', NULL, NULL);
-INSERT INTO `sys_role` VALUES (102, '游客', 'gust', 4, '1', '0', '0', 'admin', '2021-12-28 16:25:38', '', NULL, NULL);
+INSERT INTO `sys_role` VALUES (102, '游客', 'gust', 4, '1', '0', '0', 'admin', '2021-12-28 16:25:38', 'admin', '2022-03-18 21:53:35', '');
 
 -- ----------------------------
 -- Table structure for sys_role_dept
@@ -2312,7 +4354,7 @@ CREATE TABLE `sys_role_dept`  (
   `role_id` bigint NOT NULL COMMENT '角色ID',
   `dept_id` bigint NOT NULL COMMENT '部门ID',
   PRIMARY KEY (`role_id`, `dept_id`) USING BTREE
-) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_bin COMMENT = '角色和部门关联表' ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_bin COMMENT = '角色和部门关联表' ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of sys_role_dept
@@ -2326,7 +4368,7 @@ CREATE TABLE `sys_role_menu`  (
   `role_id` bigint NOT NULL COMMENT '角色ID',
   `menu_id` bigint NOT NULL COMMENT '菜单ID',
   PRIMARY KEY (`role_id`, `menu_id`) USING BTREE
-) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_bin COMMENT = '角色和菜单关联表' ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_bin COMMENT = '角色和菜单关联表' ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of sys_role_menu
@@ -2388,9 +4430,13 @@ INSERT INTO `sys_role_menu` VALUES (102, 2002);
 INSERT INTO `sys_role_menu` VALUES (102, 2003);
 INSERT INTO `sys_role_menu` VALUES (102, 2004);
 INSERT INTO `sys_role_menu` VALUES (102, 2005);
+INSERT INTO `sys_role_menu` VALUES (102, 2008);
 INSERT INTO `sys_role_menu` VALUES (102, 2011);
+INSERT INTO `sys_role_menu` VALUES (102, 2012);
 INSERT INTO `sys_role_menu` VALUES (102, 2021);
+INSERT INTO `sys_role_menu` VALUES (102, 2022);
 INSERT INTO `sys_role_menu` VALUES (102, 2026);
+INSERT INTO `sys_role_menu` VALUES (102, 2027);
 
 -- ----------------------------
 -- Table structure for sys_user
@@ -2419,17 +4465,18 @@ CREATE TABLE `sys_user`  (
   `update_time` datetime NULL DEFAULT NULL COMMENT '更新时间',
   `remark` varchar(500) CHARACTER SET utf8 COLLATE utf8_bin NULL DEFAULT NULL COMMENT '备注',
   PRIMARY KEY (`user_id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 103 CHARACTER SET = utf8 COLLATE = utf8_bin COMMENT = '用户信息表' ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 105 CHARACTER SET = utf8 COLLATE = utf8_bin COMMENT = '用户信息表' ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of sys_user
 -- ----------------------------
-INSERT INTO `sys_user` VALUES (1, 100, 'admin', 'yang', '00', '1347456958@163.com', '15888888888', '1', '', '34a507bbed65a01884035e0952eae72c', '40d895', '0', '0', '127.0.0.1', '2022-03-04 20:17:55', '2021-12-27 18:56:29', 'admin', '2021-09-22 15:36:14', '', '2022-03-04 20:17:55', '管理员');
+INSERT INTO `sys_user` VALUES (1, 100, 'admin', 'yang', '00', '1347456958@163.com', '15888888888', '1', '', '1fc19c145cbca423fd2c4bc5fee270ed', 'b21c4e', '0', '0', '127.0.0.1', '2022-04-03 15:27:41', '2022-03-18 21:57:00', 'admin', '2021-09-22 15:36:14', '', '2022-04-03 15:27:42', '管理员');
 INSERT INTO `sys_user` VALUES (2, 105, 'ry', '许世平', '00', 'ry@qq.com', '15666666666', '2', '', '8e6d98b90472783cc73c17047ddccf36', '222222', '0', '2', '127.0.0.1', '2021-09-22 15:36:14', '2021-09-22 15:36:14', 'admin', '2021-09-22 15:36:14', 'admin', '2021-09-22 18:30:29', '开发人员');
-INSERT INTO `sys_user` VALUES (100, 103, 'yang', 'yang', '00', '1347456958@qq.com', '18888888887', '0', '', '690106e6179c8edf74fe3f294ebdbf0b', '16a3ab', '0', '0', '127.0.0.1', '2022-01-24 20:41:29', NULL, 'admin', '2021-12-26 17:19:21', 'admin', '2022-01-24 20:41:29', '');
-INSERT INTO `sys_user` VALUES (101, 103, 'xiong', 'xiong', '00', '', '18888888888', '0', '', 'e9c63cd4a0ec956d7abea15b830ca30e', 'af2c2f', '0', '0', '127.0.0.1', '2021-12-28 11:54:52', NULL, 'yang', '2021-12-28 11:41:43', '', '2021-12-28 11:54:52', NULL);
-INSERT INTO `sys_user` VALUES (102, 103, 'wang', 'wang', '00', '', '18888888889', '0', '', '572ba8296a16a89cb4c4a768da171f81', '699ae1', '0', '0', '127.0.0.1', '2021-12-28 11:57:48', NULL, 'yang', '2021-12-28 11:56:51', 'admin', '2021-12-28 16:14:48', '');
-INSERT INTO `sys_user` VALUES (103, 103, 'haha', 'haha', '00', '1235656@qq.com', '17633502642', '0', '', '764207d22a4a7c436fe27a2efe638f30', '8cca0f', '0', '0', '127.0.0.1', '2021-12-28 16:19:20', NULL, 'yang', '2021-12-28 16:15:38', '', '2021-12-28 16:19:20', NULL);
+INSERT INTO `sys_user` VALUES (100, 103, 'yang', 'yang', '00', '1347456958@qq.com', '18888888887', '0', '', '690106e6179c8edf74fe3f294ebdbf0b', '16a3ab', '0', '0', '111.79.8.219', '2022-03-18 21:46:56', NULL, 'admin', '2021-12-26 17:19:21', 'admin', '2022-03-18 21:46:55', '');
+INSERT INTO `sys_user` VALUES (101, 103, 'xiong', 'xiong', '00', '', '18888888888', '0', '', 'e9c63cd4a0ec956d7abea15b830ca30e', 'af2c2f', '0', '2', '127.0.0.1', '2021-12-28 11:54:52', NULL, 'yang', '2021-12-28 11:41:43', '', '2021-12-28 11:54:52', NULL);
+INSERT INTO `sys_user` VALUES (102, 103, 'wang', 'wang', '00', '', '18888888889', '0', '', '572ba8296a16a89cb4c4a768da171f81', '699ae1', '0', '2', '127.0.0.1', '2021-12-28 11:57:48', NULL, 'yang', '2021-12-28 11:56:51', 'admin', '2021-12-28 16:14:48', '');
+INSERT INTO `sys_user` VALUES (103, 103, 'haha', 'haha', '00', '1235656@qq.com', '17633502642', '0', '', '764207d22a4a7c436fe27a2efe638f30', '8cca0f', '0', '2', '127.0.0.1', '2021-12-28 16:19:20', NULL, 'yang', '2021-12-28 16:15:38', '', '2021-12-28 16:19:20', NULL);
+INSERT INTO `sys_user` VALUES (104, 103, 'test', '测试员', '00', '12345678@qq.com', '18436002417', '1', '', 'e0285a4e2ebce044cd9a521c462c4454', 'd53896', '0', '0', '113.69.170.44', '2022-04-02 19:06:00', NULL, 'admin', '2022-03-18 21:48:35', 'admin', '2022-04-02 19:05:59', '');
 
 -- ----------------------------
 -- Table structure for sys_user_online
@@ -2448,11 +4495,12 @@ CREATE TABLE `sys_user_online`  (
   `last_access_time` datetime NULL DEFAULT NULL COMMENT 'session最后访问时间',
   `expire_time` int NULL DEFAULT 0 COMMENT '超时时间，单位为分钟',
   PRIMARY KEY (`sessionId`) USING BTREE
-) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_bin COMMENT = '在线用户记录' ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_bin COMMENT = '在线用户记录' ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of sys_user_online
 -- ----------------------------
+INSERT INTO `sys_user_online` VALUES ('334fecf4-9d22-4e63-afe6-c546559b27ab', 'admin', '校园失物管理系统', '127.0.0.1', '内网IP', 'Chrome 9', 'Windows 10', 'on_line', '2022-04-03 15:02:18', '2022-04-03 15:27:42', 1800000);
 
 -- ----------------------------
 -- Table structure for sys_user_post
@@ -2462,16 +4510,14 @@ CREATE TABLE `sys_user_post`  (
   `user_id` bigint NOT NULL COMMENT '用户ID',
   `post_id` bigint NOT NULL COMMENT '岗位ID',
   PRIMARY KEY (`user_id`, `post_id`) USING BTREE
-) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_bin COMMENT = '用户与岗位关联表' ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_bin COMMENT = '用户与岗位关联表' ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of sys_user_post
 -- ----------------------------
 INSERT INTO `sys_user_post` VALUES (1, 1);
 INSERT INTO `sys_user_post` VALUES (100, 1);
-INSERT INTO `sys_user_post` VALUES (101, 2);
-INSERT INTO `sys_user_post` VALUES (102, 4);
-INSERT INTO `sys_user_post` VALUES (103, 2);
+INSERT INTO `sys_user_post` VALUES (104, 4);
 
 -- ----------------------------
 -- Table structure for sys_user_role
@@ -2481,16 +4527,20 @@ CREATE TABLE `sys_user_role`  (
   `user_id` bigint NOT NULL COMMENT '用户ID',
   `role_id` bigint NOT NULL COMMENT '角色ID',
   PRIMARY KEY (`user_id`, `role_id`) USING BTREE
-) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_bin COMMENT = '用户和角色关联表' ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_bin COMMENT = '用户和角色关联表' ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of sys_user_role
 -- ----------------------------
 INSERT INTO `sys_user_role` VALUES (1, 1);
 INSERT INTO `sys_user_role` VALUES (100, 2);
-INSERT INTO `sys_user_role` VALUES (101, 100);
-INSERT INTO `sys_user_role` VALUES (102, 100);
-INSERT INTO `sys_user_role` VALUES (103, 100);
+INSERT INTO `sys_user_role` VALUES (104, 102);
+
+-- ----------------------------
+-- View structure for laf_wx_push_view
+-- ----------------------------
+DROP VIEW IF EXISTS `laf_wx_push_view`;
+CREATE ALGORITHM = UNDEFINED SQL SECURITY DEFINER VIEW `laf_wx_push_view` AS select `com`.`com_id` AS `com_id`,`com`.`com_content` AS `com_content`,`com`.`create_time` AS `com_time`,`con_stu`.`stu_nick` AS `com_nick`,`con_stu`.`stu_name` AS `com_name`,`laf_release`.`rel_id` AS `rel_id`,`laf_release`.`rel_title` AS `rel_title`,`con_stu`.`openid` AS `com_openid`,`rel_stu`.`openid` AS `rel_openid`,`laf_student`.`openid` AS `parent_openid`,`claim_stu`.`stu_nick` AS `claim_nick`,`claim_stu`.`stu_name` AS `claim_name`,`laf_release`.`rel_time` AS `claim_time` from ((((((`laf_comment` `com` join `laf_student` `con_stu` on((`com`.`com_stu_id` = `con_stu`.`stu_id`))) join `laf_release` on((`com`.`com_rel_id` = `laf_release`.`rel_id`))) join `laf_student` `rel_stu` on((`laf_release`.`create_id` = `rel_stu`.`stu_id`))) left join `laf_student` `claim_stu` on((`laf_release`.`rel_claim_id` = `claim_stu`.`stu_id`))) left join `laf_comment` `parent_com` on((`com`.`parent_id` = `parent_com`.`com_id`))) left join `laf_student` on((`parent_com`.`com_stu_id` = `laf_student`.`stu_id`)));
 
 -- ----------------------------
 -- View structure for laf_wx_release

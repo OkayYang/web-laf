@@ -1,7 +1,5 @@
 package com.ruoyi.wx.domain;
 
-import java.util.Date;
-import com.fasterxml.jackson.annotation.JsonFormat;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 import com.ruoyi.common.annotation.Excel;
@@ -11,7 +9,7 @@ import com.ruoyi.common.core.domain.BaseEntity;
  * 小程序公告对象 laf_announce
  * 
  * @author yang
- * @date 2021-12-20
+ * @date 2022-03-25
  */
 public class LafAnnounce extends BaseEntity
 {
@@ -28,11 +26,6 @@ public class LafAnnounce extends BaseEntity
     @Excel(name = "内容")
     private String annContent;
 
-    /** 发布时间 */
-    @JsonFormat(pattern = "yyyy-MM-dd")
-    @Excel(name = "发布时间", width = 30, dateFormat = "yyyy-MM-dd")
-    private Date creatTime;
-
     /** 图片 */
     @Excel(name = "图片")
     private String image;
@@ -40,6 +33,10 @@ public class LafAnnounce extends BaseEntity
     /** 状态 */
     @Excel(name = "状态")
     private String status;
+
+    /** 浏览量 */
+    @Excel(name = "浏览量")
+    private Long flow;
 
     public void setAnnId(Long annId) 
     {
@@ -68,15 +65,6 @@ public class LafAnnounce extends BaseEntity
     {
         return annContent;
     }
-    public void setCreatTime(Date creatTime) 
-    {
-        this.creatTime = creatTime;
-    }
-
-    public Date getCreatTime() 
-    {
-        return creatTime;
-    }
     public void setImage(String image) 
     {
         this.image = image;
@@ -95,6 +83,15 @@ public class LafAnnounce extends BaseEntity
     {
         return status;
     }
+    public void setFlow(Long flow) 
+    {
+        this.flow = flow;
+    }
+
+    public Long getFlow() 
+    {
+        return flow;
+    }
 
     @Override
     public String toString() {
@@ -103,9 +100,10 @@ public class LafAnnounce extends BaseEntity
             .append("annTitle", getAnnTitle())
             .append("annContent", getAnnContent())
             .append("createBy", getCreateBy())
-            .append("creatTime", getCreatTime())
+            .append("createTime", getCreateTime())
             .append("image", getImage())
             .append("status", getStatus())
+            .append("flow", getFlow())
             .toString();
     }
 }

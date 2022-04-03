@@ -10,10 +10,7 @@ import com.ruoyi.wx.util.WxRespResult;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 
 @Controller
 @RequestMapping("/wx/api/student")
@@ -30,16 +27,12 @@ public class LafWxStudentController extends WxBaseController {
 
         return toAjax(lafStudentService.updateLafStudent(lafStudent));
     }
-
-    /**
-     * 删除学生
-     */
-    @Log(title = "学生", businessType = BusinessType.DELETE)
-    @PostMapping( "/auth/remove")
+    @GetMapping("/auth/my")
     @ResponseBody
-    public WxRespResult remove(String ids)
-    {
-
-        return toAjax(lafStudentService.deleteLafStudentByStuIds(ids));
+    public LafStudent my(){
+        Long id = getWxUid();
+        return lafStudentService.selectLafStudentByStuId(id);
     }
+
+
 }
