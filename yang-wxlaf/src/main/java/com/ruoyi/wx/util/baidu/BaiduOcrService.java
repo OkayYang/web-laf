@@ -9,21 +9,27 @@ import com.google.gson.Gson;
 import com.ruoyi.wx.domain.LafApiToken;
 import com.ruoyi.wx.mapper.LafApiTokenMapper;
 import com.ruoyi.wx.util.HttpUtil;
-import com.ruoyi.wx.util.WxOrcIDCardResult;
-import com.ruoyi.wx.util.baidu.domain.*;
+import com.ruoyi.wx.util.bean.wx.WxOrcIDCardResult;
+import com.ruoyi.wx.util.baidu.bean.*;
 import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-@Service
+/**
+ * 百度api接口
+ */
 public class BaiduOcrService {
     @Autowired
     private LafApiTokenMapper lafApiTokenMapper;
 
+    /**
+     * 判断卡证类别
+     * @param imageUrl 图片地址
+     * @return
+     */
     public  String idCardType(String imageUrl){
         LafApiToken apiToken = lafApiTokenMapper.selectLafApiTokenById(2L);
         String accessToken = apiToken.getToken();
@@ -63,6 +69,14 @@ public class BaiduOcrService {
         }
         return type;
     }
+
+    /**
+     * 身份证打码
+     * @param imagePath
+     * @param baiduOcrSfzResult
+     * @return
+     * @throws IOException
+     */
     public boolean sfzAddWaterMark(String imagePath,BaiduOcrSfzResult baiduOcrSfzResult) throws IOException {
 
         // 返回结果格式为Json字符串
@@ -79,6 +93,14 @@ public class BaiduOcrService {
         return WaterMark.sfzMosaic(imagePath,unitList);
 
     }
+
+    /**
+     * 身份证识别
+     * @param wxOrcIDCardResult 身份证识别成功后返回字段信息
+     * @param imageUrl   身份证图片链接
+     * @param imagePath   打码的图片,和imageUrl为同一张
+     * @return
+     */
     public boolean idCardOcr(WxOrcIDCardResult wxOrcIDCardResult, String imageUrl, String imagePath){
         boolean flag =false;
 
@@ -132,6 +154,13 @@ public class BaiduOcrService {
 
     }
 
+    /**
+     * 通用卡证识别打码
+     * @param wxOrcIDCardResult
+     * @param imageUrl
+     * @param imagePath
+     * @return
+     */
     public boolean classRecognize(WxOrcIDCardResult wxOrcIDCardResult,String imageUrl,String imagePath){
 
         boolean flag = false;

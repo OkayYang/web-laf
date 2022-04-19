@@ -1,4 +1,4 @@
-package com.ruoyi.wx.util;
+package com.ruoyi.wx.util.bean.wx;
 
 /**
  * wx用户登陆请求体

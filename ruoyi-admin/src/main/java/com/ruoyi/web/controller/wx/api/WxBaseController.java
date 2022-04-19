@@ -2,7 +2,7 @@ package com.ruoyi.web.controller.wx.api;
 
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
-import com.ruoyi.wx.util.WxRespResult;
+import com.ruoyi.wx.util.bean.wx.WxRespResult;
 import com.ruoyi.common.core.domain.entity.SysUser;
 import com.ruoyi.common.core.page.PageDomain;
 import com.ruoyi.common.core.page.TableDataInfo;

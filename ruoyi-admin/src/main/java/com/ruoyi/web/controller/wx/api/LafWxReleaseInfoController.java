@@ -7,9 +7,10 @@ import com.ruoyi.wx.domain.LafComment;
 import com.ruoyi.wx.domain.LafRelease;
 import com.ruoyi.wx.domain.LafWxRelease;
 import com.ruoyi.wx.service.ILafCommentService;
-import com.ruoyi.wx.util.WxRespResult;
-import com.ruoyi.wx.util.commet.CommentDetail;
-import com.ruoyi.wx.util.commet.CommentTree;
+import com.ruoyi.wx.service.TencentService;
+import com.ruoyi.wx.util.bean.wx.WxRespResult;
+import com.ruoyi.wx.util.bean.wx.commentBean.CommentDetail;
+import com.ruoyi.wx.util.bean.wx.commentBean.CommentTree;
 import com.ruoyi.wx.service.ILafReleaseService;
 import com.ruoyi.wx.service.ILafStudentService;
 import io.swagger.annotations.Api;
@@ -34,12 +35,20 @@ public class LafWxReleaseInfoController extends WxBaseController {
     @Value("${wx.upload.path}")
     private String imagePath;
 
+    @Value("${cos.keyName}")
+    private String cosPath;
+
+
+
     @Autowired
     private ILafReleaseService lafReleaseService;
     @Autowired
     private ILafStudentService lafStudentService;
     @Autowired
     private ILafCommentService lafCommentService;
+
+    @Autowired
+    private TencentService tencentService;
     /**
      * 查询帖子详细信息
      * @param relId
@@ -118,11 +127,15 @@ public class LafWxReleaseInfoController extends WxBaseController {
         if (file!=null){
             //fileName是你前台传参时的文件名字，也可以不指定
             String fileName = file.getOriginalFilename();
-            String imageUri = "/img/user/tiezi/"+fileName;
+            String imageUri = cosPath+fileName;
             String imagePath = this.imagePath+fileName;
             //不指定名字，保存时使用 file.getOriginalFilename()得到文件名字
+            //保存到文件到本地
+            File file1 = new File(imagePath);
+            file.transferTo(file1);
+
             //保存到文件服务器，OSS服务器
-            file.transferTo(new File(imagePath));
+            tencentService.ContentCOS(file1,getRequest(),getResponse());
             return imageUri;
         }else {
             return "请上传图片!!!";

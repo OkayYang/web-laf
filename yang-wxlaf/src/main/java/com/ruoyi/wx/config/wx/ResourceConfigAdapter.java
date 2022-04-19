@@ -12,6 +12,9 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 public class ResourceConfigAdapter implements WebMvcConfigurer {
     @Value("${wx.upload.path}")
     private String imagePath;
+
+    @Value("${cos.keyName}")
+    private String cosPath;
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
 
@@ -24,10 +27,10 @@ public class ResourceConfigAdapter implements WebMvcConfigurer {
         if (os.toLowerCase().startsWith("win")) {
             System.out.println("当前运行环境是" + os);
             //win路径需要转义符
-            registry.addResourceHandler("/img/user/tiezi/**").addResourceLocations("file:"+this.imagePath);
+            registry.addResourceHandler(this.cosPath+"**").addResourceLocations("file:"+this.imagePath);
         }else{//linux系统
             System.out.println("当前运行环境是" + os);
-            registry.addResourceHandler("/img/user/tiezi/**").addResourceLocations("file:"+this.imagePath);
+            registry.addResourceHandler(this.cosPath+"**").addResourceLocations("file:"+this.imagePath);
             /*registry.addResourceHandler("/excel/**").addResourceLocations("file:/usr/asset/lou/excel/");*/
         }
 

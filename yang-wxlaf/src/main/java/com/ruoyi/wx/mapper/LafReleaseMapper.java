@@ -3,7 +3,7 @@ package com.ruoyi.wx.mapper;
 import java.util.List;
 import com.ruoyi.wx.domain.LafRelease;
 import com.ruoyi.wx.domain.LafWxRelease;
-import com.ruoyi.wx.util.echart.Graph;
+import com.ruoyi.wx.util.bean.echartBean.Graph;
 
 /**
  * 帖子Mapper接口

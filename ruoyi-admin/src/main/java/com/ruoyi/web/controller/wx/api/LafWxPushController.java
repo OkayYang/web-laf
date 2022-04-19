@@ -3,13 +3,14 @@ package com.ruoyi.web.controller.wx.api;
 import com.ruoyi.common.core.page.TableDataInfo;
 import com.ruoyi.wx.domain.LafPush;
 import com.ruoyi.wx.service.ILafPushService;
-import com.ruoyi.wx.util.WxRespResult;
+import com.ruoyi.wx.util.bean.wx.WxRespResult;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+@RequestMapping("/wx/api/push")
 @Controller
 public class LafWxPushController extends WxBaseController{
     @Autowired

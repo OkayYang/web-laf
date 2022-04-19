@@ -2,7 +2,7 @@ package com.ruoyi.web.controller.wx.api;
 
 import com.ruoyi.wx.domain.LafAnnounce;
 import com.ruoyi.wx.service.ILafAnnounceService;
-import com.ruoyi.wx.util.WxRespResult;
+import com.ruoyi.wx.util.bean.wx.WxRespResult;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;

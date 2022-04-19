@@ -10,10 +10,9 @@ import com.ruoyi.wx.domain.*;
 import com.ruoyi.wx.mapper.LafApiTokenMapper;
 import com.ruoyi.wx.mapper.LafPushMapper;
 import com.ruoyi.wx.mapper.LafStudentMapper;
-import com.ruoyi.wx.util.echart.Graph;
-import com.ruoyi.wx.util.tencent.domain.TemplateData;
-import com.ruoyi.wx.util.tencent.domain.WxMessVo;
-import org.json.JSONException;
+import com.ruoyi.wx.util.bean.echartBean.Graph;
+import com.ruoyi.wx.util.tencent.bean.TemplateData;
+import com.ruoyi.wx.util.tencent.bean.WxMessVo;
 import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -211,7 +210,7 @@ public class LafReleaseServiceImpl implements ILafReleaseService
         //拼接推送的模版
         WxMessVo wxMssVo = new WxMessVo();
         wxMssVo.setTouser(openId);//用户的openid（要发送给那个用户，通常这里应该动态传进来的）
-        wxMssVo.setTemplate_id("lhQ8vRjYydEDLDni5sWTUndbzrbtfvycNyP-SHMWMmM");//订阅消息模板id
+        wxMssVo.setTemplate_id("yN2LMy5FBS8ha9Fq-akQTag3SWgx9uvgTG5J3ABVGYw");//订阅消息模板id
         wxMssVo.setPage("/pages/index/index");
 
         Map<String, TemplateData> m = new HashMap<>(3);
@@ -266,7 +265,7 @@ public class LafReleaseServiceImpl implements ILafReleaseService
                 //拼接推送的模版
                 WxMessVo wxMssVo = new WxMessVo();
                 wxMssVo.setTouser(openId);//用户的openid（要发送给那个用户，通常这里应该动态传进来的）
-                wxMssVo.setTemplate_id("vnDNGaWHPOnrg-VkHcflNo9fWwFxZNLsQph8utdgQ8Y");//订阅消息模板id
+                wxMssVo.setTemplate_id("ePAwjtm9WKRLyGdrce0IiQtO9jE6l7mnY1KhT2Nvm6U");//订阅消息模板id
                 wxMssVo.setPage("/pages/detail/index");
 
                 Map<String, TemplateData> m = new HashMap<>(3);

@@ -1,19 +1,12 @@
 package com.ruoyi.web.controller.wx.api;
 
-import com.alibaba.fastjson.JSONObject;
 import com.ruoyi.common.annotation.RepeatSubmit;
-import com.ruoyi.wx.util.WxRespResult;
-import com.ruoyi.wx.util.tencent.TencentWxApi;
+import com.ruoyi.wx.service.TencentService;
+import com.ruoyi.wx.util.bean.wx.WxRespResult;
 import com.ruoyi.wx.util.token.JwtUtils;
 import com.ruoyi.wx.domain.LafStudent;
-import com.ruoyi.wx.util.WxUserModel;
+import com.ruoyi.wx.util.bean.wx.WxUserModel;
 import com.ruoyi.wx.service.ILafStudentService;
-import org.apache.http.HttpEntity;
-import org.apache.http.HttpResponse;
-import org.apache.http.client.HttpClient;
-import org.apache.http.client.methods.HttpGet;
-import org.apache.http.impl.client.HttpClientBuilder;
-import org.apache.http.util.EntityUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
@@ -26,6 +19,9 @@ public class LafGetWxUserOpenidController extends WxBaseController {
     @Autowired
     private ILafStudentService lafStudentService;
 
+    @Autowired
+    private TencentService tencentService;
+
     @PostMapping("/check")
     @ResponseBody
     @RepeatSubmit(interval = 500, message = "请求过于频繁")
@@ -33,7 +29,7 @@ public class LafGetWxUserOpenidController extends WxBaseController {
         System.out.println(wxUserModel);
         LafStudent student = new LafStudent();
         String token =null;
-        String openId =  TencentWxApi.getUserOpenId(wxUserModel.getCode());
+        String openId =  tencentService.getUserOpenId(wxUserModel.getCode());
         if (openId!=null){
             student.setOpenid(openId);
             List<LafStudent> studentList = lafStudentService.selectLafStudentList(student);

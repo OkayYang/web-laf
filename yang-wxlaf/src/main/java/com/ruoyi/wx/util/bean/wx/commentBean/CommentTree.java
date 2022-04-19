@@ -1,4 +1,4 @@
-package com.ruoyi.wx.util.commet;
+package com.ruoyi.wx.util.bean.wx.commentBean;
 
 import java.util.List;
 

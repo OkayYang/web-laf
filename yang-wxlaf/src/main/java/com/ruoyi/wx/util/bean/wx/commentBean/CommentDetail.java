@@ -1,7 +1,7 @@
-package com.ruoyi.wx.util.commet;
+package com.ruoyi.wx.util.bean.wx.commentBean;
 
 import com.ruoyi.wx.domain.LafComment;
-import com.ruoyi.wx.util.User;
+import com.ruoyi.wx.util.bean.wx.User;
 
 public class CommentDetail {
     private LafComment comment;

@@ -10,11 +10,11 @@ import com.ruoyi.common.core.domain.Ztree;
 import com.ruoyi.common.utils.DateUtils;
 import com.ruoyi.wx.domain.*;
 import com.ruoyi.wx.mapper.*;
-import com.ruoyi.wx.util.commet.CommentDetail;
-import com.ruoyi.wx.util.commet.CommentTree;
-import com.ruoyi.wx.util.User;
-import com.ruoyi.wx.util.tencent.domain.TemplateData;
-import com.ruoyi.wx.util.tencent.domain.WxMessVo;
+import com.ruoyi.wx.util.bean.wx.commentBean.CommentDetail;
+import com.ruoyi.wx.util.bean.wx.commentBean.CommentTree;
+import com.ruoyi.wx.util.bean.wx.User;
+import com.ruoyi.wx.util.tencent.bean.TemplateData;
+import com.ruoyi.wx.util.tencent.bean.WxMessVo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
@@ -271,7 +271,7 @@ public class LafCommentServiceImpl implements ILafCommentService
         //拼接推送的模版
         WxMessVo wxMssVo = new WxMessVo();
         wxMssVo.setTouser(openId);//用户的openid（要发送给那个用户，通常这里应该动态传进来的）
-        wxMssVo.setTemplate_id("fTUA7CP8Wh1hbv-3x4QrrK_BRl5y8dnHMBnbTqdN9dI");//订阅消息模板id
+        wxMssVo.setTemplate_id("WjSjw0WyRL-bTJ8KLZ0mL6bJLevOi3Qfw727iWPjdvg");//订阅消息模板id
         wxMssVo.setPage("pages/detail/detail?tid="+lafComment.getComRelId());
 
         Map<String, TemplateData> m = new HashMap<>(3);

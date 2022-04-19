@@ -1,4 +1,4 @@
-package com.ruoyi.wx.util.tencent.domain;
+package com.ruoyi.wx.util.tencent.bean;
 
 public class TemplateData {
 

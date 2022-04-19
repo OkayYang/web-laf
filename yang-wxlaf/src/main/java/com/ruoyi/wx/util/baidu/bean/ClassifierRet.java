@@ -1,4 +1,4 @@
-package com.ruoyi.wx.util.baidu.domain;
+package com.ruoyi.wx.util.baidu.bean;
 
 import com.google.gson.annotations.SerializedName;
 

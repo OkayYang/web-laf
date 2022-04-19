@@ -1,4 +1,4 @@
-package com.ruoyi.wx.util;
+package com.ruoyi.wx.util.bean.wx;
 
 import java.util.HashMap;
 import com.ruoyi.common.utils.StringUtils;

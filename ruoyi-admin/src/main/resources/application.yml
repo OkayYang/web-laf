@@ -83,8 +83,18 @@ mybatis:
 pagehelper: 
   helperDialect: mysql
   supportMethodsArguments: true
-  params: count=countSql 
+  params: count=countSql
 
+#上传文件配置
+file:
+  useftp: true   # 是否使用 ftp, 为false表示使用 ssh上传
+  ssh:
+    host: 101.42.222.167   #已经配置了 ftp服务
+    port: 21
+    username: root  #对应的用户名和密码
+    password: Yang611612
+    uploadFilePath: /www/laf/image   #上传文件的路径
+    downloadFilePath: D:/    #下载到哪个文件
 # Shiro
 shiro:
   user:

@@ -15,16 +15,34 @@ import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.HttpClientBuilder;
 import org.apache.http.util.EntityUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
+/**
+ * 定时获取token
+ */
 @Service("tokenTask")
 public class AccessTokenTask {
     @Autowired
     private LafApiTokenMapper lafApiTokenMapper;
+    @Value("${wx.appid}")
+    private String appid;
+    @Value("${wx.secret}")
+    private String secret;
+    @Value("${baidu.client_id}")
+    private String baidu_client_id;
+    @Value("${baidu.client_secret}")
+    private String baidu_client_secret;
 
 
-    private static String appid = "wx8a13127914667c1c";
-    private static String secret = "41ddaea423916a416d377cec14345791";
+
+//    private static String appid = "wx39b85c8911cd3be5";
+//    private static String secret = "8ce39fb09a038085229da0450accf6e3";
+
+    /**
+     * 获取微信模板消息token
+     * @return token
+     */
     public String getAccessToken(){
         String accessToken = null;
         StringBuilder url = new StringBuilder("https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&");
@@ -54,6 +72,10 @@ public class AccessTokenTask {
         return accessToken;
     }
 
+    /**
+     * 获取百度token
+     * @return token
+     */
     public  String getOcrAccessToken(){
         String accessToken = null;
         String path = "https://aip.baidubce.com/oauth/2.0/token";
@@ -64,8 +86,8 @@ public class AccessTokenTask {
         request.addHeaderParameter("Content-Type", "application/json;charset=UTF-8");
 
         // 设置query参数
-        request.addQueryParameter("client_id", "BFWxODNsE1CPwIFKGkP38oUl");
-        request.addQueryParameter("client_secret", "4vFC4fxonGMi9CXMmt1pKmmwOOBwSK0y");
+        request.addQueryParameter("client_id", baidu_client_id);
+        request.addQueryParameter("client_secret", baidu_client_secret);
         request.addQueryParameter("grant_type", "client_credentials");
 
         ApiExplorerClient client = new ApiExplorerClient();

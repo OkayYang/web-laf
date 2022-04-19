@@ -1,7 +1,6 @@
 package com.ruoyi.wx.util.baidu;
 
-import com.ruoyi.wx.util.baidu.domain.Location;
-import com.ruoyi.wx.util.baidu.domain.Unit;
+import com.ruoyi.wx.util.baidu.bean.Location;
 
 import javax.imageio.ImageIO;
 import java.awt.*;
@@ -12,7 +11,7 @@ import java.io.IOException;
 import java.util.List;
 
 /**
- * 图片处理类 支持局部打码
+ * 图片加水印处理类 支持局部打码
  */
 public class WaterMark {
 

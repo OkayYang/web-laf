@@ -22,8 +22,8 @@ import org.springframework.stereotype.Service;
 
 public class TencentWxApi {
 
-    private static String appid = "wx8a13127914667c1c";
-    private static String secret = "41ddaea423916a416d377cec14345791";
+    private static String appid = "wx39b85c8911cd3be5";
+    private static String secret = "8ce39fb09a038085229da0450accf6e3";
 
     /**
      *

@@ -6,13 +6,14 @@ import com.github.pagehelper.PageInfo;
 import com.ruoyi.common.annotation.Log;
 import com.ruoyi.common.annotation.RepeatSubmit;
 import com.ruoyi.wx.domain.LafWxRelease;
-import com.ruoyi.wx.util.WxOrcIDCardResult;
-import com.ruoyi.wx.util.WxRespResult;
+import com.ruoyi.wx.service.BaiduService;
+import com.ruoyi.wx.service.TencentService;
+import com.ruoyi.wx.util.bean.wx.WxOrcIDCardResult;
+import com.ruoyi.wx.util.bean.wx.WxRespResult;
 import com.ruoyi.common.core.page.TableDataInfo;
 import com.ruoyi.common.enums.BusinessType;
 import com.ruoyi.wx.domain.LafRelease;
 import com.ruoyi.wx.service.ILafReleaseService;
-import com.ruoyi.wx.util.baidu.BaiduOcrService;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -31,13 +32,18 @@ public class LafWxReleaseController extends WxBaseController {
     private String imagePath;
     @Value("${wx.api.host}")
     private String apiHost;
+    @Value("${cos.keyName}")
+    private String cosPath;
 
 
     @Autowired
     private ILafReleaseService lafReleaseService;
 
     @Autowired
-    private BaiduOcrService baiduOcrService;
+    private BaiduService baiduService;
+
+    @Autowired
+    private TencentService tencentService;
     /**
      * wx 发布帖子接口
      * @param lafRelease
@@ -65,7 +71,7 @@ public class LafWxReleaseController extends WxBaseController {
 
     }
     /**
-     * wx  上传接口
+     * wx  发布图片接口
      * @param file
      * @return   返回帖子图片地址
      * @throws Exception
@@ -85,19 +91,24 @@ public class LafWxReleaseController extends WxBaseController {
         String fileName = file.getOriginalFilename();
         //String name = file.getOriginalFilename().substring(0,file.getOriginalFilename().lastIndexOf(".")) + ".png";
         //图片地址
-        String imageUri = "/img/user/tiezi/"+fileName;
+        String imageUri = cosPath+fileName;
         //网络请求图片资源地址
         String imageUrl = this.apiHost+imageUri;
         //本机图片存储地址
         String imagePath = this.imagePath+fileName;
 
-        //保存到文件服务器，OSS服务器
-        file.transferTo(new File(imagePath));
+        //保存到本地
+        File file1 = new File(imagePath);
+        file.transferTo(file1);
 
         wxOrcIDCardResult.setPhotoUrl(imageUri);
+        //ocr识别打码
+        baiduService.classRecognize(wxOrcIDCardResult,imageUrl,imagePath);
 
-        baiduOcrService.classRecognize(wxOrcIDCardResult,imageUrl,imagePath);
-        //ocr识别结果
+        //保存到文件服务器，OSS服务器
+        tencentService.ContentCOS(file1,getRequest(),getResponse());
+
+        //返回ocr识别结果
         return wxOrcIDCardResult;
     }
 
