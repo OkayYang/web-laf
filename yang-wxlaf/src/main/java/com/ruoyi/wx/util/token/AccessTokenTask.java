@@ -19,7 +19,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 /**
- * 定时获取token
+ * 定时获取百度和腾讯token
  */
 @Service("tokenTask")
 public class AccessTokenTask {

@@ -36,8 +36,8 @@ public class LafRelease extends BaseEntity
     private Long relCateId;
 
     /** 认领时间 */
-    @JsonFormat(pattern = "yyyy-MM-dd")
-    @Excel(name = "认领时间", width = 30, dateFormat = "yyyy-MM-dd")
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
+    @Excel(name = "认领时间", width = 30, dateFormat = "yyyy-MM-dd HH:mm:ss")
     private Date relTime;
 
     /** 校区 */

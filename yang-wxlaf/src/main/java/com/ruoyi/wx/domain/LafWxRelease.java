@@ -76,6 +76,47 @@ public class LafWxRelease extends BaseEntity
     /** 认领者id */
     private Long relClaimId;
 
+    private String claimNick;
+
+    private String claimName;
+
+    private String claimXh;
+
+    private String claimQq;
+
+
+    public String getClaimNick() {
+        return claimNick;
+    }
+
+    public void setClaimNick(String claimNick) {
+        this.claimNick = claimNick;
+    }
+
+    public String getClaimName() {
+        return claimName;
+    }
+
+    public void setClaimName(String claimName) {
+        this.claimName = claimName;
+    }
+
+    public String getClaimXh() {
+        return claimXh;
+    }
+
+    public void setClaimXh(String claimXh) {
+        this.claimXh = claimXh;
+    }
+
+    public String getClaimQq() {
+        return claimQq;
+    }
+
+    public void setClaimQq(String claimQq) {
+        this.claimQq = claimQq;
+    }
+
     public void setRelId(Long relId)
     {
         this.relId = relId;
@@ -281,6 +322,10 @@ public class LafWxRelease extends BaseEntity
                 .append("stuAvatar", getStuAvatar())
                 .append("relStatus", getRelStatus())
                 .append("relClaimId", getRelClaimId())
+                .append("claimNick", getClaimNick())
+                .append("claimName", getClaimName())
+                .append("claimXh", getClaimXh())
+                .append("claimQq", getClaimQq())
                 .toString();
     }
 }

@@ -138,6 +138,11 @@ web-laf
 微信小程序需要接口api可在[apiHost开放文档](https://console-docs.apipost.cn/preview/d80df754ab88d4de/fafb94f099eede1d)查看。
 具体请移步小程序开发手册[点击前往](https://github.com/PGone-AKA/uniapp-laf#readme)
 
+
+在线体验小程序
+
+
+![](https://laf.4w3w.com/img/user/tiezi/xcxonline.jpg)
 ###7.其他
 
 

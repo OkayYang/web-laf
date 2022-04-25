@@ -51,6 +51,13 @@
             <version>5.6.54</version>
         </dependency>
 
+<!--        Google图片处理-->
+        <dependency>
+            <groupId>net.coobird</groupId>
+            <artifactId>thumbnailator</artifactId>
+            <version>0.4.8</version>
+        </dependency>
+
     </dependencies>
 
 

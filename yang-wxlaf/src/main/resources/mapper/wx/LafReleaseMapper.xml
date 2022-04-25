@@ -32,6 +32,10 @@
         <result property="stuSex"    column="stu_sex"    />
         <result property="stuAvatar"    column="stu_image"    />
         <result property="relClaimId"    column="rel_claim_id"    />
+        <result property="claimNick"    column="claim_nick"    />
+        <result property="claimName"    column="claim_name"    />
+        <result property="claimXh"    column="claim_xh"    />
+        <result property="claimQq"    column="claim_qq"    />
     </resultMap>
 
     <resultMap type="LafRelease" id="LafReleaseResult">
@@ -58,7 +62,7 @@
         select rel_id, rel_title, rel_desc, rel_contact, rel_cate_id, rel_time, rel_campus, create_place, create_time, create_id, rel_image, rel_status, rel_star, rel_flag, rel_flow,rel_del,rel_claim_id  from laf_release
     </sql>
     <sql id="selectLafWxReleaseVo">
-        select rel_id, rel_title, rel_desc, rel_contact, rel_cate_id, rel_time, rel_campus, create_place, create_time, rel_image, rel_status, rel_star, rel_flag, rel_flow, rel_del, stu_id, stu_nick, stu_name, stu_sex,stu_image,rel_claim_id from laf_wx_release
+        select rel_id, rel_title, rel_desc, rel_contact, rel_cate_id, rel_time, rel_campus, create_place, create_time, rel_image, rel_status, rel_star, rel_flag, rel_flow, rel_del, stu_id, stu_nick, stu_name, stu_sex,stu_image,rel_claim_id ,claim_nick,claim_name,claim_xh,claim_qq from laf_wx_release
     </sql>
 
     <select id="selectLafWxReleaseList" parameterType="LafWxRelease" resultMap="LafWxReleaseResult">

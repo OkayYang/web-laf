@@ -1,19 +1,21 @@
-package com.ruoyi.wx.util.baidu;
+package com.ruoyi.wx.util;
 
 import com.ruoyi.wx.util.baidu.bean.Location;
+import net.coobird.thumbnailator.Thumbnails;
 
 import javax.imageio.ImageIO;
 import java.awt.*;
 import java.awt.image.BufferedImage;
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.List;
 
 /**
- * 图片加水印处理类 支持局部打码
+ * 图片处理类
  */
-public class WaterMark {
+public class ImageUtil {
 
     /**
      * 给图片指定位置打马赛克
@@ -104,6 +106,32 @@ public class WaterMark {
 
         gs.dispose();
         ImageIO.write(spinImage, "jpg", new FileOutputStream(path)); // 保存图片
+        return true;
+    }
+
+    public static boolean reduce(File imgFile) {
+
+        long fileSize = imgFile.length();
+        System.out.println(fileSize);
+
+        float limit = 520000f;
+
+        if (fileSize<limit){
+            return true;
+        }
+        float scale = limit/fileSize;
+        System.out.println(scale);
+
+        try {
+            Thumbnails.of(imgFile)
+                    .scale(1f)
+                    .outputQuality(scale)
+                    .toFile(imgFile);
+
+        } catch (IOException e) {
+            e.printStackTrace();
+            return false;
+        }
         return true;
     }
 

@@ -21,7 +21,6 @@ public class LafWxStudentController extends WxBaseController {
     public WxRespResult editSave(@RequestBody LafStudent lafStudent)
     {
         lafStudent.setStuId(getWxUid());
-
         return toAjax(lafStudentService.updateLafStudent(lafStudent));
     }
     @GetMapping("/auth/my")

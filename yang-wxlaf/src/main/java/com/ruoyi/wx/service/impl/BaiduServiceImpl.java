@@ -9,7 +9,7 @@ import com.ruoyi.wx.domain.LafApiToken;
 import com.ruoyi.wx.mapper.LafApiTokenMapper;
 import com.ruoyi.wx.service.BaiduService;
 import com.ruoyi.wx.util.HttpUtil;
-import com.ruoyi.wx.util.baidu.WaterMark;
+import com.ruoyi.wx.util.ImageUtil;
 import com.ruoyi.wx.util.baidu.bean.BaiduOcrSfzResult;
 import com.ruoyi.wx.util.baidu.bean.ClassifierData;
 import com.ruoyi.wx.util.baidu.bean.ClassifierRet;
@@ -129,7 +129,7 @@ public class BaiduServiceImpl implements BaiduService {
                         }
                     }
                     //打码
-                    flag = WaterMark.sfzMosaic(imagePath,locationList);
+                    flag = ImageUtil.sfzMosaic(imagePath,locationList);
                 }
             }
         } catch (Exception e) {
@@ -219,7 +219,7 @@ public class BaiduServiceImpl implements BaiduService {
         wxOrcIDCardResult.setName(baiduOcrSfzResult.getWordsResult().getName().getWords());
         wxOrcIDCardResult.setNumber(baiduOcrSfzResult.getWordsResult().getNumber().getWords());
 
-        return WaterMark.sfzMosaic(imagePath,unitList);
+        return ImageUtil.sfzMosaic(imagePath,unitList);
 
     }
 }

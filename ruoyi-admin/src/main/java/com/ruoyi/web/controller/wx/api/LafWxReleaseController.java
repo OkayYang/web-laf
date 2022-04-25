@@ -8,12 +8,14 @@ import com.ruoyi.common.annotation.RepeatSubmit;
 import com.ruoyi.wx.domain.LafWxRelease;
 import com.ruoyi.wx.service.BaiduService;
 import com.ruoyi.wx.service.TencentService;
+import com.ruoyi.wx.util.ImageUtil;
 import com.ruoyi.wx.util.bean.wx.WxOrcIDCardResult;
 import com.ruoyi.wx.util.bean.wx.WxRespResult;
 import com.ruoyi.common.core.page.TableDataInfo;
 import com.ruoyi.common.enums.BusinessType;
 import com.ruoyi.wx.domain.LafRelease;
 import com.ruoyi.wx.service.ILafReleaseService;
+import net.coobird.thumbnailator.Thumbnails;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -88,8 +90,8 @@ public class LafWxReleaseController extends WxBaseController {
         //fileName是你前台传参时的文件名字，也可以不指定
         //不指定名字，保存时使用 file.getOriginalFilename()得到文件名字
 
-        String fileName = file.getOriginalFilename();
-        //String name = file.getOriginalFilename().substring(0,file.getOriginalFilename().lastIndexOf(".")) + ".png";
+        //String fileName = file.getOriginalFilename();
+        String fileName = file.getOriginalFilename().substring(0,file.getOriginalFilename().lastIndexOf(".")) + ".jpg";
         //图片地址
         String imageUri = cosPath+fileName;
         //网络请求图片资源地址
@@ -100,6 +102,9 @@ public class LafWxReleaseController extends WxBaseController {
         //保存到本地
         File file1 = new File(imagePath);
         file.transferTo(file1);
+
+        //图片压缩
+        ImageUtil.reduce(file1);
 
         wxOrcIDCardResult.setPhotoUrl(imageUri);
         //ocr识别打码

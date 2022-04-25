@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ruoyi.wx.mapper.LafWxMessageMapper">
+
+    <resultMap type="LafWxMessage" id="LafWxMessageResult">
+        <result property="replyTieziId"    column="reply_tiezi_id"    />
+        <result property="replyInfo"    column="reply_info"    />
+        <result property="replyImage"    column="reply_image"    />
+        <result property="replyTime"    column="reply_time"    />
+        <result property="replyName"    column="reply_name"    />
+        <result property="replyedTieziRead"    column="replyed_tiezi_read"    />
+        <result property="replyedTiezi"    column="replyed_tiezi"    />
+        <result property="avatar"    column="avatar"    />
+        <result property="replyedInfo"    column="replyed_info"    />
+        <result property="relStuid"    column="rel_stuid"    />
+        <result property="parentStuid"    column="parent_stuid"    />
+        <result property="replyedImage"    column="replyed_image"    />
+    </resultMap>
+
+    <sql id="selectLafWxMessageVo">
+        select reply_tiezi_id, reply_info, reply_image, reply_time, reply_name, replyed_tiezi_read, replyed_tiezi, avatar, replyed_info, rel_stuid, parent_stuid, replyed_image from laf_wx_message
+    </sql>
+
+
+    <select id="selectLafWxMessageList" parameterType="Long" resultMap="LafWxMessageResult">
+        <include refid="selectLafWxMessageVo"/>
+        where (rel_stuid = #{id} and parent_stuid is null) or ( rel_stuid != #{id} and parent_stuid = #{id})
+        order by reply_time desc
+    </select>
+
+
+</mapper>

@@ -1,6 +1,8 @@
 package com.ruoyi.common.utils;
 
 import java.lang.management.ManagementFactory;
+import java.net.URL;
+import java.net.URLConnection;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -35,7 +37,17 @@ public class DateUtils extends org.apache.commons.lang3.time.DateUtils
      */
     public static Date getNowDate()
     {
-        return new Date();
+        Date date=null;
+        try{
+            URL url=new URL("http://www.bjtime.cn");//取得资源对象
+            URLConnection uc=url.openConnection();//生成连接对象
+            uc.connect(); //发出连接
+            long ld=uc.getDate(); //取得网站日期时间
+            date=new Date(ld); //转换为标准时间对象
+        }catch (Exception e){
+            date = new Date();
+        }
+        return date;
     }
 
     /**

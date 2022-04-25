@@ -33,6 +33,7 @@ public class LafGetWxUserOpenidController extends WxBaseController {
         if (openId!=null){
             student.setOpenid(openId);
             List<LafStudent> studentList = lafStudentService.selectLafStudentList(student);
+
             int count = studentList.size();
             System.out.println(studentList.size());
             if (count ==0){
@@ -44,6 +45,12 @@ public class LafGetWxUserOpenidController extends WxBaseController {
                 lafStudentService.insertLafStudent(student);
             }else {
                 student=studentList.get(0);
+//                if (wxUserModel.getAvatarUrl()!=null){
+//                    if (!wxUserModel.getAvatarUrl().equals( student.getStuImage())){
+//                        student.setStuImage(wxUserModel.getAvatarUrl());
+//                        lafStudentService.updateLafStudent(student);
+//                    }
+//                }
             }
             token = JwtUtils.createToken(student.getStuId());
 

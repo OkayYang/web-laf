@@ -8,6 +8,7 @@ import com.ruoyi.wx.domain.LafRelease;
 import com.ruoyi.wx.domain.LafWxRelease;
 import com.ruoyi.wx.service.ILafCommentService;
 import com.ruoyi.wx.service.TencentService;
+import com.ruoyi.wx.util.ImageUtil;
 import com.ruoyi.wx.util.bean.wx.WxRespResult;
 import com.ruoyi.wx.util.bean.wx.commentBean.CommentDetail;
 import com.ruoyi.wx.util.bean.wx.commentBean.CommentTree;
@@ -126,13 +127,17 @@ public class LafWxReleaseInfoController extends WxBaseController {
     public String upload(@RequestParam("file") MultipartFile file ) throws Exception{
         if (file!=null){
             //fileName是你前台传参时的文件名字，也可以不指定
-            String fileName = file.getOriginalFilename();
+            //String fileName = file.getOriginalFilename();
+            String fileName = file.getOriginalFilename().substring(0,file.getOriginalFilename().lastIndexOf(".")) + ".jpg";
             String imageUri = cosPath+fileName;
             String imagePath = this.imagePath+fileName;
             //不指定名字，保存时使用 file.getOriginalFilename()得到文件名字
             //保存到文件到本地
             File file1 = new File(imagePath);
             file.transferTo(file1);
+
+            //图片压缩
+            ImageUtil.reduce(file1);
 
             //保存到文件服务器，OSS服务器
             tencentService.ContentCOS(file1,getRequest(),getResponse());
