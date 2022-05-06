@@ -36,7 +36,7 @@ public class JwtUtils {
      *            登录成功后用户user_id, 参数user_id不可传空
      */
 
-    public static String createToken(Long user_id) throws Exception {
+    public static String createToken(Long user_id,String openid) throws Exception {
         Date iatDate = new Date();
         // expire time
         Calendar nowTime = Calendar.getInstance();
@@ -52,7 +52,9 @@ public class JwtUtils {
         // param backups {iss:Service, aud:APP}
         String token = JWT.create().withHeader(map) // header
                 .withClaim("iss", "Service") // payload
-                .withClaim("aud", "APP").withClaim("user_id", null == user_id ? null : user_id.toString())
+                .withClaim("aud", "APP")
+                .withClaim("user_id", null == user_id ? null : user_id.toString())
+                .withClaim("openid",null == openid ? null: openid)
                 .withIssuedAt(iatDate) // sign time
                 .withExpiresAt(expiresDate) // expire time
                 .sign(Algorithm.HMAC256(SECRET)); // signature
@@ -96,5 +98,16 @@ public class JwtUtils {
             // token 校验失败, 抛出Token验证非法异常
         }
         return Long.valueOf(user_id_claim.asString());
+    }
+    public static String getUserOpenid(String token) {
+        Map<String, Claim> claims = verifyToken(token);
+        if (claims==null){
+            return null;
+        }
+        Claim openid_claim = claims.get("openid");
+        if (null == openid_claim || StringUtils.isEmpty(openid_claim.asString())) {
+            // token 校验失败, 抛出Token验证非法异常
+        }
+        return String.valueOf(openid_claim.asString());
     }
 }

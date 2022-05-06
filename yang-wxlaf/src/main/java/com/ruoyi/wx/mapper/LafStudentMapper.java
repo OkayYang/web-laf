@@ -1,7 +1,10 @@
 package com.ruoyi.wx.mapper;
 
 import java.util.List;
+
+import com.ruoyi.wx.domain.LafClaimStudent;
 import com.ruoyi.wx.domain.LafStudent;
+import org.apache.ibatis.annotations.Param;
 
 /**
  * 学生Mapper接口
@@ -63,6 +66,10 @@ public interface LafStudentMapper
      * 查询用户总数
      */
     public int countNumbers();
+    /**
+     * 查询认领用户
+     */
+    public LafClaimStudent selectLafClaimStudentList(Long uid);
 
 
 }

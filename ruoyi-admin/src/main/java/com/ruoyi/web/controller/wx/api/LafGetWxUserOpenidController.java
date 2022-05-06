@@ -45,14 +45,19 @@ public class LafGetWxUserOpenidController extends WxBaseController {
                 lafStudentService.insertLafStudent(student);
             }else {
                 student=studentList.get(0);
-//                if (wxUserModel.getAvatarUrl()!=null){
-//                    if (!wxUserModel.getAvatarUrl().equals( student.getStuImage())){
-//                        student.setStuImage(wxUserModel.getAvatarUrl());
-//                        lafStudentService.updateLafStudent(student);
-//                    }
-//                }
+
+                LafStudent stu = new LafStudent();
+                stu.setStuId(student.getStuId());
+                stu.setStuImage(wxUserModel.getAvatarUrl());
+                stu.setStuSex(wxUserModel.getGender());
+                stu.setStuNick(wxUserModel.getNickName());
+                if (lafStudentService.updateLafStudent(stu)==1) {
+                    student.setStuNick(wxUserModel.getNickName());
+                    student.setStuImage(wxUserModel.getAvatarUrl());
+                    stu.setStuSex(wxUserModel.getGender());
+                }
             }
-            token = JwtUtils.createToken(student.getStuId());
+            token = JwtUtils.createToken(student.getStuId(),student.getOpenid());
 
         }
         if (token == null){

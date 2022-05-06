@@ -1,6 +1,8 @@
 package com.ruoyi.wx.service;
 
 import java.util.List;
+
+import com.ruoyi.wx.domain.LafClaimStudent;
 import com.ruoyi.wx.domain.LafStudent;
 
 /**
@@ -59,6 +61,14 @@ public interface ILafStudentService
      */
     public int deleteLafStudentByStuId(Long stuId);
 
-
+    /**
+     * 统计用户总数
+     * @return 结果
+     */
     public int countNumbers();
+
+    /**
+     * 查询认领用户
+     */
+    public LafClaimStudent selectLafClaimStudentList(Long uid);
 }

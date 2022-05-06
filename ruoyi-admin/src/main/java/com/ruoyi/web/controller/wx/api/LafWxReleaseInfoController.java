@@ -38,6 +38,8 @@ public class LafWxReleaseInfoController extends WxBaseController {
 
     @Value("${cos.keyName}")
     private String cosPath;
+    @Value("${wx.api.host}")
+    private String apiHost;
 
 
 
@@ -114,7 +116,13 @@ public class LafWxReleaseInfoController extends WxBaseController {
         comment.setComStuId(getWxUid());
         comment.setComContent(lafComment.getComContent());
         comment.setComImage(lafComment.getComImage());
-        return toAjax(lafCommentService.insertLafComment(comment));
+
+        if (tencentService.checkText(lafComment.getComContent(),getOpenid(),1)==100) {
+            return toAjax(lafCommentService.insertLafComment(comment));
+        }else {
+            return WxRespResult.sensitive();
+        }
+
     }
     /**
      * wx  上传接口
@@ -124,13 +132,16 @@ public class LafWxReleaseInfoController extends WxBaseController {
      */
     @ResponseBody
     @PostMapping("/upload")
-    public String upload(@RequestParam("file") MultipartFile file ) throws Exception{
+    public WxRespResult upload(@RequestParam("file") MultipartFile file ) throws Exception{
         if (file!=null){
             //fileName是你前台传参时的文件名字，也可以不指定
             //String fileName = file.getOriginalFilename();
             String fileName = file.getOriginalFilename().substring(0,file.getOriginalFilename().lastIndexOf(".")) + ".jpg";
             String imageUri = cosPath+fileName;
             String imagePath = this.imagePath+fileName;
+
+            //网络请求图片资源地址
+            String imageUrl = this.apiHost+imageUri;
             //不指定名字，保存时使用 file.getOriginalFilename()得到文件名字
             //保存到文件到本地
             File file1 = new File(imagePath);
@@ -138,12 +149,16 @@ public class LafWxReleaseInfoController extends WxBaseController {
 
             //图片压缩
             ImageUtil.reduce(file1);
-
             //保存到文件服务器，OSS服务器
             tencentService.ContentCOS(file1,getRequest(),getResponse());
-            return imageUri;
+            if (tencentService.checkMedia(imageUrl,getOpenid(),3)!=100){
+                return WxRespResult.sensitive();
+            }
+
+
+            return success(imageUri);
         }else {
-            return "请上传图片!!!";
+            return error("上传图片失败");
         }
 
     }

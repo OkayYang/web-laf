@@ -1,9 +1,9 @@
-##江理失物招领系统（后台管理系统+微信小程用户界面）
-###1.前言
+## 江理失物招领系统（后台管理系统+微信小程用户界面）
+### 1.前言
 在我校校园，没有一个相对安全的发布平台。只有一些校园失物招领群，校园表白墙可以进行投稿，信息获取面比较窄小，也不易于失物的找回，同时浪费多人的时间，失物信息的发布只能保持一定量的时间，会被新的信息所覆盖，相当于发布的失物消息没有多少人可以看到，过于局限性，起不到一个特别好的作用。运用当今流行微信小程序，开发一个失物招领平台可以形成良好的用户体验。因此和几个同学结合大学期间所学专业知识开发了一个本校的失物招领系统，普通用户可以通过微信小程序进行失物招领发布认领等功能。后台管理员可以通过后台管理系统对数据分析查看。<br>
 本系统后台管理基于优秀的开源项目Ruoyi，前端采用微信小程序原生开发+uniapp混合式开发，关于若依本文不再介绍，如需了解请移步[http://doc.ruoyi.vip/ruoyi/](http://doc.ruoyi.vip/ruoyi/)
 
-###2.涉及技术
+### 2.涉及技术
 1.	RuoYi后台管理框架（Spring Boot、Apache Shiro、MyBatis、Thymeleaf）
 2.	JSON Web Token（微信用户登陆后发放，用于后期通讯携带标识）
 3.	百度OCR通用文字识别，卡证识别api。
@@ -12,12 +12,12 @@
 6.	微信小程序原生语言和uniapp混合式开发（第三方组件库[Vant](https://vant-contrib.gitee.io/vant-weapp/#/home)+[uView](https://www.uviewui.com/components/intro.html)）
 7.  nginx反向代理
 
-###3.环境部署
-#####3.1准备工作
+### 3.环境部署
+##### 3.1准备工作
 JDK >= 1.8 (推荐1.8版本)
  Mysql >= 5.7.0 (推荐5.7版本) 
 Maven >= 3.0
-#####3.2运行后台系统
+##### 3.2运行后台系统
 3.21	导入项目到Eclipse或IDEA等待加载Maven依赖包
 3.22	创建数据库laf 将sql文件中数据脚本导入
 3.23	必要配置
@@ -37,7 +37,7 @@ Maven >= 3.0
 3.25  打开浏览器，输入：(http://localhost:80) （默认账户/密码 admin/yang611612）若能正确展示登录页面，并能成功登录，菜单及页面展示正常，则表明环境搭建成功。
 
 
-###4.项目目录介绍
+### 4.项目目录介绍
 主目录结构仅列出各个模块，其中yang-wxlaf模块和ruoyi-admin模块下的com.ruoyi.web.controller.wx包和com.ruoyi.web.controller.wx.api(微信请求api接口)包为本系统的主要代码。
 ~~~
 web-laf 
@@ -78,10 +78,11 @@ web-laf
             │              ├─mapper	//数据持久层
             │              ├─service    //业务逻辑层
             │              └─util       //一些工具包
-            │                  │        
+            │                  │  ImageUtil.java     //图片处理类(压缩,打码)   
+            │                  │     
             │                  │  HttpUtil.java     //http请求工具类
             │                  ├─baidu              //百度ocr识别结果集和打工具
-            │                  │  │  WaterMark.java          //图片打码
+            │                  │  │  
             │                  │  │  
             │                  │  └─domain          //处理百度ocr识别返回的字段
             │                  │          BaiduOcrSfzResult.java
@@ -120,7 +121,7 @@ web-laf
                 └─mapper  //对数据库进行操作  
 ~~~    
 
-###5.后台手册
+### 5.后台手册
 5.1  数据库设计
 
 5.2 ruoyi系统的基础上失物招领模块新加功能
@@ -134,7 +135,7 @@ web-laf
 - 小程序评论管理功能，支持增删改查操作。
 - 小程序用户推送功能，支持增删改查操作。
 
-###6.微信小程序
+### 6.微信小程序
 微信小程序需要接口api可在[apiHost开放文档](https://console-docs.apipost.cn/preview/d80df754ab88d4de/fafb94f099eede1d)查看。
 具体请移步小程序开发手册[点击前往](https://github.com/PGone-AKA/uniapp-laf#readme)
 
@@ -143,7 +144,7 @@ web-laf
 
 
 ![](https://laf.4w3w.com/img/user/tiezi/xcxonline.jpg)
-###7.其他
+### 7.其他
 
 
 

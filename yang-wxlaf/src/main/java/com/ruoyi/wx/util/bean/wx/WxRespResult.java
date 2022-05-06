@@ -20,7 +20,7 @@ public class WxRespResult extends HashMap<String, Object>
     public static final String MSG_TAG = "msg";
 
     /** 数据对象 */
-    public static final String DATA_TAG = "userInfo";
+    public static final String DATA_TAG = "object";
 
     /** 数据对象 */
     public static final String TOKEN_TAG = "token";
@@ -34,6 +34,8 @@ public class WxRespResult extends HashMap<String, Object>
         SUCCESS(0),
         /** 警告 */
         WARN(301),
+        /**敏感信息**/
+        SENSITIVE(406),
         /** 错误 */
         ERROR(500);
         private final int value;
@@ -118,6 +120,15 @@ public class WxRespResult extends HashMap<String, Object>
     {
         super.put(key, value);
         return this;
+    }
+    /**
+     * 返回成功消息
+     *
+     * @return 成功消息
+     */
+    public static WxRespResult sensitive()
+    {
+        return new WxRespResult(Type.SENSITIVE,"敏感信息");
     }
 
     /**

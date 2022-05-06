@@ -69,7 +69,15 @@ public class LafWxReleaseController extends WxBaseController {
                 lafRelease.setRelImage("/img/user/xunwu.png");
             }
         }
-        return toAjax(lafReleaseService.insertLafRelease(lafRelease));
+        String text = lafRelease.getRelTitle()+lafRelease.getRelDesc()+lafRelease.
+                getCreatePlace()+lafRelease.getRelCampus()+lafRelease.getRelContact();
+
+        if (tencentService.checkText(text,getOpenid(),3)==100) {
+            return toAjax(lafReleaseService.insertLafRelease(lafRelease));
+        }else {
+            return WxRespResult.sensitive();
+        }
+
 
     }
     /**
@@ -82,10 +90,10 @@ public class LafWxReleaseController extends WxBaseController {
     @ResponseBody
     @PostMapping("/upload")
     @RepeatSubmit(interval = 500, message = "请求过于频繁")
-    public WxOrcIDCardResult upload(@RequestParam("file") MultipartFile file ) throws Exception{
+    public WxRespResult upload(@RequestParam("file") MultipartFile file ) throws Exception{
         WxOrcIDCardResult wxOrcIDCardResult = new WxOrcIDCardResult();
         if (file==null){
-            return wxOrcIDCardResult;
+            return error("上传文件不合法!");
         }
         //fileName是你前台传参时的文件名字，也可以不指定
         //不指定名字，保存时使用 file.getOriginalFilename()得到文件名字
@@ -106,6 +114,10 @@ public class LafWxReleaseController extends WxBaseController {
         //图片压缩
         ImageUtil.reduce(file1);
 
+        if (tencentService.checkMedia(imageUrl,getOpenid(),3)!=100){
+            return WxRespResult.sensitive();
+        }
+
         wxOrcIDCardResult.setPhotoUrl(imageUri);
         //ocr识别打码
         baiduService.classRecognize(wxOrcIDCardResult,imageUrl,imagePath);
@@ -114,7 +126,7 @@ public class LafWxReleaseController extends WxBaseController {
         tencentService.ContentCOS(file1,getRequest(),getResponse());
 
         //返回ocr识别结果
-        return wxOrcIDCardResult;
+        return success(wxOrcIDCardResult);
     }
 
     @PostMapping("/list")

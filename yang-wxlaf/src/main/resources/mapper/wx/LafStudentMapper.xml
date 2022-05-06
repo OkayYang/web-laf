@@ -21,10 +21,31 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         <result property="stuStatus"    column="stu_status"    />
         <result property="openid"    column="openid"    />
     </resultMap>
+    <resultMap type="LafClaimStudent" id="LafClaimStudentResult">
+        <result property="stuId"    column="stu_id"    />
+        <result property="stuNick"    column="stu_nick"    />
+        <result property="stuName"    column="stu_name"    />
+        <result property="stuSex"    column="stu_sex"    />
+        <result property="stuXh"    column="stu_xh"    />
+        <result property="stuDepartment"    column="stu_department"    />
+        <result property="stuMajor"    column="stu_major"    />
+        <result property="stuClassname"    column="stu_className"    />
+        <result property="stuQq"    column="stu_qq"    />
+        <result property="stuEmail"    column="stu_email"    />
+        <result property="profile"    column="stu_image"    />
+
+    </resultMap>
 
     <sql id="selectLafStudentVo">
         select stu_id, stu_nick, stu_name, stu_sex, stu_xh, stu_password, stu_department, stu_major, stu_className, stu_qq, stu_email, stu_image, create_time, stu_status, openid from laf_student
     </sql>
+    <sql id="selectLafClaimStudentVo">
+        select stu_id, stu_nick, stu_name, stu_sex, stu_xh, stu_department, stu_major, stu_className, stu_qq, stu_email, stu_image from laf_student
+    </sql>
+    <select id="selectLafClaimStudentList" parameterType="Long" resultMap="LafClaimStudentResult">
+        <include refid="selectLafClaimStudentVo"></include>
+        where stu_id = #{uid}
+    </select>
 
     <select id="selectLafStudentList" parameterType="LafStudent" resultMap="LafStudentResult">
         <include refid="selectLafStudentVo"/>

@@ -40,7 +40,7 @@ public class AccessTokenTask {
 //    private static String secret = "8ce39fb09a038085229da0450accf6e3";
 
     /**
-     * 获取微信模板消息token
+     * 获取微信token
      * @return token
      */
     public String getAccessToken(){

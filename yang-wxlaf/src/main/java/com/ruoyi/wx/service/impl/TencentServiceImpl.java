@@ -9,21 +9,28 @@ import com.qcloud.cos.exception.CosClientException;
 import com.qcloud.cos.exception.CosServiceException;
 import com.qcloud.cos.model.*;
 import com.qcloud.cos.region.Region;
+import com.ruoyi.wx.domain.LafApiToken;
 import com.ruoyi.wx.service.TencentService;
+import com.ruoyi.wx.util.tencent.bean.WxMediaSensitiveCheckVo;
+import com.ruoyi.wx.util.tencent.bean.WxTextSensitiveCheckVo;
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.HttpGet;
+import org.apache.http.client.methods.HttpPost;
+import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.HttpClientBuilder;
 import org.apache.http.util.EntityUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.File;
+import java.nio.charset.Charset;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -35,6 +42,9 @@ import java.util.Map;
 @Service
 public class TencentServiceImpl implements TencentService {
     private static final Logger LOG = LoggerFactory.getLogger(TencentServiceImpl.class);
+
+    @Autowired
+    private LafApiTokenServiceImpl lafApiTokenService;
 
     @Value("${cos.accessKey}")
     private String accessKey;
@@ -137,4 +147,74 @@ public class TencentServiceImpl implements TencentService {
         }
         return openId;
     }
+
+    @Override
+    public int checkText(String text,String openid,int scene) {
+        int label = 100;
+        LafApiToken lafApiToken = lafApiTokenService.selectLafApiTokenById(1L);
+        String accessToken = lafApiToken.getToken();
+        StringBuilder url = new StringBuilder("https://api.weixin.qq.com/wxa/msg_sec_check?");
+        url.append("access_token="+accessToken);
+        WxTextSensitiveCheckVo wxTextSensitiveCheckVo = new WxTextSensitiveCheckVo();
+        wxTextSensitiveCheckVo.setContent(text);
+        wxTextSensitiveCheckVo.setOpenid(openid);
+        wxTextSensitiveCheckVo.setScene(scene);
+        String json = JSONObject.toJSONString(wxTextSensitiveCheckVo);
+        try {
+            HttpClient client = HttpClientBuilder.create().build();//构建一个Client
+            HttpPost postMethod = new HttpPost(url.toString());//传入URL地址
+            //设置请求头 指定为json
+            postMethod.addHeader("Content-type", "application/json;charset=UTF-8");
+            postMethod.setEntity(new StringEntity(json, Charset.forName("UTF-8")));
+            HttpResponse response = client.execute(postMethod);
+            HttpEntity result = response.getEntity();//拿到返回的HttpResponse的"实体"
+            String content = EntityUtils.toString(result);
+            JSONObject res = JSONObject.parseObject(content);//把信息封装为json
+            int errcode = (Integer) res.get("errcode");//拿到open-id
+            if (errcode==0){
+                JSONObject rest = res.getJSONObject("result");
+                label = (Integer)rest.get("label");
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return label;
+
+    }
+
+    @Override
+    public int checkMedia(String imageUrl, String openid, int scene) {
+        int label = 100;
+        LafApiToken lafApiToken = lafApiTokenService.selectLafApiTokenById(1L);
+        String accessToken = lafApiToken.getToken();
+        StringBuilder url = new StringBuilder("https://api.weixin.qq.com/wxa/media_check_async?");
+        url.append("access_token="+accessToken);
+        WxMediaSensitiveCheckVo wxMediaSensitiveCheckVo = new WxMediaSensitiveCheckVo();
+        wxMediaSensitiveCheckVo.setOpenid(openid);
+        wxMediaSensitiveCheckVo.setScene(scene);
+        wxMediaSensitiveCheckVo.setMedia_url(imageUrl);
+        String json = JSONObject.toJSONString(wxMediaSensitiveCheckVo);
+        try {
+            HttpClient client = HttpClientBuilder.create().build();//构建一个Client
+            HttpPost postMethod = new HttpPost(url.toString());//传入URL地址
+            //设置请求头 指定为json
+            postMethod.addHeader("Content-type", "application/json;charset=UTF-8");
+            postMethod.setEntity(new StringEntity(json, Charset.forName("UTF-8")));
+            HttpResponse response = client.execute(postMethod);
+            HttpEntity result = response.getEntity();//拿到返回的HttpResponse的"实体"
+            String content = EntityUtils.toString(result);
+            JSONObject res = JSONObject.parseObject(content);//把信息封装为json
+            int errcode = (Integer) res.get("errcode");//拿到open-id
+            if (errcode==0){
+                JSONObject rest = res.getJSONObject("result");
+                label = (Integer)rest.get("label");
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return label;
+    }
+
 }

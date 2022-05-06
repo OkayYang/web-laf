@@ -86,6 +86,21 @@ public class WxBaseController {
         return wxUid;
     }
     /**
+     * 通过请求头token获取用户唯一表示id
+     * @return openid
+     * @Author yang
+     */
+    public String getOpenid(){
+        String openid = null;
+        try{
+            openid= JwtUtils.getUserOpenid(getRequest().getHeader("token"));
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+
+        return openid;
+    }
+    /**
      * 获取request
      */
     public HttpServletRequest getRequest()

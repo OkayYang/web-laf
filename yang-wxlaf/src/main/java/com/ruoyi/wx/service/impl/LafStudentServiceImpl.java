@@ -2,6 +2,7 @@ package com.ruoyi.wx.service.impl;
 
 import java.util.List;
 import com.ruoyi.common.utils.DateUtils;
+import com.ruoyi.wx.domain.LafClaimStudent;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.ruoyi.wx.mapper.LafStudentMapper;
@@ -96,5 +97,12 @@ public class LafStudentServiceImpl implements ILafStudentService
     @Override
     public int countNumbers(){
         return lafStudentMapper.countNumbers();
+    }
+    /**
+     * 查询认领用户
+     */
+    @Override
+    public LafClaimStudent selectLafClaimStudentList(Long uid) {
+        return lafStudentMapper.selectLafClaimStudentList(uid);
     }
 }
