@@ -108,6 +108,10 @@ public class Constants
     public static final String RESOURCE_PREFIX = "/profile";
 
     /**
+     * Wx资源映射路径 前缀
+     */
+    public static final String WX_RESOURCE_PREFIX = "/img/user/tiezi";
+    /**
      * RMI 远程方法调用
      */
     public static final String LOOKUP_RMI = "rmi://";

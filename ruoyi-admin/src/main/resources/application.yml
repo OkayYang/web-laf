@@ -8,8 +8,10 @@ ruoyi:
   copyrightYear: 2022
   # 实例演示开关
   demoEnabled: true
-  # 文件路径 示例（ Windows配置D:/ruoyi/uploadPath，Linux配置 /home/ruoyi/uploadPath）
-  profile: /www/image/tiezi/
+  # 文件路径 示例（ Windows配置D:/BaiduNetdiskWorkspace/tiezi/，Linux配置 /www/image/tiezi/）
+  #profile: /www/image/tiezi
+  profile : D:/BaiduNetdiskWorkspace/tiezi
+
   # 获取ip地址开关
   addressEnabled: false
 

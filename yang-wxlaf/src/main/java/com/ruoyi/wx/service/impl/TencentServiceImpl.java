@@ -74,7 +74,7 @@ public class TencentServiceImpl implements TencentService {
      * @param response
      * @return
      */
-    public Map<String, Object> ContentCOS(File file, HttpServletRequest request, HttpServletResponse response) {
+    public  Map<String, Object> ContentCOS(File file, HttpServletRequest request, HttpServletResponse response) {
         Map<String, Object> map = new HashMap<>();
         // 1 初始化用户身份信息(secretId, secretKey)
         COSCredentials cred = new BasicCOSCredentials(accessKey, secretKey);

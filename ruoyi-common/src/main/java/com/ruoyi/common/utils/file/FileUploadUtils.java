@@ -2,6 +2,9 @@ package com.ruoyi.common.utils.file;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
+
 import org.apache.commons.io.FilenameUtils;
 import org.springframework.web.multipart.MultipartFile;
 import com.ruoyi.common.config.RuoYiConfig;
@@ -20,6 +23,8 @@ import com.ruoyi.common.utils.uuid.IdUtils;
  */
 public class FileUploadUtils
 {
+
+
     /**
      * 默认大小 50M
      */
@@ -83,6 +88,25 @@ public class FileUploadUtils
             throw new IOException(e.getMessage(), e);
         }
     }
+    /**
+     * 根据文件路径上传
+     *
+     * @param baseDir 相对应用的基目录
+     * @param file 上传的文件
+     * @return 文件名称
+     * @throws IOException
+     */
+    public static final Map<String,Object> wxUpload(String baseDir, MultipartFile file) throws IOException
+    {
+        try
+        {
+            return wxUpload(baseDir, file, MimeTypeUtils.DEFAULT_ALLOWED_EXTENSION);
+        }
+        catch (Exception e)
+        {
+            throw new IOException(e.getMessage(), e);
+        }
+    }
 
     /**
      * 文件上传
@@ -115,6 +139,51 @@ public class FileUploadUtils
         String pathFileName = getPathFileName(baseDir, fileName);
         return pathFileName;
     }
+    /**
+     * 文件上传
+     *
+     * @param baseDir 相对应用的基目录
+     * @param file 上传的文件
+     * @param allowedExtension 上传文件类型
+     * @return 返回上传成功的文件名和文件地址
+     * @throws FileSizeLimitExceededException 如果超出最大大小
+     * @throws FileNameLengthLimitExceededException 文件名太长
+     * @throws IOException 比如读写文件出错时
+     * @throws InvalidExtensionException 文件校验异常
+     */
+    public static final Map<String,Object> wxUpload(String baseDir, MultipartFile file, String[] allowedExtension)
+            throws FileSizeLimitExceededException, IOException, FileNameLengthLimitExceededException,
+            InvalidExtensionException
+    {
+        int fileNamelength = file.getOriginalFilename().length();
+        if (fileNamelength > FileUploadUtils.DEFAULT_FILE_NAME_LENGTH)
+        {
+            throw new FileNameLengthLimitExceededException(FileUploadUtils.DEFAULT_FILE_NAME_LENGTH);
+        }
+
+        assertAllowed(file, allowedExtension);
+
+        //String fileName = extractFilename(file);
+        //String fileDesc = baseDir + File.separator + fileName;
+
+        String fileName =IdUtils.fastUUID() + ".jpg" ;
+        String fileDesc = "D:/BaiduNetdiskWorkspace/tiezi/"+fileName;
+        File desc = new File(fileDesc);
+        if (!desc.exists())
+        {
+            if (!desc.getParentFile().exists())
+            {
+                desc.getParentFile().mkdirs();
+            }
+        }
+
+        file.transferTo(desc);
+        String pathFileName = Constants.WX_RESOURCE_PREFIX + "/" + fileName;
+        Map<String,Object> map = new HashMap<>();
+        map.put("fileName",pathFileName);
+        map.put("fileDesc",desc);
+        return map;
+    }
 
     /**
      * 编码文件名
@@ -145,9 +214,10 @@ public class FileUploadUtils
     {
         int dirLastIndex = RuoYiConfig.getProfile().length() + 1;
         String currentDir = StringUtils.substring(uploadDir, dirLastIndex);
-        String pathFileName = Constants.RESOURCE_PREFIX + "/" + currentDir + "/" + fileName;
+        String pathFileName = Constants.WX_RESOURCE_PREFIX + "/" + currentDir + "/" + fileName;
         return pathFileName;
     }
+
 
     /**
      * 文件大小校验
@@ -231,4 +301,9 @@ public class FileUploadUtils
         }
         return extension;
     }
+
+    /**
+     * 上传COS
+     */
+
 }

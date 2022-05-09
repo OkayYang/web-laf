@@ -105,7 +105,7 @@
                     field: "image", align: "center", title: "图片",
                     formatter: function (value, row, index) {
 //var image =  '<div><a href="http://localhost' + row.relImage + '" target="view_window"><img style="width: 50px;height: 50px;margin: auto"  src="http://localhost' + row.relImage + '"></img></a></div>';
-                        var image = '<div><a href="' + row.image + '" target="view_window"><img style="width: 50px;height: 50px;margin: auto"  src="' + row.image + '"></img></a></div>';
+                        var image = '<div><a href="' + row.image.split(',')[0] + '" target="view_window"><img style="width: 50px;height: 50px;margin: auto"  src="' + row.image.split(',')[0] + '"></img></a></div>';
                         return image;
                     }
                 },
