@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ruoyi.wx.mapper.LafArticleMapper">
+    
+    <resultMap type="LafArticle" id="LafArticleResult">
+        <result property="id"    column="id"    />
+        <result property="title"    column="title"    />
+        <result property="content"    column="content"    />
+        <result property="createTime"    column="create_time"    />
+        <result property="createBy"    column="create_by"    />
+        <result property="claimPlace"    column="claim_place"    />
+        <result property="contact"    column="contact"    />
+        <result property="unit"    column="unit"    />
+        <result property="flow"    column="flow"    />
+        <result property="star"    column="star"    />
+    </resultMap>
+
+    <sql id="selectLafArticleVo">
+        select id, title, content, create_time, create_by, claim_place, contact, unit, flow, star from laf_article
+    </sql>
+
+    <select id="selectLafArticleList" parameterType="LafArticle" resultMap="LafArticleResult">
+        <include refid="selectLafArticleVo"/>
+        <where>  
+            <if test="title != null  and title != ''"> and title = #{title}</if>
+            <if test="content != null  and content != ''"> and content = #{content}</if>
+            <if test="createTime != null "> and create_time = #{createTime}</if>
+            <if test="createBy != null  and createBy != ''"> and create_by = #{createBy}</if>
+            <if test="claimPlace != null  and claimPlace != ''"> and claim_place = #{claimPlace}</if>
+            <if test="contact != null  and contact != ''"> and contact = #{contact}</if>
+            <if test="unit != null  and unit != ''"> and unit = #{unit}</if>
+            <if test="flow != null "> and flow = #{flow}</if>
+            <if test="star != null "> and star = #{star}</if>
+        </where>
+    </select>
+    
+    <select id="selectLafArticleById" parameterType="Long" resultMap="LafArticleResult">
+        <include refid="selectLafArticleVo"/>
+        where id = #{id}
+    </select>
+        
+    <insert id="insertLafArticle" parameterType="LafArticle" useGeneratedKeys="true" keyProperty="id">
+        insert into laf_article
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="title != null and title != ''">title,</if>
+            <if test="content != null and content != ''">content,</if>
+            <if test="createTime != null">create_time,</if>
+            <if test="createBy != null">create_by,</if>
+            <if test="claimPlace != null">claim_place,</if>
+            <if test="contact != null">contact,</if>
+            <if test="unit != null">unit,</if>
+            <if test="flow != null">flow,</if>
+            <if test="star != null">star,</if>
+         </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="title != null and title != ''">#{title},</if>
+            <if test="content != null and content != ''">#{content},</if>
+            <if test="createTime != null">#{createTime},</if>
+            <if test="createBy != null">#{createBy},</if>
+            <if test="claimPlace != null">#{claimPlace},</if>
+            <if test="contact != null">#{contact},</if>
+            <if test="unit != null">#{unit},</if>
+            <if test="flow != null">#{flow},</if>
+            <if test="star != null">#{star},</if>
+         </trim>
+    </insert>
+
+    <update id="updateLafArticle" parameterType="LafArticle">
+        update laf_article
+        <trim prefix="SET" suffixOverrides=",">
+            <if test="title != null and title != ''">title = #{title},</if>
+            <if test="content != null and content != ''">content = #{content},</if>
+            <if test="createTime != null">create_time = #{createTime},</if>
+            <if test="createBy != null">create_by = #{createBy},</if>
+            <if test="claimPlace != null">claim_place = #{claimPlace},</if>
+            <if test="contact != null">contact = #{contact},</if>
+            <if test="unit != null">unit = #{unit},</if>
+            <if test="flow != null">flow = #{flow},</if>
+            <if test="star != null">star = #{star},</if>
+        </trim>
+        where id = #{id}
+    </update>
+
+    <delete id="deleteLafArticleById" parameterType="Long">
+        delete from laf_article where id = #{id}
+    </delete>
+
+    <delete id="deleteLafArticleByIds" parameterType="String">
+        delete from laf_article where id in 
+        <foreach item="id" collection="array" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+    </delete>
+
+</mapper>
