@@ -58,4 +58,6 @@ public interface ILafArticleService
      * @return 结果
      */
     public int deleteLafArticleById(Long id);
+
+    public void updateBrowse(Long id);
 }

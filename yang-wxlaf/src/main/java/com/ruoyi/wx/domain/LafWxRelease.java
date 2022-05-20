@@ -84,6 +84,25 @@ public class LafWxRelease extends BaseEntity
 
     private String claimQq;
 
+    private String claimTel;
+
+    private String claimAvatar;
+
+    public String getClaimTel() {
+        return claimTel;
+    }
+
+    public void setClaimTel(String claimTel) {
+        this.claimTel = claimTel;
+    }
+
+    public String getClaimAvatar() {
+        return claimAvatar;
+    }
+
+    public void setClaimAvatar(String claimAvatar) {
+        this.claimAvatar = claimAvatar;
+    }
 
     public String getClaimNick() {
         return claimNick;
@@ -326,6 +345,8 @@ public class LafWxRelease extends BaseEntity
                 .append("claimName", getClaimName())
                 .append("claimXh", getClaimXh())
                 .append("claimQq", getClaimQq())
+                .append("claimTel",getClaimTel())
+                .append("claimAvatar",getClaimAvatar())
                 .toString();
     }
 }

@@ -58,4 +58,6 @@ public interface LafArticleMapper
      * @return 结果
      */
     public int deleteLafArticleByIds(String[] ids);
+
+    public int updateBrowse(Long id);
 }

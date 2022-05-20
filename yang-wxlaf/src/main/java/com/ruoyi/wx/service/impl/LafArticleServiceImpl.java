@@ -54,7 +54,9 @@ public class LafArticleServiceImpl implements ILafArticleService
     @Override
     public int insertLafArticle(LafArticle lafArticle)
     {
-        lafArticle.setCreateTime(DateUtils.getNowDate());
+        if (lafArticle.getCreateTime()==null){
+            lafArticle.setCreateTime(DateUtils.getNowDate());
+        }
         return lafArticleMapper.insertLafArticle(lafArticle);
     }
 
@@ -92,5 +94,15 @@ public class LafArticleServiceImpl implements ILafArticleService
     public int deleteLafArticleById(Long id)
     {
         return lafArticleMapper.deleteLafArticleById(id);
+    }
+
+    @Override
+    public void updateBrowse(Long id){
+        new Thread(){
+            @Override
+            public void run(){
+                lafArticleMapper.updateBrowse(id);
+            }
+        }.start();
     }
 }

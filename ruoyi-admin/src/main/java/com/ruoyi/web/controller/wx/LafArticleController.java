@@ -1,4 +1,4 @@
-package com.ruoyi.wx.controller;
+package com.ruoyi.web.controller.wx;
 
 import java.util.List;
 import org.apache.shiro.authz.annotation.RequiresPermissions;

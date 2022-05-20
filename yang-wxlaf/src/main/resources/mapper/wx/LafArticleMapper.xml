@@ -26,7 +26,8 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         <where>  
             <if test="title != null  and title != ''"> and title = #{title}</if>
             <if test="content != null  and content != ''"> and content = #{content}</if>
-            <if test="createTime != null "> and create_time = #{createTime}</if>
+            <!--时间模糊查询-->
+            <if test="createTime != null "> and  date_format(create_time,'%y%m%d') = date_format(#{createTime},'%y%m%d')</if>
             <if test="createBy != null  and createBy != ''"> and create_by = #{createBy}</if>
             <if test="claimPlace != null  and claimPlace != ''"> and claim_place = #{claimPlace}</if>
             <if test="contact != null  and contact != ''"> and contact = #{contact}</if>
@@ -34,6 +35,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
             <if test="flow != null "> and flow = #{flow}</if>
             <if test="star != null "> and star = #{star}</if>
         </where>
+        order by create_time desc
     </select>
     
     <select id="selectLafArticleById" parameterType="Long" resultMap="LafArticleResult">
@@ -93,5 +95,9 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
             #{id}
         </foreach>
     </delete>
+
+    <update id="updateBrowse" parameterType="Long">
+        update laf_article set flow = flow+1 where id = #{id}
+    </update>
 
 </mapper>

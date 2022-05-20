@@ -5,6 +5,8 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
+
+import net.coobird.thumbnailator.Thumbnails;
 import org.apache.commons.io.FilenameUtils;
 import org.springframework.web.multipart.MultipartFile;
 import com.ruoyi.common.config.RuoYiConfig;
@@ -96,11 +98,11 @@ public class FileUploadUtils
      * @return 文件名称
      * @throws IOException
      */
-    public static final Map<String,Object> wxUpload(String baseDir, MultipartFile file) throws IOException
+    public static final Map<String,Object> wxUpload(String baseDir,String desFile, MultipartFile file) throws IOException
     {
         try
         {
-            return wxUpload(baseDir, file, MimeTypeUtils.DEFAULT_ALLOWED_EXTENSION);
+            return wxUpload(baseDir,desFile, file, MimeTypeUtils.DEFAULT_ALLOWED_EXTENSION);
         }
         catch (Exception e)
         {
@@ -151,7 +153,7 @@ public class FileUploadUtils
      * @throws IOException 比如读写文件出错时
      * @throws InvalidExtensionException 文件校验异常
      */
-    public static final Map<String,Object> wxUpload(String baseDir, MultipartFile file, String[] allowedExtension)
+    public static final Map<String,Object> wxUpload(String baseDir,String desFile, MultipartFile file, String[] allowedExtension)
             throws FileSizeLimitExceededException, IOException, FileNameLengthLimitExceededException,
             InvalidExtensionException
     {
@@ -167,7 +169,7 @@ public class FileUploadUtils
         //String fileDesc = baseDir + File.separator + fileName;
 
         String fileName =IdUtils.fastUUID() + ".jpg" ;
-        String fileDesc = "D:/BaiduNetdiskWorkspace/tiezi/"+fileName;
+        String fileDesc = desFile+fileName;
         File desc = new File(fileDesc);
         if (!desc.exists())
         {
@@ -178,6 +180,11 @@ public class FileUploadUtils
         }
 
         file.transferTo(desc);
+        try {
+            Thumbnails.of(desc).scale(0.5f).toFile(desc);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         String pathFileName = Constants.WX_RESOURCE_PREFIX + "/" + fileName;
         Map<String,Object> map = new HashMap<>();
         map.put("fileName",pathFileName);

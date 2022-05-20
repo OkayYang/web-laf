@@ -135,4 +135,13 @@ public class ImageUtil {
         return true;
     }
 
+    public static void scale(File imgFile){
+
+        try {
+            Thumbnails.of(imgFile).scale(0.5f).toFile(imgFile);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
 }
