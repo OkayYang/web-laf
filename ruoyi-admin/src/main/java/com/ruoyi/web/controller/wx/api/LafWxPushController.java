@@ -20,7 +20,12 @@ public class LafWxPushController extends WxBaseController{
     @ResponseBody
     public WxRespResult addSave(@RequestBody LafPush lafPush)
     {
+
         lafPush.setStuId(getWxUid());
+        if (lafPushService.selectLafPushList(lafPush).size()>5) {
+            return error("抱歉,超过最大限制！");
+        }
+
         return toAjax(lafPushService.insertLafPush(lafPush));
     }
     @PostMapping("/auth/update")
