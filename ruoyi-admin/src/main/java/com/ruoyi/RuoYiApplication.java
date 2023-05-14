@@ -13,7 +13,6 @@ import org.springframework.stereotype.Service;
  * @author ruoyi
  */
 @SpringBootApplication(exclude = { DataSourceAutoConfiguration.class })
-
 public class RuoYiApplication
 {
     public static void main(String[] args)

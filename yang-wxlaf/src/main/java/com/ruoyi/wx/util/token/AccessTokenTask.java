@@ -36,9 +36,6 @@ public class AccessTokenTask {
 
 
 
-//    private static String appid = "wx39b85c8911cd3be5";
-//    private static String secret = "8ce39fb09a038085229da0450accf6e3";
-
     /**
      * 获取微信token
      * @return token

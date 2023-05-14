@@ -143,7 +143,7 @@ web-laf
 在线体验小程序
 
 
-![](https://laf.4w3w.com/img/user/tiezi/xcxonline.jpg)
+![](https://laf.ywenrou.cn/img/user/tiezi/xcxonline.jpg)
 ### 7.其他
 
 
