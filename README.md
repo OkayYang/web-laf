@@ -35,8 +35,9 @@ Maven >= 3.0
 /_____/       /_/  |_|       /_/    
 ~~~
 3.25  打开浏览器，输入：(http://localhost:80) （默认账户/密码 admin/yang611612）若能正确展示登录页面，并能成功登录，菜单及页面展示正常，则表明环境搭建成功。
-
-
+### .运行效果图
+![登录](https://i.postimg.cc/KvfdfyHJ/QQ-20230406000421.jpg)
+![首页](https://i.postimg.cc/sg0bF4yW/QQ-20230406000450.jpg)
 ### 4.项目目录介绍
 主目录结构仅列出各个模块，其中yang-wxlaf模块和ruoyi-admin模块下的com.ruoyi.web.controller.wx包和com.ruoyi.web.controller.wx.api(微信请求api接口)包为本系统的主要代码。
 ~~~
@@ -142,9 +143,10 @@ web-laf
 
 在线体验小程序
 
-
-![](https://laf.ywenrou.cn/img/user/tiezi/xcxonline.jpg)
+![小程序码](https://i.postimg.cc/x1bSgZD7/gh-4c21a8fcb4b0-344.jpg)
 ### 7.其他
+
+如有问题加QQ群：540295517
 
 
 
